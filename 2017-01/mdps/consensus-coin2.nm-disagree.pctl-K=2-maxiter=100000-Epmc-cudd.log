@@ -1,0 +1,21 @@
+~/prism-examples/models/;mdps;consensus;coin2.nm;disagree.pctl;K=2;maxiter=100000;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property Pmax=? [ F "finished"&!"agree" ]
+Building DD model...
+Building DD model finished in 0 seconds
+Exploring model state space...
+Finished exploring the state space. Time required: 0 seconds
+Converting BDD graph to explicit...
+Converting BDD graph to explicit done in 0 seconds
+Starting iteration...
+Done. Did 0 iterations in 0 seconds.
+Finished model checking. Time required: 0 seconds
+Time spent in DD routines converting DD<->MDD: 0 seconds
+Total time spent in DD routines: 0 seconds
+Pmax=? [ F "finished"&!"agree" ]: 0.10833333302435955
+Wall time: 2.77s
+User time: 10.44s
+System time: 0.96s
+Memory: 284404KB

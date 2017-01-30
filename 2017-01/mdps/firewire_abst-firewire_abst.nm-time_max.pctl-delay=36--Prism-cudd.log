@@ -1,0 +1,68 @@
+~/prism-examples/models/;mdps;firewire_abst;firewire_abst.nm;time_max.pctl;delay=36;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 13:51:32 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/firewire_abst/firewire_abst.nm ~/prism-examples/models/mdps/firewire_abst/time_max.pctl -const delay=36 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/firewire_abst/firewire_abst.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/firewire_abst/time_max.pctl"...
+
+1 property:
+(1) R{"time"}max=? [ F "done" ]
+
+Type:        MDP
+Modules:     abstract_firewire 
+Variables:   x s 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time"}max=? [ F "done" ]
+Model constants: delay=36
+
+Building model...
+Model constants: delay=36
+
+Computing reachable states...
+
+Reachability (BFS): 170 iterations in 0.01 seconds (average 0.000047, setup 0.00)
+
+Time for model construction: 0.151 seconds.
+
+Type:        MDP
+States:      776 (1 initial)
+Transitions: 1411
+Choices:     1189
+
+Transition matrix: 407 nodes (3 terminal), 1411 minterms, vars: 12r/12c/3nd
+
+Prob0E: 375 iterations in 0.03 seconds (average 0.000085, setup 0.00)
+
+Prob1A: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 1, inf = 0, maybe = 775
+
+Computing remaining rewards...
+Engine: MTBDD
+
+Building iteration matrix MTBDD... [nodes=394] [7.7 Kb]
+
+Starting iterations...
+Iteration 1818: 5.00 sec so far
+
+Iterative method: 2126 iterations in 6.11 seconds (average 0.002875, setup 0.00)
+
+Value in the initial state: 364.93731079500867
+
+Time for model checking: 6.167 seconds.
+
+Result: 364.93731079500867 (value in the initial state)
+
+Wall time: 7.56s
+User time: 7.87s
+System time: 0.12s
+Memory: 111596KB

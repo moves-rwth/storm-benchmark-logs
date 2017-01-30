@@ -1,0 +1,50 @@
+~/prism-examples/models/;mdps;csma;csma4_4.nm;all_before_min.pctl;;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 09:47:58 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/csma/csma4_4.nm ~/prism-examples/models/mdps/csma/all_before_min.pctl -ex
+
+Parsing model file "~/prism-examples/models/mdps/csma/csma4_4.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/csma/all_before_min.pctl"...
+
+1 property:
+(1) Pmin=? [ !"collision_max_backoff" U "all_delivered" ]
+
+Type:        MDP
+Modules:     bus station1 station2 station3 station4 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 s3 x3 bc3 cd3 s4 x4 bc4 cd4 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ !"collision_max_backoff" U "all_delivered" ]
+
+Building model...
+
+Computing reachable states... 80497 209629 328272 448981 585762 701717 857776 969702 1063759 1205631 1338998 1502880 1665133 1790061 1886174 1964154 2047994 2066091 2168439 2244524 2370296 2493284 2639912 2761885 2899939 3064796 3194197 3316243 3413635 3557099 3649032 3733646 3828269 3900574 3994387 4066073 4103046 4209247 4262152 4351553 4460240 4579921 4679524 4779795 4894105 5009887 5133062 5256919 5386803 5512415 5613648 5707609 5864267 6019498 6169029 6306592 6424162 6541431 6619688 6700071 6803339 6869883 7038613 7114635 7209958 7304046 7408387 7529142 7643372 7646467 7757542 7765811 7869992 7962170 8029226 8033425 8101051 8158101 8211003 8255363 8294920 8330609 8362729 8391135 8416571 8439068 8459525 8478751 8495433 8506066 8507439 8514784 8521023 8526895 8532387 8537246 8541159 8545378 8549199 8552484 8555396 8557458 8559734 8561369 8563095 8564676 8566096 8567341 8568459 8569398 8570339 8571101 8571879 8572528 8573133 8573677 8574162 8574572 8575007 8575358 8575681 8575977 8576212 8576474 8576699Exception in thread "main" java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at java.util.Arrays.copyOf(Arrays.java:2219)
+	at java.util.ArrayList.grow(ArrayList.java:242)
+	at java.util.ArrayList.ensureExplicitCapacity(ArrayList.java:216)
+	at java.util.ArrayList.ensureCapacityInternal(ArrayList.java:208)
+	at java.util.ArrayList.add(ArrayList.java:440)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:364)
+	at simulator.Updater.calculateTransitions(Updater.java:190)
+	at simulator.SimulatorEngine.getTransitionList(SimulatorEngine.java:929)
+	at simulator.SimulatorEngine.getNumChoices(SimulatorEngine.java:940)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:221)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:110)
+	at prism.Prism.doBuildModel(Prism.java:1889)
+	at prism.Prism.buildModelIfRequired(Prism.java:1850)
+	at prism.Prism.modelCheck(Prism.java:2739)
+	at prism.PrismCL.run(PrismCL.java:333)
+	at prism.PrismCL.main(PrismCL.java:2336)
+Command exited with non-zero status 1
+Wall time: 1441.71s
+User time: 9533.03s
+System time: 40.23s
+Memory: 8581016KB
+External error: 1

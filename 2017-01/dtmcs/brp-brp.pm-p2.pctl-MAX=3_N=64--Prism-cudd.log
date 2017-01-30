@@ -1,0 +1,73 @@
+~/prism-examples/models/;dtmcs;brp;brp.pm;p2.pctl;MAX=3,N=64;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 00:01:11 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/brp/brp.pm ~/prism-examples/models/dtmcs/brp/p2.pctl -const 'MAX=3,N=64' -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/brp/brp.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/brp/p2.pctl"...
+
+1 property:
+(1) P=? [ F s=5&srep=2 ]
+
+Type:        DTMC
+Modules:     sender receiver checker channelK channelL 
+Variables:   s srep nrtr i bs s_ab fs ls r rrep fr lr br r_ab recv T k l 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F s=5&srep=2 ]
+Model constants: N=64,MAX=3
+
+Building model...
+Model constants: N=64,MAX=3
+
+Computing reachable states...
+
+Reachability (BFS): 395 iterations in 0.19 seconds (average 0.000486, setup 0.00)
+
+Time for model construction: 0.258 seconds.
+
+Warning: Deadlocks detected and fixed in 132 states
+
+Type:        DTMC
+States:      3526 (1 initial)
+Transitions: 4611
+
+Transition matrix: 2359 nodes (6 terminal), 4611 minterms, vars: 34r/34c
+
+Prob0: 390 iterations in 0.15 seconds (average 0.000379, setup 0.00)
+
+Prob1: 11 iterations in 0.01 seconds (average 0.000727, setup 0.00)
+
+yes = 7, no = 709, maybe = 2810
+
+Computing remaining probabilities...
+Engine: MTBDD
+
+Iteration matrix MTBDD... [nodes=1694] [33.1 Kb]
+Diagonals MTBDD... [nodes=602] [11.8 Kb]
+
+Starting iterations...
+
+Jacobi: 427 iterations in 3.03 seconds (average 0.007091, setup 0.00)
+
+Value in the initial state: 7.885752633901206E-7
+
+Time for model checking: 3.204 seconds.
+
+Result: 7.885752633901206E-7 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 4.71s
+User time: 5.04s
+System time: 0.13s
+Memory: 122412KB

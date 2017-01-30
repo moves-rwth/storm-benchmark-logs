@@ -1,0 +1,37 @@
+~/prism-examples/models/;dtmcs;crowds;crowds.pm;positive.pctl;CrowdSize=20,TotalRuns=6;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 01:36:28 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/crowds/crowds.pm ~/prism-examples/models/dtmcs/crowds/positive.pctl -const 'CrowdSize=20,TotalRuns=6' -exact -politer
+
+Parsing model file "~/prism-examples/models/dtmcs/crowds/crowds.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/crowds/positive.pctl"...
+
+1 property:
+(1) P=? [ F observe0>1 ]
+
+Type:        DTMC
+Modules:     crowds 
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F observe0>1 ]
+Model constants: TotalRuns=6,CrowdSize=20
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 1136.771 secs.
+
+Time for model construction: 1136.782 seconds.
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

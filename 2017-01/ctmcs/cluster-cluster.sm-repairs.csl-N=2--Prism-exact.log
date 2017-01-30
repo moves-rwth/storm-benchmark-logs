@@ -1,0 +1,40 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;repairs.csl;N=2;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 18:03:26 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/cluster/cluster.sm ~/prism-examples/models/ctmcs/cluster/repairs.csl -const N=2 -exact -politer
+
+Parsing model file "~/prism-examples/models/ctmcs/cluster/cluster.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/cluster/repairs.csl"...
+
+1 property:
+(1) R{"num_repairs"}=? [ C<=20 ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: R{"num_repairs"}=? [ C<=20 ]
+Model constants: N=2
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 1.371 secs.
+
+Time for model construction: 1.376 seconds.
+Building reward structure...
+
+Error: Parametric engine does not yet handle the C operator in the R operator.
+
+Wall time: 2.86s
+User time: 4.79s
+System time: 0.23s
+Memory: 121656KB

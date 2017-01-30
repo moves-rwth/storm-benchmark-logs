@@ -1,0 +1,32 @@
+~/prism-examples/models/;dtmcs;leader_sync;leader_sync5_8.pm;eventually_elected.pctl;;;Storm-hybrid
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/dtmcs/leader_sync/leader_sync5_8.pm --prop ~/prism-examples/models/dtmcs/leader_sync/eventually_elected.pctl -e hybrid --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 7.641s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	131521 (195750 nodes)
+Transitions: 	164288 (1492491 nodes)
+Reward Models:  none
+Variables: 	rows: 21 meta variables (47 DD variables), columns: 21 meta variables (47 DD variables)
+Labels: 	1
+   * elected
+-------------------------------------------------------------- 
+
+Model checking property P>=1 [F "elected"] ...
+Result (initial states): true
+
+Time for model checking: 4.173s.
+Wall time: 12.18s
+User time: 11.98s
+System time: 0.18s
+Memory: 292928KB

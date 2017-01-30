@@ -1,0 +1,73 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;customers.csl;c=63;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 12:28:51 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/tandem/tandem.sm ~/prism-examples/models/ctmcs/tandem/customers.csl -const c=63 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/tandem/tandem.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/tandem/customers.csl"...
+
+1 property:
+(1) R{"customers"}=? [ S ]
+
+Type:        CTMC
+Modules:     serverC serverM 
+Variables:   sc ph sm 
+
+---------------------------------------------------------------------
+
+Model checking: R{"customers"}=? [ S ]
+Model constants: c=63
+
+Building model...
+Model constants: c=63
+
+Computing reachable states...
+
+Reachability (BFS): 191 iterations in 0.03 seconds (average 0.000168, setup 0.00)
+
+Time for model construction: 0.065 seconds.
+
+Type:        CTMC
+States:      8128 (1 initial)
+Transitions: 27971
+
+Rate matrix: 183 nodes (6 terminal), 27971 minterms, vars: 13r/13c
+
+SCCs: 1, BSCCs: 1, non-BSCC states: 0
+BSCC sizes: 1:8128
+
+Computing steady state probabilities for BSCC 1
+
+Computing probabilities...
+Engine: MTBDD
+
+Iteration matrix MTBDD... [nodes=538] [10.5 Kb]
+Diagonals MTBDD... [nodes=64] [1.2 Kb]
+
+Starting iterations...
+Iteration 194: 5.02 sec so far
+Iteration 331: 10.03 sec so far
+Iteration 477: 15.06 sec so far
+
+Jacobi: 787 iterations in 18.64 seconds (average 0.023690, setup 0.00)
+
+BSCC 1 Reward: 63.82261574462952
+
+All states are in BSCCs (so no reachability probabilities computed)
+
+Value in the initial state: 63.82261574462952
+
+Time for model checking: 18.737 seconds.
+
+Result: 63.82261574462952 (value in the initial state)
+
+Wall time: 20.06s
+User time: 20.38s
+System time: 0.10s
+Memory: 109288KB

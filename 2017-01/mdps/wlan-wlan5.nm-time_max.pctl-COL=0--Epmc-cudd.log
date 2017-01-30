@@ -1,0 +1,11 @@
+~/prism-examples/models/;mdps;wlan;wlan5.nm;time_max.pctl;COL=0;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R{"time"}max=? [ F s1=12 & s2=12 ]
+Finished model checking. Time required: 0 seconds
+R{"time"}max=? [ F s1=12 & s2=12 ]: No solver available to handle property "R{"time"}max=?[F (((s1) = (12)) ∧ ((s2) = (12)))]" for this model with the current settings
+Wall time: 2.09s
+User time: 7.93s
+System time: 0.58s
+Memory: 273728KB

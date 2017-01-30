@@ -1,0 +1,74 @@
+~/prism-examples/models/;mdps;zeroconf;zeroconf.nm;correct_min.pctl;K=8,N=1000,reset=false;;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 19:02:15 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/zeroconf/zeroconf.nm ~/prism-examples/models/mdps/zeroconf/correct_min.pctl -const 'K=8,N=1000,reset=false' -s -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/zeroconf/zeroconf.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/zeroconf/correct_min.pctl"...
+
+1 property:
+(1) Pmin=? [ F (l=4&ip=1) ]
+
+Type:        MDP
+Modules:     environment host0 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ F (l=4&ip=1) ]
+Model constants: reset=false,N=1000,K=8
+
+Building model...
+Model constants: reset=false,N=1000,K=8
+
+Computing reachable states...
+
+Reachability (BFS): 592 iterations in 105.97 seconds (average 0.179000, setup 0.00)
+
+Time for model construction: 107.142 seconds.
+
+Type:        MDP
+States:      1870338 (1 initial)
+Transitions: 4245554
+Choices:     3443961
+
+Transition matrix: 154038 nodes (6 terminal), 4245554 minterms, vars: 58r/58c/7nd
+
+Prob0E: 133 iterations in 7.54 seconds (average 0.056662, setup 0.00)
+
+Prob1A: 91 iterations in 4.87 seconds (average 0.053495, setup 0.00)
+
+yes = 17943, no = 611330, maybe = 1241065
+
+Computing remaining probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=1870338, nc=2315321, nnz=2865855, k=4] [36.8 MB]
+Creating vector for yes... [14.3 MB]
+Allocating iteration vectors... [2 x 14.3 MB]
+TOTAL: [79.6 MB]
+
+Starting iterations...
+Iteration 87: max relative diff=1.000000, 5.05 sec so far
+Iteration 172: max relative diff=0.259370, 10.08 sec so far
+Iteration 257: max relative diff=0.000539, 15.09 sec so far
+Iteration 342: max relative diff=0.000001, 20.13 sec so far
+
+Iterative method: 345 iterations in 25.23 seconds (average 0.058875, setup 4.92)
+
+Value in the initial state: 5.04010521292984E-9
+
+Time for model checking: 37.79 seconds.
+
+Result: 5.04010521292984E-9 (value in the initial state)
+
+Wall time: 146.36s
+User time: 146.68s
+System time: 0.30s
+Memory: 378704KB

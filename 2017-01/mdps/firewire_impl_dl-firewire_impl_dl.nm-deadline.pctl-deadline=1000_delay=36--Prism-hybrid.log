@@ -1,0 +1,35 @@
+~/prism-examples/models/;mdps;firewire_impl_dl;firewire_impl_dl.nm;deadline.pctl;deadline=1000,delay=36;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 19:28:45 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/firewire_impl_dl/firewire_impl_dl.nm ~/prism-examples/models/mdps/firewire_impl_dl/deadline.pctl -const 'deadline=1000,delay=36' -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/firewire_impl_dl/firewire_impl_dl.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/firewire_impl_dl/deadline.pctl"...
+
+1 property:
+(1) Pmin=? [ F ((s1=8)&(s2=7))|((s1=7)&(s2=8)) ]
+
+Type:        MDP
+Modules:     wire12 node1 wire21 node2 timer 
+Variables:   w12 y1 y2 x1 s1 w21 z1 z2 x2 s2 t 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ F ((s1=8)&(s2=7))|((s1=7)&(s2=8)) ]
+Model constants: deadline=1000,delay=36
+
+Building model...
+Model constants: deadline=1000,delay=36
+
+Computing reachable states...
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

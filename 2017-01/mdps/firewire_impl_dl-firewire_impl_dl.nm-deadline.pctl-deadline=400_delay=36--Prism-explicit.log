@@ -1,0 +1,46 @@
+~/prism-examples/models/;mdps;firewire_impl_dl;firewire_impl_dl.nm;deadline.pctl;deadline=400,delay=36;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 14:43:56 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/firewire_impl_dl/firewire_impl_dl.nm ~/prism-examples/models/mdps/firewire_impl_dl/deadline.pctl -const 'deadline=400,delay=36' -ex
+
+Parsing model file "~/prism-examples/models/mdps/firewire_impl_dl/firewire_impl_dl.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/firewire_impl_dl/deadline.pctl"...
+
+1 property:
+(1) Pmin=? [ F ((s1=8)&(s2=7))|((s1=7)&(s2=8)) ]
+
+Type:        MDP
+Modules:     wire12 node1 wire21 node2 timer 
+Variables:   w12 y1 y2 x1 s1 w21 z1 z2 x2 s2 t 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ F ((s1=8)&(s2=7))|((s1=7)&(s2=8)) ]
+Model constants: deadline=400,delay=36
+
+Building model...
+Model constants: deadline=400,delay=36
+
+Computing reachable states... 67475 185076 290915 395606 492987 572913 686443 789142 903234 1000488 1117944 1214596 1333344 1433397 1527416 1641272 1690958 1804710 1905183 2027548 2133628 2231003 2358025 2477575 2587260 2701064 2794376 2877746 2984763 3074213 3160030 3220922 3290545 3392250 3489416 3593045 3685207 3776724 3867175 3954475 4055446 4158021 4242350 4322654 4400177 4477907 4561330 4659151 4755992 4853873 4950656 5048574 5138874 5236895 5332774 5422887 5510559 5599530 5690936 5780146 5873182 5961458 6050849 6133070 6231655 6313875 6380498 6473315 6574174 6629709 6689084 6781201 6840640 6884548 6983747 7052903 7118546 7175780 7228066 7277761 7320809 7359851 7395634 7430366 7459898 7486629 7510868 7532887 7552872 7571101 7589383 7605841 7619839 7632515 7643995 7654410 7663847 7672407 7680175 7687222 7693617 7699429 7704686 7709476 7713804 7717755 7721331 7724575 7727527 7730191 7732609 7734802 7736795 7738618 7740286 7741825 7743239 7744544 7745746 7746855 7747956 7748965 7749913 7750806 7751637 7752423 7753162 7753931 7754634 7755287 7755893 7756452 7756973 7757455Exception in thread "main" java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at java.util.HashMap.inflateTable(HashMap.java:316)
+	at java.util.HashMap.put(HashMap.java:488)
+	at explicit.Distribution.add(Distribution.java:100)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:253)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:110)
+	at prism.Prism.doBuildModel(Prism.java:1889)
+	at prism.Prism.buildModelIfRequired(Prism.java:1850)
+	at prism.Prism.modelCheck(Prism.java:2739)
+	at prism.PrismCL.run(PrismCL.java:333)
+	at prism.PrismCL.main(PrismCL.java:2336)
+Command exited with non-zero status 1
+Wall time: 1659.39s
+User time: 11128.67s
+System time: 45.18s
+Memory: 8417680KB
+External error: 1

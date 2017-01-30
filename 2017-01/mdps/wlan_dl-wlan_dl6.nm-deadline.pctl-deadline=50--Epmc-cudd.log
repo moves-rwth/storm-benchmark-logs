@@ -1,0 +1,17 @@
+~/prism-examples/models/;mdps;wlan_dl;wlan_dl6.nm;deadline.pctl;deadline=50;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property Pmin=? [ F 1=12 & s2=12 ]
+Building DD model...
+Building DD model finished in 2 seconds
+Exploring model state space...
+Finished exploring the state space. Time required: 7 seconds
+Finished model checking. Time required: 11 seconds
+Time spent in DD routines converting DD<->MDD: 1 seconds
+Total time spent in DD routines: 11 seconds
+Pmin=? [ F 1=12 & s2=12 ]: 0.0
+Wall time: 14.01s
+User time: 25.27s
+System time: 1.23s
+Memory: 667504KB

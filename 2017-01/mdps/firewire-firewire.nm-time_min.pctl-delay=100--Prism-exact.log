@@ -1,0 +1,38 @@
+~/prism-examples/models/;mdps;firewire;firewire.nm;time_min.pctl;delay=100;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 13:35:38 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/firewire/firewire.nm ~/prism-examples/models/mdps/firewire/time_min.pctl -const delay=100 -exact -politer
+
+Parsing model file "~/prism-examples/models/mdps/firewire/firewire.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/firewire/time_min.pctl"...
+
+1 property:
+(1) R{"time"}min=? [ F "done" ]
+
+Type:        MDP
+Modules:     wire12 node1 wire21 node2 
+Variables:   w12 y1 y2 x1 s1 w21 z1 z2 x2 s2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time"}min=? [ F "done" ]
+Model constants: delay=100
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 215.561 secs.
+
+Time for model construction: 215.574 seconds.
+Building reward structure...
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

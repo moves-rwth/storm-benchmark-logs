@@ -1,0 +1,58 @@
+~/prism-examples/models/;mdps;wlan;wlan0.nm;collisions.pctl;COL=0;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 19:28:45 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/wlan/wlan0.nm ~/prism-examples/models/mdps/wlan/collisions.pctl -const COL=0 -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/wlan/wlan0.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/wlan/collisions.pctl"...
+
+1 property:
+(1) Pmax=? [ F col=COL ]
+
+Type:        MDP
+Modules:     medium station1 station2 
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2 
+
+---------------------------------------------------------------------
+
+Model checking: Pmax=? [ F col=COL ]
+Model constants: COL=0
+
+Building model...
+Model constants: COL=0
+
+Computing reachable states...
+
+Reachability (BFS): 45 iterations in 0.04 seconds (average 0.000889, setup 0.00)
+
+Time for model construction: 0.162 seconds.
+
+Type:        MDP
+States:      2954 (1 initial)
+Transitions: 5202
+Choices:     3972
+
+Transition matrix: 4173 nodes (3 terminal), 5202 minterms, vars: 33r/33c/7nd
+
+Prob0A: 1 iterations in 0.00 seconds (average 0.004000, setup 0.00)
+
+Prob1E: 2 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+yes = 2954, no = 0, maybe = 0
+
+Value in the initial state: 1.0
+
+Time for model checking: 0.011 seconds.
+
+Result: 1.0 (value in the initial state)
+
+Wall time: 2.04s
+User time: 1.97s
+System time: 0.11s
+Memory: 112716KB

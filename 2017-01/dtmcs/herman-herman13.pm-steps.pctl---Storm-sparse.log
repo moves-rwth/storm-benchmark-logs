@@ -1,0 +1,83 @@
+~/prism-examples/models/;dtmcs;herman;herman13.pm;steps.pctl;;;Storm-sparse
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/dtmcs/herman/herman13.pm --prop ~/prism-examples/models/dtmcs/herman/steps.pctl -e sparse -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 57.936s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	8192
+Transitions: 	1594324
+Reward Models:  steps
+Labels: 	3
+   * deadlock -> 0 state(s)
+   * init -> 8192 state(s)
+   * stable -> 26 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property R[exp]=? [F "stable"] ...
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 3639 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 3640 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 3642 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 3681 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 3720 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 4188 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 4703 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 4709 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 4710 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 4738 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 4758 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 4784 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 4820 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 4897 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 5028 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 5081 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 5106 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 5618 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 5807 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 5947 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 5948 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 6010 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 6092 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 6094 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 6098 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 6143 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 6150 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 6273 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 6288 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 6711 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 6851 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 6855 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 7131 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 7132 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 7176 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 7179 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 7181 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 7182 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 7236 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 7498 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 7523 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 7586 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 7789 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 7791 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 7792 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 7803 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 7804 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 8112 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 8122 is too small
+Level 2 Warning in ~/storm/resources/3rdparty/gmm-5.0/include/gmm/gmm_precond_ilu.h, line 182: pivot 8148 is too small
+Result (initial states): [0, 24.61538566] (range)
+Time for model checking: 1.297s.
+Wall time: 59.29s
+User time: 58.80s
+System time: 0.45s
+Memory: 261924KB

@@ -1,0 +1,137 @@
+~/prism-examples/models/;dtmcs;nand;nand.pm;reliable.pctl;K=2,N=60;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 18:31:06 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/nand/nand.pm ~/prism-examples/models/dtmcs/nand/reliable.pctl -const 'K=2,N=60' -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/nand/nand.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/nand/reliable.pctl"...
+
+1 property:
+(1) P=? [ F s=4&z/N<0.1 ]
+
+Type:        DTMC
+Modules:     multiplex 
+Variables:   u c s z zx zy x y 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F s=4&z/N<0.1 ]
+Model constants: N=60,K=2
+
+Building model...
+Model constants: N=60,K=2
+
+Computing reachable states...
+
+Reachability (BFS): 1202 iterations in 10.50 seconds (average 0.008739, setup 0.00)
+
+Time for model construction: 11.139 seconds.
+
+Type:        DTMC
+States:      9420422 (1 initial)
+Transitions: 14899892
+
+Transition matrix: 101989 nodes (2421 terminal), 14899892 minterms, vars: 32r/32c
+
+Prob0: 1202 iterations in 9.65 seconds (average 0.008030, setup 0.00)
+
+Prob1: 985 iterations in 8.34 seconds (average 0.008467, setup 0.00)
+
+yes = 547, no = 1757695, maybe = 7662180
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=32, nodes=136727] [6.3 MB]
+Adding explicit sparse matrices... [levels=14, num=365, compact] [769.2 KB]
+Creating vector for diagonals... [dist=1, compact] [18.0 MB]
+Creating vector for RHS... [dist=2, compact] [18.0 MB]
+Allocating iteration vectors... [2 x 71.9 MB]
+TOTAL: [186.7 MB]
+
+Starting iterations...
+Iteration 22: max relative diff=1.000000, 5.06 sec so far
+Iteration 43: max relative diff=1.000000, 10.13 sec so far
+Iteration 57: max relative diff=1.000000, 15.24 sec so far
+Iteration 71: max relative diff=1.000000, 20.32 sec so far
+Iteration 88: max relative diff=1.000000, 25.54 sec so far
+Iteration 105: max relative diff=1.000000, 30.72 sec so far
+Iteration 122: max relative diff=1.000000, 35.90 sec so far
+Iteration 139: max relative diff=1.000000, 41.07 sec so far
+Iteration 156: max relative diff=1.000000, 46.25 sec so far
+Iteration 171: max relative diff=1.000000, 51.50 sec so far
+Iteration 193: max relative diff=1.000000, 56.59 sec so far
+Iteration 215: max relative diff=1.000000, 61.67 sec so far
+Iteration 238: max relative diff=1.000000, 66.78 sec so far
+Iteration 253: max relative diff=1.000000, 71.83 sec so far
+Iteration 268: max relative diff=1.000000, 77.00 sec so far
+Iteration 283: max relative diff=1.000000, 82.16 sec so far
+Iteration 299: max relative diff=1.000000, 87.49 sec so far
+Iteration 322: max relative diff=1.000000, 92.65 sec so far
+Iteration 344: max relative diff=1.000000, 97.77 sec so far
+Iteration 361: max relative diff=1.000000, 102.99 sec so far
+Iteration 378: max relative diff=1.000000, 108.14 sec so far
+Iteration 394: max relative diff=1.000000, 113.15 sec so far
+Iteration 410: max relative diff=1.000000, 118.27 sec so far
+Iteration 426: max relative diff=1.000000, 123.50 sec so far
+Iteration 442: max relative diff=1.000000, 128.78 sec so far
+Iteration 464: max relative diff=1.000000, 133.87 sec so far
+Iteration 486: max relative diff=1.000000, 138.97 sec so far
+Iteration 508: max relative diff=1.000000, 144.02 sec so far
+Iteration 530: max relative diff=1.000000, 149.09 sec so far
+Iteration 552: max relative diff=1.000000, 154.18 sec so far
+Iteration 574: max relative diff=1.000000, 159.20 sec so far
+Iteration 591: max relative diff=1.000000, 164.34 sec so far
+Iteration 608: max relative diff=1.000000, 169.47 sec so far
+Iteration 628: max relative diff=1.000000, 174.55 sec so far
+Iteration 650: max relative diff=1.000000, 179.64 sec so far
+Iteration 665: max relative diff=1.000000, 184.93 sec so far
+Iteration 679: max relative diff=1.000000, 190.16 sec so far
+Iteration 693: max relative diff=1.000000, 195.39 sec so far
+Iteration 707: max relative diff=1.000000, 200.63 sec so far
+Iteration 721: max relative diff=1.000000, 205.65 sec so far
+Iteration 744: max relative diff=1.000000, 210.87 sec so far
+Iteration 766: max relative diff=1.000000, 215.94 sec so far
+Iteration 789: max relative diff=1.000000, 221.11 sec so far
+Iteration 811: max relative diff=1.000000, 226.18 sec so far
+Iteration 834: max relative diff=1.000000, 231.28 sec so far
+Iteration 856: max relative diff=1.000000, 236.39 sec so far
+Iteration 879: max relative diff=1.000000, 241.56 sec so far
+Iteration 896: max relative diff=1.000000, 246.74 sec so far
+Iteration 913: max relative diff=1.000000, 251.92 sec so far
+Iteration 930: max relative diff=1.000000, 257.09 sec so far
+Iteration 947: max relative diff=1.000000, 262.26 sec so far
+Iteration 962: max relative diff=1.000000, 267.38 sec so far
+Iteration 977: max relative diff=1.000000, 272.68 sec so far
+Iteration 994: max relative diff=1.000000, 277.72 sec so far
+Iteration 1011: max relative diff=1.000000, 282.75 sec so far
+Iteration 1028: max relative diff=1.000000, 287.78 sec so far
+Iteration 1045: max relative diff=1.000000, 292.80 sec so far
+Iteration 1062: max relative diff=1.000000, 297.82 sec so far
+Iteration 1077: max relative diff=1.000000, 303.09 sec so far
+Iteration 1092: max relative diff=1.000000, 308.38 sec so far
+Iteration 1107: max relative diff=1.000000, 313.67 sec so far
+Iteration 1124: max relative diff=1.000000, 318.71 sec so far
+Iteration 1141: max relative diff=1.000000, 323.74 sec so far
+Iteration 1158: max relative diff=1.000000, 328.76 sec so far
+Iteration 1175: max relative diff=1.000000, 333.79 sec so far
+Iteration 1192: max relative diff=0.267732, 338.81 sec so far
+
+Jacobi: 1201 iterations in 352.92 seconds (average 0.284323, setup 11.45)
+
+Value in the initial state: 0.5175335545543001
+
+Time for model checking: 372.247 seconds.
+
+Result: 0.5175335545543001 (value in the initial state)
+
+Wall time: 384.74s
+User time: 384.72s
+System time: 0.44s
+Memory: 334996KB

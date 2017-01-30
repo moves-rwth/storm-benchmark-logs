@@ -1,0 +1,137 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;qos4.csl;N=16;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 22:26:53 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/cluster/cluster.sm ~/prism-examples/models/ctmcs/cluster/qos4.csl -const N=16 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/cluster/cluster.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/cluster/qos4.csl"...
+
+1 property:
+(1) P=? [ !"minimum" U>=20 "minimum" ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !"minimum" U>=20 "minimum" ]
+Model constants: N=16
+
+Building model...
+Model constants: N=16
+
+Computing reachable states...
+
+Reachability (BFS): 37 iterations in 0.01 seconds (average 0.000216, setup 0.00)
+
+Time for model construction: 0.054 seconds.
+
+Type:        CTMC
+States:      10132 (1 initial)
+Transitions: 48160
+
+Rate matrix: 1899 nodes (23 terminal), 48160 minterms, vars: 19r/19c
+
+Diagonals vector: 5028 nodes (936 terminal), 10132 minterms
+Embedded Markov chain: 71545 nodes (7002 terminal), 48160 minterms
+
+Prob0: 28 iterations in 0.02 seconds (average 0.000714, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+yes = 10132, no = 0, maybe = 0
+
+Computing probabilities...
+Engine: MTBDD
+
+Number of non-absorbing states: 7545 of 10132 (74.5%)
+
+Computing diagonals MTBDD... [nodes=4489] [87.7 Kb]
+Building iteration matrix MTBDD... [nodes=13449] [262.7 Kb]
+
+Uniformisation: q.t = 51.061200 x 20.000000 = 1021.224000
+Fox-Glynn: left = 795, right = 1294
+
+Starting iterations...
+Iteration 36 (of 1294): 5.13 sec so far
+Iteration 59 (of 1294): 10.24 sec so far
+Iteration 82 (of 1294): 15.31 sec so far
+Iteration 103 (of 1294): 20.48 sec so far
+Iteration 124 (of 1294): 25.63 sec so far
+Iteration 145 (of 1294): 30.81 sec so far
+Iteration 166 (of 1294): 35.96 sec so far
+Iteration 187 (of 1294): 41.14 sec so far
+Iteration 210 (of 1294): 46.18 sec so far
+Iteration 237 (of 1294): 51.24 sec so far
+Iteration 265 (of 1294): 56.40 sec so far
+Iteration 292 (of 1294): 61.46 sec so far
+Iteration 320 (of 1294): 66.68 sec so far
+Iteration 348 (of 1294): 71.81 sec so far
+Iteration 375 (of 1294): 76.89 sec so far
+Iteration 397 (of 1294): 82.07 sec so far
+Iteration 418 (of 1294): 87.15 sec so far
+Iteration 440 (of 1294): 92.29 sec so far
+Iteration 463 (of 1294): 97.44 sec so far
+Iteration 485 (of 1294): 102.59 sec so far
+Iteration 508 (of 1294): 107.80 sec so far
+Iteration 529 (of 1294): 112.81 sec so far
+Iteration 551 (of 1294): 118.10 sec so far
+Iteration 572 (of 1294): 123.10 sec so far
+Iteration 596 (of 1294): 128.35 sec so far
+Iteration 618 (of 1294): 133.53 sec so far
+Iteration 640 (of 1294): 138.69 sec so far
+Iteration 662 (of 1294): 143.89 sec so far
+Iteration 683 (of 1294): 148.90 sec so far
+Iteration 704 (of 1294): 153.94 sec so far
+Iteration 725 (of 1294): 158.96 sec so far
+Iteration 747 (of 1294): 164.16 sec so far
+Iteration 772 (of 1294): 169.37 sec so far
+Iteration 794 (of 1294): 174.47 sec so far
+Iteration 814 (of 1294): 179.63 sec so far
+Iteration 824 (of 1294): 184.73 sec so far
+Iteration 832 (of 1294): 190.48 sec so far
+Iteration 838 (of 1294): 195.71 sec so far
+Iteration 846 (of 1294): 200.74 sec so far
+Iteration 859 (of 1294): 205.86 sec so far
+Iteration 877 (of 1294): 211.03 sec so far
+Iteration 896 (of 1294): 216.13 sec so far
+Iteration 915 (of 1294): 221.18 sec so far
+Iteration 934 (of 1294): 226.24 sec so far
+Iteration 953 (of 1294): 231.36 sec so far
+Iteration 972 (of 1294): 236.46 sec so far
+Iteration 991 (of 1294): 241.71 sec so far
+Iteration 1010 (of 1294): 246.76 sec so far
+Iteration 1032 (of 1294): 251.79 sec so far
+Iteration 1049 (of 1294): 256.82 sec so far
+Iteration 1066 (of 1294): 261.99 sec so far
+Iteration 1090 (of 1294): 267.04 sec so far
+Iteration 1114 (of 1294): 272.06 sec so far
+Iteration 1138 (of 1294): 277.20 sec so far
+Iteration 1162 (of 1294): 282.30 sec so far
+Iteration 1185 (of 1294): 287.32 sec so far
+Iteration 1206 (of 1294): 292.75 sec so far
+Iteration 1219 (of 1294): 298.03 sec so far
+Iteration 1230 (of 1294): 303.43 sec so far
+Iteration 1245 (of 1294): 308.59 sec so far
+Iteration 1263 (of 1294): 313.71 sec so far
+Iteration 1282 (of 1294): 318.83 sec so far
+
+Iterative method: 1294 iterations in 321.98 seconds (average 0.248798, setup 0.04)
+
+Value in the initial state: 0.0
+
+Time for model checking: 322.211 seconds.
+
+Result: 0.0 (value in the initial state)
+
+Wall time: 323.59s
+User time: 323.78s
+System time: 0.31s
+Memory: 168388KB

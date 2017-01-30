@@ -1,0 +1,37 @@
+~/prism-examples/models/;mdps;consensus;coin2.nm;steps_min.pctl;K=2;maxiter=100000;Storm-cudd
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/consensus/coin2.nm --prop ~/prism-examples/models/mdps/consensus/steps_min.pctl -const K=2 -e dd --ddlib cudd --cudd:maxmem 4096 --maxiter 100000 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+ WARN (NativeEquationSolverSettings.cpp:87): Native is not selected as the preferred equation solver, so setting options for native might have no effect.
+Time for model construction: 0.021s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	272 (34 nodes)
+Transitions: 	492 (365 nodes)
+Choices: 	400
+Reward Models:  steps
+Variables: 	rows: 5 meta variables (10 DD variables), columns: 5 meta variables (10 DD variables), nondeterminism: 2 meta variables (2 DD variables)
+Labels: 	4
+   * agree
+   * all_coins_equal_0
+   * all_coins_equal_1
+   * finished
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"steps"}min=? [F "finished"] ...
+ WARN (SymbolicMdpPrctlHelper.cpp:171): Results of reward computation may be too low, because of zero-reward loops.
+Result (initial states): 47.99832424
+Time for model checking: 0.466s.
+Wall time: 0.56s
+User time: 0.52s
+System time: 0.03s
+Memory: 37740KB

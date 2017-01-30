@@ -1,0 +1,43 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;qos4.csl;N=256;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P=? [ !"minimum" U>=20 "minimum" ]
+Starting to build model...
+Current number of states: 321,484; states/second: 64,295
+Current number of states: 659,018; states/second: 67,507
+Current number of states: 988,532; states/second: 65,902
+Current number of states: 1,316,858; states/second: 65,665
+Current number of states: 1,715,756; states/second: 79,780
+Current number of states: 2,082,648; states/second: 73,377
+Current number of states: 2,269,496; states/second: 37,369
+Building model done. 2,373,652 states. Time for model exploration: 36 seconds.
+Starting iteration...
+Done. Did 0 iterations in 27 seconds.
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007ff608136f41, pid=30646, tid=140695325521664
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_73-b02) (build 1.8.0_73-b02)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.73-b02 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [jna150939422521320779.tmp+0xf41]  double_ctmc_bounded+0x101
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# An error report file with more information is saved as:
+# ~/benchmarking_pmc/scripts/hs_err_pid30646.log
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+~/epmc/run_epmc.sh: line 2: 30646 Aborted                 /import/sw/jdk1.8.0_73/bin/java -Xmx"$1" -Xss4m -XX:ParallelGCThreads=8 -jar ~/epmc/epmc-standard.jar "${@:2}"
+Command exited with non-zero status 134
+Wall time: 102.95s
+User time: 116.05s
+System time: 1.73s
+Memory: 1527600KB
+External error: 134

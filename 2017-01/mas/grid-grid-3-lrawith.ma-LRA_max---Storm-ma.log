@@ -1,0 +1,37 @@
+~/MA_experiments;mas;grid;grid-3-lrawith.ma;LRA_max;;;Storm-ma
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --explicit ~/MA_experiments/mas/grid/grid-3-lrawith.tra ~/MA_experiments/mas/grid/grid-3-lrawith.lab --prop Smax=? [ "goal" ] 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.019s.
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	7191
+Transitions: 	15233
+Choices: 	11627
+Markovian St.: 	1837
+Max. Rate.: 	31
+Reward Models:  (default)
+Labels: 	2
+   * goal -> 2764 state(s)
+   * init -> 1 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property LRAmax=? ["goal"] ...
+Result (initial states): 0.9997572396
+Time for model checking: 9.663s.
+Wall time: 9.73s
+User time: 9.72s
+System time: 0.00s
+Memory: 38408KB

@@ -1,0 +1,36 @@
+~/prism-examples/models/;mdps;firewire_abst;firewire_abst.nm;time_min.pctl;delay=1000;;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/firewire_abst/firewire_abst.nm --prop ~/prism-examples/models/mdps/firewire_abst/time_min.pctl -const delay=1000 --exact --minmax:method pi -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.196s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	1436
+Transitions: 	4069
+Choices: 	3055
+Reward Models:  time
+Labels: 	3
+   * deadlock -> 0 state(s)
+   * init -> 1 state(s)
+   * done -> 1 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"time"}min=? [F "done"] ...
+ WARN (SparseMdpPrctlHelper.cpp:289): Results of reward computation may be too low, because of zero-reward loops.
+ERROR (storm.cpp:42): An unexpected exception occurred and caused Storm to terminate. The message of this exception is: Division by zero.
+Command exited with non-zero status 2
+Wall time: 0.27s
+User time: 0.16s
+System time: 0.10s
+Memory: 219732KB
+External error: 2

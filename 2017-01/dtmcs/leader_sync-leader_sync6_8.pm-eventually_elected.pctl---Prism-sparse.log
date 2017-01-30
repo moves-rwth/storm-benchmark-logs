@@ -1,0 +1,35 @@
+~/prism-examples/models/;dtmcs;leader_sync;leader_sync6_8.pm;eventually_elected.pctl;;;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 06:25:05 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/leader_sync/leader_sync6_8.pm ~/prism-examples/models/dtmcs/leader_sync/eventually_elected.pctl -s -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/leader_sync/leader_sync6_8.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/leader_sync/eventually_elected.pctl"...
+
+1 property:
+(1) P>=1 [ F "elected" ]
+
+Type:        DTMC
+Modules:     counter process1 process2 process3 process4 process5 process6 
+Variables:   c s1 u1 v1 p1 s2 u2 v2 p2 s3 u3 v3 p3 s4 u4 v4 p4 s5 u5 v5 p5 s6 u6 v6 p6 
+
+---------------------------------------------------------------------
+
+Model checking: P>=1 [ F "elected" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 8 iterations in 153.90 seconds (average 19.237000, setup 0.00)
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

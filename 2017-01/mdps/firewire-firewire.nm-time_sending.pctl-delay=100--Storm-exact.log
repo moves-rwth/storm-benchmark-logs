@@ -1,0 +1,34 @@
+~/prism-examples/models/;mdps;firewire;firewire.nm;time_sending.pctl;delay=100;;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/firewire/firewire.nm --prop ~/prism-examples/models/mdps/firewire/time_sending.pctl -const delay=100 --exact --minmax:method pi -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 136.866s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	3874664
+Transitions: 	9063660
+Choices: 	9041760
+Reward Models:  time_sending
+Labels: 	3
+   * deadlock -> 9104 state(s)
+   * init -> 1 state(s)
+   * done -> 654 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"time_sending"}max=? [F "done"] ...
+Result (initial states): -1 (approx. -1)
+Time for model checking: 21.441s.
+Wall time: 158.59s
+User time: 155.12s
+System time: 3.32s
+Memory: 1181296KB

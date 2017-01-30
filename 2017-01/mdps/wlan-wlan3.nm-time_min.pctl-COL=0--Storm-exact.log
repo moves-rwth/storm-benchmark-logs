@@ -1,0 +1,35 @@
+~/prism-examples/models/;mdps;wlan;wlan3.nm;time_min.pctl;COL=0;;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/wlan/wlan3.nm --prop ~/prism-examples/models/mdps/wlan/time_min.pctl -const COL=0 --exact --minmax:method pi -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 2.386s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	96302
+Transitions: 	204576
+Choices: 	123730
+Reward Models:  time
+Labels: 	3
+   * init -> 1 state(s)
+   * deadlock -> 0 state(s)
+   * ((s1 = 12) & (s2 = 12)) -> 1 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"time"}min=? [F ((s1 = 12) & (s2 = 12))] ...
+ WARN (SparseMdpPrctlHelper.cpp:289): Results of reward computation may be too low, because of zero-reward loops.
+Result (initial states): 1325 (approx. 1325)
+Time for model checking: 4.361s.
+Wall time: 6.86s
+User time: 6.52s
+System time: 0.32s
+Memory: 230420KB

@@ -1,0 +1,80 @@
+~/prism-examples/models/;mdps;firewire;firewire.nm;time_min.pctl;delay=36;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 19:01:24 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/firewire/firewire.nm ~/prism-examples/models/mdps/firewire/time_min.pctl -const delay=36 -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/firewire/firewire.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/firewire/time_min.pctl"...
+
+1 property:
+(1) R{"time"}min=? [ F "done" ]
+
+Type:        MDP
+Modules:     wire12 node1 wire21 node2 
+Variables:   w12 y1 y2 x1 s1 w21 z1 z2 x2 s2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time"}min=? [ F "done" ]
+Model constants: delay=36
+
+Building model...
+Model constants: delay=36
+
+Computing reachable states...
+
+Reachability (BFS): 285 iterations in 5.44 seconds (average 0.019088, setup 0.00)
+
+Time for model construction: 6.598 seconds.
+
+Type:        MDP
+States:      212268 (1 initial)
+Transitions: 481792
+Choices:     478756
+
+Transition matrix: 88908 nodes (3 terminal), 481792 minterms, vars: 56r/56c/14nd
+
+Prob0A: 168 iterations in 11.47 seconds (average 0.068286, setup 0.00)
+
+Prob1E: 169 iterations in 16.32 seconds (average 0.096544, setup 0.00)
+
+Warning: PRISM hasn't checked for zero-reward loops.
+Your minimum rewards may be too low...
+
+goal = 2, inf = 0, maybe = 212266
+
+Computing remaining rewards...
+Switching engine since hybrid engine does yet support this computation...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=212268, nc=478750, nnz=481786, k=3] [8.1 MB]
+Building sparse matrix (transition rewards)... [n=212268, nc=478750, nnz=206914, k=3] [5.0 MB]
+Creating vector for state rewards... [1.6 MB]
+Creating vector for inf... [1.6 MB]
+Allocating iteration vectors... [2 x 1.6 MB]
+TOTAL: [19.6 MB]
+
+Starting iterations...
+
+Iterative method: 168 iterations in 3.50 seconds (average 0.012333, setup 1.43)
+
+Value in the initial state: 138.25
+
+Time for model checking: 31.449 seconds.
+
+Result: 138.25 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 39.72s
+User time: 40.05s
+System time: 0.24s
+Memory: 270928KB

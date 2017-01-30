@@ -1,0 +1,46 @@
+~/prism-examples/models/;mdps;firewire;firewire.nm;elected.pctl;delay=3;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 12:44:13 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/firewire/firewire.nm ~/prism-examples/models/mdps/firewire/elected.pctl -const delay=3 -exact -politer
+
+Parsing model file "~/prism-examples/models/mdps/firewire/firewire.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/firewire/elected.pctl"...
+
+1 property:
+(1) P>=1 [ F "done" ]
+
+Type:        MDP
+Modules:     wire12 node1 wire21 node2 
+Variables:   w12 y1 y2 x1 s1 w21 z1 z2 x2 s2 
+
+---------------------------------------------------------------------
+
+Model checking: P>=1 [ F "done" ]
+Model constants: delay=3
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 1.359 secs.
+
+Time for model construction: 1.372 seconds.
+
+Time for model checking: 2.375 seconds.
+Exception in thread "main" java.lang.ClassCastException: param.StateBoolean cannot be cast to param.Function
+	at param.StateValues.getInitStateValueAsFunction(StateValues.java:194)
+	at prism.Prism.modelCheckExact(Prism.java:2991)
+	at prism.Prism.modelCheck(Prism.java:2720)
+	at prism.PrismCL.run(PrismCL.java:333)
+	at prism.PrismCL.main(PrismCL.java:2336)
+Command exited with non-zero status 1
+Wall time: 64.36s
+User time: 10.61s
+System time: 0.48s
+Memory: 480792KB
+External error: 1

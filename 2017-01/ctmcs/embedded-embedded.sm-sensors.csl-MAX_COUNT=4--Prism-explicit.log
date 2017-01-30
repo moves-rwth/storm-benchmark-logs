@@ -1,0 +1,67 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;sensors.csl;MAX_COUNT=4;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 02:56:55 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/sensors.csl -const MAX_COUNT=4 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/sensors.csl"...
+
+1 property:
+(1) P=? [ !"down" U "fail_sensors" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !"down" U "fail_sensors" ]
+Model constants: MAX_COUNT=4
+
+Building model...
+Model constants: MAX_COUNT=4
+
+Computing reachable states... 5168 states
+Reachable states exploration and model construction done in 0.673 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.77 seconds.
+
+Type:        CTMC
+States:      5168 (1 initial)
+Transitions: 21773
+Building embedded DTMC...
+
+Warning: Switching to linear equation solution method "Gauss-Seidel"
+
+Starting probabilistic reachability...
+Calculating predecessor relation for discrete-time Markov chain...  done (0.032 seconds)
+Starting Prob0...
+Prob0 took 0.011 seconds.
+Starting Prob1...
+Prob1 took 0.034 seconds.
+target=644, yes=644, no=3892, maybe=632
+Starting Gauss-Seidel...
+Gauss-Seidel took 335 iterations and 0.128 seconds.
+Probabilistic reachability took 0.208 seconds.
+
+Value in the initial state: 0.7171881581474228
+
+Time for model checking: 0.265 seconds.
+
+Result: 0.7171881581474228 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 2.36s
+User time: 3.70s
+System time: 0.16s
+Memory: 126096KB

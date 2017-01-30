@@ -1,0 +1,66 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;second_queue.csl;c=5;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 18:04:42 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/tandem/tandem.sm ~/prism-examples/models/ctmcs/tandem/second_queue.csl -const c=5 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/tandem/tandem.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/tandem/second_queue.csl"...
+
+1 property:
+(1) P=? [ sm=c U<=0.2 sm<c ]
+
+Type:        CTMC
+Modules:     serverC serverM 
+Variables:   sc ph sm 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ sm=c U<=0.2 sm<c ]
+Model constants: c=5
+
+Building model...
+Model constants: c=5
+
+Computing reachable states...
+
+Reachability (BFS): 17 iterations in 0.00 seconds (average 0.000235, setup 0.00)
+
+Time for model construction: 0.022 seconds.
+
+Type:        CTMC
+States:      66 (1 initial)
+Transitions: 189
+
+Rate matrix: 100 nodes (6 terminal), 189 minterms, vars: 7r/7c
+
+Computing probabilities...
+Engine: MTBDD
+
+Number of non-absorbing states: 11 of 66 (16.7%)
+
+Computing diagonals MTBDD... [nodes=38] [0.7 Kb]
+Building iteration matrix MTBDD... [nodes=83] [1.6 Kb]
+
+Uniformisation: q.t = 24.684000 x 0.200000 = 4.936800
+Fox-Glynn: left = 0, right = 21
+
+Starting iterations...
+
+Iterative method: 21 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Value in the initial state: 1.0
+
+Time for model checking: 0.003 seconds.
+
+Result: 1.0 (value in the initial state)
+
+Wall time: 2.04s
+User time: 1.60s
+System time: 0.10s
+Memory: 104900KB

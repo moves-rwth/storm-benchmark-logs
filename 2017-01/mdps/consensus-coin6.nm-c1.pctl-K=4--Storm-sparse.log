@@ -1,0 +1,35 @@
+~/prism-examples/models/;mdps;consensus;coin6.nm;c1.pctl;K=4;;Storm-sparse
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/consensus/coin6.nm --prop ~/prism-examples/models/mdps/consensus/c1.pctl -const K=4 -e sparse -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 34.247s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	2376448
+Transitions: 	11835456
+Choices: 	9487104
+Reward Models:  none
+Labels: 	3
+   * deadlock -> 0 state(s)
+   * init -> 1 state(s)
+   * finished -> 384 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property P>=1 [F "finished"] ...
+Result (initial states): true
+
+Time for model checking: 5.847s.
+Wall time: 40.20s
+User time: 39.37s
+System time: 0.73s
+Memory: 565912KB

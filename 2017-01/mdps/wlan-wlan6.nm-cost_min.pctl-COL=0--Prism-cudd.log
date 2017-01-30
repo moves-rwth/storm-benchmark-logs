@@ -1,0 +1,312 @@
+~/prism-examples/models/;mdps;wlan;wlan6.nm;cost_min.pctl;COL=0;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 18:19:58 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/wlan/wlan6.nm ~/prism-examples/models/mdps/wlan/cost_min.pctl -const COL=0 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/wlan/wlan6.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/wlan/cost_min.pctl"...
+
+1 property:
+(1) R{"cost"}min=? [ F s1=12&s2=12 ]
+
+Type:        MDP
+Modules:     medium station1 station2 
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"cost"}min=? [ F s1=12&s2=12 ]
+Model constants: COL=0
+
+Building model...
+Model constants: COL=0
+
+Computing reachable states...
+
+Reachability (BFS): 195 iterations in 0.74 seconds (average 0.003815, setup 0.00)
+
+Time for model construction: 1.042 seconds.
+
+Type:        MDP
+States:      5007548 (1 initial)
+Transitions: 11475748
+Choices:     6350470
+
+Transition matrix: 20377 nodes (8 terminal), 11475748 minterms, vars: 47r/47c/7nd
+
+Prob0A: 3101 iterations in 181.74 seconds (average 0.058607, setup 0.00)
+
+Prob1E: 3102 iterations in 163.70 seconds (average 0.052771, setup 0.00)
+
+Warning: PRISM hasn't checked for zero-reward loops.
+Your minimum rewards may be too low...
+
+goal = 1, inf = 0, maybe = 5007547
+
+Computing remaining rewards...
+Engine: MTBDD
+
+Building iteration matrix MTBDD... [nodes=20377] [398.0 Kb]
+
+Starting iterations...
+Iteration 33: 5.11 sec so far
+Iteration 53: 10.27 sec so far
+Iteration 69: 15.31 sec so far
+Iteration 83: 20.48 sec so far
+Iteration 96: 25.71 sec so far
+Iteration 107: 30.95 sec so far
+Iteration 117: 36.10 sec so far
+Iteration 124: 41.14 sec so far
+Iteration 137: 46.56 sec so far
+Iteration 147: 51.92 sec so far
+Iteration 156: 57.42 sec so far
+Iteration 163: 62.70 sec so far
+Iteration 171: 67.85 sec so far
+Iteration 180: 73.22 sec so far
+Iteration 188: 78.36 sec so far
+Iteration 196: 83.74 sec so far
+Iteration 202: 88.88 sec so far
+Iteration 210: 94.53 sec so far
+Iteration 216: 99.58 sec so far
+Iteration 223: 104.67 sec so far
+Iteration 230: 110.51 sec so far
+Iteration 236: 115.68 sec so far
+Iteration 244: 120.78 sec so far
+Iteration 251: 125.94 sec so far
+Iteration 257: 131.47 sec so far
+Iteration 264: 136.80 sec so far
+Iteration 271: 142.56 sec so far
+Iteration 276: 148.84 sec so far
+Iteration 283: 153.95 sec so far
+Iteration 290: 159.66 sec so far
+Iteration 296: 164.77 sec so far
+Iteration 300: 170.33 sec so far
+Iteration 307: 175.91 sec so far
+Iteration 313: 181.16 sec so far
+Iteration 319: 186.66 sec so far
+Iteration 322: 191.75 sec so far
+Iteration 328: 197.03 sec so far
+Iteration 334: 202.89 sec so far
+Iteration 339: 207.90 sec so far
+Iteration 343: 213.59 sec so far
+Iteration 349: 219.15 sec so far
+Iteration 354: 224.17 sec so far
+Iteration 359: 229.40 sec so far
+Iteration 363: 235.06 sec so far
+Iteration 369: 240.11 sec so far
+Iteration 375: 245.54 sec so far
+Iteration 381: 252.62 sec so far
+Iteration 387: 257.68 sec so far
+Iteration 393: 262.98 sec so far
+Iteration 399: 270.04 sec so far
+Iteration 405: 275.12 sec so far
+Iteration 411: 280.69 sec so far
+Iteration 417: 287.81 sec so far
+Iteration 423: 292.87 sec so far
+Iteration 429: 298.51 sec so far
+Iteration 434: 304.45 sec so far
+Iteration 440: 310.31 sec so far
+Iteration 446: 316.08 sec so far
+Iteration 451: 322.16 sec so far
+Iteration 456: 327.31 sec so far
+Iteration 462: 333.12 sec so far
+Iteration 467: 338.24 sec so far
+Iteration 471: 344.10 sec so far
+Iteration 476: 349.68 sec so far
+Iteration 481: 355.68 sec so far
+Iteration 484: 361.40 sec so far
+Iteration 489: 366.69 sec so far
+Iteration 494: 372.73 sec so far
+Iteration 499: 380.60 sec so far
+Iteration 504: 386.25 sec so far
+Iteration 509: 392.48 sec so far
+Iteration 513: 399.02 sec so far
+Iteration 517: 404.45 sec so far
+Iteration 522: 410.58 sec so far
+Iteration 526: 415.92 sec so far
+Iteration 529: 421.45 sec so far
+Iteration 534: 426.58 sec so far
+Iteration 539: 432.17 sec so far
+Iteration 543: 438.07 sec so far
+Iteration 548: 443.26 sec so far
+Iteration 553: 448.91 sec so far
+Iteration 556: 453.95 sec so far
+Iteration 561: 459.40 sec so far
+Iteration 566: 465.32 sec so far
+Iteration 570: 471.55 sec so far
+Iteration 575: 477.15 sec so far
+Iteration 580: 483.17 sec so far
+Iteration 584: 489.99 sec so far
+Iteration 589: 495.32 sec so far
+Iteration 594: 501.35 sec so far
+Iteration 597: 506.41 sec so far
+Iteration 602: 511.99 sec so far
+Iteration 607: 517.92 sec so far
+Iteration 610: 523.07 sec so far
+Iteration 615: 528.56 sec so far
+Iteration 620: 534.59 sec so far
+Iteration 623: 539.69 sec so far
+Iteration 628: 545.22 sec so far
+Iteration 633: 551.29 sec so far
+Iteration 636: 556.40 sec so far
+Iteration 641: 561.97 sec so far
+Iteration 646: 568.01 sec so far
+Iteration 651: 574.25 sec so far
+Iteration 655: 580.00 sec so far
+Iteration 658: 585.71 sec so far
+Iteration 663: 590.87 sec so far
+Iteration 668: 596.75 sec so far
+Iteration 673: 602.77 sec so far
+Iteration 678: 611.73 sec so far
+Iteration 683: 617.49 sec so far
+Iteration 687: 622.58 sec so far
+Iteration 692: 628.80 sec so far
+Iteration 696: 633.81 sec so far
+Iteration 699: 640.10 sec so far
+Iteration 704: 645.29 sec so far
+Iteration 709: 650.92 sec so far
+Iteration 714: 656.82 sec so far
+Iteration 719: 662.83 sec so far
+Iteration 722: 668.58 sec so far
+Iteration 727: 673.63 sec so far
+Iteration 732: 679.16 sec so far
+Iteration 737: 685.10 sec so far
+Iteration 741: 690.66 sec so far
+Iteration 745: 696.53 sec so far
+Iteration 749: 702.63 sec so far
+Iteration 751: 707.73 sec so far
+Iteration 757: 713.20 sec so far
+Iteration 763: 719.21 sec so far
+Iteration 768: 724.51 sec so far
+Iteration 773: 729.85 sec so far
+Iteration 778: 738.40 sec so far
+Iteration 784: 743.79 sec so far
+Iteration 790: 749.44 sec so far
+Iteration 795: 754.50 sec so far
+Iteration 800: 760.50 sec so far
+Iteration 805: 766.22 sec so far
+Iteration 810: 772.06 sec so far
+Iteration 813: 778.24 sec so far
+Iteration 819: 783.66 sec so far
+Iteration 825: 789.50 sec so far
+Iteration 830: 794.78 sec so far
+Iteration 835: 800.22 sec so far
+Iteration 840: 805.78 sec so far
+Iteration 845: 811.41 sec so far
+Iteration 849: 818.98 sec so far
+Iteration 854: 824.00 sec so far
+Iteration 859: 829.34 sec so far
+Iteration 864: 834.95 sec so far
+Iteration 869: 840.72 sec so far
+Iteration 874: 846.88 sec so far
+Iteration 878: 851.89 sec so far
+Iteration 882: 856.92 sec so far
+Iteration 884: 862.98 sec so far
+Iteration 889: 868.10 sec so far
+Iteration 894: 873.62 sec so far
+Iteration 899: 879.53 sec so far
+Iteration 903: 884.93 sec so far
+Iteration 907: 890.58 sec so far
+Iteration 911: 896.44 sec so far
+Iteration 915: 902.21 sec so far
+Iteration 919: 911.41 sec so far
+Iteration 923: 917.60 sec so far
+Iteration 928: 923.82 sec so far
+Iteration 932: 929.16 sec so far
+Iteration 936: 934.60 sec so far
+Iteration 940: 940.07 sec so far
+Iteration 944: 945.42 sec so far
+Iteration 948: 950.74 sec so far
+Iteration 952: 959.34 sec so far
+Iteration 957: 965.26 sec so far
+Iteration 962: 971.55 sec so far
+Iteration 966: 976.76 sec so far
+Iteration 970: 982.10 sec so far
+Iteration 974: 987.54 sec so far
+Iteration 978: 993.06 sec so far
+Iteration 982: 1001.48 sec so far
+Iteration 987: 1007.66 sec so far
+Iteration 991: 1012.71 sec so far
+Iteration 995: 1018.22 sec so far
+Iteration 999: 1023.72 sec so far
+Iteration 1003: 1029.32 sec so far
+Iteration 1007: 1035.18 sec so far
+Iteration 1010: 1042.67 sec so far
+Iteration 1015: 1048.44 sec so far
+Iteration 1020: 1054.62 sec so far
+Iteration 1024: 1060.27 sec so far
+Iteration 1028: 1066.05 sec so far
+Iteration 1032: 1071.88 sec so far
+Iteration 1036: 1077.90 sec so far
+Iteration 1038: 1083.84 sec so far
+Iteration 1042: 1089.01 sec so far
+Iteration 1046: 1094.61 sec so far
+Iteration 1050: 1100.40 sec so far
+Iteration 1054: 1105.97 sec so far
+Iteration 1058: 1111.82 sec so far
+Iteration 1062: 1117.81 sec so far
+Iteration 1064: 1124.03 sec so far
+Iteration 1068: 1129.57 sec so far
+Iteration 1072: 1135.60 sec so far
+Iteration 1076: 1141.33 sec so far
+Iteration 1080: 1147.16 sec so far
+Iteration 1084: 1153.15 sec so far
+Iteration 1088: 1159.41 sec so far
+Iteration 1090: 1165.90 sec so far
+Iteration 1094: 1171.40 sec so far
+Iteration 1098: 1177.19 sec so far
+Iteration 1102: 1183.10 sec so far
+Iteration 1106: 1189.24 sec so far
+Iteration 1110: 1195.48 sec so far
+Iteration 1114: 1201.90 sec so far
+Iteration 1116: 1207.79 sec so far
+Iteration 1120: 1213.32 sec so far
+Iteration 1124: 1219.27 sec so far
+Iteration 1128: 1225.32 sec so far
+Iteration 1132: 1231.62 sec so far
+Iteration 1136: 1238.07 sec so far
+Iteration 1139: 1245.70 sec so far
+Iteration 1143: 1251.35 sec so far
+Iteration 1147: 1257.35 sec so far
+Iteration 1151: 1263.63 sec so far
+Iteration 1154: 1268.80 sec so far
+Iteration 1157: 1273.89 sec so far
+Iteration 1161: 1280.42 sec so far
+Iteration 1163: 1286.66 sec so far
+Iteration 1167: 1292.55 sec so far
+Iteration 1171: 1298.91 sec so far
+Iteration 1175: 1305.52 sec so far
+Iteration 1178: 1310.54 sec so far
+Iteration 1181: 1315.68 sec so far
+Iteration 1185: 1322.15 sec so far
+Iteration 1187: 1328.67 sec so far
+Iteration 1191: 1334.14 sec so far
+Iteration 1195: 1339.85 sec so far
+Iteration 1199: 1346.08 sec so far
+Iteration 1203: 1352.33 sec so far
+Iteration 1207: 1358.84 sec so far
+Iteration 1211: 1368.62 sec so far
+Iteration 1215: 1374.54 sec so far
+Iteration 1219: 1380.87 sec so far
+Iteration 1223: 1387.21 sec so far
+Iteration 1227: 1393.75 sec so far
+Iteration 1230: 1398.80 sec so far
+Iteration 1233: 1403.84 sec so far
+Iteration 1235: 1410.20 sec so far
+Iteration 1239: 1416.19 sec so far
+Iteration 1243: 1422.87 sec so far
+Iteration 1247: 1429.56 sec so far
+Iteration 1250: 1434.80 sec so far
+Iteration 1253: 1440.13 sec so far
+Iteration 1256: 1445.56 sec so far
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

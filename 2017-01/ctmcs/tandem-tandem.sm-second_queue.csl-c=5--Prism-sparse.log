@@ -1,0 +1,68 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;second_queue.csl;c=5;;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 18:04:05 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/tandem/tandem.sm ~/prism-examples/models/ctmcs/tandem/second_queue.csl -const c=5 -s -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/tandem/tandem.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/tandem/second_queue.csl"...
+
+1 property:
+(1) P=? [ sm=c U<=0.2 sm<c ]
+
+Type:        CTMC
+Modules:     serverC serverM 
+Variables:   sc ph sm 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ sm=c U<=0.2 sm<c ]
+Model constants: c=5
+
+Building model...
+Model constants: c=5
+
+Computing reachable states...
+
+Reachability (BFS): 17 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Time for model construction: 0.022 seconds.
+
+Type:        CTMC
+States:      66 (1 initial)
+Transitions: 189
+
+Rate matrix: 100 nodes (6 terminal), 189 minterms, vars: 7r/7c
+
+Computing probabilities...
+Engine: Sparse
+
+Number of non-absorbing states: 11 of 66 (16.7%)
+
+Building sparse matrix... [n=66, nnz=25, compact] [0.2 KB]
+Creating vector for diagonals... [dist=5, compact] [0.2 KB]
+Allocating iteration vectors... [3 x 0.5 KB]
+TOTAL: [1.9 KB]
+
+Uniformisation: q.t = 24.684000 x 0.200000 = 4.936800
+Fox-Glynn: left = 0, right = 21
+
+Starting iterations...
+
+Iterative method: 21 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Value in the initial state: 1.0
+
+Time for model checking: 0.004 seconds.
+
+Result: 1.0 (value in the initial state)
+
+Wall time: 2.04s
+User time: 1.62s
+System time: 0.12s
+Memory: 105424KB

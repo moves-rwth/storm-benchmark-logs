@@ -1,0 +1,110 @@
+~/prism-examples/models/;mdps;zeroconf_dl;zeroconf_dl.nm;deadline_min.pctl;K=1,N=1000,deadline=500,reset=false;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property Pmin=? [ !(l=4 & ip=2) U t>=deadline ]
+Starting to build model...
+Current number of states: 196,283; states/second: 39,256
+Current number of states: 394,427; states/second: 39,629
+Current number of states: 589,385; states/second: 38,991
+Current number of states: 781,703; states/second: 38,463
+Current number of states: 991,775; states/second: 42,014
+Current number of states: 1,163,560; states/second: 34,357
+Current number of states: 1,456,251; states/second: 58,538
+Current number of states: 1,676,064; states/second: 43,962
+Current number of states: 1,932,464; states/second: 51,279
+Current number of states: 2,207,112; states/second: 54,929
+Current number of states: 2,299,340; states/second: 18,445
+Current number of states: 2,517,545; states/second: 43,640
+Current number of states: 2,808,013; states/second: 58,093
+Current number of states: 3,093,779; states/second: 57,153
+Current number of states: 3,271,280; states/second: 35,500
+Current number of states: 3,479,527; states/second: 41,649
+Current number of states: 3,664,793; states/second: 37,053
+Current number of states: 3,918,337; states/second: 50,708
+Current number of states: 4,165,965; states/second: 49,525
+Current number of states: 4,388,772; states/second: 44,561
+Current number of states: 4,554,335; states/second: 33,112
+Current number of states: 4,554,335; states/second: 0
+Current number of states: 4,649,139; states/second: 18,960
+Current number of states: 4,868,809; states/second: 43,934
+Current number of states: 5,085,380; states/second: 43,314
+Current number of states: 5,295,561; states/second: 42,036
+Current number of states: 5,508,665; states/second: 42,620
+Current number of states: 5,717,602; states/second: 41,787
+Current number of states: 5,923,461; states/second: 41,172
+Current number of states: 6,130,843; states/second: 41,476
+Current number of states: 6,332,651; states/second: 40,361
+Current number of states: 6,534,686; states/second: 40,407
+Current number of states: 6,558,351; states/second: 4,733
+Current number of states: 6,558,351; states/second: 0
+Current number of states: 6,608,557; states/second: 10,041
+Current number of states: 6,825,720; states/second: 43,432
+Current number of states: 7,039,846; states/second: 42,825
+Current number of states: 7,155,868; states/second: 23,204
+Current number of states: 7,274,622; states/second: 23,750
+Current number of states: 7,474,221; states/second: 39,919
+Current number of states: 7,668,463; states/second: 38,848
+Current number of states: 7,862,304; states/second: 38,768
+Current number of states: 8,053,687; states/second: 38,276
+Current number of states: 8,237,330; states/second: 36,728
+Current number of states: 8,397,555; states/second: 32,044
+Current number of states: 8,578,605; states/second: 36,210
+Current number of states: 8,756,622; states/second: 35,603
+Current number of states: 8,933,192; states/second: 35,314
+Current number of states: 9,050,510; states/second: 23,463
+Current number of states: 9,050,510; states/second: 0
+Current number of states: 9,050,510; states/second: 0
+Current number of states: 9,050,510; states/second: 0
+Current number of states: 9,120,871; states/second: 14,072
+Current number of states: 9,305,808; states/second: 36,987
+Current number of states: 9,489,256; states/second: 36,689
+Current number of states: 9,671,207; states/second: 36,390
+Current number of states: 9,850,757; states/second: 35,910
+Current number of states: 10,029,730; states/second: 35,794
+Current number of states: 10,207,353; states/second: 35,524
+Current number of states: 10,384,730; states/second: 35,475
+Current number of states: 10,558,504; states/second: 34,755
+Current number of states: 10,732,875; states/second: 34,874
+Current number of states: 10,907,098; states/second: 34,844
+Current number of states: 11,079,588; states/second: 34,498
+Current number of states: 11,251,517; states/second: 34,385
+Current number of states: 11,421,018; states/second: 33,900
+Current number of states: 11,588,151; states/second: 33,426
+Current number of states: 11,753,879; states/second: 33,145
+Current number of states: 11,917,234; states/second: 32,670
+Current number of states: 12,078,645; states/second: 32,282
+Current number of states: 12,237,448; states/second: 31,760
+Current number of states: 12,392,841; states/second: 31,078
+Current number of states: 12,546,068; states/second: 30,645
+Current number of states: 12,696,620; states/second: 30,110
+Current number of states: 12,845,684; states/second: 29,812
+Current number of states: 12,993,104; states/second: 29,484
+Current number of states: 13,138,574; states/second: 29,094
+Current number of states: 13,153,711; states/second: 3,027
+Current number of states: 13,153,711; states/second: 0
+Current number of states: 13,153,711; states/second: 0
+Current number of states: 13,153,711; states/second: 0
+Current number of states: 13,153,711; states/second: 0
+Current number of states: 13,153,711; states/second: 0
+Current number of states: 13,153,711; states/second: 0
+Current number of states: 13,153,711; states/second: 0
+Current number of states: 13,195,249; states/second: 8,307
+Current number of states: 13,370,740; states/second: 35,098
+Current number of states: 13,534,934; states/second: 32,838
+Current number of states: 13,695,332; states/second: 32,079
+Current number of states: 13,854,465; states/second: 31,826
+Current number of states: 14,013,598; states/second: 31,826
+Current number of states: 14,172,395; states/second: 31,759
+Current number of states: 14,225,237; states/second: 10,568
+Current number of states: 14,277,610; states/second: 10,474
+Current number of states: 14,435,384; states/second: 31,554
+Building model done. 14,546,091 states. Time for model exploration: 478 seconds.
+Starting iteration...
+Done. Did 0 iterations in 190 seconds.
+Finished model checking. Time required: 757 seconds
+Pmin=? [ !(l=4 & ip=2) U t>=deadline ]: 0.0
+Wall time: 759.56s
+User time: 791.82s
+System time: 4.81s
+Memory: 5627252KB

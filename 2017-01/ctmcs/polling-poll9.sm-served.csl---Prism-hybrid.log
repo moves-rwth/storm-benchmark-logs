@@ -1,0 +1,65 @@
+~/prism-examples/models/;ctmcs;polling;poll9.sm;served.csl;;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 21:03:25 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/polling/poll9.sm ~/prism-examples/models/ctmcs/polling/served.csl -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/polling/poll9.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/polling/served.csl"...
+
+1 property:
+(1) R{"served"}=? [ C<=20 ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 station4 station5 station6 station7 station8 station9 
+Variables:   s a s1 s2 s3 s4 s5 s6 s7 s8 s9 
+
+---------------------------------------------------------------------
+
+Model checking: R{"served"}=? [ C<=20 ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 19 iterations in 0.00 seconds (average 0.000211, setup 0.00)
+
+Time for model construction: 0.058 seconds.
+
+Type:        CTMC
+States:      6912 (1 initial)
+Transitions: 36864
+
+Rate matrix: 765 nodes (4 terminal), 36864 minterms, vars: 14r/14c
+
+Computing rewards...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=14, nodes=789] [37.0 KB]
+Adding explicit sparse matrices... [levels=14, num=1, compact] [150.8 KB]
+Creating vector for diagonals... [dist=30, compact] [13.7 KB]
+Allocating iteration vectors... [3 x 54.0 KB]
+TOTAL: [363.5 KB]
+
+Uniformisation: q.t = 205.020000 x 20.000000 = 4100.400000
+Fox-Glynn: left = 3649, right = 4645
+
+Starting iterations...
+
+Iterative method: 4645 iterations in 2.10 seconds (average 0.000451, setup 0.00)
+
+Value in the initial state: 1.5748776119397456
+
+Time for model checking: 2.118 seconds.
+
+Result: 1.5748776119397456 (value in the initial state)
+
+Wall time: 3.48s
+User time: 3.81s
+System time: 0.10s
+Memory: 106332KB

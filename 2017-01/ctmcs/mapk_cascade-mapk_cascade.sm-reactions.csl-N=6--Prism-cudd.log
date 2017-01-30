@@ -1,0 +1,60 @@
+~/prism-examples/models/;ctmcs;mapk_cascade;mapk_cascade.sm;reactions.csl;N=6;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 09:47:15 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm ~/prism-examples/models/ctmcs/mapk_cascade/reactions.csl -const N=6 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/mapk_cascade/reactions.csl"...
+
+1 property:
+(1) R{"reactions"}=? [ C<=20 ]
+
+Type:        CTMC
+Modules:     E1 E2 KPTASE KKPTASE MAPK MAPKK MAPKKK 
+Variables:   e1 e2 kptase kkptase k k_kkpp kp kp_kkpp kp_ptase kpp kpp_ptase kk kk_kkkp kkp kkp_kkkp kkp_ptase kkpp kkpp_ptase kkk kkk_e1 kkkp kkkp_e2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"reactions"}=? [ C<=20 ]
+Model constants: N=6
+
+Building model...
+Model constants: N=6
+
+Computing reachable states...
+
+Reachability (BFS): 64 iterations in 30.62 seconds (average 0.478438, setup 0.00)
+
+Time for model construction: 31.774 seconds.
+
+Type:        CTMC
+States:      1373026 (1 initial)
+Transitions: 15015264
+
+Rate matrix: 285106 nodes (25 terminal), 15015264 minterms, vars: 58r/58c
+
+Computing rewards...
+Engine: MTBDD
+
+Computing diagonals MTBDD... [nodes=429128] [8381.4 Kb]
+Building iteration matrix MTBDD... [nodes=752920] [14705.5 Kb]
+
+Uniformisation: q.t = 2754.000000 x 20.000000 = 55080.000000
+Fox-Glynn: left = 53434, right = 57073
+
+Starting iterations...
+Iteration 1 (of 57073): 26.64 sec so far
+Iteration 2 (of 57073): 182.48 sec so far
+Iteration 3 (of 57073): 567.37 sec so far
+Iteration 4 (of 57073): 1485.20 sec so far
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

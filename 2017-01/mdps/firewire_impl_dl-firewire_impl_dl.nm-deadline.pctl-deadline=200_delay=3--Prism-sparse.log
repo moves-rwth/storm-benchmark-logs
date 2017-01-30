@@ -1,0 +1,70 @@
+~/prism-examples/models/;mdps;firewire_impl_dl;firewire_impl_dl.nm;deadline.pctl;deadline=200,delay=3;;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 12:45:08 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/firewire_impl_dl/firewire_impl_dl.nm ~/prism-examples/models/mdps/firewire_impl_dl/deadline.pctl -const 'deadline=200,delay=3' -s -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/firewire_impl_dl/firewire_impl_dl.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/firewire_impl_dl/deadline.pctl"...
+
+1 property:
+(1) Pmin=? [ F ((s1=8)&(s2=7))|((s1=7)&(s2=8)) ]
+
+Type:        MDP
+Modules:     wire12 node1 wire21 node2 timer 
+Variables:   w12 y1 y2 x1 s1 w21 z1 z2 x2 s2 t 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ F ((s1=8)&(s2=7))|((s1=7)&(s2=8)) ]
+Model constants: deadline=200,delay=3
+
+Building model...
+Model constants: deadline=200,delay=3
+
+Computing reachable states...
+
+Reachability (BFS): 221 iterations in 2.97 seconds (average 0.013448, setup 0.00)
+
+Time for model construction: 3.938 seconds.
+
+Type:        MDP
+States:      80980 (1 initial)
+Transitions: 113242
+Choices:     111036
+
+Transition matrix: 56827 nodes (3 terminal), 113242 minterms, vars: 64r/64c/15nd
+
+Prob0E: 179 iterations in 1.37 seconds (average 0.007665, setup 0.00)
+
+Prob1A: 3 iterations in 0.09 seconds (average 0.030667, setup 0.00)
+
+yes = 1312, no = 79659, maybe = 9
+
+Computing remaining probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=80980, nc=14, nnz=24, k=2] [79.4 KB]
+Creating vector for yes... [632.7 KB]
+Allocating iteration vectors... [2 x 632.7 KB]
+TOTAL: [1.9 MB]
+
+Starting iterations...
+
+Iterative method: 4 iterations in 0.01 seconds (average 0.001000, setup 0.00)
+
+Value in the initial state: 0.5
+
+Time for model checking: 1.524 seconds.
+
+Result: 0.5 (value in the initial state)
+
+Wall time: 6.86s
+User time: 7.17s
+System time: 0.23s
+Memory: 143176KB

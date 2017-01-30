@@ -1,0 +1,33 @@
+~/prism-examples/models/;mdps;consensus;coin6.nm;c2.pctl;K=4;maxiter=100000;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property Pmin=? [ F "finished"&"all_coins_equal_1" ]
+Starting to build model...
+Current number of states: 87,381; states/second: 17,476
+Current number of states: 174,762; states/second: 17,476
+Current number of states: 266,872; states/second: 18,421
+Current number of states: 405,887; states/second: 27,803
+Current number of states: 439,375; states/second: 6,697
+Current number of states: 604,286; states/second: 32,982
+Current number of states: 743,068; states/second: 27,756
+Current number of states: 885,428; states/second: 28,472
+Current number of states: 885,428; states/second: 0
+Current number of states: 965,762; states/second: 16,066
+Current number of states: 1,129,238; states/second: 32,695
+Current number of states: 1,294,673; states/second: 33,087
+Current number of states: 1,485,467; states/second: 38,158
+Current number of states: 1,633,277; states/second: 29,562
+Current number of states: 1,848,844; states/second: 43,113
+Current number of states: 2,027,790; states/second: 35,789
+Current number of states: 2,027,790; states/second: 0
+Current number of states: 2,027,790; states/second: 0
+Current number of states: 2,027,790; states/second: 0
+Current number of states: 2,205,216; states/second: 35,485
+Building model done. 2,376,448 states. Time for model exploration: 103 seconds.
+Starting iteration...
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

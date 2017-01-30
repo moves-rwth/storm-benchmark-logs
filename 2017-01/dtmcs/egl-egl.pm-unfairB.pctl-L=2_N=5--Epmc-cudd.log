@@ -1,0 +1,21 @@
+~/prism-examples/models/;dtmcs;egl;egl.pm;unfairB.pctl;L=2,N=5;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P=? [ F !"knowB" & "knowA" ]
+Building DD model...
+Building DD model finished in 14 seconds
+Exploring model state space...
+Finished exploring the state space. Time required: 0 seconds
+Converting BDD graph to explicit...
+Converting BDD graph to explicit done in 0 seconds
+Starting iteration...
+Done. Did 0 iterations in 0 seconds.
+Finished model checking. Time required: 782 seconds
+Time spent in DD routines converting DD<->MDD: 6 seconds
+Total time spent in DD routines: 783 seconds
+P=? [ F !"knowB" & "knowA" ]: 0.484375
+Wall time: 786.28s
+User time: 802.10s
+System time: 2.49s
+Memory: 1623420KB

@@ -1,0 +1,13 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;qos3.csl;N=16;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P=? [ "minimum" U<=20 "premium" ]
+Starting to build model...
+Building model done. 10,132 states. Time for model exploration: 0 seconds.
+Finished model checking. Time required: 0 seconds
+P=? [ "minimum" U<=20 "premium" ]: 0.9999999999999998
+Wall time: 2.85s
+User time: 10.92s
+System time: 0.80s
+Memory: 272108KB

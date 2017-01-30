@@ -1,0 +1,45 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;qos2.csl;N=512;;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/ctmcs/cluster/cluster.sm --prop ~/prism-examples/models/ctmcs/cluster/qos2.csl -const N=512 --exact --minmax:method pi -pc 
+Current working directory: ~/ma_scripts/scripts
+
+ WARN (Program.cpp:179): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 309.292s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	9465876
+Transitions: 	46235680
+Reward Models:  none
+Labels: 	3
+   * deadlock -> 0 state(s)
+   * init -> 1 state(s)
+   * minimum -> 2217165 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property P=? [true U[20, 20] !("minimum")] ...
+ERROR (SparseCtmcCslHelper.cpp:196): Computing bounded until probabilities is unsupported for this value type.
+ERROR (storm.cpp:39): An exception caused Storm to terminate. The message of the exception is: Computing bounded until probabilities is unsupported for this value type.
+Command exited with non-zero status 1
+Wall time: 339.69s
+User time: 334.61s
+System time: 4.50s
+Memory: 3926432KB
+External error: 1

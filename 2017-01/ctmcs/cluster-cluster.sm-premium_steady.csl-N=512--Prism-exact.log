@@ -1,0 +1,33 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;premium_steady.csl;N=512;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 01:12:09 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/cluster/cluster.sm ~/prism-examples/models/ctmcs/cluster/premium_steady.csl -const N=512 -exact -politer
+
+Parsing model file "~/prism-examples/models/ctmcs/cluster/cluster.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/cluster/premium_steady.csl"...
+
+1 property:
+(1) S=? [ "premium" ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: S=? [ "premium" ]
+Model constants: N=512
+
+Building model...
+
+Computing reachable states...External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

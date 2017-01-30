@@ -1,0 +1,48 @@
+~/prism-examples/models/;ctmcs;kanban;kanban.sm;throughput.csl;t=6;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 08:00:39 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/kanban/kanban.sm ~/prism-examples/models/ctmcs/kanban/throughput.csl -const t=6 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/kanban/kanban.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/kanban/throughput.csl"...
+
+1 property:
+(1) R{"throughput"}=? [ S ]
+
+Type:        CTMC
+Modules:     k1 k2 k3 k4 
+Variables:   w1 x1 y1 z1 w2 x2 y2 z2 w3 x3 y3 z3 w4 x4 y4 z4 
+
+---------------------------------------------------------------------
+
+Model checking: R{"throughput"}=? [ S ]
+Model constants: t=6
+
+Building model...
+Model constants: t=6
+
+Computing reachable states... 72648 175382 259277 349024 434529 527389 602021 665772 755790 845062 919104 1001593 1086671 1152612 1235248 1320057 1377795 1461372 1523565 1600805 1607357 1681495 1746841 1802490 1873481 1934026 2010963 2063273 2133341 2198210 2267573 2322096 2396470 2450655 2516103 2553636 2623753 2677852 2740440 2799064 2870083 2926136 2987945 3036026 3101839 3149767 3210841 3270575 3318732 3384902 3435669 3497353 3538995 3601112 3650739 3717011 3763607 3820233 3869603 3929937 3934948 4001481 4056944 4112886 4160836 4219890 4274586 4338426 4387732 4441427 4488480 4546528 4600206 4663314 4710580 4765111 4807838 4865055 4907276 4969416 5015226 5068899 5108875 5159145 5207067 5260950 5313317 5370205 5371181 5419549 5462209 5497208 5529291 5558565 5583417 5604607 5624380 5641669 5656285 5669749 5682258 5692616 5701017 5708555 5715297 5720753 5725406 5729427 5732950 5736220 5738965 5741362 5743642 5745491 5747112 5748464 5749664 5750788 5751741 5752572 5753316 5753999 5754640 5755188 5755636 5756002 5756338 5756626 5756855 5757060 5757239 5757411 5757550 5757680 5757792 5757881Exception in thread "main" java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at parser.ast.ExpressionBinaryOp.evaluate(ExpressionBinaryOp.java:185)
+	at parser.ast.Expression.evaluate(Expression.java:200)
+	at parser.ast.Update.update(Update.java:207)
+	at simulator.ChoiceListFlexi.computeTarget(ChoiceListFlexi.java:219)
+	at simulator.SimulatorEngine.computeTransitionTarget(SimulatorEngine.java:1082)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:230)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:110)
+	at prism.Prism.doBuildModel(Prism.java:1889)
+	at prism.Prism.buildModelIfRequired(Prism.java:1850)
+	at prism.Prism.modelCheck(Prism.java:2739)
+	at prism.PrismCL.run(PrismCL.java:333)
+	at prism.PrismCL.main(PrismCL.java:2336)
+Command exited with non-zero status 1
+Wall time: 1721.34s
+User time: 11423.31s
+System time: 46.54s
+Memory: 8465596KB
+External error: 1

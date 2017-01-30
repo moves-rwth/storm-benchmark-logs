@@ -1,0 +1,72 @@
+~/prism-examples/models/;mdps;consensus;coin4.nm;steps_max.pctl;K=2;maxiter=100000;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 07:38:26 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/consensus/coin4.nm ~/prism-examples/models/mdps/consensus/steps_max.pctl -const K=2 -s -cuddmaxmem 4096m -maxiters 100000
+
+Parsing model file "~/prism-examples/models/mdps/consensus/coin4.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/consensus/steps_max.pctl"...
+
+1 property:
+(1) R{"steps"}max=? [ F "finished" ]
+
+Type:        MDP
+Modules:     process1 process2 process3 process4 
+Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4 
+
+---------------------------------------------------------------------
+
+Model checking: R{"steps"}max=? [ F "finished" ]
+Model constants: K=2
+
+Building model...
+Model constants: K=2
+
+Computing reachable states...
+
+Reachability (BFS): 99 iterations in 0.03 seconds (average 0.000323, setup 0.00)
+
+Time for model construction: 0.08 seconds.
+
+Type:        MDP
+States:      22656 (1 initial)
+Transitions: 75232
+Choices:     60544
+
+Transition matrix: 2288 nodes (3 terminal), 75232 minterms, vars: 17r/17c/4nd
+
+Prob0E: 42 iterations in 0.11 seconds (average 0.002571, setup 0.00)
+
+Prob1A: 1 iterations in 0.00 seconds (average 0.004000, setup 0.00)
+
+goal = 64, inf = 0, maybe = 22592
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=22656, nc=60480, nnz=75168, k=4] [1.2 MB]
+Building sparse matrix (transition rewards)... [n=22656, nc=60480, nnz=0, k=4] [324.8 KB]
+Creating vector for state rewards... [177.0 KB]
+Creating vector for inf... [177.0 KB]
+Allocating iteration vectors... [2 x 177.0 KB]
+TOTAL: [2.2 MB]
+
+Starting iterations...
+
+Iterative method: 2400 iterations in 3.80 seconds (average 0.001568, setup 0.04)
+
+Value in the initial state: 362.8955030688992
+
+Time for model checking: 3.932 seconds.
+
+Result: 362.8955030688992 (value in the initial state)
+
+Wall time: 5.25s
+User time: 5.60s
+System time: 0.09s
+Memory: 110052KB

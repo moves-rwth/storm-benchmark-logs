@@ -1,0 +1,121 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;qos2.csl;N=256;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 23:31:53 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/cluster/cluster.sm ~/prism-examples/models/ctmcs/cluster/qos2.csl -const N=256 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/cluster/cluster.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/cluster/qos2.csl"...
+
+1 property:
+(1) P=? [ F[20,20] !"minimum" ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F[20,20] !"minimum" ]
+Model constants: N=256
+
+Building model...
+Model constants: N=256
+
+Computing reachable states...
+
+Reachability (BFS): 517 iterations in 0.72 seconds (average 0.001400, setup 0.00)
+
+Time for model construction: 1.22 seconds.
+
+Type:        CTMC
+States:      2373652 (1 initial)
+Transitions: 11583520
+
+Rate matrix: 37272 nodes (262 terminal), 11583520 minterms, vars: 27r/27c
+
+Computing probabilities...
+Engine: MTBDD
+
+Number of non-absorbing states: 2373652 of 2373652 (100.0%)
+
+Computing diagonals MTBDD... [nodes=146291] [2857.2 Kb]
+Building iteration matrix MTBDD... [nodes=469282] [9165.7 Kb]
+
+Uniformisation: q.t = 52.040400 x 20.000000 = 1040.808000
+Fox-Glynn: left = 811, right = 1316
+
+Starting iterations...
+Iteration 4 (of 1316): 7.12 sec so far
+Iteration 6 (of 1316): 14.90 sec so far
+Iteration 8 (of 1316): 25.51 sec so far
+Iteration 9 (of 1316): 32.52 sec so far
+Iteration 10 (of 1316): 40.73 sec so far
+Iteration 11 (of 1316): 51.59 sec so far
+Iteration 12 (of 1316): 63.98 sec so far
+Iteration 13 (of 1316): 78.05 sec so far
+Iteration 14 (of 1316): 94.00 sec so far
+Iteration 15 (of 1316): 111.94 sec so far
+Iteration 16 (of 1316): 127.49 sec so far
+Iteration 17 (of 1316): 144.53 sec so far
+Iteration 18 (of 1316): 162.02 sec so far
+Iteration 19 (of 1316): 180.92 sec so far
+Iteration 20 (of 1316): 200.57 sec so far
+Iteration 21 (of 1316): 220.37 sec so far
+Iteration 22 (of 1316): 240.70 sec so far
+Iteration 23 (of 1316): 261.48 sec so far
+Iteration 24 (of 1316): 284.03 sec so far
+Iteration 25 (of 1316): 306.25 sec so far
+Iteration 26 (of 1316): 332.68 sec so far
+Iteration 27 (of 1316): 359.68 sec so far
+Iteration 28 (of 1316): 385.12 sec so far
+Iteration 29 (of 1316): 408.20 sec so far
+Iteration 30 (of 1316): 436.69 sec so far
+Iteration 31 (of 1316): 462.44 sec so far
+Iteration 32 (of 1316): 487.58 sec so far
+Iteration 33 (of 1316): 516.20 sec so far
+Iteration 34 (of 1316): 543.81 sec so far
+Iteration 35 (of 1316): 570.70 sec so far
+Iteration 36 (of 1316): 597.62 sec so far
+Iteration 37 (of 1316): 625.34 sec so far
+Iteration 38 (of 1316): 651.54 sec so far
+Iteration 39 (of 1316): 688.11 sec so far
+Iteration 40 (of 1316): 724.64 sec so far
+Iteration 41 (of 1316): 754.17 sec so far
+Iteration 42 (of 1316): 783.56 sec so far
+Iteration 43 (of 1316): 813.14 sec so far
+Iteration 44 (of 1316): 844.00 sec so far
+Iteration 45 (of 1316): 875.50 sec so far
+Iteration 46 (of 1316): 904.23 sec so far
+Iteration 47 (of 1316): 934.48 sec so far
+Iteration 48 (of 1316): 972.86 sec so far
+Iteration 49 (of 1316): 1009.36 sec so far
+Iteration 50 (of 1316): 1048.51 sec so far
+Iteration 51 (of 1316): 1086.49 sec so far
+Iteration 52 (of 1316): 1126.63 sec so far
+Iteration 53 (of 1316): 1163.44 sec so far
+Iteration 54 (of 1316): 1202.30 sec so far
+Iteration 55 (of 1316): 1239.66 sec so far
+Iteration 56 (of 1316): 1280.08 sec so far
+Iteration 57 (of 1316): 1320.59 sec so far
+Iteration 58 (of 1316): 1361.47 sec so far
+Iteration 59 (of 1316): 1405.58 sec so far
+Iteration 60 (of 1316): 1446.95 sec so far
+Iteration 61 (of 1316): 1488.49 sec so far
+Iteration 62 (of 1316): 1528.88 sec so far
+Iteration 63 (of 1316): 1566.71 sec so far
+Iteration 64 (of 1316): 1607.45 sec so far
+Iteration 65 (of 1316): 1650.40 sec so far
+Iteration 66 (of 1316): 1691.52 sec so far
+Iteration 67 (of 1316): 1735.76 sec so far
+Iteration 68 (of 1316): 1780.46 sec so far
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

@@ -1,0 +1,98 @@
+~/prism-examples/models/;mdps;wlan;wlan5.nm;cost_min.pctl;COL=0;;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 16:09:52 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/wlan/wlan5.nm ~/prism-examples/models/mdps/wlan/cost_min.pctl -const COL=0 -s -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/wlan/wlan5.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/wlan/cost_min.pctl"...
+
+1 property:
+(1) R{"cost"}min=? [ F s1=12&s2=12 ]
+
+Type:        MDP
+Modules:     medium station1 station2 
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"cost"}min=? [ F s1=12&s2=12 ]
+Model constants: COL=0
+
+Building model...
+Model constants: COL=0
+
+Computing reachable states...
+
+Reachability (BFS): 170 iterations in 0.54 seconds (average 0.003176, setup 0.00)
+
+Time for model construction: 0.768 seconds.
+
+Type:        MDP
+States:      1295218 (1 initial)
+Transitions: 2929960
+Choices:     1646074
+
+Transition matrix: 17250 nodes (7 terminal), 2929960 minterms, vars: 45r/45c/7nd
+
+Prob0A: 1565 iterations in 34.11 seconds (average 0.021797, setup 0.00)
+
+Prob1E: 1566 iterations in 35.02 seconds (average 0.022363, setup 0.00)
+
+Warning: PRISM hasn't checked for zero-reward loops.
+Your minimum rewards may be too low...
+
+goal = 1, inf = 0, maybe = 1295217
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=1295218, nc=1646073, nnz=2929959, k=3] [44.8 MB]
+Building sparse matrix (transition rewards)... [n=1295218, nc=1646073, nnz=328891, k=3] [15.0 MB]
+Creating vector for state rewards... [9.9 MB]
+Creating vector for inf... [9.9 MB]
+Allocating iteration vectors... [2 x 9.9 MB]
+TOTAL: [99.3 MB]
+
+Starting iterations...
+Iteration 83: max relative diff=0.517857, 5.05 sec so far
+Iteration 166: max relative diff=0.345238, 10.08 sec so far
+Iteration 249: max relative diff=0.261261, 15.12 sec so far
+Iteration 332: max relative diff=0.208633, 20.16 sec so far
+Iteration 415: max relative diff=0.173653, 25.19 sec so far
+Iteration 498: max relative diff=0.149485, 30.22 sec so far
+Iteration 581: max relative diff=0.130631, 35.26 sec so far
+Iteration 664: max relative diff=0.116000, 40.30 sec so far
+Iteration 747: max relative diff=0.104693, 45.34 sec so far
+Iteration 830: max relative diff=0.095082, 50.37 sec so far
+Iteration 913: max relative diff=0.087087, 55.40 sec so far
+Iteration 996: max relative diff=0.080556, 60.44 sec so far
+Iteration 1079: max relative diff=0.074742, 65.48 sec so far
+Iteration 1162: max relative diff=0.069712, 70.52 sec so far
+Iteration 1245: max relative diff=0.065463, 75.55 sec so far
+Iteration 1327: max relative diff=0.061571, 80.56 sec so far
+Iteration 1410: max relative diff=0.058233, 85.60 sec so far
+Iteration 1493: max relative diff=0.055133, 90.64 sec so far
+Iteration 1576: max relative diff=0.000045, 95.68 sec so far
+
+Iterative method: 1580 iterations in 99.34 seconds (average 0.060709, setup 3.42)
+
+Value in the initial state: 7625.0
+
+Time for model checking: 168.708 seconds.
+
+Result: 7625.0 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 170.92s
+User time: 171.28s
+System time: 0.29s
+Memory: 259784KB

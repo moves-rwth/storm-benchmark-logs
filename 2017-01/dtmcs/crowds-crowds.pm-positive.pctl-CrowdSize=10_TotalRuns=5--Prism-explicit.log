@@ -1,0 +1,68 @@
+~/prism-examples/models/;dtmcs;crowds;crowds.pm;positive.pctl;CrowdSize=10,TotalRuns=5;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 01:17:56 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/crowds/crowds.pm ~/prism-examples/models/dtmcs/crowds/positive.pctl -const 'CrowdSize=10,TotalRuns=5' -ex
+
+Parsing model file "~/prism-examples/models/dtmcs/crowds/crowds.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/crowds/positive.pctl"...
+
+1 property:
+(1) P=? [ F observe0>1 ]
+
+Type:        DTMC
+Modules:     crowds 
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F observe0>1 ]
+Model constants: TotalRuns=5,CrowdSize=10
+
+Building model...
+Model constants: TotalRuns=5,CrowdSize=10
+
+Computing reachable states... 111294 states
+Reachable states exploration and model construction done in 2.174 secs.
+Sorting reachable states list...
+
+Time for model construction: 2.621 seconds.
+
+Warning: Deadlocks detected and fixed in 3003 states
+
+Type:        DTMC
+States:      111294 (1 initial)
+Transitions: 261444
+
+Warning: Switching to linear equation solution method "Gauss-Seidel"
+
+Starting probabilistic reachability...
+Calculating predecessor relation for discrete-time Markov chain...  done (0.21 seconds)
+Starting Prob0...
+Prob0 took 0.108 seconds.
+Starting Prob1...
+Prob1 took 0.16 seconds.
+target=7068, yes=7354, no=78837, maybe=25103
+Starting Gauss-Seidel...
+Gauss-Seidel took 70 iterations and 1.037 seconds.
+Probabilistic reachability took 1.541 seconds.
+
+Value in the initial state: 0.10478658026161433
+
+Time for model checking: 1.664 seconds.
+
+Result: 0.10478658026161433 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There were 2 warnings during computation.
+
+Wall time: 5.64s
+User time: 7.83s
+System time: 0.46s
+Memory: 632296KB

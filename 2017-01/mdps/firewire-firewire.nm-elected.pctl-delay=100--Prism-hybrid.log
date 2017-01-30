@@ -1,0 +1,68 @@
+~/prism-examples/models/;mdps;firewire;firewire.nm;elected.pctl;delay=100;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 19:02:04 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/firewire/firewire.nm ~/prism-examples/models/mdps/firewire/elected.pctl -const delay=100 -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/firewire/firewire.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/firewire/elected.pctl"...
+
+1 property:
+(1) P>=1 [ F "done" ]
+
+Type:        MDP
+Modules:     wire12 node1 wire21 node2 
+Variables:   w12 y1 y2 x1 s1 w21 z1 z2 x2 s2 
+
+---------------------------------------------------------------------
+
+Model checking: P>=1 [ F "done" ]
+Model constants: delay=100
+
+Building model...
+Model constants: delay=100
+
+Computing reachable states...
+
+Reachability (BFS): 267 iterations in 35.62 seconds (average 0.133423, setup 0.00)
+
+Time for model construction: 45.989 seconds.
+
+Warning: Deadlocks detected and fixed in 9104 states
+
+Type:        MDP
+States:      3874664 (1 initial)
+Transitions: 9063660
+Choices:     9041760
+
+Transition matrix: 478053 nodes (3 terminal), 9063660 minterms, vars: 60r/60c/14nd
+
+Probability bound in formula is 0/1 so not computing exact probabilities...
+
+Prob0E: 273 iterations in 40.63 seconds (average 0.148821, setup 0.00)
+
+Prob1A: 2 iterations in 1.26 seconds (average 0.628000, setup 0.00)
+
+yes = 493928, no = 3380634, maybe = 102
+
+Number of states satisfying P>=1 [ F "done" ]: 493928
+
+Property satisfied in 0 of 1 initial states.
+
+Time for model checking: 42.384 seconds.
+
+Result: false (property not satisfied in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 90.41s
+User time: 90.56s
+System time: 0.44s
+Memory: 454312KB

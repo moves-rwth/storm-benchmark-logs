@@ -1,0 +1,61 @@
+~/prism-examples/models/;dtmcs;bluetooth;bluetooth.pm;time.pctl;mrec=1;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 17:26:34 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/bluetooth/bluetooth.pm ~/prism-examples/models/dtmcs/bluetooth/time.pctl -const mrec=1 -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/bluetooth/bluetooth.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/bluetooth/time.pctl"...
+
+1 property:
+(1) R=? [ F "complete" ]
+
+Type:        DTMC
+Modules:     receiver1 frequency1 sender_frequency replies 
+Variables:   y1 receiver freq1 train1 z1 f1 t1 send freq train c rep rec 
+
+---------------------------------------------------------------------
+
+Model checking: R=? [ F "complete" ]
+Model constants: mrec=1
+
+Building model...
+Model constants: mrec=1
+
+Computing reachable states...
+
+Reachability (BFS): 50 iterations in 0.31 seconds (average 0.006160, setup 0.00)
+
+Time for model construction: 29.369 seconds.
+
+Type:        DTMC
+States:      3411945339 (536870912 initial)
+Transitions: 5035263739
+
+Transition matrix: 14727 nodes (4 terminal), 5035263739 minterms, vars: 52r/52c
+
+Prob0: 49 iterations in 0.52 seconds (average 0.010694, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.004000, setup 0.00)
+
+goal = 1636000575, inf = 0, maybe = 1775944764
+
+Computing remaining rewards...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=52, nodes=28397] [1.3 MB]
+Adding explicit sparse matrices... [levels=10, num=720, compact] [415.6 KB]
+Creating vector for diagonals... 
+Error: Out of memory.
+
+Warning: CUDD reports 28 non-zero references.
+
+Wall time: 31.66s
+User time: 32.15s
+System time: 0.16s
+Memory: 130612KB

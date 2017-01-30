@@ -1,0 +1,42 @@
+~/prism-examples/models/;ctmcs;kanban;kanban.sm;throughput.csl;t=4;;Storm-sparse
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/ctmcs/kanban/kanban.sm --prop ~/prism-examples/models/ctmcs/kanban/throughput.csl -const t=4 -e sparse -pc 
+Current working directory: ~/ma_scripts/scripts
+
+ WARN (Program.cpp:179): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 13.432s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	454475
+Transitions: 	3979850
+Reward Models:  throughput
+Labels: 	2
+   * deadlock -> 0 state(s)
+   * init -> 1 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"throughput"}=? [LRA] ...
+Result (initial states): 0.276294463
+Time for model checking: 9.360s.
+Wall time: 22.91s
+User time: 21.60s
+System time: 1.27s
+Memory: 606956KB

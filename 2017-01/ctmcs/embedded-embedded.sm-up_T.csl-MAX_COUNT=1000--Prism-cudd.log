@@ -1,0 +1,371 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;up_T.csl;MAX_COUNT=1000;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 07:10:07 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/up_T.csl -const MAX_COUNT=1000 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/up_T.csl"...
+
+1 property:
+(1) R{"up"}=? [ C<=72000 ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: R{"up"}=? [ C<=72000 ]
+Model constants: MAX_COUNT=1000
+
+Building model...
+Model constants: MAX_COUNT=1000
+
+Computing reachable states...
+
+Reachability (BFS): 1013 iterations in 1.29 seconds (average 0.001271, setup 0.00)
+
+Time for model construction: 1.595 seconds.
+
+Type:        CTMC
+States:      846788 (1 initial)
+Transitions: 3574505
+
+Rate matrix: 4199 nodes (9 terminal), 3574505 minterms, vars: 22r/22c
+
+Computing rewards...
+Engine: MTBDD
+
+Computing diagonals MTBDD... [nodes=1573] [30.7 Kb]
+Building iteration matrix MTBDD... [nodes=11994] [234.3 Kb]
+
+Uniformisation: q.t = 0.085002 x 72000.000000 = 6120.120320
+Fox-Glynn: left = 5570, right = 6786
+
+Starting iterations...
+Iteration 94 (of 6786): 5.00 sec so far
+Iteration 139 (of 6786): 10.07 sec so far
+Iteration 174 (of 6786): 15.19 sec so far
+Iteration 206 (of 6786): 20.24 sec so far
+Iteration 235 (of 6786): 25.30 sec so far
+Iteration 262 (of 6786): 30.38 sec so far
+Iteration 286 (of 6786): 35.48 sec so far
+Iteration 309 (of 6786): 40.66 sec so far
+Iteration 330 (of 6786): 45.77 sec so far
+Iteration 350 (of 6786): 50.90 sec so far
+Iteration 369 (of 6786): 56.36 sec so far
+Iteration 389 (of 6786): 61.58 sec so far
+Iteration 407 (of 6786): 66.92 sec so far
+Iteration 425 (of 6786): 72.03 sec so far
+Iteration 442 (of 6786): 77.04 sec so far
+Iteration 460 (of 6786): 82.22 sec so far
+Iteration 477 (of 6786): 87.66 sec so far
+Iteration 494 (of 6786): 92.75 sec so far
+Iteration 510 (of 6786): 97.97 sec so far
+Iteration 527 (of 6786): 103.13 sec so far
+Iteration 543 (of 6786): 108.45 sec so far
+Iteration 558 (of 6786): 113.75 sec so far
+Iteration 571 (of 6786): 118.84 sec so far
+Iteration 585 (of 6786): 124.12 sec so far
+Iteration 597 (of 6786): 129.59 sec so far
+Iteration 611 (of 6786): 134.68 sec so far
+Iteration 623 (of 6786): 139.79 sec so far
+Iteration 635 (of 6786): 145.30 sec so far
+Iteration 646 (of 6786): 150.47 sec so far
+Iteration 659 (of 6786): 155.72 sec so far
+Iteration 671 (of 6786): 161.19 sec so far
+Iteration 681 (of 6786): 166.39 sec so far
+Iteration 692 (of 6786): 171.63 sec so far
+Iteration 703 (of 6786): 177.36 sec so far
+Iteration 715 (of 6786): 182.43 sec so far
+Iteration 726 (of 6786): 187.54 sec so far
+Iteration 737 (of 6786): 192.95 sec so far
+Iteration 747 (of 6786): 198.35 sec so far
+Iteration 757 (of 6786): 203.61 sec so far
+Iteration 767 (of 6786): 209.07 sec so far
+Iteration 778 (of 6786): 214.20 sec so far
+Iteration 789 (of 6786): 219.58 sec so far
+Iteration 799 (of 6786): 225.18 sec so far
+Iteration 809 (of 6786): 230.88 sec so far
+Iteration 819 (of 6786): 236.63 sec so far
+Iteration 829 (of 6786): 241.65 sec so far
+Iteration 839 (of 6786): 246.72 sec so far
+Iteration 849 (of 6786): 251.98 sec so far
+Iteration 858 (of 6786): 256.98 sec so far
+Iteration 868 (of 6786): 262.55 sec so far
+Iteration 877 (of 6786): 267.74 sec so far
+Iteration 886 (of 6786): 273.11 sec so far
+Iteration 895 (of 6786): 278.63 sec so far
+Iteration 903 (of 6786): 283.78 sec so far
+Iteration 912 (of 6786): 289.17 sec so far
+Iteration 921 (of 6786): 294.68 sec so far
+Iteration 929 (of 6786): 299.69 sec so far
+Iteration 938 (of 6786): 305.06 sec so far
+Iteration 947 (of 6786): 310.93 sec so far
+Iteration 956 (of 6786): 316.26 sec so far
+Iteration 964 (of 6786): 321.63 sec so far
+Iteration 973 (of 6786): 326.74 sec so far
+Iteration 982 (of 6786): 331.77 sec so far
+Iteration 991 (of 6786): 337.10 sec so far
+Iteration 1001 (of 6786): 342.48 sec so far
+Iteration 1010 (of 6786): 347.80 sec so far
+Iteration 1019 (of 6786): 353.17 sec so far
+Iteration 1028 (of 6786): 358.46 sec so far
+Iteration 1037 (of 6786): 363.80 sec so far
+Iteration 1046 (of 6786): 369.24 sec so far
+Iteration 1055 (of 6786): 374.54 sec so far
+Iteration 1065 (of 6786): 379.91 sec so far
+Iteration 1074 (of 6786): 385.06 sec so far
+Iteration 1083 (of 6786): 390.32 sec so far
+Iteration 1092 (of 6786): 395.66 sec so far
+Iteration 1101 (of 6786): 401.06 sec so far
+Iteration 1110 (of 6786): 407.06 sec so far
+Iteration 1118 (of 6786): 412.45 sec so far
+Iteration 1126 (of 6786): 418.03 sec so far
+Iteration 1134 (of 6786): 423.46 sec so far
+Iteration 1142 (of 6786): 428.77 sec so far
+Iteration 1149 (of 6786): 433.88 sec so far
+Iteration 1157 (of 6786): 439.31 sec so far
+Iteration 1165 (of 6786): 444.56 sec so far
+Iteration 1173 (of 6786): 449.76 sec so far
+Iteration 1181 (of 6786): 454.84 sec so far
+Iteration 1189 (of 6786): 460.00 sec so far
+Iteration 1198 (of 6786): 465.57 sec so far
+Iteration 1206 (of 6786): 471.01 sec so far
+Iteration 1214 (of 6786): 476.55 sec so far
+Iteration 1221 (of 6786): 481.60 sec so far
+Iteration 1228 (of 6786): 486.67 sec so far
+Iteration 1236 (of 6786): 491.96 sec so far
+Iteration 1243 (of 6786): 497.27 sec so far
+Iteration 1250 (of 6786): 503.32 sec so far
+Iteration 1257 (of 6786): 508.53 sec so far
+Iteration 1262 (of 6786): 513.73 sec so far
+Iteration 1270 (of 6786): 519.40 sec so far
+Iteration 1276 (of 6786): 524.94 sec so far
+Iteration 1282 (of 6786): 530.80 sec so far
+Iteration 1289 (of 6786): 536.56 sec so far
+Iteration 1294 (of 6786): 542.36 sec so far
+Iteration 1301 (of 6786): 548.04 sec so far
+Iteration 1307 (of 6786): 553.65 sec so far
+Iteration 1312 (of 6786): 558.83 sec so far
+Iteration 1319 (of 6786): 564.72 sec so far
+Iteration 1324 (of 6786): 571.24 sec so far
+Iteration 1331 (of 6786): 576.82 sec so far
+Iteration 1335 (of 6786): 581.90 sec so far
+Iteration 1341 (of 6786): 586.98 sec so far
+Iteration 1346 (of 6786): 592.97 sec so far
+Iteration 1352 (of 6786): 598.25 sec so far
+Iteration 1357 (of 6786): 603.82 sec so far
+Iteration 1364 (of 6786): 609.66 sec so far
+Iteration 1369 (of 6786): 616.72 sec so far
+Iteration 1377 (of 6786): 622.75 sec so far
+Iteration 1380 (of 6786): 627.80 sec so far
+Iteration 1388 (of 6786): 633.79 sec so far
+Iteration 1392 (of 6786): 639.12 sec so far
+Iteration 1399 (of 6786): 645.14 sec so far
+Iteration 1403 (of 6786): 650.38 sec so far
+Iteration 1409 (of 6786): 655.61 sec so far
+Iteration 1413 (of 6786): 662.58 sec so far
+Iteration 1420 (of 6786): 667.92 sec so far
+Iteration 1424 (of 6786): 674.16 sec so far
+Iteration 1431 (of 6786): 679.79 sec so far
+Iteration 1435 (of 6786): 685.65 sec so far
+Iteration 1441 (of 6786): 690.67 sec so far
+Iteration 1445 (of 6786): 695.91 sec so far
+Iteration 1449 (of 6786): 700.91 sec so far
+Iteration 1455 (of 6786): 707.09 sec so far
+Iteration 1458 (of 6786): 713.59 sec so far
+Iteration 1465 (of 6786): 719.59 sec so far
+Iteration 1469 (of 6786): 726.26 sec so far
+Iteration 1476 (of 6786): 732.00 sec so far
+Iteration 1480 (of 6786): 738.32 sec so far
+Iteration 1487 (of 6786): 743.98 sec so far
+Iteration 1491 (of 6786): 749.95 sec so far
+Iteration 1498 (of 6786): 755.91 sec so far
+Iteration 1502 (of 6786): 762.13 sec so far
+Iteration 1508 (of 6786): 767.52 sec so far
+Iteration 1512 (of 6786): 773.09 sec so far
+Iteration 1517 (of 6786): 778.22 sec so far
+Iteration 1522 (of 6786): 784.04 sec so far
+Iteration 1525 (of 6786): 790.76 sec so far
+Iteration 1532 (of 6786): 796.13 sec so far
+Iteration 1535 (of 6786): 801.15 sec so far
+Iteration 1539 (of 6786): 806.40 sec so far
+Iteration 1544 (of 6786): 812.23 sec so far
+Iteration 1547 (of 6786): 817.78 sec so far
+Iteration 1552 (of 6786): 822.92 sec so far
+Iteration 1556 (of 6786): 828.04 sec so far
+Iteration 1559 (of 6786): 834.24 sec so far
+Iteration 1565 (of 6786): 839.38 sec so far
+Iteration 1569 (of 6786): 845.63 sec so far
+Iteration 1574 (of 6786): 851.23 sec so far
+Iteration 1579 (of 6786): 857.73 sec so far
+Iteration 1582 (of 6786): 864.43 sec so far
+Iteration 1588 (of 6786): 869.44 sec so far
+Iteration 1592 (of 6786): 876.62 sec so far
+Iteration 1596 (of 6786): 882.03 sec so far
+Iteration 1600 (of 6786): 887.08 sec so far
+Iteration 1603 (of 6786): 893.29 sec so far
+Iteration 1607 (of 6786): 898.83 sec so far
+Iteration 1611 (of 6786): 903.90 sec so far
+Iteration 1614 (of 6786): 909.96 sec so far
+Iteration 1618 (of 6786): 915.22 sec so far
+Iteration 1622 (of 6786): 920.40 sec so far
+Iteration 1625 (of 6786): 926.64 sec so far
+Iteration 1630 (of 6786): 932.43 sec so far
+Iteration 1634 (of 6786): 938.58 sec so far
+Iteration 1637 (of 6786): 944.90 sec so far
+Iteration 1643 (of 6786): 950.96 sec so far
+Iteration 1646 (of 6786): 956.64 sec so far
+Iteration 1650 (of 6786): 961.85 sec so far
+Iteration 1655 (of 6786): 968.22 sec so far
+Iteration 1658 (of 6786): 975.06 sec so far
+Iteration 1664 (of 6786): 980.80 sec so far
+Iteration 1667 (of 6786): 986.38 sec so far
+Iteration 1671 (of 6786): 992.02 sec so far
+Iteration 1676 (of 6786): 998.01 sec so far
+Iteration 1679 (of 6786): 1004.63 sec so far
+Iteration 1685 (of 6786): 1010.38 sec so far
+Iteration 1688 (of 6786): 1015.84 sec so far
+Iteration 1692 (of 6786): 1021.52 sec so far
+Iteration 1697 (of 6786): 1027.73 sec so far
+Iteration 1700 (of 6786): 1034.39 sec so far
+Iteration 1706 (of 6786): 1040.13 sec so far
+Iteration 1709 (of 6786): 1045.28 sec so far
+Iteration 1713 (of 6786): 1050.94 sec so far
+Iteration 1718 (of 6786): 1057.14 sec so far
+Iteration 1721 (of 6786): 1064.38 sec so far
+Iteration 1727 (of 6786): 1069.70 sec so far
+Iteration 1730 (of 6786): 1075.08 sec so far
+Iteration 1734 (of 6786): 1080.14 sec so far
+Iteration 1739 (of 6786): 1086.41 sec so far
+Iteration 1742 (of 6786): 1093.44 sec so far
+Iteration 1748 (of 6786): 1098.95 sec so far
+Iteration 1751 (of 6786): 1104.54 sec so far
+Iteration 1755 (of 6786): 1109.61 sec so far
+Iteration 1760 (of 6786): 1116.14 sec so far
+Iteration 1763 (of 6786): 1121.83 sec so far
+Iteration 1769 (of 6786): 1127.88 sec so far
+Iteration 1772 (of 6786): 1134.02 sec so far
+Iteration 1777 (of 6786): 1139.64 sec so far
+Iteration 1781 (of 6786): 1146.22 sec so far
+Iteration 1783 (of 6786): 1152.01 sec so far
+Iteration 1789 (of 6786): 1157.32 sec so far
+Iteration 1792 (of 6786): 1162.97 sec so far
+Iteration 1796 (of 6786): 1168.67 sec so far
+Iteration 1800 (of 6786): 1174.04 sec so far
+Iteration 1803 (of 6786): 1180.79 sec so far
+Iteration 1808 (of 6786): 1185.96 sec so far
+Iteration 1812 (of 6786): 1193.03 sec so far
+Iteration 1814 (of 6786): 1199.03 sec so far
+Iteration 1820 (of 6786): 1204.93 sec so far
+Iteration 1823 (of 6786): 1210.95 sec so far
+Iteration 1825 (of 6786): 1216.18 sec so far
+Iteration 1831 (of 6786): 1222.59 sec so far
+Iteration 1834 (of 6786): 1228.99 sec so far
+Iteration 1837 (of 6786): 1234.26 sec so far
+Iteration 1842 (of 6786): 1239.94 sec so far
+Iteration 1845 (of 6786): 1246.22 sec so far
+Iteration 1849 (of 6786): 1251.71 sec so far
+Iteration 1853 (of 6786): 1256.74 sec so far
+Iteration 1856 (of 6786): 1263.02 sec so far
+Iteration 1861 (of 6786): 1268.97 sec so far
+Iteration 1865 (of 6786): 1275.70 sec so far
+Iteration 1867 (of 6786): 1280.90 sec so far
+Iteration 1870 (of 6786): 1286.16 sec so far
+Iteration 1875 (of 6786): 1292.05 sec so far
+Iteration 1878 (of 6786): 1298.72 sec so far
+Iteration 1881 (of 6786): 1303.82 sec so far
+Iteration 1886 (of 6786): 1310.00 sec so far
+Iteration 1889 (of 6786): 1316.90 sec so far
+Iteration 1892 (of 6786): 1322.13 sec so far
+Iteration 1897 (of 6786): 1328.24 sec so far
+Iteration 1900 (of 6786): 1335.12 sec so far
+Iteration 1903 (of 6786): 1340.22 sec so far
+Iteration 1908 (of 6786): 1346.24 sec so far
+Iteration 1911 (of 6786): 1353.17 sec so far
+Iteration 1914 (of 6786): 1358.35 sec so far
+Iteration 1919 (of 6786): 1364.35 sec so far
+Iteration 1922 (of 6786): 1371.48 sec so far
+Iteration 1925 (of 6786): 1376.93 sec so far
+Iteration 1930 (of 6786): 1382.95 sec so far
+Iteration 1933 (of 6786): 1389.58 sec so far
+Iteration 1937 (of 6786): 1395.25 sec so far
+Iteration 1941 (of 6786): 1400.64 sec so far
+Iteration 1944 (of 6786): 1407.80 sec so far
+Iteration 1948 (of 6786): 1413.76 sec so far
+Iteration 1952 (of 6786): 1419.80 sec so far
+Iteration 1955 (of 6786): 1427.07 sec so far
+Iteration 1959 (of 6786): 1432.14 sec so far
+Iteration 1963 (of 6786): 1438.40 sec so far
+Iteration 1966 (of 6786): 1446.42 sec so far
+Iteration 1971 (of 6786): 1451.99 sec so far
+Iteration 1974 (of 6786): 1457.37 sec so far
+Iteration 1976 (of 6786): 1462.51 sec so far
+Iteration 1981 (of 6786): 1468.44 sec so far
+Iteration 1984 (of 6786): 1473.58 sec so far
+Iteration 1986 (of 6786): 1478.59 sec so far
+Iteration 1989 (of 6786): 1483.86 sec so far
+Iteration 1994 (of 6786): 1490.10 sec so far
+Iteration 1997 (of 6786): 1497.39 sec so far
+Iteration 2002 (of 6786): 1503.02 sec so far
+Iteration 2005 (of 6786): 1508.30 sec so far
+Iteration 2007 (of 6786): 1513.62 sec so far
+Iteration 2010 (of 6786): 1518.96 sec so far
+Iteration 2015 (of 6786): 1525.61 sec so far
+Iteration 2018 (of 6786): 1533.11 sec so far
+Iteration 2023 (of 6786): 1538.42 sec so far
+Iteration 2026 (of 6786): 1543.69 sec so far
+Iteration 2028 (of 6786): 1548.83 sec so far
+Iteration 2031 (of 6786): 1554.10 sec so far
+Iteration 2035 (of 6786): 1559.72 sec so far
+Iteration 2038 (of 6786): 1567.25 sec so far
+Iteration 2041 (of 6786): 1572.98 sec so far
+Iteration 2045 (of 6786): 1578.30 sec so far
+Iteration 2048 (of 6786): 1585.32 sec so far
+Iteration 2051 (of 6786): 1590.88 sec so far
+Iteration 2055 (of 6786): 1596.16 sec so far
+Iteration 2058 (of 6786): 1603.17 sec so far
+Iteration 2061 (of 6786): 1608.81 sec so far
+Iteration 2065 (of 6786): 1614.14 sec so far
+Iteration 2068 (of 6786): 1621.04 sec so far
+Iteration 2071 (of 6786): 1626.62 sec so far
+Iteration 2075 (of 6786): 1631.92 sec so far
+Iteration 2078 (of 6786): 1638.49 sec so far
+Iteration 2081 (of 6786): 1643.60 sec so far
+Iteration 2085 (of 6786): 1648.80 sec so far
+Iteration 2088 (of 6786): 1655.79 sec so far
+Iteration 2091 (of 6786): 1661.32 sec so far
+Iteration 2095 (of 6786): 1666.35 sec so far
+Iteration 2098 (of 6786): 1672.96 sec so far
+Iteration 2101 (of 6786): 1678.10 sec so far
+Iteration 2105 (of 6786): 1683.16 sec so far
+Iteration 2108 (of 6786): 1689.98 sec so far
+Iteration 2111 (of 6786): 1695.19 sec so far
+Iteration 2115 (of 6786): 1700.32 sec so far
+Iteration 2118 (of 6786): 1707.12 sec so far
+Iteration 2121 (of 6786): 1712.19 sec so far
+Iteration 2125 (of 6786): 1717.62 sec so far
+Iteration 2128 (of 6786): 1724.83 sec so far
+Iteration 2132 (of 6786): 1730.51 sec so far
+Iteration 2136 (of 6786): 1737.81 sec so far
+Iteration 2138 (of 6786): 1743.70 sec so far
+Iteration 2142 (of 6786): 1749.32 sec so far
+Iteration 2145 (of 6786): 1754.58 sec so far
+Iteration 2147 (of 6786): 1759.79 sec so far
+Iteration 2149 (of 6786): 1764.86 sec so far
+Iteration 2154 (of 6786): 1770.88 sec so far
+Iteration 2157 (of 6786): 1777.96 sec so far
+Iteration 2161 (of 6786): 1783.66 sec so far
+Iteration 2165 (of 6786): 1790.93 sec so far
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

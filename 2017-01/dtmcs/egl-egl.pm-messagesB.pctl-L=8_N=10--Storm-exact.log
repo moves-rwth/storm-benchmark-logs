@@ -1,0 +1,19 @@
+~/prism-examples/models/;dtmcs;egl;egl.pm;messagesB.pctl;L=8,N=10;;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/dtmcs/egl/egl.pm --prop ~/prism-examples/models/dtmcs/egl/messagesB.pctl -const L=8,N=10 --exact --minmax:method pi -pc 
+Current working directory: ~/ma_scripts/scripts
+
+ERROR (storm.cpp:42): An unexpected exception occurred and caused Storm to terminate. The message of this exception is: std::bad_alloc
+Command exited with non-zero status 2
+Wall time: 1315.93s
+User time: 1309.44s
+System time: 5.57s
+Memory: 5865816KB
+External error: 2

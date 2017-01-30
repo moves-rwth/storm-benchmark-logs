@@ -1,0 +1,69 @@
+~/prism-examples/models/;dtmcs;leader_sync;leader_sync4_6.pm;time.pctl;;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 18:17:42 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/leader_sync/leader_sync4_6.pm ~/prism-examples/models/dtmcs/leader_sync/time.pctl -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/leader_sync/leader_sync4_6.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/leader_sync/time.pctl"...
+
+1 property:
+(1) R{"num_rounds"}=? [ F "elected" ]
+
+Type:        DTMC
+Modules:     counter process1 process2 process3 process4 
+Variables:   c s1 u1 v1 p1 s2 u2 v2 p2 s3 u3 v3 p3 s4 u4 v4 p4 
+
+---------------------------------------------------------------------
+
+Model checking: R{"num_rounds"}=? [ F "elected" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 6 iterations in 0.21 seconds (average 0.035333, setup 0.00)
+
+Time for model construction: 0.545 seconds.
+
+Type:        DTMC
+States:      3962 (1 initial)
+Transitions: 5257
+
+Transition matrix: 64180 nodes (3 terminal), 5257 minterms, vars: 38r/38c
+
+Prob0: 10 iterations in 0.15 seconds (average 0.014800, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.004000, setup 0.00)
+
+goal = 1, inf = 0, maybe = 3961
+
+Computing remaining rewards...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=38, nodes=67587] [3.1 MB]
+Adding explicit sparse matrices... [levels=38, num=1, compact] [36.0 KB]
+Creating vector for diagonals... [dist=1, compact] [7.7 KB]
+Creating vector for RHS... [dist=2, compact] [7.8 KB]
+Allocating iteration vectors... [2 x 31.0 KB]
+TOTAL: [3.2 MB]
+
+Starting iterations...
+
+Jacobi: 30 iterations in 1.91 seconds (average 0.000133, setup 1.90)
+
+Value in the initial state: 1.0799999867843866
+
+Time for model checking: 2.17 seconds.
+
+Result: 1.0799999867843866 (value in the initial state)
+
+Wall time: 4.03s
+User time: 4.30s
+System time: 0.16s
+Memory: 123620KB

@@ -1,0 +1,34 @@
+~/prism-examples/models/;mdps;zeroconf;zeroconf.nm;correct_max.pctl;K=6,N=1000,reset=true;;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/zeroconf/zeroconf.nm --prop ~/prism-examples/models/mdps/zeroconf/correct_max.pctl -const K=6,N=1000,reset=true --exact --minmax:method pi -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.205s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	1495
+Transitions: 	2197
+Choices: 	1859
+Reward Models:  none
+Labels: 	3
+   * init -> 1 state(s)
+   * deadlock -> 0 state(s)
+   * ((l = 4) & (ip = 1)) -> 9 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property Pmax=? [F ((l = 4) & (ip = 1))] ...
+Result (initial states): 8515304461/6402408515304461 (approx. 1.330015796e-06)
+Time for model checking: 0.011s.
+Wall time: 0.29s
+User time: 0.20s
+System time: 0.08s
+Memory: 219916KB

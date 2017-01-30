@@ -1,0 +1,37 @@
+~/MA_experiments;mas;grid;grid-4-without.ma;ET_min;;;Storm-ma
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --explicit ~/MA_experiments/mas/grid/grid-4-without.tra ~/MA_experiments/mas/grid/grid-4-without.lab --prop Tmin=? [ F "goal" ] 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.085s.
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	31832
+Transitions: 	62356
+Choices: 	51119
+Markovian St.: 	5145
+Max. Rate.: 	31
+Reward Models:  (default)
+Labels: 	2
+   * goal -> 10424 state(s)
+   * init -> 1 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property T[exp]min=? [F "goal"] ...
+Result (initial states): 102.1369605
+Time for model checking: 8.415s.
+Wall time: 8.75s
+User time: 8.53s
+System time: 0.00s
+Memory: 28856KB

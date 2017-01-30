@@ -1,0 +1,73 @@
+~/prism-examples/models/;mdps;firewire;firewire.nm;time_max.pctl;delay=3;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 19:00:38 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/firewire/firewire.nm ~/prism-examples/models/mdps/firewire/time_max.pctl -const delay=3 -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/firewire/firewire.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/firewire/time_max.pctl"...
+
+1 property:
+(1) R{"time"}max=? [ F "done" ]
+
+Type:        MDP
+Modules:     wire12 node1 wire21 node2 
+Variables:   w12 y1 y2 x1 s1 w21 z1 z2 x2 s2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time"}max=? [ F "done" ]
+Model constants: delay=3
+
+Building model...
+Model constants: delay=3
+
+Computing reachable states...
+
+Reachability (BFS): 256 iterations in 0.58 seconds (average 0.002250, setup 0.00)
+
+Time for model construction: 1.182 seconds.
+
+Type:        MDP
+States:      4093 (1 initial)
+Transitions: 5585
+Choices:     5519
+
+Transition matrix: 14899 nodes (3 terminal), 5585 minterms, vars: 44r/44c/14nd
+
+Prob0E: 355 iterations in 1.19 seconds (average 0.003346, setup 0.00)
+
+Prob1A: 1 iterations in 0.01 seconds (average 0.008000, setup 0.00)
+
+goal = 2, inf = 0, maybe = 4091
+
+Computing remaining rewards...
+Switching engine since hybrid engine does yet support this computation...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=4093, nc=5513, nnz=5579, k=3] [102.9 KB]
+Building sparse matrix (transition rewards)... [n=4093, nc=5513, nnz=3755, k=3] [81.5 KB]
+Creating vector for state rewards... [32.0 KB]
+Creating vector for inf... [32.0 KB]
+Allocating iteration vectors... [2 x 32.0 KB]
+TOTAL: [312.3 KB]
+
+Starting iterations...
+
+Iterative method: 1843 iterations in 0.34 seconds (average 0.000158, setup 0.04)
+
+Value in the initial state: 298.96168923679215
+
+Time for model checking: 1.555 seconds.
+
+Result: 298.96168923679215 (value in the initial state)
+
+Wall time: 4.07s
+User time: 4.44s
+System time: 0.13s
+Memory: 126344KB

@@ -1,0 +1,44 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;sensors.csl;MAX_COUNT=4;;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/ctmcs/embedded/embedded.sm --prop ~/prism-examples/models/ctmcs/embedded/sensors.csl -const MAX_COUNT=4 --exact --minmax:method pi -pc 
+Current working directory: ~/ma_scripts/scripts
+
+ WARN (Program.cpp:179): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 0.305s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4854
+Transitions: 	20272
+Reward Models:  none
+Labels: 	4
+   * deadlock -> 0 state(s)
+   * init -> 1 state(s)
+   * fail_sensors -> 330 state(s)
+   * down -> 3358 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property P=? [!("down") U "fail_sensors"] ...
+Result (initial states): 351471327287083626248452191400498296480588994297010372906853436367941866256287362245416208793257937664901180713205736435932318770273732580113116890635723892593324204071292586006566419321203619566778461132122822307217158658115164689645580556182194415625687031680766327897276751381924103268612127991463042547381553696747383109239447371788936330022039005708562122575508175223707661380671582934025950255094577496037341306383036079013200053144872243281304131066064417581772594808439634341507920571968085918096973359753324228034201987454634931071360688238633705150185078782337035259194713282836183783191432839106843477395472230818238613710772421437638394649946236924981281889562166367259778825059312215398430988279986452968531469498767166362056383585780272275538605627986318274174294275009217332843/490056841315858652029545501203690342530082724218669243675821011783559691990934666072075960001011430068951431340323777826665196046956303127463003911299004388806324333588797667369619754600161018900105203592208547945597956607688890869880976604996687015608408780734378160896538704520636470039102736857733924796545555411034766977159824150273197378336544656264853402614658613384633842857755411929985798613373200864508683031163763953787892471771961847596890083412504428123684873433416301809706293106914095991733213505344825356166249917549977304816925747368315171242538573318856834793031687603226058786726753642613995744624387088250423354196262743443102511906928303745739963301515013411131134033609596933003028519154890084811906320078757678724994816923015672328573819208904751756179340873466021858525 (approx. 0.7172052253)
+Time for model checking: 1.473s.
+Wall time: 1.84s
+User time: 1.70s
+System time: 0.13s
+Memory: 220028KB

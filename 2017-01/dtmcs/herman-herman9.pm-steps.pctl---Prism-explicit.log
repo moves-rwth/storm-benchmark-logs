@@ -1,0 +1,62 @@
+~/prism-examples/models/;dtmcs;herman;herman9.pm;steps.pctl;;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 04:19:49 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/herman/herman9.pm ~/prism-examples/models/dtmcs/herman/steps.pctl -ex
+
+Parsing model file "~/prism-examples/models/dtmcs/herman/herman9.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/herman/steps.pctl"...
+
+1 property:
+(1) R=? [ F "stable" ]
+
+Type:        DTMC
+Modules:     process1 process2 process3 process4 process5 process6 process7 process8 process9 
+Variables:   x1 x2 x3 x4 x5 x6 x7 x8 x9 
+
+---------------------------------------------------------------------
+
+Model checking: R=? [ F "stable" ]
+
+Building model...
+
+Computing reachable states... 512 states
+Reachable states exploration and model construction done in 0.519 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.613 seconds.
+
+Type:        DTMC
+States:      512 (512 initial)
+Transitions: 19684
+Building reward structure...
+
+Warning: Switching to linear equation solution method "Power method"
+
+Starting expected reachability...
+Starting Prob1...
+Prob1 took 4 iterations and 0.034 seconds.
+target=18, inf=0, rest=494
+Starting value iteration...
+Value iteration took 96 iterations and 0.109 seconds.
+Expected reachability took 0.145 seconds.
+
+Range of values over initial states: [0.0,11.999911784095342]
+
+Time for model checking: 0.172 seconds.
+
+Result: [0.0,11.999911784095342] (range of values over initial states)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 2.39s
+User time: 3.29s
+System time: 0.15s
+Memory: 113704KB

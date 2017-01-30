@@ -1,0 +1,35 @@
+~/prism-examples/models/;mdps;zeroconf_dl;zeroconf_dl.nm;deadline_min.pctl;K=1,N=1000,deadline=30,reset=false;;Storm-sparse
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/zeroconf_dl/zeroconf_dl.nm --prop ~/prism-examples/models/mdps/zeroconf_dl/deadline_min.pctl -const K=1,N=1000,deadline=30,reset=false -e sparse -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 1.888s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	116585
+Transitions: 	254873
+Choices: 	198716
+Reward Models:  none
+Labels: 	4
+   * init -> 1 state(s)
+   * (t >= 30) -> 2801 state(s)
+   * deadlock -> 0 state(s)
+   * ((l = 4) & (ip = 2)) -> 275 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property Pmin=? [!(((l = 4) & (ip = 2))) U (t >= 30)] ...
+Result (initial states): 5.760746776e-25
+Time for model checking: 0.258s.
+Wall time: 2.22s
+User time: 2.11s
+System time: 0.10s
+Memory: 226644KB

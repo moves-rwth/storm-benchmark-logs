@@ -1,0 +1,33 @@
+~/prism-examples/models/;dtmcs;herman;herman9.pm;steps.pctl;;;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/dtmcs/herman/herman9.pm --prop ~/prism-examples/models/dtmcs/herman/steps.pctl --exact --minmax:method pi -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.544s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	512
+Transitions: 	19684
+Reward Models:  steps
+Labels: 	3
+   * deadlock -> 0 state(s)
+   * init -> 512 state(s)
+   * stable -> 18 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property R[exp]=? [F "stable"] ...
+Result (initial states): [0, 12] (approx. [0, 12]) (range)
+Time for model checking: 70.409s.
+Wall time: 71.01s
+User time: 70.88s
+System time: 0.09s
+Memory: 221580KB

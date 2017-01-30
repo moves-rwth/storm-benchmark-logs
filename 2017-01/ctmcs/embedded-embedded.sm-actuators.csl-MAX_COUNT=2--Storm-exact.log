@@ -1,0 +1,44 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;actuators.csl;MAX_COUNT=2;;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/ctmcs/embedded/embedded.sm --prop ~/prism-examples/models/ctmcs/embedded/actuators.csl -const MAX_COUNT=2 --exact --minmax:method pi -pc 
+Current working directory: ~/ma_scripts/scripts
+
+ WARN (Program.cpp:179): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 0.236s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	3264
+Transitions: 	13626
+Reward Models:  none
+Labels: 	4
+   * deadlock -> 0 state(s)
+   * init -> 1 state(s)
+   * fail_actuators -> 220 state(s)
+   * down -> 2352 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property P=? [!("down") U "fail_actuators"] ...
+Result (initial states): 16527423742497975203248229400689588904694491884077868980632958415765496885356955993578776707357440545317112698284258805559037416644107657737410875979407737893471868672006085617918710562796440396605804096118728736953430851793448990215857234555240471339284746112983275119916878990393898631169165791219561717668523433055473167824767957785527868954010674944404375741244766768818845404481453878277078348067939777555445321827717405680095291132505897781884116229654059755491391454759205800741478568928747352048622068356103627236222152465508533853337315799446870445232/188500967824809910658180125634421763063967986886590278928363038103058151300395842161620210823656618123078608852324757441837926789021054810407933398909956112918136889130883313126485112254027927462789671510200607544805761856009046664012707030532884687314074812476690242648188561327658768779033417677245438428611413786707410514055273626403190707113064999886498988817528066815182780510042408226957833322306963278700250657224818953471935254850484650891423604953166257025358196868819064178597862454663311297804489735546994964056702603009541394234532201901542332009375 (approx. 0.08767819037)
+Time for model checking: 0.593s.
+Wall time: 0.89s
+User time: 0.76s
+System time: 0.12s
+Memory: 219992KB

@@ -1,0 +1,64 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;repairs.csl;N=2;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 18:03:26 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/cluster/cluster.sm ~/prism-examples/models/ctmcs/cluster/repairs.csl -const N=2 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/cluster/cluster.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/cluster/repairs.csl"...
+
+1 property:
+(1) R{"num_repairs"}=? [ C<=20 ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: R{"num_repairs"}=? [ C<=20 ]
+Model constants: N=2
+
+Building model...
+Model constants: N=2
+
+Computing reachable states...
+
+Reachability (BFS): 9 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Time for model construction: 0.035 seconds.
+
+Type:        CTMC
+States:      276 (1 initial)
+Transitions: 1120
+
+Rate matrix: 331 nodes (9 terminal), 1120 minterms, vars: 13r/13c
+
+Computing rewards...
+Engine: MTBDD
+
+Computing diagonals MTBDD... [nodes=450] [8.8 Kb]
+Building iteration matrix MTBDD... [nodes=1134] [22.1 Kb]
+
+Uniformisation: q.t = 51.004080 x 20.000000 = 1020.081600
+Fox-Glynn: left = 794, right = 1293
+
+Starting iterations...
+
+Iterative method: 1293 iterations in 3.17 seconds (average 0.002447, setup 0.00)
+
+Value in the initial state: 0.1653272321361073
+
+Time for model checking: 3.183 seconds.
+
+Result: 0.1653272321361073 (value in the initial state)
+
+Wall time: 4.48s
+User time: 4.81s
+System time: 0.12s
+Memory: 107004KB

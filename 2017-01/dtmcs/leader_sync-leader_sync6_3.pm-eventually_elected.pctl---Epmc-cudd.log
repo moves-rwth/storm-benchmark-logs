@@ -1,0 +1,11 @@
+~/prism-examples/models/;dtmcs;leader_sync;leader_sync6_3.pm;eventually_elected.pctl;;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P>=1 [ F "elected" ]
+Building DD model...
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

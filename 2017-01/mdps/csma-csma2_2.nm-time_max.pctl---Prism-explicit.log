@@ -1,0 +1,58 @@
+~/prism-examples/models/;mdps;csma;csma2_2.nm;time_max.pctl;;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 09:24:04 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/csma/csma2_2.nm ~/prism-examples/models/mdps/csma/time_max.pctl -ex
+
+Parsing model file "~/prism-examples/models/mdps/csma/csma2_2.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/csma/time_max.pctl"...
+
+1 property:
+(1) R{"time"}max=? [ F "all_delivered" ]
+
+Type:        MDP
+Modules:     bus station1 station2 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time"}max=? [ F "all_delivered" ]
+
+Building model...
+
+Computing reachable states... 1038 states
+Reachable states exploration and model construction done in 0.413 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.459 seconds.
+
+Type:        MDP
+States:      1038 (1 initial)
+Transitions: 1282
+Choices:     1054
+Max/avg:     2/1.02
+Building reward structure...
+
+Starting expected reachability (max)...
+Starting Prob1 (min)...
+Prob1 (min) took 91 iterations and 0.065 seconds.
+target=3, inf=0, rest=1035
+Starting value iteration (max)...
+Value iteration (max) took 170 iterations and 0.05 seconds.
+Expected reachability took 0.115 seconds.
+
+Value in the initial state: 70.66544333833558
+
+Time for model checking: 0.13 seconds.
+
+Result: 70.66544333833558 (value in the initial state)
+
+Wall time: 2.34s
+User time: 2.76s
+System time: 0.14s
+Memory: 102640KB

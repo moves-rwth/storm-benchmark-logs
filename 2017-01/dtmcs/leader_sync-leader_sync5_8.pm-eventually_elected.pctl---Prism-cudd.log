@@ -1,0 +1,59 @@
+~/prism-examples/models/;dtmcs;leader_sync;leader_sync5_8.pm;eventually_elected.pctl;;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 04:50:21 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/leader_sync/leader_sync5_8.pm ~/prism-examples/models/dtmcs/leader_sync/eventually_elected.pctl -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/leader_sync/leader_sync5_8.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/leader_sync/eventually_elected.pctl"...
+
+1 property:
+(1) P>=1 [ F "elected" ]
+
+Type:        DTMC
+Modules:     counter process1 process2 process3 process4 process5 
+Variables:   c s1 u1 v1 p1 s2 u2 v2 p2 s3 u3 v3 p3 s4 u4 v4 p4 s5 u5 v5 p5 
+
+---------------------------------------------------------------------
+
+Model checking: P>=1 [ F "elected" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 7 iterations in 14.70 seconds (average 2.100000, setup 0.00)
+
+Time for model construction: 135.766 seconds.
+
+Type:        DTMC
+States:      131521 (1 initial)
+Transitions: 164288
+
+Transition matrix: 1540390 nodes (3 terminal), 164288 minterms, vars: 47r/47c
+
+Probability bound in formula is 0/1 so not computing exact probabilities...
+
+Prob0: 12 iterations in 7.73 seconds (average 0.644000, setup 0.00)
+
+Prob1: 1 iterations in 0.17 seconds (average 0.168000, setup 0.00)
+
+yes = 131521, no = 0, maybe = 0
+
+Number of states satisfying P>=1 [ F "elected" ]: 131521 (all in model)
+
+Property satisfied in 1 of 1 initial states.
+
+Time for model checking: 8.677 seconds.
+
+Result: true (property satisfied in the initial state)
+
+Wall time: 147.25s
+User time: 147.38s
+System time: 0.42s
+Memory: 406124KB

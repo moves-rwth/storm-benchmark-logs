@@ -1,0 +1,11 @@
+~/prism-examples/models/;dtmcs;bluetooth;bluetooth.pm;time.pctl;mrec=2;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R=? [ F "complete" ]
+Finished model checking. Time required: 0 seconds
+R=? [ F "complete" ]: No solver available to handle property "R=?[F ((rec) = (2))]" for this model with the current settings
+Wall time: 2.06s
+User time: 7.80s
+System time: 0.70s
+Memory: 274936KB

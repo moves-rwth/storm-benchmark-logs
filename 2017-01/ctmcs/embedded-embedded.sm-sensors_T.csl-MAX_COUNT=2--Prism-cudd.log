@@ -1,0 +1,69 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;sensors_T.csl;MAX_COUNT=2;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 18:04:04 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/sensors_T.csl -const MAX_COUNT=2 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/sensors_T.csl"...
+
+1 property:
+(1) P=? [ !"down" U<=72000 "fail_sensors" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !"down" U<=72000 "fail_sensors" ]
+Model constants: MAX_COUNT=2
+
+Building model...
+Model constants: MAX_COUNT=2
+
+Computing reachable states...
+
+Reachability (BFS): 15 iterations in 0.00 seconds (average 0.000267, setup 0.00)
+
+Time for model construction: 0.037 seconds.
+
+Type:        CTMC
+States:      3478 (1 initial)
+Transitions: 14639
+
+Rate matrix: 1144 nodes (9 terminal), 14639 minterms, vars: 14r/14c
+
+Computing probabilities...
+Engine: MTBDD
+
+Number of non-absorbing states: 912 of 3478 (26.2%)
+
+Computing diagonals MTBDD... [nodes=551] [10.8 Kb]
+Building iteration matrix MTBDD... [nodes=2200] [43.0 Kb]
+
+Uniformisation: q.t = 0.085002 x 72000.000000 = 6120.120320
+Fox-Glynn: left = 5570, right = 6786
+
+Starting iterations...
+Iteration 2300 (of 6786): 5.00 sec so far
+Iteration 4606 (of 6786): 10.01 sec so far
+Iteration 6355 (of 6786): 15.01 sec so far
+
+Iterative method: 6786 iterations in 16.38 seconds (average 0.002413, setup 0.00)
+
+Value in the initial state: 0.002189519308916188
+
+Time for model checking: 16.41 seconds.
+
+Result: 0.002189519308916188 (value in the initial state)
+
+Wall time: 17.77s
+User time: 18.13s
+System time: 0.12s
+Memory: 107124KB

@@ -1,0 +1,80 @@
+~/prism-examples/models/;mdps;csma;csma4_2.nm;time_min.pctl;;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 19:00:31 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/csma/csma4_2.nm ~/prism-examples/models/mdps/csma/time_min.pctl -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/csma/csma4_2.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/csma/time_min.pctl"...
+
+1 property:
+(1) R{"time"}min=? [ F "all_delivered" ]
+
+Type:        MDP
+Modules:     bus station1 station2 station3 station4 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 s3 x3 bc3 cd3 s4 x4 bc4 cd4 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time"}min=? [ F "all_delivered" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 193 iterations in 3.97 seconds (average 0.020560, setup 0.00)
+
+Time for model construction: 4.31 seconds.
+
+Type:        MDP
+States:      761962 (1 initial)
+Transitions: 1327068
+Choices:     825504
+
+Transition matrix: 52233 nodes (4 terminal), 1327068 minterms, vars: 54r/54c/17nd
+
+Prob0A: 189 iterations in 4.06 seconds (average 0.021503, setup 0.00)
+
+Prob1E: 190 iterations in 4.84 seconds (average 0.025495, setup 0.00)
+
+Warning: PRISM hasn't checked for zero-reward loops.
+Your minimum rewards may be too low...
+
+goal = 9, inf = 0, maybe = 761953
+
+Computing remaining rewards...
+Switching engine since hybrid engine does yet support this computation...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=761962, nc=825495, nnz=1327059, k=4] [21.2 MB]
+Building sparse matrix (transition rewards)... [n=761962, nc=825495, nnz=456769, k=4] [11.3 MB]
+Creating vector for state rewards... [5.8 MB]
+Creating vector for inf... [5.8 MB]
+Allocating iteration vectors... [2 x 5.8 MB]
+TOTAL: [55.8 MB]
+
+Starting iterations...
+Iteration 149: max relative diff=0.010611, 5.02 sec so far
+Iteration 297: max relative diff=0.000003, 10.02 sec so far
+
+Iterative method: 308 iterations in 12.46 seconds (average 0.033987, setup 2.00)
+
+Value in the initial state: 124.4634766025491
+
+Time for model checking: 21.471 seconds.
+
+Result: 124.4634766025491 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 27.24s
+User time: 27.59s
+System time: 0.19s
+Memory: 232872KB

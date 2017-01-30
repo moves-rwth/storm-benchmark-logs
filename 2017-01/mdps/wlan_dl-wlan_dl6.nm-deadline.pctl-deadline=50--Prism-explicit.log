@@ -1,0 +1,57 @@
+~/prism-examples/models/;mdps;wlan_dl;wlan_dl6.nm;deadline.pctl;deadline=50;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 19:39:58 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/wlan_dl/wlan_dl6.nm ~/prism-examples/models/mdps/wlan_dl/deadline.pctl -const deadline=50 -ex
+
+Parsing model file "~/prism-examples/models/mdps/wlan_dl/wlan_dl6.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/wlan_dl/deadline.pctl"...
+
+1 property:
+(1) Pmin=? [ F 1=12&s2=12 ]
+
+Type:        MDP
+Modules:     medium station1 station2 timer 
+Variables:   c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2 t 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ F 1=12&s2=12 ]
+Model constants: deadline=50
+
+Building model...
+Model constants: deadline=50
+
+Computing reachable states... 91828 230121 365755 478881 states
+Reachable states exploration and model construction done in 11.486 secs.
+Sorting reachable states list...
+
+Time for model construction: 12.486 seconds.
+
+Type:        MDP
+States:      478881 (1 initial)
+Transitions: 966610
+Choices:     636690
+Max/avg:     3/1.33
+
+Starting probabilistic reachability (min)...
+Starting Prob0 (min)...
+Starting Prob1 (min)...
+target=0, yes=0, no=478881, maybe=0
+Probabilistic reachability took 0.03 seconds.
+
+Value in the initial state: 0.0
+
+Time for model checking: 0.211 seconds.
+
+Result: 0.0 (value in the initial state)
+
+Wall time: 14.24s
+User time: 19.51s
+System time: 1.20s
+Memory: 1542740KB

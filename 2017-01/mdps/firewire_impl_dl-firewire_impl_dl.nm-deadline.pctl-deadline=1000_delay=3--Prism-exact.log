@@ -1,0 +1,37 @@
+~/prism-examples/models/;mdps;firewire_impl_dl;firewire_impl_dl.nm;deadline.pctl;deadline=1000,delay=3;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 15:10:16 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/firewire_impl_dl/firewire_impl_dl.nm ~/prism-examples/models/mdps/firewire_impl_dl/deadline.pctl -const 'deadline=1000,delay=3' -exact -politer
+
+Parsing model file "~/prism-examples/models/mdps/firewire_impl_dl/firewire_impl_dl.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/firewire_impl_dl/deadline.pctl"...
+
+1 property:
+(1) Pmin=? [ F ((s1=8)&(s2=7))|((s1=7)&(s2=8)) ]
+
+Type:        MDP
+Modules:     wire12 node1 wire21 node2 timer 
+Variables:   w12 y1 y2 x1 s1 w21 z1 z2 x2 s2 t 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ F ((s1=8)&(s2=7))|((s1=7)&(s2=8)) ]
+Model constants: deadline=1000,delay=3
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 160.433 secs.
+
+Time for model construction: 160.446 seconds.
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

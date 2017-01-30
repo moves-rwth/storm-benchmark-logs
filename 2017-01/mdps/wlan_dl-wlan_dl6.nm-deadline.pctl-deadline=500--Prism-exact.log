@@ -1,0 +1,33 @@
+~/prism-examples/models/;mdps;wlan_dl;wlan_dl6.nm;deadline.pctl;deadline=500;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 19:49:58 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/wlan_dl/wlan_dl6.nm ~/prism-examples/models/mdps/wlan_dl/deadline.pctl -const deadline=500 -exact -politer
+
+Parsing model file "~/prism-examples/models/mdps/wlan_dl/wlan_dl6.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/wlan_dl/deadline.pctl"...
+
+1 property:
+(1) Pmin=? [ F 1=12&s2=12 ]
+
+Type:        MDP
+Modules:     medium station1 station2 timer 
+Variables:   c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2 t 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ F 1=12&s2=12 ]
+Model constants: deadline=500
+
+Building model...
+
+Computing reachable states...External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

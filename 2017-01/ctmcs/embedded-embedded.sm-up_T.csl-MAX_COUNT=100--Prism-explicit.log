@@ -1,0 +1,56 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;up_T.csl;MAX_COUNT=100;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 04:20:42 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/up_T.csl -const MAX_COUNT=100 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/up_T.csl"...
+
+1 property:
+(1) R{"up"}=? [ C<=72000 ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: R{"up"}=? [ C<=72000 ]
+Model constants: MAX_COUNT=100
+
+Building model...
+Model constants: MAX_COUNT=100
+
+Computing reachable states... 86288 states
+Reachable states exploration and model construction done in 2.386 secs.
+Sorting reachable states list...
+
+Time for model construction: 2.814 seconds.
+
+Type:        CTMC
+States:      86288 (1 initial)
+Transitions: 364205
+Building reward structure...
+
+Starting backwards cumulative rewards computation...
+
+Uniformisation: q.t = 0.08500167110603755 x 72000.0 = 6120.120319634704
+Fox-Glynn (1.25E-7): left = 5570, right = 6786
+Backwards transient cumulative rewards computation took 6787 iters and 385.292 seconds.
+
+Value in the initial state: 19.909215136152415
+
+Time for model checking: 385.456 seconds.
+
+Result: 19.909215136152415 (value in the initial state)
+
+Wall time: 389.61s
+User time: 391.13s
+System time: 0.70s
+Memory: 651056KB

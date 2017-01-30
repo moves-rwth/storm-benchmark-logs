@@ -1,0 +1,40 @@
+~/prism-examples/models/;dtmcs;brp;brp.pm;p4.pctl;MAX=15,N=4096;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 00:43:47 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/brp/brp.pm ~/prism-examples/models/dtmcs/brp/p4.pctl -const 'MAX=15,N=4096' -exact -politer
+
+Parsing model file "~/prism-examples/models/dtmcs/brp/brp.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/brp/p4.pctl"...
+
+1 property:
+(1) P=? [ F !(srep=0)&!recv ]
+
+Type:        DTMC
+Modules:     sender receiver checker channelK channelL 
+Variables:   s srep nrtr i bs s_ab fs ls r rrep fr lr br r_ab recv T k l 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F !(srep=0)&!recv ]
+Model constants: N=4096,MAX=15
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 67.326 secs.
+
+Time for model construction: 67.331 seconds.
+
+Time for model checking: 170.72 seconds.
+
+Result (probability): 1/1525878906250000000000000000
+Wall time: 239.71s
+User time: 267.76s
+System time: 32.20s
+Memory: 3141940KB

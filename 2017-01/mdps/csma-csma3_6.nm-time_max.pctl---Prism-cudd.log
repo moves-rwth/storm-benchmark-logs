@@ -1,0 +1,107 @@
+~/prism-examples/models/;mdps;csma;csma3_6.nm;time_max.pctl;;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 11:46:13 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/csma/csma3_6.nm ~/prism-examples/models/mdps/csma/time_max.pctl -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/csma/csma3_6.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/csma/time_max.pctl"...
+
+1 property:
+(1) R{"time"}max=? [ F "all_delivered" ]
+
+Type:        MDP
+Modules:     bus station1 station2 station3 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 s3 x3 bc3 cd3 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time"}max=? [ F "all_delivered" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 151 iterations in 27.26 seconds (average 0.180556, setup 0.00)
+
+Time for model construction: 36.064 seconds.
+
+Type:        MDP
+States:      84856004 (1 initial)
+Transitions: 147200984
+Choices:     84988757
+
+Transition matrix: 289469 nodes (8 terminal), 147200984 minterms, vars: 57r/57c/13nd
+
+Prob0E: 239 iterations in 164.67 seconds (average 0.688987, setup 0.00)
+
+Prob1A: 1 iterations in 0.21 seconds (average 0.212000, setup 0.00)
+
+goal = 125, inf = 0, maybe = 84855879
+
+Computing remaining rewards...
+Engine: MTBDD
+
+Building iteration matrix MTBDD... [nodes=289437] [5653.1 Kb]
+
+Starting iterations...
+Iteration 6: 6.11 sec so far
+Iteration 9: 12.87 sec so far
+Iteration 11: 19.31 sec so far
+Iteration 13: 27.82 sec so far
+Iteration 14: 33.48 sec so far
+Iteration 15: 40.96 sec so far
+Iteration 16: 49.80 sec so far
+Iteration 17: 55.58 sec so far
+Iteration 18: 62.54 sec so far
+Iteration 19: 70.31 sec so far
+Iteration 20: 81.93 sec so far
+Iteration 21: 90.46 sec so far
+Iteration 22: 100.83 sec so far
+Iteration 23: 113.84 sec so far
+Iteration 24: 131.11 sec so far
+Iteration 25: 145.95 sec so far
+Iteration 26: 162.75 sec so far
+Iteration 27: 182.73 sec so far
+Iteration 28: 204.78 sec so far
+Iteration 29: 233.57 sec so far
+Iteration 30: 251.14 sec so far
+Iteration 31: 272.98 sec so far
+Iteration 32: 302.56 sec so far
+Iteration 33: 325.06 sec so far
+Iteration 34: 352.85 sec so far
+Iteration 35: 386.22 sec so far
+Iteration 36: 422.80 sec so far
+Iteration 37: 451.54 sec so far
+Iteration 38: 482.41 sec so far
+Iteration 39: 526.13 sec so far
+Iteration 40: 560.56 sec so far
+Iteration 41: 599.65 sec so far
+Iteration 42: 652.49 sec so far
+Iteration 43: 691.62 sec so far
+Iteration 44: 730.52 sec so far
+Iteration 45: 795.50 sec so far
+Iteration 46: 833.39 sec so far
+Iteration 47: 877.08 sec so far
+Iteration 48: 922.73 sec so far
+Iteration 49: 979.58 sec so far
+Iteration 50: 1023.37 sec so far
+Iteration 51: 1071.77 sec so far
+Iteration 52: 1130.41 sec so far
+Iteration 53: 1178.57 sec so far
+Iteration 54: 1244.96 sec so far
+Iteration 55: 1293.55 sec so far
+Iteration 56: 1345.54 sec so far
+Iteration 57: 1412.43 sec so far
+Iteration 58: 1467.01 sec so far
+Iteration 59: 1549.08 sec so far
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

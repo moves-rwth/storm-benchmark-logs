@@ -1,0 +1,54 @@
+~/prism-examples/models/;ctmcs;polling;poll14.sm;waiting.csl;;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 11:02:18 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/polling/poll14.sm ~/prism-examples/models/ctmcs/polling/waiting.csl -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/polling/poll14.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/polling/waiting.csl"...
+
+1 property:
+(1) R{"waiting"}=? [ C<=20 ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 station4 station5 station6 station7 station8 station9 station10 station11 station12 station13 station14 
+Variables:   s a s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 
+
+---------------------------------------------------------------------
+
+Model checking: R{"waiting"}=? [ C<=20 ]
+
+Building model...
+
+Computing reachable states... 47007 119488 186826 251981 322322 344064 states
+Reachable states exploration and model construction done in 15.759 secs.
+Sorting reachable states list...
+
+Time for model construction: 16.517 seconds.
+
+Type:        CTMC
+States:      344064 (1 initial)
+Transitions: 2695168
+Building reward structure...
+
+Starting backwards cumulative rewards computation...
+
+Uniformisation: q.t = 205.02000000000018 x 20.0 = 4100.400000000003
+Fox-Glynn (1.25E-7): left = 3649, right = 4645
+Backwards transient cumulative rewards computation took 4646 iters and 1532.371 seconds.
+
+Value in the initial state: 1.8449954606975323
+
+Time for model checking: 1532.54 seconds.
+
+Result: 1.8449954606975323 (value in the initial state)
+
+Wall time: 1550.47s
+User time: 1554.28s
+System time: 1.44s
+Memory: 1584404KB

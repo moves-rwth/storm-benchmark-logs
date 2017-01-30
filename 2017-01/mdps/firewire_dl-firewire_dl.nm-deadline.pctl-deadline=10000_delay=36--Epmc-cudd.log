@@ -1,0 +1,34 @@
+~/prism-examples/models/;mdps;firewire_dl;firewire_dl.nm;deadline.pctl;deadline=10000,delay=36;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property Pmin=? [ F s=9 ]
+Building DD model...
+Building DD model finished in 0 seconds
+Exploring model state space...
+Finished exploring the state space. Time required: 104 seconds
+Converting BDD graph to explicit...
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at epmc.value.ValueArrayDoubleJava.setDimensionsContent(ValueArrayDoubleJava.java:43)
+	at epmc.value.ValueArray.setSize(ValueArray.java:200)
+	at epmc.value.ValueArray.resize(ValueArray.java:185)
+	at epmc.graph.explicit.GraphExplicitWrapper$EdgePropertyWrapperSettable.set(GraphExplicitWrapper.java:154)
+	at epmc.graph.GraphBuilderDD.buildGraph(GraphBuilderDD.java:496)
+	at epmc.propertysolver.PropertySolverDDPCTL.checkUntilQuantitative(PropertySolverDDPCTL.java:178)
+	at epmc.propertysolver.PropertySolverDDPCTL.solveUntil(PropertySolverDDPCTL.java:150)
+	at epmc.propertysolver.PropertySolverDDPCTL.solve(PropertySolverDDPCTL.java:117)
+	at epmc.propertysolver.PropertySolverDDPCTL.solve(PropertySolverDDPCTL.java:371)
+	at epmc.modelchecker.ModelChecker.check(ModelChecker.java:236)
+	at epmc.modelchecker.ModelChecker.checkProperty(ModelChecker.java:207)
+	at epmc.modelchecker.ModelChecker.check(ModelChecker.java:151)
+	at epmc.command.CommandTaskCheck.executeInServer(CommandTaskCheck.java:22)
+	at epmc.main.Analyse.execute(Analyse.java:90)
+	at epmc.main.EPMC.execute(EPMC.java:125)
+	at epmc.main.EPMC.startInConsole(EPMC.java:108)
+	at epmc.main.EPMC.main(EPMC.java:42)
+Command exited with non-zero status 1
+Wall time: 406.70s
+User time: 1372.32s
+System time: 10.61s
+Memory: 8679256KB
+External error: 1

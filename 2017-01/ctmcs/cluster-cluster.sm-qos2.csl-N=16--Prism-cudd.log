@@ -1,0 +1,145 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;qos2.csl;N=16;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 22:23:35 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/cluster/cluster.sm ~/prism-examples/models/ctmcs/cluster/qos2.csl -const N=16 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/cluster/cluster.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/cluster/qos2.csl"...
+
+1 property:
+(1) P=? [ F[20,20] !"minimum" ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F[20,20] !"minimum" ]
+Model constants: N=16
+
+Building model...
+Model constants: N=16
+
+Computing reachable states...
+
+Reachability (BFS): 37 iterations in 0.00 seconds (average 0.000108, setup 0.00)
+
+Time for model construction: 0.048 seconds.
+
+Type:        CTMC
+States:      10132 (1 initial)
+Transitions: 48160
+
+Rate matrix: 1899 nodes (23 terminal), 48160 minterms, vars: 19r/19c
+
+Computing probabilities...
+Engine: MTBDD
+
+Number of non-absorbing states: 10132 of 10132 (100.0%)
+
+Computing diagonals MTBDD... [nodes=4603] [89.9 Kb]
+Building iteration matrix MTBDD... [nodes=9461] [184.8 Kb]
+
+Uniformisation: q.t = 51.061200 x 20.000000 = 1021.224000
+Fox-Glynn: left = 795, right = 1294
+
+Starting iterations...
+Iteration 33 (of 1294): 5.04 sec so far
+Iteration 51 (of 1294): 10.32 sec so far
+Iteration 71 (of 1294): 15.44 sec so far
+Iteration 90 (of 1294): 20.47 sec so far
+Iteration 109 (of 1294): 25.50 sec so far
+Iteration 129 (of 1294): 30.67 sec so far
+Iteration 149 (of 1294): 35.92 sec so far
+Iteration 169 (of 1294): 41.04 sec so far
+Iteration 186 (of 1294): 46.18 sec so far
+Iteration 204 (of 1294): 51.37 sec so far
+Iteration 222 (of 1294): 56.44 sec so far
+Iteration 240 (of 1294): 61.48 sec so far
+Iteration 258 (of 1294): 66.56 sec so far
+Iteration 276 (of 1294): 71.59 sec so far
+Iteration 294 (of 1294): 76.69 sec so far
+Iteration 312 (of 1294): 81.81 sec so far
+Iteration 329 (of 1294): 86.82 sec so far
+Iteration 348 (of 1294): 92.11 sec so far
+Iteration 366 (of 1294): 97.23 sec so far
+Iteration 384 (of 1294): 102.30 sec so far
+Iteration 402 (of 1294): 107.42 sec so far
+Iteration 420 (of 1294): 112.50 sec so far
+Iteration 438 (of 1294): 117.62 sec so far
+Iteration 456 (of 1294): 122.65 sec so far
+Iteration 476 (of 1294): 127.72 sec so far
+Iteration 496 (of 1294): 132.78 sec so far
+Iteration 516 (of 1294): 137.88 sec so far
+Iteration 536 (of 1294): 143.03 sec so far
+Iteration 555 (of 1294): 148.04 sec so far
+Iteration 575 (of 1294): 153.15 sec so far
+Iteration 595 (of 1294): 158.24 sec so far
+Iteration 615 (of 1294): 163.34 sec so far
+Iteration 635 (of 1294): 168.43 sec so far
+Iteration 655 (of 1294): 173.48 sec so far
+Iteration 674 (of 1294): 178.68 sec so far
+Iteration 693 (of 1294): 183.74 sec so far
+Iteration 711 (of 1294): 188.92 sec so far
+Iteration 728 (of 1294): 194.18 sec so far
+Iteration 745 (of 1294): 199.38 sec so far
+Iteration 765 (of 1294): 204.50 sec so far
+Iteration 785 (of 1294): 209.56 sec so far
+Iteration 805 (of 1294): 214.80 sec so far
+Iteration 817 (of 1294): 219.87 sec so far
+Iteration 824 (of 1294): 226.33 sec so far
+Iteration 828 (of 1294): 232.91 sec so far
+Iteration 832 (of 1294): 240.09 sec so far
+Iteration 836 (of 1294): 245.66 sec so far
+Iteration 839 (of 1294): 251.11 sec so far
+Iteration 845 (of 1294): 256.37 sec so far
+Iteration 852 (of 1294): 261.68 sec so far
+Iteration 863 (of 1294): 266.79 sec so far
+Iteration 877 (of 1294): 271.90 sec so far
+Iteration 893 (of 1294): 277.10 sec so far
+Iteration 909 (of 1294): 282.30 sec so far
+Iteration 926 (of 1294): 287.54 sec so far
+Iteration 943 (of 1294): 292.84 sec so far
+Iteration 960 (of 1294): 297.94 sec so far
+Iteration 977 (of 1294): 303.13 sec so far
+Iteration 994 (of 1294): 308.46 sec so far
+Iteration 1010 (of 1294): 313.84 sec so far
+Iteration 1026 (of 1294): 318.96 sec so far
+Iteration 1041 (of 1294): 323.98 sec so far
+Iteration 1056 (of 1294): 329.13 sec so far
+Iteration 1071 (of 1294): 334.15 sec so far
+Iteration 1086 (of 1294): 339.22 sec so far
+Iteration 1101 (of 1294): 344.39 sec so far
+Iteration 1115 (of 1294): 349.43 sec so far
+Iteration 1129 (of 1294): 354.59 sec so far
+Iteration 1143 (of 1294): 359.84 sec so far
+Iteration 1157 (of 1294): 364.98 sec so far
+Iteration 1171 (of 1294): 370.24 sec so far
+Iteration 1185 (of 1294): 375.28 sec so far
+Iteration 1199 (of 1294): 380.62 sec so far
+Iteration 1211 (of 1294): 386.11 sec so far
+Iteration 1221 (of 1294): 391.91 sec so far
+Iteration 1231 (of 1294): 397.41 sec so far
+Iteration 1245 (of 1294): 402.85 sec so far
+Iteration 1261 (of 1294): 408.07 sec so far
+Iteration 1278 (of 1294): 413.43 sec so far
+
+Iterative method: 1294 iterations in 418.15 seconds (average 0.323128, setup 0.02)
+
+Value in the initial state: 1.9917213000730046E-6
+
+Time for model checking: 418.295 seconds.
+
+Result: 1.9917213000730046E-6 (value in the initial state)
+
+Wall time: 419.64s
+User time: 419.84s
+System time: 0.33s
+Memory: 149780KB

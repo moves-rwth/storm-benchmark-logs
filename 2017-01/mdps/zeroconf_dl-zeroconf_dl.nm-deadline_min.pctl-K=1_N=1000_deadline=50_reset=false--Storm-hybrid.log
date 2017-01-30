@@ -1,0 +1,31 @@
+~/prism-examples/models/;mdps;zeroconf_dl;zeroconf_dl.nm;deadline_min.pctl;K=1,N=1000,deadline=50,reset=false;;Storm-hybrid
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/zeroconf_dl/zeroconf_dl.nm --prop ~/prism-examples/models/mdps/zeroconf_dl/deadline_min.pctl -const K=1,N=1000,deadline=50,reset=false -e hybrid --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 9.815s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	381236 (17917 nodes)
+Transitions: 	865132 (125067 nodes)
+Choices: 	678579
+Reward Models:  none
+Variables: 	rows: 23 meta variables (61 DD variables), columns: 23 meta variables (61 DD variables), nondeterminism: 8 meta variables (8 DD variables)
+Labels: 	0
+-------------------------------------------------------------- 
+
+Model checking property Pmin=? [!(((l = 4) & (ip = 2))) U (t >= 50)] ...
+Result (initial states): 1.608212289e-46
+Time for model checking: 6.192s.
+Wall time: 16.41s
+User time: 16.18s
+System time: 0.21s
+Memory: 263768KB

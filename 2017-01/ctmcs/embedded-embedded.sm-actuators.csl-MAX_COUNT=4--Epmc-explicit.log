@@ -1,0 +1,15 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;actuators.csl;MAX_COUNT=4;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P=? [ !"down" U "fail_actuators" ]
+Starting to build model...
+Building model done. 5,168 states. Time for model exploration: 0 seconds.
+Starting iteration...
+Done. Did 0 iterations in 6 seconds.
+Finished model checking. Time required: 7 seconds
+P=? [ !"down" U "fail_actuators" ]: 0.10312767589912362
+Wall time: 9.62s
+User time: 17.63s
+System time: 0.79s
+Memory: 268380KB

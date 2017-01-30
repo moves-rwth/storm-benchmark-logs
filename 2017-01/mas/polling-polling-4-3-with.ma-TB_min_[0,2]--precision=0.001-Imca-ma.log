@@ -1,0 +1,34 @@
+~/MA_experiments;mas;polling;polling-4-3-with.ma;TB_min_[0,2];;precision=0.001;Imca-ma
+ ------------------------------------------------------------------- 
+|                  Interactive Markov Chain Analyzer                |
+|                        IMCA Version 1.6 beta                      |
+|             Binary build date: Jan 20 2017 @ 17:22:22             |
+|                using SoPlex "http://soplex.zib.de/"               |
+|                                                                   |
+|                  Copyright (C) RWTH Aachen, 2012.                 |
+|          Copyright (C) University of Twente, 2013-2014.           |
+|                         Author: Dennis Guck                       |
+|           IMCA is distributed under the GPL conditions            |
+|            (GPL stands for GNU General Public License)            |
+|          This program comes with ABSOLUTELY NO WARRANTY.          |
+|   This is free software, and you are welcome to redistribute it   |
+ ------------------------------------------------------------------- 
+
+Loading the '~/MA_experiments/mas/polling/polling-4-3-with.ma' file, please wait.
+Maximum State Reward: 0
+#States: 87606    #MS: 43924    #PS: 43682    #ND: 43442
+#Initials: 1    #Goals: 26244    #Transitions: 218171
+The occupied space is 19886832 Bytes (~18.965561 MB).
+
+
+Compute minimal time-bounded reachability inside interval [0,2] with precision 0.001, please wait.
+start value iteration
+iterations: 392000
+step duration: 5.10204e-06
+interval step: 392000
+interval start: 0
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

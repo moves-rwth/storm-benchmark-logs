@@ -1,0 +1,33 @@
+~/prism-examples/models/;mdps;firewire;firewire.nm;time_min.pctl;delay=36;;Storm-hybrid
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/firewire/firewire.nm --prop ~/prism-examples/models/mdps/firewire/time_min.pctl -const delay=36 -e hybrid --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 2.392s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	212268 (18185 nodes)
+Transitions: 	481792 (88908 nodes)
+Choices: 	478756
+Reward Models:  time
+Variables: 	rows: 10 meta variables (56 DD variables), columns: 10 meta variables (56 DD variables), nondeterminism: 14 meta variables (14 DD variables)
+Labels: 	1
+   * done
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"time"}min=? [F "done"] ...
+ WARN (HybridMdpPrctlHelper.cpp:215): Results of reward computation may be too low, because of zero-reward loops.
+Result (initial states): 138.25
+Time for model checking: 10.081s.
+Wall time: 12.88s
+User time: 12.74s
+System time: 0.12s
+Memory: 205012KB

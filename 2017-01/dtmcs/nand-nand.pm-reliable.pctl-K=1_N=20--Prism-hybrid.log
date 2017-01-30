@@ -1,0 +1,71 @@
+~/prism-examples/models/;dtmcs;nand;nand.pm;reliable.pctl;K=1,N=20;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 18:29:56 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/nand/nand.pm ~/prism-examples/models/dtmcs/nand/reliable.pctl -const 'K=1,N=20' -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/nand/nand.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/nand/reliable.pctl"...
+
+1 property:
+(1) P=? [ F s=4&z/N<0.1 ]
+
+Type:        DTMC
+Modules:     multiplex 
+Variables:   u c s z zx zy x y 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F s=4&z/N<0.1 ]
+Model constants: N=20,K=1
+
+Building model...
+Model constants: N=20,K=1
+
+Computing reachable states...
+
+Reachability (BFS): 242 iterations in 0.24 seconds (average 0.001008, setup 0.00)
+
+Time for model construction: 0.334 seconds.
+
+Type:        DTMC
+States:      78332 (1 initial)
+Transitions: 121512
+
+Transition matrix: 13582 nodes (131 terminal), 121512 minterms, vars: 27r/27c
+
+Prob0: 242 iterations in 0.32 seconds (average 0.001322, setup 0.00)
+
+Prob1: 169 iterations in 0.26 seconds (average 0.001515, setup 0.00)
+
+yes = 16, no = 29276, maybe = 49040
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=27, nodes=17931] [840.5 KB]
+Adding explicit sparse matrices... [levels=27, num=1, compact] [376.0 KB]
+Creating vector for diagonals... [dist=1, compact] [153.0 KB]
+Creating vector for RHS... [dist=2, compact] [153.0 KB]
+Allocating iteration vectors... [2 x 612.0 KB]
+TOTAL: [2.7 MB]
+
+Starting iterations...
+
+Jacobi: 241 iterations in 0.46 seconds (average 0.001461, setup 0.11)
+
+Value in the initial state: 0.28641904638485005
+
+Time for model checking: 1.099 seconds.
+
+Result: 0.28641904638485005 (value in the initial state)
+
+Wall time: 2.71s
+User time: 3.04s
+System time: 0.11s
+Memory: 111520KB

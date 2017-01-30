@@ -1,0 +1,55 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;io_T.csl;MAX_COUNT=1000;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 05:58:34 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/io_T.csl -const MAX_COUNT=1000 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/io_T.csl"...
+
+1 property:
+(1) P=? [ !"down" U<=72000 "fail_io" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !"down" U<=72000 "fail_io" ]
+Model constants: MAX_COUNT=1000
+
+Building model...
+Model constants: MAX_COUNT=1000
+
+Computing reachable states... 113606 268594 408743 545577 686512 830677 846788 states
+Reachable states exploration and model construction done in 18.335 secs.
+Sorting reachable states list...
+
+Time for model construction: 20.427 seconds.
+
+Type:        CTMC
+States:      846788 (1 initial)
+Transitions: 3574505
+
+Starting backwards transient probability computation...
+
+Uniformisation: q.t = 0.08500167110603755 x 72000.0 = 6120.120319634704
+Fox-Glynn (1.25E-7): left = 5570, right = 6786
+Backwards transient probability computation took 6787 iters and 1489.259 seconds.
+
+Value in the initial state: 7.47027884438923E-4
+
+Time for model checking: 1490.321 seconds.
+
+Result: 7.47027884438923E-4 (value in the initial state)
+
+Wall time: 1512.18s
+User time: 1527.25s
+System time: 2.75s
+Memory: 3212604KB

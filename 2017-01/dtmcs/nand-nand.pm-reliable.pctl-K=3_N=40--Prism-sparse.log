@@ -1,0 +1,88 @@
+~/prism-examples/models/;dtmcs;nand;nand.pm;reliable.pctl;K=3,N=40;;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 06:55:05 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/nand/nand.pm ~/prism-examples/models/dtmcs/nand/reliable.pctl -const 'K=3,N=40' -s -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/nand/nand.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/nand/reliable.pctl"...
+
+1 property:
+(1) P=? [ F s=4&z/N<0.1 ]
+
+Type:        DTMC
+Modules:     multiplex 
+Variables:   u c s z zx zy x y 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F s=4&z/N<0.1 ]
+Model constants: N=40,K=3
+
+Building model...
+Model constants: N=40,K=3
+
+Computing reachable states...
+
+Reachability (BFS): 1122 iterations in 5.42 seconds (average 0.004834, setup 0.00)
+
+Time for model construction: 5.667 seconds.
+
+Type:        DTMC
+States:      3001302 (1 initial)
+Transitions: 4719502
+
+Transition matrix: 49475 nodes (898 terminal), 4719502 minterms, vars: 32r/32c
+
+Prob0: 1122 iterations in 4.87 seconds (average 0.004342, setup 0.00)
+
+Prob1: 977 iterations in 4.32 seconds (average 0.004426, setup 0.00)
+
+yes = 141, no = 375263, maybe = 2625898
+
+Computing remaining probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=3001302, nnz=4130326, compact] [18.6 MB]
+Creating vector for diagonals... [dist=1, compact] [5.7 MB]
+Creating vector for RHS... [dist=2, compact] [5.7 MB]
+Allocating iteration vectors... [2 x 22.9 MB]
+TOTAL: [75.9 MB]
+
+Starting iterations...
+Iteration 64: max relative diff=1.000000, 5.06 sec so far
+Iteration 128: max relative diff=1.000000, 10.13 sec so far
+Iteration 192: max relative diff=1.000000, 15.19 sec so far
+Iteration 256: max relative diff=1.000000, 20.26 sec so far
+Iteration 320: max relative diff=1.000000, 25.32 sec so far
+Iteration 384: max relative diff=1.000000, 30.40 sec so far
+Iteration 448: max relative diff=1.000000, 35.46 sec so far
+Iteration 507: max relative diff=1.000000, 40.54 sec so far
+Iteration 559: max relative diff=1.000000, 45.60 sec so far
+Iteration 611: max relative diff=1.000000, 50.66 sec so far
+Iteration 663: max relative diff=1.000000, 55.74 sec so far
+Iteration 715: max relative diff=1.000000, 60.80 sec so far
+Iteration 769: max relative diff=1.000000, 65.83 sec so far
+Iteration 833: max relative diff=1.000000, 70.84 sec so far
+Iteration 897: max relative diff=1.000000, 75.86 sec so far
+Iteration 961: max relative diff=1.000000, 80.88 sec so far
+Iteration 1025: max relative diff=1.000000, 85.90 sec so far
+Iteration 1089: max relative diff=1.000000, 90.91 sec so far
+
+Jacobi: 1121 iterations in 95.76 seconds (average 0.083322, setup 2.36)
+
+Value in the initial state: 0.5777069138830992
+
+Time for model checking: 105.383 seconds.
+
+Result: 0.5777069138830992 (value in the initial state)
+
+Wall time: 112.35s
+User time: 112.53s
+System time: 0.28s
+Memory: 198608KB

@@ -1,0 +1,55 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;network.csl;c=1023;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 13:15:44 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/tandem/tandem.sm ~/prism-examples/models/ctmcs/tandem/network.csl -const c=1023 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/tandem/tandem.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/tandem/network.csl"...
+
+1 property:
+(1) P=? [ F<=0.2 sc=c&sm=c&ph=2 ]
+
+Type:        CTMC
+Modules:     serverC serverM 
+Variables:   sc ph sm 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F<=0.2 sc=c&sm=c&ph=2 ]
+Model constants: c=1023
+
+Building model...
+Model constants: c=1023
+
+Computing reachable states... 189297 426873 626576 794453 980389 1157485 1332984 1523295 1687557 1855543 2029949 2096128 states
+Reachable states exploration and model construction done in 33.737 secs.
+Sorting reachable states list...
+
+Time for model construction: 36.549 seconds.
+
+Type:        CTMC
+States:      2096128 (1 initial)
+Transitions: 7328771
+
+Starting backwards transient probability computation...
+
+Uniformisation: q.t = 4179.96 x 0.2 = 835.9920000000001
+Fox-Glynn (1.25E-7): left = 630, right = 1082
+Backwards transient probability computation took 1083 iters and 1671.448 seconds.
+
+Value in the initial state: 0.0
+
+Time for model checking: 1672.565 seconds.
+
+Result: 0.0 (value in the initial state)
+
+Wall time: 1710.64s
+User time: 1778.37s
+System time: 4.10s
+Memory: 4384308KB

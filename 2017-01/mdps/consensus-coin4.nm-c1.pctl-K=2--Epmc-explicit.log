@@ -1,0 +1,15 @@
+~/prism-examples/models/;mdps;consensus;coin4.nm;c1.pctl;K=2;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P>=1 [ F "finished" ]
+Starting to build model...
+Building model done. 22,656 states. Time for model exploration: 0 seconds.
+Starting iteration...
+Done. Did 0 iterations in 7 seconds.
+Finished model checking. Time required: 9 seconds
+P>=1 [ F "finished" ]: true
+Wall time: 11.43s
+User time: 21.99s
+System time: 1.06s
+Memory: 300788KB

@@ -1,0 +1,60 @@
+~/prism-examples/models/;mdps;consensus;coin2.nm;steps_min.pctl;K=16;maxiter=100000;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 06:42:19 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/consensus/coin2.nm ~/prism-examples/models/mdps/consensus/steps_min.pctl -const K=16 -ex -maxiters 100000
+
+Parsing model file "~/prism-examples/models/mdps/consensus/coin2.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/consensus/steps_min.pctl"...
+
+1 property:
+(1) R{"steps"}min=? [ F "finished" ]
+
+Type:        MDP
+Modules:     process1 process2 
+Variables:   counter pc1 coin1 pc2 coin2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"steps"}min=? [ F "finished" ]
+Model constants: K=16
+
+Building model...
+Model constants: K=16
+
+Computing reachable states... 2064 states
+Reachable states exploration and model construction done in 0.459 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.529 seconds.
+
+Type:        MDP
+States:      2064 (1 initial)
+Transitions: 3852
+Choices:     3088
+Max/avg:     2/1.50
+Building reward structure...
+
+Starting expected reachability (min)...
+Starting Prob1 (max)...
+Prob1 (max) took 101 iterations and 0.068 seconds.
+target=8, inf=0, rest=2056
+Starting value iteration (min)...
+Value iteration (min) took 15012 iterations and 2.078 seconds.
+Expected reachability took 2.149 seconds.
+
+Value in the initial state: 3064.382412878783
+
+Time for model checking: 2.164 seconds.
+
+Result: 3064.382412878783 (value in the initial state)
+
+Wall time: 3.96s
+User time: 4.72s
+System time: 0.44s
+Memory: 547264KB

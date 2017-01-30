@@ -1,0 +1,72 @@
+~/prism-examples/models/;mdps;firewire_dl;firewire_dl.nm;deadline.pctl;deadline=800,delay=3;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 19:08:31 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/firewire_dl/firewire_dl.nm ~/prism-examples/models/mdps/firewire_dl/deadline.pctl -const 'deadline=800,delay=3' -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/firewire_dl/firewire_dl.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/firewire_dl/deadline.pctl"...
+
+1 property:
+(1) Pmin=? [ F s=9 ]
+
+Type:        MDP
+Modules:     abstract_firewire 
+Variables:   y x s 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ F s=9 ]
+Model constants: deadline=800,delay=3
+
+Building model...
+Model constants: deadline=800,delay=3
+
+Computing reachable states...
+
+Reachability (BFS): 826 iterations in 1.41 seconds (average 0.001709, setup 0.00)
+
+Time for model construction: 10.121 seconds.
+
+Type:        MDP
+States:      290017 (1 initial)
+Transitions: 339865
+Choices:     327229
+
+Transition matrix: 11219 nodes (3 terminal), 339865 minterms, vars: 22r/22c/2nd
+
+Prob0E: 342 iterations in 4.11 seconds (average 0.012023, setup 0.00)
+
+Prob1A: 482 iterations in 2.56 seconds (average 0.005303, setup 0.00)
+
+yes = 128900, no = 93057, maybe = 68060
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrices... [nm=3, levels=22, nodes=34433] [1.6 MB]
+Adding sparse bits... [levels=22-22, num=3, compact=3/3] [1.2 MB]
+Creating vector for yes... [dist=2, compact] [566.5 KB]
+Allocating iteration vectors... [3 x 2.2 MB]
+TOTAL: [10.0 MB]
+
+Starting iterations...
+Iteration 416: max relative diff=0.074074, 5.00 sec so far
+
+Iterative method: 643 iterations in 8.04 seconds (average 0.011994, setup 0.33)
+
+Value in the initial state: 0.975494384765625
+
+Time for model checking: 14.78 seconds.
+
+Result: 0.975494384765625 (value in the initial state)
+
+Wall time: 26.20s
+User time: 26.61s
+System time: 0.17s
+Memory: 147692KB

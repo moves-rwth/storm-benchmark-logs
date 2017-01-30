@@ -1,0 +1,30 @@
+~/prism-examples/models/;dtmcs;brp;brp.pm;p1.pctl;MAX=2,N=16;;Storm-hybrid
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/dtmcs/brp/brp.pm --prop ~/prism-examples/models/dtmcs/brp/p1.pctl -const MAX=2,N=16 -e hybrid --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.051s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	613 (461 nodes)
+Transitions: 	803 (1812 nodes)
+Reward Models:  none
+Variables: 	rows: 18 meta variables (32 DD variables), columns: 18 meta variables (32 DD variables)
+Labels: 	0
+-------------------------------------------------------------- 
+
+Model checking property P=? [F (s = 5)] ...
+Result (initial states): 0.000423312906
+Time for model checking: 0.033s.
+Wall time: 0.18s
+User time: 0.12s
+System time: 0.02s
+Memory: 38272KB

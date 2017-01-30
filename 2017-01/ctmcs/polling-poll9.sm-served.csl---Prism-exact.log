@@ -1,0 +1,39 @@
+~/prism-examples/models/;ctmcs;polling;poll9.sm;served.csl;;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 10:17:15 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/polling/poll9.sm ~/prism-examples/models/ctmcs/polling/served.csl -exact -politer
+
+Parsing model file "~/prism-examples/models/ctmcs/polling/poll9.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/polling/served.csl"...
+
+1 property:
+(1) R{"served"}=? [ C<=20 ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 station4 station5 station6 station7 station8 station9 
+Variables:   s a s1 s2 s3 s4 s5 s6 s7 s8 s9 
+
+---------------------------------------------------------------------
+
+Model checking: R{"served"}=? [ C<=20 ]
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 7.056 secs.
+
+Time for model construction: 7.063 seconds.
+Building reward structure...
+
+Error: Parametric engine does not yet handle the C operator in the R operator.
+
+Wall time: 8.73s
+User time: 13.98s
+System time: 2.71s
+Memory: 570992KB

@@ -1,0 +1,48 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;qos2.csl;N=256;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 23:26:59 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/cluster/cluster.sm ~/prism-examples/models/ctmcs/cluster/qos2.csl -const N=256 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/cluster/cluster.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/cluster/qos2.csl"...
+
+1 property:
+(1) P=? [ F[20,20] !"minimum" ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F[20,20] !"minimum" ]
+Model constants: N=256
+
+Building model...
+Model constants: N=256
+
+Computing reachable states... 125882 315961 470206 650705 844736 1001890 1144290 1339394 1515271 1709318 1870578 2065714 2231211 2373652 states
+Reachable states exploration and model construction done in 41.652 secs.
+Sorting reachable states list...
+
+Time for model construction: 58.635 seconds.
+
+Type:        CTMC
+States:      2373652 (1 initial)
+Transitions: 11583520
+
+Starting backwards transient probability computation...
+
+Uniformisation: q.t = 52.0404 x 20.0 = 1040.808
+Fox-Glynn (1.25E-7): left = 811, right = 1316
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

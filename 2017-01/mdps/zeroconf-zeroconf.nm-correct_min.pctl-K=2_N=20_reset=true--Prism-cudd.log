@@ -1,0 +1,67 @@
+~/prism-examples/models/;mdps;zeroconf;zeroconf.nm;correct_min.pctl;K=2,N=20,reset=true;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 19:52:06 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/zeroconf/zeroconf.nm ~/prism-examples/models/mdps/zeroconf/correct_min.pctl -const 'K=2,N=20,reset=true' -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/zeroconf/zeroconf.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/zeroconf/correct_min.pctl"...
+
+1 property:
+(1) Pmin=? [ F (l=4&ip=1) ]
+
+Type:        MDP
+Modules:     environment host0 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ F (l=4&ip=1) ]
+Model constants: reset=true,N=20,K=2
+
+Building model...
+Model constants: reset=true,N=20,K=2
+
+Computing reachable states...
+
+Reachability (BFS): 142 iterations in 0.44 seconds (average 0.003099, setup 0.00)
+
+Time for model construction: 0.969 seconds.
+
+Type:        MDP
+States:      670 (1 initial)
+Transitions: 997
+Choices:     827
+
+Transition matrix: 3188 nodes (6 terminal), 997 minterms, vars: 56r/56c/7nd
+
+Prob0E: 82 iterations in 0.06 seconds (average 0.000732, setup 0.00)
+
+Prob1A: 64 iterations in 0.04 seconds (average 0.000625, setup 0.00)
+
+yes = 32, no = 177, maybe = 461
+
+Computing remaining probabilities...
+Engine: MTBDD
+
+Building iteration matrix MTBDD... [nodes=2187] [42.7 Kb]
+
+Starting iterations...
+
+Iterative method: 163 iterations in 0.52 seconds (average 0.003190, setup 0.00)
+
+Value in the initial state: 2.110327217526126E-6
+
+Time for model checking: 0.628 seconds.
+
+Result: 2.110327217526126E-6 (value in the initial state)
+
+Wall time: 2.91s
+User time: 3.28s
+System time: 0.17s
+Memory: 134264KB

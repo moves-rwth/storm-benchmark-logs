@@ -1,0 +1,11 @@
+~/prism-examples/models/;ctmcs;kanban;kanban.sm;throughput.csl;t=1;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R{"throughput"}=? [ S ]
+Finished model checking. Time required: 0 seconds
+R{"throughput"}=? [ S ]: No solver available to handle property "R{"throughput"}=?[S]" for this model with the current settings
+Wall time: 1.99s
+User time: 7.58s
+System time: 0.69s
+Memory: 250160KB

@@ -1,0 +1,14 @@
+~/prism-examples/models/;mdps;consensus;coin4.nm;c1.pctl;K=32;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P>=1 [ F "finished" ]
+Starting to build model...
+Current number of states: 247,307; states/second: 49,460
+Building model done. 329,856 states. Time for model exploration: 5 seconds.
+Starting iteration...
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

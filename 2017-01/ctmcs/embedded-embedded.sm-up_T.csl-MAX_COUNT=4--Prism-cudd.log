@@ -1,0 +1,67 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;up_T.csl;MAX_COUNT=4;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 03:01:13 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/up_T.csl -const MAX_COUNT=4 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/up_T.csl"...
+
+1 property:
+(1) R{"up"}=? [ C<=72000 ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: R{"up"}=? [ C<=72000 ]
+Model constants: MAX_COUNT=4
+
+Building model...
+Model constants: MAX_COUNT=4
+
+Computing reachable states...
+
+Reachability (BFS): 17 iterations in 0.01 seconds (average 0.000471, setup 0.00)
+
+Time for model construction: 0.039 seconds.
+
+Type:        CTMC
+States:      5168 (1 initial)
+Transitions: 21773
+
+Rate matrix: 1448 nodes (9 terminal), 21773 minterms, vars: 15r/15c
+
+Computing rewards...
+Engine: MTBDD
+
+Computing diagonals MTBDD... [nodes=719] [14.0 Kb]
+Building iteration matrix MTBDD... [nodes=4858] [94.9 Kb]
+
+Uniformisation: q.t = 0.085002 x 72000.000000 = 6120.120320
+Fox-Glynn: left = 5570, right = 6786
+
+Starting iterations...
+Iteration 1739 (of 6786): 5.00 sec so far
+Iteration 3621 (of 6786): 10.01 sec so far
+Iteration 5487 (of 6786): 15.01 sec so far
+
+Iterative method: 6786 iterations in 18.06 seconds (average 0.002661, setup 0.01)
+
+Value in the initial state: 19.90226584717465
+
+Time for model checking: 18.099 seconds.
+
+Result: 19.90226584717465 (value in the initial state)
+
+Wall time: 19.45s
+User time: 19.76s
+System time: 0.17s
+Memory: 111040KB

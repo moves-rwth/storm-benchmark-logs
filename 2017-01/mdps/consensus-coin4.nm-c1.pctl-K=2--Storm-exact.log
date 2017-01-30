@@ -1,0 +1,35 @@
+~/prism-examples/models/;mdps;consensus;coin4.nm;c1.pctl;K=2;;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/consensus/coin4.nm --prop ~/prism-examples/models/mdps/consensus/c1.pctl -const K=2 --exact --minmax:method pi -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.476s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	22656
+Transitions: 	75232
+Choices: 	60544
+Reward Models:  none
+Labels: 	3
+   * deadlock -> 0 state(s)
+   * init -> 1 state(s)
+   * finished -> 64 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property P>=1 [F "finished"] ...
+Result (initial states): true
+
+Time for model checking: 0.031s.
+Wall time: 0.58s
+User time: 0.46s
+System time: 0.11s
+Memory: 221756KB

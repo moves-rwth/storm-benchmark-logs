@@ -1,0 +1,39 @@
+~/prism-examples/models/;ctmcs;polling;poll3.sm;s1.csl;;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 09:59:30 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/polling/poll3.sm ~/prism-examples/models/ctmcs/polling/s1.csl -exact -politer
+
+Parsing model file "~/prism-examples/models/ctmcs/polling/poll3.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/polling/s1.csl"...
+
+1 property:
+(1) S=? [ s1=1&!(s=1&a=1) ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 
+Variables:   s a s1 s2 s3 
+
+---------------------------------------------------------------------
+
+Model checking: S=? [ s1=1&!(s=1&a=1) ]
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 0.213 secs.
+
+Time for model construction: 0.216 seconds.
+
+Time for model checking: 2.825 seconds.
+
+Result (probability): 607039434066937513/4640902006747394313
+Wall time: 4.47s
+User time: 9.26s
+System time: 0.80s
+Memory: 231636KB

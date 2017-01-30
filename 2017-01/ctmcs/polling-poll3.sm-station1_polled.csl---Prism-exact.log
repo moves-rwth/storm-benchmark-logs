@@ -1,0 +1,38 @@
+~/prism-examples/models/;ctmcs;polling;poll3.sm;station1_polled.csl;;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 18:04:32 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/polling/poll3.sm ~/prism-examples/models/ctmcs/polling/station1_polled.csl -exact -politer
+
+Parsing model file "~/prism-examples/models/ctmcs/polling/poll3.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/polling/station1_polled.csl"...
+
+1 property:
+(1) P=? [ F<=20 (s=1&a=0) ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 
+Variables:   s a s1 s2 s3 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F<=20 (s=1&a=0) ]
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 0.214 secs.
+
+Time for model construction: 0.218 seconds.
+
+Error: Bounded until operator not supported by parametric engine.
+
+Wall time: 2.10s
+User time: 2.13s
+System time: 0.12s
+Memory: 87452KB

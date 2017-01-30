@@ -1,0 +1,40 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;danger_T.csl;MAX_COUNT=100;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 03:43:20 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/danger_T.csl -const MAX_COUNT=100 -exact -politer
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/danger_T.csl"...
+
+1 property:
+(1) R{"danger"}=? [ C<=72000 ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: R{"danger"}=? [ C<=72000 ]
+Model constants: MAX_COUNT=100
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 66.708 secs.
+
+Time for model construction: 66.714 seconds.
+Building reward structure...
+
+Error: Parametric engine does not yet handle the C operator in the R operator.
+
+Wall time: 70.70s
+User time: 83.33s
+System time: 34.35s
+Memory: 672500KB

@@ -1,0 +1,37 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;qos3.csl;N=256;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 23:56:59 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/cluster/cluster.sm ~/prism-examples/models/ctmcs/cluster/qos3.csl -const N=256 -exact -politer
+
+Parsing model file "~/prism-examples/models/ctmcs/cluster/cluster.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/cluster/qos3.csl"...
+
+1 property:
+(1) P=? [ "minimum" U<=20 "premium" ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ "minimum" U<=20 "premium" ]
+Model constants: N=256
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 1556.203 secs.
+
+Time for model construction: 1556.208 seconds.
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

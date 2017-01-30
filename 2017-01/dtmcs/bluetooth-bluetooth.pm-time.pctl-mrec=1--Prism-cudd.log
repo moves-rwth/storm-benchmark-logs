@@ -1,0 +1,67 @@
+~/prism-examples/models/;dtmcs;bluetooth;bluetooth.pm;time.pctl;mrec=1;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 00:00:17 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/bluetooth/bluetooth.pm ~/prism-examples/models/dtmcs/bluetooth/time.pctl -const mrec=1 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/bluetooth/bluetooth.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/bluetooth/time.pctl"...
+
+1 property:
+(1) R=? [ F "complete" ]
+
+Type:        DTMC
+Modules:     receiver1 frequency1 sender_frequency replies 
+Variables:   y1 receiver freq1 train1 z1 f1 t1 send freq train c rep rec 
+
+---------------------------------------------------------------------
+
+Model checking: R=? [ F "complete" ]
+Model constants: mrec=1
+
+Building model...
+Model constants: mrec=1
+
+Computing reachable states...
+
+Reachability (BFS): 50 iterations in 0.26 seconds (average 0.005280, setup 0.00)
+
+Time for model construction: 28.358 seconds.
+
+Type:        DTMC
+States:      3411945339 (536870912 initial)
+Transitions: 5035263739
+
+Transition matrix: 14727 nodes (4 terminal), 5035263739 minterms, vars: 52r/52c
+
+Prob0: 49 iterations in 0.47 seconds (average 0.009633, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 1636000575, inf = 0, maybe = 1775944764
+
+Computing remaining rewards...
+Engine: MTBDD
+
+Iteration matrix MTBDD... [nodes=11441] [223.5 Kb]
+Diagonals MTBDD... [nodes=4425] [86.4 Kb]
+
+Starting iterations...
+
+Jacobi: 47 iterations in 1.02 seconds (average 0.021191, setup 0.02)
+
+Range of values over initial states: [2.0,8229.0]
+
+Time for model checking: 1.546 seconds.
+
+Result: [2.0,8229.0] (range of values over initial states)
+
+Wall time: 31.34s
+User time: 31.88s
+System time: 0.19s
+Memory: 140992KB

@@ -1,0 +1,62 @@
+~/prism-examples/models/;dtmcs;crowds;crowds.pm;positive.pctl;CrowdSize=15,TotalRuns=6;;Storm-cudd
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/dtmcs/crowds/crowds.pm --prop ~/prism-examples/models/dtmcs/crowds/positive.pctl -const CrowdSize=15,TotalRuns=6 -e dd --ddlib cudd --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+ WARN (DdPrismModelBuilder.cpp:622): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:765): Guard of a command overlaps with previous guards.
+Time for model construction: 0.437s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	2341309 (3493 nodes)
+Transitions: 	6992509 (18300 nodes)
+Reward Models:  none
+Variables: 	rows: 32 meta variables (78 DD variables), columns: 32 meta variables (78 DD variables)
+Labels: 	0
+-------------------------------------------------------------- 
+
+Model checking property P=? [F (observe0 > 1)] ...
+Result (initial states): 0.1286525244
+Time for model checking: 24.455s.
+Wall time: 24.99s
+User time: 24.89s
+System time: 0.06s
+Memory: 103320KB

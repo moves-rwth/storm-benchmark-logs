@@ -1,0 +1,47 @@
+~/prism-examples/models/;mdps;zeroconf_dl;zeroconf_dl.nm;deadline_max.pctl;K=1,N=1000,deadline=500,reset=false;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 21:42:41 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/zeroconf_dl/zeroconf_dl.nm ~/prism-examples/models/mdps/zeroconf_dl/deadline_max.pctl -const 'K=1,N=1000,deadline=500,reset=false' -ex
+
+Parsing model file "~/prism-examples/models/mdps/zeroconf_dl/zeroconf_dl.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/zeroconf_dl/deadline_max.pctl"...
+
+1 property:
+(1) Pmax=? [ !(l=4&ip=2) U t>=deadline ]
+
+Type:        MDP
+Modules:     environment host0 timer 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l t 
+
+---------------------------------------------------------------------
+
+Model checking: Pmax=? [ !(l=4&ip=2) U t>=deadline ]
+Model constants: reset=false,deadline=500,N=1000,K=1
+
+Building model...
+Model constants: reset=false,deadline=500,N=1000,K=1
+
+Computing reachable states... 81591 204696 321621 423038 542037 654275 771647 871384 964734 1058238 1171265 1280135 1372001 1479584 1584188 1676571 1791870 1903427 1999393 2099945 2188939 2204595 2305206 2404204 2483996 2582161 2671634 2770319 2856212 2956124 3035026 3135736 3227918 3329405 3400865 3499405 3570682 3668554 3728974 3817349 3898468 3989062 4067933 4158038 4237379 4326709 4406860 4495270 4576369 4663830 4745846 4833402 4915386 5002503 5079412 5166347 5248892 5334847 5420972 5496734 5583206 5657154 5743526 5816375 5902872 5969612 6058847 6129019 6213507 6296183 6339071 6422219 6488482 6572340 6640893 6725584 6808498 6872599 6956416 7012033 7097269 7168229 7255388 7340425 7379318 7464887 7514549 7600914 7675595 7756206 7835869 7845048 7916272 7968839 8019747 8063445 8101061 8133325 8161046 8184881 8205319 8222910 8238042 8251003 8262168 8271777 8280004 8287017 8293178 8298417 8302889 8306733 8310032 8312864 8315273 8317416 8319256 8320807 8322174 8323309 8324298 8325142 8325867 8326508 8327063 8327532 8327922 8328253 8328549 8328800 8329018 8329206 8329358 8329492 8329606 8329704 8329785 8329860Exception in thread "main" java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at parser.State.<init>(State.java:48)
+	at parser.State.<init>(State.java:57)
+	at simulator.ChoiceListFlexi.computeTarget(ChoiceListFlexi.java:217)
+	at simulator.SimulatorEngine.computeTransitionTarget(SimulatorEngine.java:1082)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:230)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:110)
+	at prism.Prism.doBuildModel(Prism.java:1889)
+	at prism.Prism.buildModelIfRequired(Prism.java:1850)
+	at prism.Prism.modelCheck(Prism.java:2739)
+	at prism.PrismCL.run(PrismCL.java:333)
+	at prism.PrismCL.main(PrismCL.java:2336)
+Command exited with non-zero status 1
+Wall time: 1440.76s
+User time: 9130.60s
+System time: 39.72s
+Memory: 8500164KB
+External error: 1

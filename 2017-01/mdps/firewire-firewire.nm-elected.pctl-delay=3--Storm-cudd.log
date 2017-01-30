@@ -1,0 +1,33 @@
+~/prism-examples/models/;mdps;firewire;firewire.nm;elected.pctl;delay=3;;Storm-cudd
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/firewire/firewire.nm --prop ~/prism-examples/models/mdps/firewire/elected.pctl -const delay=3 -e dd --ddlib cudd --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.573s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	4093 (4065 nodes)
+Transitions: 	5581 (14911 nodes)
+Choices: 	5515
+Reward Models:  none
+Variables: 	rows: 10 meta variables (44 DD variables), columns: 10 meta variables (44 DD variables), nondeterminism: 14 meta variables (14 DD variables)
+Labels: 	1
+   * done
+-------------------------------------------------------------- 
+
+Model checking property P>=1 [F "done"] ...
+Result (initial states): true
+
+Time for model checking: 0.550s.
+Wall time: 1.21s
+User time: 1.16s
+System time: 0.04s
+Memory: 57892KB

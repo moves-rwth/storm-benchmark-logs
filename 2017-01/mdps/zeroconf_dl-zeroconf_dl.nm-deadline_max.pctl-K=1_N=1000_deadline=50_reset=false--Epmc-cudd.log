@@ -1,0 +1,21 @@
+~/prism-examples/models/;mdps;zeroconf_dl;zeroconf_dl.nm;deadline_max.pctl;K=1,N=1000,deadline=50,reset=false;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property Pmax=? [ !(l=4 & ip=2) U t>=deadline ]
+Building DD model...
+Building DD model finished in 0 seconds
+Exploring model state space...
+Finished exploring the state space. Time required: 89 seconds
+Converting BDD graph to explicit...
+Converting BDD graph to explicit done in 4 seconds
+Starting iteration...
+Done. Did 0 iterations in 0 seconds.
+Finished model checking. Time required: 219 seconds
+Time spent in DD routines converting DD<->MDD: 15 seconds
+Total time spent in DD routines: 209 seconds
+Pmax=? [ !(l=4 & ip=2) U t>=deadline ]: 1.0
+Wall time: 222.09s
+User time: 248.89s
+System time: 3.12s
+Memory: 2887932KB

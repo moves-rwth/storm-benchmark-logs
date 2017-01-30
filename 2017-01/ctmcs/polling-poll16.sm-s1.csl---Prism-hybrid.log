@@ -1,0 +1,88 @@
+~/prism-examples/models/;ctmcs;polling;poll16.sm;s1.csl;;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 21:07:11 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/polling/poll16.sm ~/prism-examples/models/ctmcs/polling/s1.csl -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/polling/poll16.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/polling/s1.csl"...
+
+1 property:
+(1) S=? [ s1=1&!(s=1&a=1) ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 station4 station5 station6 station7 station8 station9 station10 station11 station12 station13 station14 station15 station16 
+Variables:   s a s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 
+
+---------------------------------------------------------------------
+
+Model checking: S=? [ s1=1&!(s=1&a=1) ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 33 iterations in 0.06 seconds (average 0.001939, setup 0.00)
+
+Time for model construction: 0.13 seconds.
+
+Type:        CTMC
+States:      1572864 (1 initial)
+Transitions: 13893632
+
+Rate matrix: 2188 nodes (4 terminal), 13893632 minterms, vars: 21r/21c
+
+SCCs: 1, BSCCs: 1, non-BSCC states: 0
+BSCC sizes: 1:1572864
+
+Computing steady state probabilities for BSCC 1
+
+Computing probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=21, nodes=2233] [104.7 KB]
+Adding explicit sparse matrices... [levels=11, num=59, compact] [549.0 KB]
+Creating vector for diagonals... [dist=33, compact] [3.0 MB]
+Allocating iteration vectors... [2 x 12.0 MB]
+TOTAL: [27.6 MB]
+
+Starting iterations...
+Iteration 48: max relative diff=0.064282, 5.10 sec so far
+Iteration 96: max relative diff=0.021498, 10.19 sec so far
+Iteration 144: max relative diff=0.015744, 15.27 sec so far
+Iteration 188: max relative diff=0.011759, 20.37 sec so far
+Iteration 232: max relative diff=0.007482, 25.40 sec so far
+Iteration 276: max relative diff=0.004018, 30.43 sec so far
+Iteration 314: max relative diff=0.002126, 35.45 sec so far
+Iteration 352: max relative diff=0.001065, 40.47 sec so far
+Iteration 390: max relative diff=0.000518, 45.53 sec so far
+Iteration 429: max relative diff=0.000244, 50.66 sec so far
+Iteration 468: max relative diff=0.000114, 55.79 sec so far
+Iteration 506: max relative diff=0.000054, 60.80 sec so far
+Iteration 544: max relative diff=0.000026, 65.80 sec so far
+Iteration 582: max relative diff=0.000012, 70.81 sec so far
+Iteration 620: max relative diff=0.000006, 75.82 sec so far
+Iteration 658: max relative diff=0.000003, 80.82 sec so far
+Iteration 696: max relative diff=0.000001, 85.84 sec so far
+
+Jacobi: 709 iterations in 87.78 seconds (average 0.123487, setup 0.23)
+
+BSCC 1 probability: 0.12899023960346379
+
+All states are in BSCCs (so no reachability probabilities computed)
+
+Value in the initial state: 0.12899023960346379
+
+Time for model checking: 87.931 seconds.
+
+Result: 0.12899023960346379 (value in the initial state)
+
+Wall time: 89.35s
+User time: 89.76s
+System time: 0.18s
+Memory: 139212KB

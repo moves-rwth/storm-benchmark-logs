@@ -1,0 +1,31 @@
+~/prism-examples/models/;mdps;firewire_dl;firewire_dl.nm;deadline.pctl;deadline=800,delay=36;;Storm-cudd
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/firewire_dl/firewire_dl.nm --prop ~/prism-examples/models/mdps/firewire_dl/deadline.pctl -const deadline=800,delay=36 -e dd --ddlib cudd --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 9.863s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	530965 (1933 nodes)
+Transitions: 	954670 (10475 nodes)
+Choices: 	804154
+Reward Models:  none
+Variables: 	rows: 3 meta variables (22 DD variables), columns: 3 meta variables (22 DD variables), nondeterminism: 2 meta variables (2 DD variables)
+Labels: 	0
+-------------------------------------------------------------- 
+
+Model checking property Pmin=? [F (s = 9)] ...
+Result (initial states): 0.939453125
+Time for model checking: 9.344s.
+Wall time: 19.29s
+User time: 19.15s
+System time: 0.12s
+Memory: 177288KB

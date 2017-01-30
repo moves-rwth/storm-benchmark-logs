@@ -1,0 +1,11 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;premium_steady.csl;N=16;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property S=? [ "premium" ]
+Finished model checking. Time required: 0 seconds
+S=? [ "premium" ]: No solver available to handle property "(((left_n) ≥ (16)) ∧ (toleft_n)) ∨ (((right_n) ≥ (16)) ∧ (toright_n)) ∨ ((((left_n) + (right_n)) ≥ (16)) ∧ (toleft_n) ∧ (line_n) ∧ (toright_n))" for this model with the current settings
+Wall time: 1.97s
+User time: 7.48s
+System time: 0.67s
+Memory: 248632KB

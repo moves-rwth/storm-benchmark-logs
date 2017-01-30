@@ -1,0 +1,80 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;main.csl;MAX_COUNT=1000;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 20:28:28 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/main.csl -const MAX_COUNT=1000 -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/main.csl"...
+
+1 property:
+(1) P=? [ !"down" U "fail_main" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !"down" U "fail_main" ]
+Model constants: MAX_COUNT=1000
+
+Building model...
+Model constants: MAX_COUNT=1000
+
+Computing reachable states...
+
+Reachability (BFS): 1013 iterations in 1.30 seconds (average 0.001283, setup 0.00)
+
+Time for model construction: 1.615 seconds.
+
+Type:        CTMC
+States:      846788 (1 initial)
+Transitions: 3574505
+
+Rate matrix: 4199 nodes (9 terminal), 3574505 minterms, vars: 22r/22c
+
+Diagonals vector: 1573 nodes (69 terminal), 846788 minterms
+Embedded Markov chain: 32318 nodes (309 terminal), 3574505 minterms
+
+Prob0: 2 iterations in 0.00 seconds (average 0.002000, setup 0.00)
+
+Prob1: 1004 iterations in 0.37 seconds (average 0.000367, setup 0.00)
+
+yes = 463975, no = 90485, maybe = 292328
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=22, nodes=25189] [1.2 MB]
+Adding explicit sparse matrices... [levels=9, num=862, compact] [821.6 KB]
+Creating vector for diagonals... [dist=5, compact] [1.6 MB]
+Creating vector for RHS... [dist=2, compact] [1.6 MB]
+Allocating iteration vectors... [2 x 6.5 MB]
+TOTAL: [18.1 MB]
+
+Starting iterations...
+Iteration 195: max relative diff=0.005154, 5.02 sec so far
+Iteration 390: max relative diff=0.002570, 10.02 sec so far
+Iteration 551: max relative diff=0.001817, 15.03 sec so far
+Iteration 714: max relative diff=0.001402, 20.04 sec so far
+Iteration 877: max relative diff=0.001141, 25.04 sec so far
+Iteration 1041: max relative diff=0.000003, 30.06 sec so far
+
+Jacobi: 1115 iterations in 32.70 seconds (average 0.028994, setup 0.37)
+
+Value in the initial state: 0.05476373306521506
+
+Time for model checking: 33.194 seconds.
+
+Result: 0.05476373306521506 (value in the initial state)
+
+Wall time: 36.12s
+User time: 36.37s
+System time: 0.19s
+Memory: 136544KB

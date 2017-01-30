@@ -1,0 +1,44 @@
+~/prism-examples/models/;ctmcs;polling;poll16.sm;served.csl;;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 11:47:44 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/polling/poll16.sm ~/prism-examples/models/ctmcs/polling/served.csl -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/polling/poll16.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/polling/served.csl"...
+
+1 property:
+(1) R{"served"}=? [ C<=20 ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 station4 station5 station6 station7 station8 station9 station10 station11 station12 station13 station14 station15 station16 
+Variables:   s a s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 
+
+---------------------------------------------------------------------
+
+Model checking: R{"served"}=? [ C<=20 ]
+
+Building model...
+
+Computing reachable states... 35877 91610 148626 200644 260440 318961 380270 427678 474823 532290 594699 652441 707149 765205 820153 870591 927193 987250 1032118 1093683 1152605 1202798 1264392 1323105 1372255 1433851 1476624 1542295 1572864 states
+Reachable states exploration and model construction done in 100.054 secs.
+Sorting reachable states list...
+
+Time for model construction: 104.493 seconds.
+
+Type:        CTMC
+States:      1572864 (1 initial)
+Transitions: 13893632
+Building reward structure...
+
+Error: Explicit engine does not yet handle transition rewards for D/CTMCs.
+
+Wall time: 106.22s
+User time: 233.37s
+System time: 3.56s
+Memory: 4226028KB

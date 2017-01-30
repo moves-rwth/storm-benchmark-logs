@@ -1,0 +1,17 @@
+~/prism-examples/models/;mdps;consensus;coin6.nm;c1.pctl;K=4;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P>=1 [ F "finished" ]
+Building DD model...
+Building DD model finished in 0 seconds
+Exploring model state space...
+Finished exploring the state space. Time required: 22 seconds
+Finished model checking. Time required: 57 seconds
+Time spent in DD routines converting DD<->MDD: 0 seconds
+Total time spent in DD routines: 57 seconds
+P>=1 [ F "finished" ]: true
+Wall time: 59.13s
+User time: 68.14s
+System time: 0.88s
+Memory: 305792KB

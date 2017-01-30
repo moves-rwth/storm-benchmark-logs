@@ -1,0 +1,98 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;actuators_T.csl;MAX_COUNT=1000;;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 21:32:48 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/actuators_T.csl -const MAX_COUNT=1000 -s -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/actuators_T.csl"...
+
+1 property:
+(1) P=? [ !"down" U<=72000 "fail_sensors" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !"down" U<=72000 "fail_sensors" ]
+Model constants: MAX_COUNT=1000
+
+Building model...
+Model constants: MAX_COUNT=1000
+
+Computing reachable states...
+
+Reachability (BFS): 1013 iterations in 1.28 seconds (average 0.001268, setup 0.00)
+
+Time for model construction: 1.591 seconds.
+
+Type:        CTMC
+States:      846788 (1 initial)
+Transitions: 3574505
+
+Rate matrix: 4199 nodes (9 terminal), 3574505 minterms, vars: 22r/22c
+
+Computing probabilities...
+Engine: Sparse
+
+Number of non-absorbing states: 292328 of 846788 (34.5%)
+
+Building sparse matrix... [n=846788, nnz=1497664, compact] [6.5 MB]
+Creating vector for diagonals... [dist=35, compact] [1.6 MB]
+Allocating iteration vectors... [3 x 6.5 MB]
+TOTAL: [27.5 MB]
+
+Uniformisation: q.t = 0.085002 x 72000.000000 = 6120.120320
+Fox-Glynn: left = 5570, right = 6786
+
+Starting iterations...
+Iteration 259 (of 6786): max relative diff=0.007716, 5.02 sec so far
+Iteration 517 (of 6786): max relative diff=0.003861, 10.02 sec so far
+Iteration 779 (of 6786): max relative diff=0.002559, 15.03 sec so far
+Iteration 1046 (of 6786): max relative diff=0.001904, 20.04 sec so far
+Iteration 1311 (of 6786): max relative diff=0.001518, 25.04 sec so far
+Iteration 1535 (of 6786): max relative diff=0.001295, 30.06 sec so far
+Iteration 1797 (of 6786): max relative diff=0.001105, 35.06 sec so far
+Iteration 2065 (of 6786): max relative diff=0.000960, 40.08 sec so far
+Iteration 2329 (of 6786): max relative diff=0.000851, 45.09 sec so far
+Iteration 2549 (of 6786): max relative diff=0.000777, 50.11 sec so far
+Iteration 2771 (of 6786): max relative diff=0.000714, 55.11 sec so far
+Iteration 2997 (of 6786): max relative diff=0.000659, 60.13 sec so far
+Iteration 3226 (of 6786): max relative diff=0.000612, 65.16 sec so far
+Iteration 3456 (of 6786): max relative diff=0.000571, 70.16 sec so far
+Iteration 3690 (of 6786): max relative diff=0.000534, 75.18 sec so far
+Iteration 3925 (of 6786): max relative diff=0.000502, 80.19 sec so far
+Iteration 4156 (of 6786): max relative diff=0.000473, 85.22 sec so far
+Iteration 4381 (of 6786): max relative diff=0.000448, 90.22 sec so far
+Iteration 4607 (of 6786): max relative diff=0.000426, 95.24 sec so far
+Iteration 4838 (of 6786): max relative diff=0.000405, 100.26 sec so far
+Iteration 5070 (of 6786): max relative diff=0.000386, 105.29 sec so far
+Iteration 5301 (of 6786): max relative diff=0.000369, 110.31 sec so far
+Iteration 5531 (of 6786): max relative diff=0.000354, 115.32 sec so far
+Iteration 5718 (of 6786): max relative diff=0.000342, 120.34 sec so far
+Iteration 5896 (of 6786): max relative diff=0.000331, 125.36 sec so far
+Iteration 6074 (of 6786): max relative diff=0.000321, 130.38 sec so far
+Iteration 6252 (of 6786): max relative diff=0.000312, 135.39 sec so far
+Iteration 6429 (of 6786): max relative diff=0.000303, 140.41 sec so far
+Iteration 6607 (of 6786): max relative diff=0.000295, 145.42 sec so far
+Iteration 6785 (of 6786): max relative diff=0.000287, 150.43 sec so far
+
+Iterative method: 6786 iterations in 150.92 seconds (average 0.022173, setup 0.46)
+
+Value in the initial state: 0.0022026431769079685
+
+Time for model checking: 151.099 seconds.
+
+Result: 0.0022026431769079685 (value in the initial state)
+
+Wall time: 154.03s
+User time: 154.24s
+System time: 0.28s
+Memory: 139312KB

@@ -1,0 +1,39 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;io_T.csl;MAX_COUNT=2;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 18:03:55 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/io_T.csl -const MAX_COUNT=2 -exact -politer
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/io_T.csl"...
+
+1 property:
+(1) P=? [ !"down" U<=72000 "fail_io" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !"down" U<=72000 "fail_io" ]
+Model constants: MAX_COUNT=2
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 6.089 secs.
+
+Time for model construction: 6.095 seconds.
+
+Error: Bounded until operator not supported by parametric engine.
+
+Wall time: 8.65s
+User time: 16.22s
+System time: 1.92s
+Memory: 602124KB

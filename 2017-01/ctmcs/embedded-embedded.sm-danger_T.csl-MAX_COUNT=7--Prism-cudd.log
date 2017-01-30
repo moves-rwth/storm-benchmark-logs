@@ -1,0 +1,70 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;danger_T.csl;MAX_COUNT=7;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 03:07:04 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/danger_T.csl -const MAX_COUNT=7 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/danger_T.csl"...
+
+1 property:
+(1) R{"danger"}=? [ C<=72000 ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: R{"danger"}=? [ C<=72000 ]
+Model constants: MAX_COUNT=7
+
+Building model...
+Model constants: MAX_COUNT=7
+
+Computing reachable states...
+
+Reachability (BFS): 20 iterations in 0.01 seconds (average 0.000600, setup 0.00)
+
+Time for model construction: 0.045 seconds.
+
+Type:        CTMC
+States:      7703 (1 initial)
+Transitions: 32474
+
+Rate matrix: 1950 nodes (9 terminal), 32474 minterms, vars: 16r/16c
+
+Computing rewards...
+Engine: MTBDD
+
+Computing diagonals MTBDD... [nodes=925] [18.1 Kb]
+Building iteration matrix MTBDD... [nodes=5972] [116.6 Kb]
+
+Uniformisation: q.t = 0.085002 x 72000.000000 = 6120.120320
+Fox-Glynn: left = 5570, right = 6786
+
+Starting iterations...
+Iteration 356 (of 6786): 5.00 sec so far
+Iteration 1562 (of 6786): 10.01 sec so far
+Iteration 2762 (of 6786): 15.01 sec so far
+Iteration 3964 (of 6786): 20.02 sec so far
+Iteration 5174 (of 6786): 25.02 sec so far
+Iteration 6450 (of 6786): 30.02 sec so far
+
+Iterative method: 6786 iterations in 30.75 seconds (average 0.004530, setup 0.01)
+
+Value in the initial state: 0.013817694089480746
+
+Time for model checking: 30.797 seconds.
+
+Result: 0.013817694089480746 (value in the initial state)
+
+Wall time: 32.11s
+User time: 32.44s
+System time: 0.17s
+Memory: 113040KB

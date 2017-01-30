@@ -1,0 +1,71 @@
+~/prism-examples/models/;mdps;firewire_dl;firewire_dl.nm;deadline.pctl;deadline=1000,delay=3;;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 12:23:31 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/firewire_dl/firewire_dl.nm ~/prism-examples/models/mdps/firewire_dl/deadline.pctl -const 'deadline=1000,delay=3' -s -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/firewire_dl/firewire_dl.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/firewire_dl/deadline.pctl"...
+
+1 property:
+(1) Pmin=? [ F s=9 ]
+
+Type:        MDP
+Modules:     abstract_firewire 
+Variables:   y x s 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ F s=9 ]
+Model constants: deadline=1000,delay=3
+
+Building model...
+Model constants: deadline=1000,delay=3
+
+Computing reachable states...
+
+Reachability (BFS): 1026 iterations in 1.88 seconds (average 0.001828, setup 0.00)
+
+Time for model construction: 19.593 seconds.
+
+Type:        MDP
+States:      412217 (1 initial)
+Transitions: 483465
+Choices:     466029
+
+Transition matrix: 11222 nodes (3 terminal), 483465 minterms, vars: 22r/22c/2nd
+
+Prob0E: 342 iterations in 5.25 seconds (average 0.015345, setup 0.00)
+
+Prob1A: 681 iterations in 3.70 seconds (average 0.005433, setup 0.00)
+
+yes = 196300, no = 93057, maybe = 122860
+
+Computing remaining probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=412217, nc=152570, nnz=165962, k=3] [2.4 MB]
+Creating vector for yes... [3.1 MB]
+Allocating iteration vectors... [2 x 3.1 MB]
+TOTAL: [11.9 MB]
+
+Starting iterations...
+Iteration 619: max relative diff=0.012214, 5.01 sec so far
+
+Iterative method: 825 iterations in 6.88 seconds (average 0.008073, setup 0.22)
+
+Value in the initial state: 0.9899692535400391
+
+Time for model checking: 15.877 seconds.
+
+Result: 0.9899692535400391 (value in the initial state)
+
+Wall time: 36.78s
+User time: 37.26s
+System time: 0.13s
+Memory: 148116KB

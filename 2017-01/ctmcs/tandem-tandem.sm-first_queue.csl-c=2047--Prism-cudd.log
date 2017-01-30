@@ -1,0 +1,135 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;first_queue.csl;c=2047;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 14:04:08 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/tandem/tandem.sm ~/prism-examples/models/ctmcs/tandem/first_queue.csl -const c=2047 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/tandem/tandem.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/tandem/first_queue.csl"...
+
+1 property:
+(1) P=? [ F<=0.2 sc=c ]
+
+Type:        CTMC
+Modules:     serverC serverM 
+Variables:   sc ph sm 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F<=0.2 sc=c ]
+Model constants: c=2047
+
+Building model...
+Model constants: c=2047
+
+Computing reachable states...
+
+Reachability (BFS): 6143 iterations in 53.40 seconds (average 0.008693, setup 0.00)
+
+Time for model construction: 59.015 seconds.
+
+Type:        CTMC
+States:      8386560 (1 initial)
+Transitions: 29337603
+
+Rate matrix: 333 nodes (6 terminal), 29337603 minterms, vars: 23r/23c
+
+Computing probabilities...
+Engine: MTBDD
+
+Number of non-absorbing states: 8382464 of 8386560 (100.0%)
+
+Computing diagonals MTBDD... [nodes=109] [2.1 Kb]
+Building iteration matrix MTBDD... [nodes=508] [9.9 Kb]
+
+Uniformisation: q.t = 8357.880000 x 0.200000 = 1671.576000
+Fox-Glynn: left = 1382, right = 2020
+
+Starting iterations...
+Iteration 227 (of 2020): 5.03 sec so far
+Iteration 328 (of 2020): 10.06 sec so far
+Iteration 407 (of 2020): 15.09 sec so far
+Iteration 461 (of 2020): 20.16 sec so far
+Iteration 499 (of 2020): 25.24 sec so far
+Iteration 528 (of 2020): 30.34 sec so far
+Iteration 576 (of 2020): 35.56 sec so far
+Iteration 624 (of 2020): 40.66 sec so far
+Iteration 673 (of 2020): 45.70 sec so far
+Iteration 728 (of 2020): 50.74 sec so far
+Iteration 780 (of 2020): 55.75 sec so far
+Iteration 828 (of 2020): 60.77 sec so far
+Iteration 875 (of 2020): 65.80 sec so far
+Iteration 915 (of 2020): 70.91 sec so far
+Iteration 955 (of 2020): 76.06 sec so far
+Iteration 995 (of 2020): 81.10 sec so far
+Iteration 1028 (of 2020): 86.19 sec so far
+Iteration 1067 (of 2020): 91.30 sec so far
+Iteration 1101 (of 2020): 96.40 sec so far
+Iteration 1135 (of 2020): 101.42 sec so far
+Iteration 1174 (of 2020): 106.51 sec so far
+Iteration 1209 (of 2020): 111.51 sec so far
+Iteration 1246 (of 2020): 116.55 sec so far
+Iteration 1281 (of 2020): 121.62 sec so far
+Iteration 1317 (of 2020): 126.94 sec so far
+Iteration 1351 (of 2020): 132.03 sec so far
+Iteration 1372 (of 2020): 137.44 sec so far
+Iteration 1390 (of 2020): 142.64 sec so far
+Iteration 1412 (of 2020): 147.68 sec so far
+Iteration 1436 (of 2020): 152.78 sec so far
+Iteration 1468 (of 2020): 157.78 sec so far
+Iteration 1493 (of 2020): 163.03 sec so far
+Iteration 1524 (of 2020): 168.36 sec so far
+Iteration 1550 (of 2020): 173.37 sec so far
+Iteration 1580 (of 2020): 178.40 sec so far
+Iteration 1606 (of 2020): 183.49 sec so far
+Iteration 1636 (of 2020): 188.58 sec so far
+Iteration 1663 (of 2020): 193.71 sec so far
+Iteration 1684 (of 2020): 198.74 sec so far
+Iteration 1707 (of 2020): 203.86 sec so far
+Iteration 1727 (of 2020): 209.05 sec so far
+Iteration 1747 (of 2020): 214.24 sec so far
+Iteration 1771 (of 2020): 219.46 sec so far
+Iteration 1783 (of 2020): 224.74 sec so far
+Iteration 1794 (of 2020): 229.83 sec so far
+Iteration 1807 (of 2020): 234.86 sec so far
+Iteration 1819 (of 2020): 239.96 sec so far
+Iteration 1834 (of 2020): 245.16 sec so far
+Iteration 1846 (of 2020): 250.32 sec so far
+Iteration 1858 (of 2020): 255.83 sec so far
+Iteration 1872 (of 2020): 261.14 sec so far
+Iteration 1884 (of 2020): 266.65 sec so far
+Iteration 1895 (of 2020): 272.60 sec so far
+Iteration 1904 (of 2020): 279.01 sec so far
+Iteration 1911 (of 2020): 284.30 sec so far
+Iteration 1917 (of 2020): 289.71 sec so far
+Iteration 1927 (of 2020): 295.21 sec so far
+Iteration 1934 (of 2020): 300.27 sec so far
+Iteration 1940 (of 2020): 306.00 sec so far
+Iteration 1949 (of 2020): 311.12 sec so far
+Iteration 1957 (of 2020): 316.29 sec so far
+Iteration 1964 (of 2020): 321.70 sec so far
+Iteration 1974 (of 2020): 327.78 sec so far
+Iteration 1980 (of 2020): 333.16 sec so far
+Iteration 1986 (of 2020): 339.25 sec so far
+Iteration 1995 (of 2020): 344.32 sec so far
+Iteration 2003 (of 2020): 349.80 sec so far
+Iteration 2011 (of 2020): 355.13 sec so far
+Iteration 2017 (of 2020): 361.10 sec so far
+
+Iterative method: 2020 iterations in 365.66 seconds (average 0.181020, setup 0.00)
+
+Value in the initial state: 0.0
+
+Time for model checking: 365.989 seconds.
+
+Result: 0.0 (value in the initial state)
+
+Wall time: 426.37s
+User time: 426.42s
+System time: 0.61s
+Memory: 379584KB

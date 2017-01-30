@@ -1,0 +1,50 @@
+~/prism-examples/models/;dtmcs;bluetooth;bluetooth.pm;time.pctl;mrec=2;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R=? [ F "complete" ]
+Exception in thread "main" java.lang.NullPointerException
+	at epmc.expression.standard.evaluatordd.UtilEvaluatorDD.newEvaluator(UtilEvaluatorDD.java:55)
+	at epmc.expression.standard.evaluatordd.EvaluatorDDOperatorGeneral.build(EvaluatorDDOperatorGeneral.java:65)
+	at epmc.expression.standard.evaluatordd.UtilEvaluatorDD.applyVector(UtilEvaluatorDD.java:245)
+	at epmc.expression.standard.evaluatordd.UtilEvaluatorDD.applyVector(UtilEvaluatorDD.java:218)
+	at epmc.expression.standard.evaluatordd.EvaluatorDDOperatorVectorEq.build(EvaluatorDDOperatorVectorEq.java:46)
+	at epmc.expression.standard.evaluatordd.UtilEvaluatorDD.newEvaluator(UtilEvaluatorDD.java:63)
+	at epmc.expression.standard.evaluatordd.EvaluatorDDOperatorGeneral.build(EvaluatorDDOperatorGeneral.java:65)
+	at epmc.expression.standard.evaluatordd.UtilEvaluatorDD.newEvaluator(UtilEvaluatorDD.java:63)
+	at epmc.expression.standard.evaluatordd.EvaluatorDDOperatorGeneral.build(EvaluatorDDOperatorGeneral.java:65)
+	at epmc.expression.standard.evaluatordd.UtilEvaluatorDD.newEvaluator(UtilEvaluatorDD.java:63)
+	at epmc.expression.standard.evaluatordd.EvaluatorDDOperatorGeneral.build(EvaluatorDDOperatorGeneral.java:65)
+	at epmc.expression.standard.evaluatordd.UtilEvaluatorDD.newEvaluator(UtilEvaluatorDD.java:63)
+	at epmc.expression.standard.evaluatordd.EvaluatorDDOperatorGeneral.build(EvaluatorDDOperatorGeneral.java:65)
+	at epmc.expression.standard.evaluatordd.UtilEvaluatorDD.newEvaluator(UtilEvaluatorDD.java:63)
+	at epmc.expression.standard.evaluatordd.EvaluatorDDOperatorGeneral.build(EvaluatorDDOperatorGeneral.java:65)
+	at epmc.expression.standard.evaluatordd.UtilEvaluatorDD.newEvaluator(UtilEvaluatorDD.java:63)
+	at epmc.expression.standard.evaluatordd.EvaluatorDDOperatorGeneral.build(EvaluatorDDOperatorGeneral.java:65)
+	at epmc.expression.standard.evaluatordd.UtilEvaluatorDD.newEvaluator(UtilEvaluatorDD.java:63)
+	at epmc.expression.standard.evaluatordd.EvaluatorDDOperatorGeneral.build(EvaluatorDDOperatorGeneral.java:65)
+	at epmc.expression.standard.evaluatordd.UtilEvaluatorDD.newEvaluator(UtilEvaluatorDD.java:63)
+	at epmc.jani.explorer.VariableValuesEnumerator.generalEnumerateBDD(VariableValuesEnumerator.java:409)
+	at epmc.jani.explorer.VariableValuesEnumerator.generalEnumerate(VariableValuesEnumerator.java:336)
+	at epmc.jani.explorer.VariableValuesEnumerator.computeRecursive(VariableValuesEnumerator.java:121)
+	at epmc.jani.explorer.VariableValuesEnumerator.enumerate(VariableValuesEnumerator.java:81)
+	at epmc.jani.explorer.ExplorerJANI.computeInitialNodes(ExplorerJANI.java:268)
+	at epmc.jani.explorer.ExplorerJANI.<init>(ExplorerJANI.java:120)
+	at epmc.jani.model.ModelJANI.newLowLevel(ModelJANI.java:532)
+	at epmc.prism.model.ModelPRISM.newLowLevel(ModelPRISM.java:823)
+	at epmc.prism.model.ModelPRISM.newLowLevelInternal(ModelPRISM.java:832)
+	at epmc.prism.model.ModelPRISM.newLowLevel(ModelPRISM.java:825)
+	at epmc.modelchecker.ModelChecker.prepareLowLevel(ModelChecker.java:181)
+	at epmc.modelchecker.ModelChecker.checkProperty(ModelChecker.java:205)
+	at epmc.modelchecker.ModelChecker.check(ModelChecker.java:151)
+	at epmc.command.CommandTaskCheck.executeInServer(CommandTaskCheck.java:22)
+	at epmc.main.Analyse.execute(Analyse.java:90)
+	at epmc.main.EPMC.execute(EPMC.java:125)
+	at epmc.main.EPMC.startInConsole(EPMC.java:108)
+	at epmc.main.EPMC.main(EPMC.java:42)
+Command exited with non-zero status 1
+Wall time: 429.73s
+User time: 438.18s
+System time: 1.42s
+Memory: 465280KB
+External error: 1

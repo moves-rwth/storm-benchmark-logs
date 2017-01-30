@@ -1,0 +1,39 @@
+~/prism-examples/models/;mdps;csma;csma2_2.nm;all_before_max.pctl;;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 09:23:45 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/csma/csma2_2.nm ~/prism-examples/models/mdps/csma/all_before_max.pctl -exact -politer
+
+Parsing model file "~/prism-examples/models/mdps/csma/csma2_2.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/csma/all_before_max.pctl"...
+
+1 property:
+(1) Pmax=? [ !"collision_max_backoff" U "all_delivered" ]
+
+Type:        MDP
+Modules:     bus station1 station2 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 
+
+---------------------------------------------------------------------
+
+Model checking: Pmax=? [ !"collision_max_backoff" U "all_delivered" ]
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 0.741 secs.
+
+Time for model construction: 0.748 seconds.
+
+Time for model checking: 1.662 seconds.
+
+Result (maximum probability): 7/8
+Wall time: 3.82s
+User time: 7.58s
+System time: 0.21s
+Memory: 205316KB

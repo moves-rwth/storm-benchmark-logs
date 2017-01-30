@@ -1,0 +1,41 @@
+~/prism-examples/models/;ctmcs;kanban;kanban.sm;throughput.csl;t=1;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 07:55:32 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/kanban/kanban.sm ~/prism-examples/models/ctmcs/kanban/throughput.csl -const t=1 -exact -politer
+
+Parsing model file "~/prism-examples/models/ctmcs/kanban/kanban.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/kanban/throughput.csl"...
+
+1 property:
+(1) R{"throughput"}=? [ S ]
+
+Type:        CTMC
+Modules:     k1 k2 k3 k4 
+Variables:   w1 x1 y1 z1 w2 x2 y2 z2 w3 x3 y3 z3 w4 x4 y4 z4 
+
+---------------------------------------------------------------------
+
+Model checking: R{"throughput"}=? [ S ]
+Model constants: t=1
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 1.087 secs.
+
+Time for model construction: 1.093 seconds.
+Building reward structure...
+
+Time for model checking: 6.254 seconds.
+
+Result (expected throughput): 4865429218079652816001899457627620925149320470127547902267414894926618261068954618360495139512318209841291845034371308647016980607117995197977209113663723678505085078124379399751365651353965305091702001381/118002067250240091289513292954732989748528756554376746791186360841448777799698714394424761870507397190462406252528814336767770159820272748735923247118819842948128870015268568286298077425791996340941240153201
+Wall time: 8.80s
+User time: 17.10s
+System time: 2.57s
+Memory: 628764KB

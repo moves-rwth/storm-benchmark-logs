@@ -1,0 +1,43 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;first_queue.csl;c=2047;;Storm-sparse
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/ctmcs/tandem/tandem.sm --prop ~/prism-examples/models/ctmcs/tandem/first_queue.csl -const c=2047 -e sparse -pc 
+Current working directory: ~/ma_scripts/scripts
+
+ WARN (Program.cpp:179): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 74.075s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	8386560
+Transitions: 	29337603
+Reward Models:  none
+Labels: 	3
+   * init -> 1 state(s)
+   * deadlock -> 0 state(s)
+   * (sc = 2047) -> 4096 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property P=? [true U<=1/5 (sc = 2047)] ...
+Result (initial states): 0
+Time for model checking: 376.014s.
+Wall time: 450.22s
+User time: 447.82s
+System time: 1.96s
+Memory: 2644256KB

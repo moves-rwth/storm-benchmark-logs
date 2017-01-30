@@ -1,0 +1,52 @@
+~/prism-examples/models/;mdps;wlan;wlan6.nm;cost_max.pctl;COL=0;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 18:03:20 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/wlan/wlan6.nm ~/prism-examples/models/mdps/wlan/cost_max.pctl -const COL=0 -ex
+
+Parsing model file "~/prism-examples/models/mdps/wlan/wlan6.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/wlan/cost_max.pctl"...
+
+1 property:
+(1) R{"cost"}max=? [ F s1=12&s2=12 ]
+
+Type:        MDP
+Modules:     medium station1 station2 
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"cost"}max=? [ F s1=12&s2=12 ]
+Model constants: COL=0
+
+Building model...
+Model constants: COL=0
+
+Computing reachable states... 88233 206528 369827 460149 573177 668520 762555 924490 1102050 1280586 1481194 1612397 1656679 1700647 1773524 1882347 1999208 2135458 2236814 2369397 2505194 2568921 2589018 2604639 2712531 2905472 3061731 3218881 3391423 3550585 3687683 3880099 4069576 4250977 4448797 4637689 4824595 4979978 5007548 states
+Reachable states exploration and model construction done in 136.176 secs.
+Sorting reachable states list...
+
+Time for model construction: 142.732 seconds.
+
+Type:        MDP
+States:      5007548 (1 initial)
+Transitions: 11475748
+Choices:     6350470
+Max/avg:     3/1.27
+Building reward structure...
+
+Starting expected reachability (max)...
+Starting Prob1 (min)...
+Prob1 (min) took 3158 iterations and 970.179 seconds.
+target=1, inf=0, rest=5007547
+Starting value iteration (max)...
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

@@ -1,0 +1,46 @@
+~/prism-examples/models/;ctmcs;polling;poll16.sm;station1_polled.csl;;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 11:56:39 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/polling/poll16.sm ~/prism-examples/models/ctmcs/polling/station1_polled.csl -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/polling/poll16.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/polling/station1_polled.csl"...
+
+1 property:
+(1) P=? [ F<=20 (s=1&a=0) ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 station4 station5 station6 station7 station8 station9 station10 station11 station12 station13 station14 station15 station16 
+Variables:   s a s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F<=20 (s=1&a=0) ]
+
+Building model...
+
+Computing reachable states... 37299 93277 149511 200564 259724 319376 379316 427648 475455 534330 596791 652998 713971 773962 829924 885200 942326 999304 1042994 1103854 1163043 1213480 1271762 1325820 1375244 1437319 1476624 1541964 1572864 states
+Reachable states exploration and model construction done in 98.173 secs.
+Sorting reachable states list...
+
+Time for model construction: 102.649 seconds.
+
+Type:        CTMC
+States:      1572864 (1 initial)
+Transitions: 13893632
+
+Starting backwards transient probability computation...
+
+Uniformisation: q.t = 205.02 x 20.0 = 4100.400000000001
+Fox-Glynn (1.25E-7): left = 3649, right = 4645
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

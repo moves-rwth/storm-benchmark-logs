@@ -1,0 +1,67 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;sensors.csl;MAX_COUNT=1000;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 06:50:03 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/sensors.csl -const MAX_COUNT=1000 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/sensors.csl"...
+
+1 property:
+(1) P=? [ !"down" U "fail_sensors" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !"down" U "fail_sensors" ]
+Model constants: MAX_COUNT=1000
+
+Building model...
+Model constants: MAX_COUNT=1000
+
+Computing reachable states... 115814 275804 418576 562700 704660 846788 states
+Reachable states exploration and model construction done in 17.821 secs.
+Sorting reachable states list...
+
+Time for model construction: 19.536 seconds.
+
+Type:        CTMC
+States:      846788 (1 initial)
+Transitions: 3574505
+Building embedded DTMC...
+
+Warning: Switching to linear equation solution method "Gauss-Seidel"
+
+Starting probabilistic reachability...
+Calculating predecessor relation for discrete-time Markov chain...  done (1.133 seconds)
+Starting Prob0...
+Prob0 took 0.313 seconds.
+Starting Prob1...
+Prob1 took 0.603 seconds.
+target=105224, yes=105224, no=617428, maybe=124136
+Starting Gauss-Seidel...
+Gauss-Seidel took 1045 iterations and 126.595 seconds.
+Probabilistic reachability took 128.654 seconds.
+
+Value in the initial state: 0.732076490915012
+
+Time for model checking: 130.501 seconds.
+
+Result: 0.732076490915012 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 151.62s
+User time: 164.92s
+System time: 2.34s
+Memory: 3235752KB

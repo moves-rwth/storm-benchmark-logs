@@ -1,0 +1,68 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;operational.csl;N=512;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 00:49:11 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/cluster/cluster.sm ~/prism-examples/models/ctmcs/cluster/operational.csl -const N=512 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/cluster/cluster.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/cluster/operational.csl"...
+
+1 property:
+(1) R{"percent_op"}=? [ I=20 ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: R{"percent_op"}=? [ I=20 ]
+Model constants: N=512
+
+Building model...
+Model constants: N=512
+
+Computing reachable states...
+
+Reachability (BFS): 1029 iterations in 2.83 seconds (average 0.002752, setup 0.00)
+
+Time for model construction: 4.179 seconds.
+
+Type:        CTMC
+States:      9465876 (1 initial)
+Transitions: 46235680
+
+Rate matrix: 82567 nodes (590 terminal), 46235680 minterms, vars: 29r/29c
+
+Computing probabilities...
+Engine: MTBDD
+
+Number of non-absorbing states: 9465876 of 9465876 (100.0%)
+
+Computing diagonals MTBDD... [nodes=378727] [7397.0 Kb]
+Building iteration matrix MTBDD... [nodes=1598113] [31213.1 Kb]
+
+Uniformisation: q.t = 53.084880 x 20.000000 = 1061.697600
+Fox-Glynn: left = 830, right = 1339
+
+Starting iterations...
+Iteration 1 (of 1339): 41.77 sec so far
+Iteration 2 (of 1339): 110.61 sec so far
+Iteration 3 (of 1339): 210.71 sec so far
+Iteration 4 (of 1339): 340.60 sec so far
+Iteration 5 (of 1339): 492.66 sec so far
+Iteration 6 (of 1339): 682.66 sec so far
+Iteration 7 (of 1339): 910.84 sec so far
+Iteration 8 (of 1339): 1148.76 sec so far
+Iteration 9 (of 1339): 1378.33 sec so far
+Iteration 10 (of 1339): 1604.57 sec so far
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

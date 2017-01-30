@@ -1,0 +1,61 @@
+~/prism-examples/models/;mdps;zeroconf;zeroconf.nm;correct_min.pctl;K=16,N=1000,reset=false;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 20:43:14 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/zeroconf/zeroconf.nm ~/prism-examples/models/mdps/zeroconf/correct_min.pctl -const 'K=16,N=1000,reset=false' -ex
+
+Parsing model file "~/prism-examples/models/mdps/zeroconf/zeroconf.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/zeroconf/correct_min.pctl"...
+
+1 property:
+(1) Pmin=? [ F (l=4&ip=1) ]
+
+Type:        MDP
+Modules:     environment host0 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ F (l=4&ip=1) ]
+Model constants: reset=false,N=1000,K=16
+
+Building model...
+Model constants: reset=false,N=1000,K=16
+
+Computing reachable states... 77747 234252 380905 500470 612066 750155 874929 982157 1079624 1211882 1343087 1454137 1582367 1709463 1813261 1947650 2076412 2104060 2242277 2332371 2467609 2573526 2698661 2803396 2935510 3031887 3121799 3251518 3345330 3466856 3480163 3596671 3705051 3822619 3932645 4024739 4142799 4242561 4368895 4483991 4577225 4690567 4777224 4890110 4980056 5010803 states
+Reachable states exploration and model construction done in 154.171 secs.
+Sorting reachable states list...
+
+Time for model construction: 169.49 seconds.
+
+Type:        MDP
+States:      5010803 (1 initial)
+Transitions: 11325290
+Choices:     9235429
+Max/avg:     4/1.84
+
+Starting probabilistic reachability (min)...
+Starting Prob0 (min)...
+Prob0 (min) took 166 iterations and 54.405 seconds.
+Starting Prob1 (min)...
+Prob1 (min) took 418 iterations and 116.932 seconds.
+target=15234, yes=15946, no=1212928, maybe=3781929
+Starting value iteration (min)...
+Value iteration (min) took 436 iterations and 106.757 seconds.
+Probabilistic reachability took 278.113 seconds.
+
+Value in the initial state: 8.559894504849373E-15
+
+Time for model checking: 280.602 seconds.
+
+Result: 8.559894504849373E-15 (value in the initial state)
+
+Wall time: 451.83s
+User time: 761.80s
+System time: 6.09s
+Memory: 7031096KB

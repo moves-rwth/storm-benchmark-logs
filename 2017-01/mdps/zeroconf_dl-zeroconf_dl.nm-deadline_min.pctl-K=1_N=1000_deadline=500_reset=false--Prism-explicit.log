@@ -1,0 +1,52 @@
+~/prism-examples/models/;mdps;zeroconf_dl;zeroconf_dl.nm;deadline_min.pctl;K=1,N=1000,deadline=500,reset=false;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 22:02:15 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/zeroconf_dl/zeroconf_dl.nm ~/prism-examples/models/mdps/zeroconf_dl/deadline_min.pctl -const 'K=1,N=1000,deadline=500,reset=false' -ex
+
+Parsing model file "~/prism-examples/models/mdps/zeroconf_dl/zeroconf_dl.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/zeroconf_dl/deadline_min.pctl"...
+
+1 property:
+(1) Pmin=? [ !(l=4&ip=2) U t>=deadline ]
+
+Type:        MDP
+Modules:     environment host0 timer 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l t 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ !(l=4&ip=2) U t>=deadline ]
+Model constants: reset=false,deadline=500,N=1000,K=1
+
+Building model...
+Model constants: reset=false,deadline=500,N=1000,K=1
+
+Computing reachable states... 83416 216914 337887 438950 563115 674533 790066 885372 966427 1085793 1194838 1304370 1401141 1515856 1625333 1714909 1826699 1933314 2015368 2127125 2204595 2311542 2404444 2509633 2612792 2706190 2809712 2899593 3003743 3084639 3182886 3265316 3369412 3437218 3536343 3610775 3712213 3729525 3826398 3899043 3995839 4070076 4162358 4237954 4333269 4408192 4502402 4577068 4670156 4746422 4838283 4915970 5007025 5081730 5172874 5249472 5337858 5423907 5516729 5604289 5681321 5754141 5809934 5882571 5955379 6008011 6081864 6133025 6210049 6284229 6315478 6390761 6463545 6519992 6593233 6650819 6725364 6798279 6848466 6921120 6992599 7039802 7112184 7172711 7246186 7318670 7350292 7424552 7495890 7519669 7598198 7673312 7680726 7758013 7833070 7850196 7920691 7972616 8023005 8066270 8103453 8135383 8162816 8186400 8206626 8224047 8239013 8251847 8262874 8272415 8280547 8287472 8293578 8298774 8303191 8306998 8310260 8313054 8315452 8317573 8319384 8320930 8322275 8323399 8324373 8325213 8325934 8326566 8327112 8327578 8327962 8328291 8328586 8328833 8329051 8329232 8329384 8329514 8329628 8329724 8329806Exception in thread "main" java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at parser.ast.ExpressionBinaryOp.evaluate(ExpressionBinaryOp.java:149)
+	at parser.ast.Expression.evaluateBoolean(Expression.java:444)
+	at parser.ast.ExpressionBinaryOp.evaluate(ExpressionBinaryOp.java:146)
+	at parser.ast.Expression.evaluateBoolean(Expression.java:444)
+	at parser.ast.Expression.evaluateBoolean(Expression.java:491)
+	at simulator.Updater.calculateUpdatesForModule(Updater.java:319)
+	at simulator.Updater.calculateTransitions(Updater.java:163)
+	at simulator.SimulatorEngine.getTransitionList(SimulatorEngine.java:929)
+	at simulator.SimulatorEngine.getNumChoices(SimulatorEngine.java:940)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:221)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:110)
+	at prism.Prism.doBuildModel(Prism.java:1889)
+	at prism.Prism.buildModelIfRequired(Prism.java:1850)
+	at prism.Prism.modelCheck(Prism.java:2739)
+	at prism.PrismCL.run(PrismCL.java:333)
+	at prism.PrismCL.main(PrismCL.java:2336)
+Command exited with non-zero status 1
+Wall time: 1369.46s
+User time: 8594.13s
+System time: 33.70s
+Memory: 8501044KB
+External error: 1

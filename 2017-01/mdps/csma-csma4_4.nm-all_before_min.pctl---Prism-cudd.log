@@ -1,0 +1,88 @@
+~/prism-examples/models/;mdps;csma;csma4_4.nm;all_before_min.pctl;;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 09:51:08 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/csma/csma4_4.nm ~/prism-examples/models/mdps/csma/all_before_min.pctl -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/csma/csma4_4.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/csma/all_before_min.pctl"...
+
+1 property:
+(1) Pmin=? [ !"collision_max_backoff" U "all_delivered" ]
+
+Type:        MDP
+Modules:     bus station1 station2 station3 station4 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 s3 x3 bc3 cd3 s4 x4 bc4 cd4 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ !"collision_max_backoff" U "all_delivered" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 179 iterations in 54.30 seconds (average 0.303330, setup 0.00)
+
+Time for model construction: 65.628 seconds.
+
+Type:        MDP
+States:      133301572 (1 initial)
+Transitions: 258474290
+Choices:     135347434
+
+Transition matrix: 553488 nodes (6 terminal), 258474290 minterms, vars: 66r/66c/17nd
+
+Prob0E: 177 iterations in 93.75 seconds (average 0.529672, setup 0.00)
+
+Prob1A: 43 iterations in 195.82 seconds (average 4.553953, setup 0.00)
+
+yes = 8940841, no = 3327996, maybe = 121032735
+
+Computing remaining probabilities...
+Engine: MTBDD
+
+Building iteration matrix MTBDD... [nodes=1163617] [22726.9 Kb]
+
+Starting iterations...
+Iteration 3: sol=143114 nodes, 6.51 sec so far
+Iteration 5: sol=221157 nodes, 13.52 sec so far
+Iteration 6: sol=272808 nodes, 19.36 sec so far
+Iteration 7: sol=329933 nodes, 26.59 sec so far
+Iteration 8: sol=405201 nodes, 35.52 sec so far
+Iteration 9: sol=490703 nodes, 45.80 sec so far
+Iteration 10: sol=584282 nodes, 65.04 sec so far
+Iteration 11: sol=695822 nodes, 75.27 sec so far
+Iteration 12: sol=823620 nodes, 86.90 sec so far
+Iteration 13: sol=967879 nodes, 101.92 sec so far
+Iteration 14: sol=1143373 nodes, 120.32 sec so far
+Iteration 15: sol=1384646 nodes, 142.45 sec so far
+Iteration 16: sol=1617694 nodes, 170.02 sec so far
+Iteration 17: sol=1880939 nodes, 202.06 sec so far
+Iteration 18: sol=2169472 nodes, 241.24 sec so far
+Iteration 19: sol=2468104 nodes, 286.76 sec so far
+Iteration 20: sol=2590265 nodes, 326.32 sec so far
+Iteration 21: sol=2789471 nodes, 374.74 sec so far
+Iteration 22: sol=3001382 nodes, 418.85 sec so far
+Iteration 23: sol=3253655 nodes, 467.88 sec so far
+Iteration 24: sol=3492283 nodes, 528.36 sec so far
+Iteration 25: sol=3732027 nodes, 589.50 sec so far
+Iteration 26: sol=3952112 nodes, 661.58 sec so far
+Iteration 27: sol=4183286 nodes, 729.82 sec so far
+Iteration 28: sol=4496001 nodes, 806.76 sec so far
+Iteration 29: sol=4688087 nodes, 886.24 sec so far
+Iteration 30: sol=4853991 nodes, 974.23 sec so far
+Iteration 31: sol=5073180 nodes, 1064.76 sec so far
+Iteration 32: sol=5301303 nodes, 1148.66 sec so far
+Iteration 33: sol=5551314 nodes, 1258.95 sec so far
+Iteration 34: sol=5788425 nodes, 1368.44 sec so far
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

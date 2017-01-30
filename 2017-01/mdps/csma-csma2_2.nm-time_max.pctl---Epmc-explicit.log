@@ -1,0 +1,11 @@
+~/prism-examples/models/;mdps;csma;csma2_2.nm;time_max.pctl;;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R{"time"}max=? [ F "all_delivered" ]
+Finished model checking. Time required: 0 seconds
+R{"time"}max=? [ F "all_delivered" ]: Variable information are inconsistent
+Wall time: 2.06s
+User time: 7.62s
+System time: 0.58s
+Memory: 256876KB

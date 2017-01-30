@@ -1,0 +1,67 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;io.csl;MAX_COUNT=100;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 03:55:08 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/io.csl -const MAX_COUNT=100 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/io.csl"...
+
+1 property:
+(1) P=? [ !"down" U "fail_io" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !"down" U "fail_io" ]
+Model constants: MAX_COUNT=100
+
+Building model...
+Model constants: MAX_COUNT=100
+
+Computing reachable states... 86288 states
+Reachable states exploration and model construction done in 2.356 secs.
+Sorting reachable states list...
+
+Time for model construction: 2.829 seconds.
+
+Type:        CTMC
+States:      86288 (1 initial)
+Transitions: 364205
+Building embedded DTMC...
+
+Warning: Switching to linear equation solution method "Gauss-Seidel"
+
+Starting probabilistic reachability...
+Calculating predecessor relation for discrete-time Markov chain...  done (0.168 seconds)
+Starting Prob0...
+Prob0 took 0.091 seconds.
+Starting Prob1...
+Prob1 took 0.158 seconds.
+target=845, yes=845, no=55915, maybe=29528
+Starting Gauss-Seidel...
+Gauss-Seidel took 423 iterations and 8.757 seconds.
+Probabilistic reachability took 9.179 seconds.
+
+Value in the initial state: 0.10922221448420964
+
+Time for model checking: 9.442 seconds.
+
+Result: 0.10922221448420964 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 13.59s
+User time: 15.72s
+System time: 0.54s
+Memory: 674400KB

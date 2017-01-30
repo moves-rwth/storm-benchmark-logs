@@ -1,0 +1,22 @@
+~/prism-examples/models/;mdps;firewire_dl;firewire_dl.nm;deadline.pctl;deadline=10000,delay=36;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property Pmin=? [ F s=9 ]
+Starting to build model...
+Current number of states: 690,525; states/second: 138,105
+Current number of states: 1,374,965; states/second: 136,888
+Current number of states: 2,312,823; states/second: 187,571
+Current number of states: 2,842,072; states/second: 105,847
+Current number of states: 4,006,794; states/second: 232,946
+Current number of states: 4,670,945; states/second: 132,829
+Current number of states: 5,481,113; states/second: 162,034
+Current number of states: 5,839,448; states/second: 71,665
+Current number of states: 6,890,183; states/second: 210,147
+Building model done. 7,670,165 states. Time for model exploration: 48 seconds.
+Starting iteration...
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

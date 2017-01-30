@@ -1,0 +1,11 @@
+~/prism-examples/models/;mdps;consensus;coin4.nm;steps_min.pctl;K=2;maxiter=100000;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R{"steps"}min=? [ F "finished" ]
+Finished model checking. Time required: 0 seconds
+R{"steps"}min=? [ F "finished" ]: No solver available to handle property "R{"steps"}min=?[F (((pc1) = (3)) ∧ ((pc2) = (3)) ∧ ((pc3) = (3)) ∧ ((pc4) = (3)))]" for this model with the current settings
+Wall time: 1.95s
+User time: 7.64s
+System time: 0.59s
+Memory: 246772KB

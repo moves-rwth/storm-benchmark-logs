@@ -1,0 +1,15 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;io_T.csl;MAX_COUNT=1000;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P=? [ !"down" U<=72000 "fail_io" ]
+Starting to build model...
+Current number of states: 368,354; states/second: 73,669
+Current number of states: 763,344; states/second: 78,998
+Building model done. 846,788 states. Time for model exploration: 10 seconds.
+Finished model checking. Time required: 92 seconds
+P=? [ !"down" U<=72000 "fail_io" ]: 7.470278844387059E-4
+Wall time: 94.26s
+User time: 105.12s
+System time: 1.35s
+Memory: 780140KB

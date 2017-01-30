@@ -1,0 +1,17 @@
+~/prism-examples/models/;mdps;zeroconf_dl;zeroconf_dl.nm;deadline_min.pctl;K=1,N=1000,deadline=50,reset=false;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property Pmin=? [ !(l=4 & ip=2) U t>=deadline ]
+Starting to build model...
+Current number of states: 198,026; states/second: 39,604
+Current number of states: 402,649; states/second: 40,924
+Building model done. 411,031 states. Time for model exploration: 10 seconds.
+Starting iteration...
+Done. Did 0 iterations in 1 seconds.
+Finished model checking. Time required: 16 seconds
+Pmin=? [ !(l=4 & ip=2) U t>=deadline ]: 0.0
+Wall time: 18.13s
+User time: 33.03s
+System time: 1.31s
+Memory: 610036KB

@@ -1,0 +1,80 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;qos3.csl;N=16;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 22:25:20 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/cluster/cluster.sm ~/prism-examples/models/ctmcs/cluster/qos3.csl -const N=16 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/cluster/cluster.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/cluster/qos3.csl"...
+
+1 property:
+(1) P=? [ "minimum" U<=20 "premium" ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ "minimum" U<=20 "premium" ]
+Model constants: N=16
+
+Building model...
+Model constants: N=16
+
+Computing reachable states...
+
+Reachability (BFS): 37 iterations in 0.01 seconds (average 0.000216, setup 0.00)
+
+Time for model construction: 0.053 seconds.
+
+Type:        CTMC
+States:      10132 (1 initial)
+Transitions: 48160
+
+Rate matrix: 1899 nodes (23 terminal), 48160 minterms, vars: 19r/19c
+
+Computing probabilities...
+Engine: MTBDD
+
+Number of non-absorbing states: 1830 of 10132 (18.1%)
+
+Computing diagonals MTBDD... [nodes=4577] [89.4 Kb]
+Building iteration matrix MTBDD... [nodes=9166] [179.0 Kb]
+
+Uniformisation: q.t = 40.861455 x 20.000000 = 817.229100
+Fox-Glynn: left = 614, right = 1062
+
+Starting iterations...
+Iteration 96 (of 1062): 5.05 sec so far
+Iteration 186 (of 1062): 10.07 sec so far
+Iteration 276 (of 1062): 15.09 sec so far
+Iteration 352 (of 1062): 20.12 sec so far
+Iteration 429 (of 1062): 25.20 sec so far
+Iteration 506 (of 1062): 30.22 sec so far
+Iteration 582 (of 1062): 35.26 sec so far
+Iteration 647 (of 1062): 40.32 sec so far
+Iteration 710 (of 1062): 45.34 sec so far
+Iteration 774 (of 1062): 50.34 sec so far
+Iteration 838 (of 1062): 55.35 sec so far
+Iteration 901 (of 1062): 60.39 sec so far
+Iteration 966 (of 1062): 65.45 sec so far
+Iteration 1029 (of 1062): 70.56 sec so far
+
+Iterative method: 1062 iterations in 72.92 seconds (average 0.068637, setup 0.02)
+
+Value in the initial state: 1.0
+
+Time for model checking: 72.928 seconds.
+
+Result: 1.0 (value in the initial state)
+
+Wall time: 74.27s
+User time: 74.60s
+System time: 0.16s
+Memory: 125440KB

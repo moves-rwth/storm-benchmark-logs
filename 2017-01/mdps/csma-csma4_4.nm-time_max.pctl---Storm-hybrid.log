@@ -1,0 +1,35 @@
+~/prism-examples/models/;mdps;csma;csma4_4.nm;time_max.pctl;;;Storm-hybrid
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/csma/csma4_4.nm --prop ~/prism-examples/models/mdps/csma/time_max.pctl -e hybrid --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 15.603s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	133301572 (86742 nodes)
+Transitions: 	258474290 (553488 nodes)
+Choices: 	135347434
+Reward Models:  time
+Variables: 	rows: 19 meta variables (66 DD variables), columns: 19 meta variables (66 DD variables), nondeterminism: 17 meta variables (17 DD variables)
+Labels: 	3
+   * all_delivered
+   * collision_max_backoff
+   * one_delivered
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"time"}max=? [F "all_delivered"] ...
+ERROR (storm.cpp:42): An unexpected exception occurred and caused Storm to terminate. The message of this exception is: std::bad_alloc
+Command exited with non-zero status 2
+Wall time: 75.86s
+User time: 73.49s
+System time: 2.28s
+Memory: 3424180KB
+External error: 2

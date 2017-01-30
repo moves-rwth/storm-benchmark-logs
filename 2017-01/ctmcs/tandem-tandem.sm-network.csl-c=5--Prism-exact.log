@@ -1,0 +1,39 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;network.csl;c=5;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 18:04:40 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/tandem/tandem.sm ~/prism-examples/models/ctmcs/tandem/network.csl -const c=5 -exact -politer
+
+Parsing model file "~/prism-examples/models/ctmcs/tandem/tandem.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/tandem/network.csl"...
+
+1 property:
+(1) P=? [ F<=0.2 sc=c&sm=c&ph=2 ]
+
+Type:        CTMC
+Modules:     serverC serverM 
+Variables:   sc ph sm 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F<=0.2 sc=c&sm=c&ph=2 ]
+Model constants: c=5
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 0.383 secs.
+
+Time for model construction: 0.386 seconds.
+
+Error: Bounded until operator not supported by parametric engine.
+
+Wall time: 2.02s
+User time: 2.43s
+System time: 0.12s
+Memory: 90888KB

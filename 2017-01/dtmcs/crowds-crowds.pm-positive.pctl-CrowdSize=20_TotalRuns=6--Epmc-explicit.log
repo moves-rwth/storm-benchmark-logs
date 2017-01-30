@@ -1,0 +1,50 @@
+~/prism-examples/models/;dtmcs;crowds;crowds.pm;positive.pctl;CrowdSize=20,TotalRuns=6;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P=? [ F observe0>1  ]
+Starting to build model...
+Current number of states: 284,498; states/second: 56,899
+Current number of states: 647,889; states/second: 72,678
+Current number of states: 940,809; states/second: 58,582
+Current number of states: 1,335,685; states/second: 78,976
+Current number of states: 1,561,959; states/second: 45,255
+Current number of states: 1,789,490; states/second: 45,505
+Current number of states: 2,226,433; states/second: 87,388
+Current number of states: 2,475,322; states/second: 49,778
+Current number of states: 2,758,667; states/second: 56,669
+Current number of states: 2,978,827; states/second: 44,032
+Current number of states: 3,586,544; states/second: 121,542
+Current number of states: 3,948,912; states/second: 72,474
+Current number of states: 4,141,599; states/second: 38,537
+Current number of states: 4,250,172; states/second: 21,714
+Current number of states: 4,442,241; states/second: 38,413
+Current number of states: 4,553,042; states/second: 22,159
+Current number of states: 4,831,924; states/second: 55,776
+Current number of states: 5,214,234; states/second: 76,462
+Current number of states: 5,214,234; states/second: 0
+Current number of states: 5,604,809; states/second: 78,114
+Current number of states: 6,247,036; states/second: 128,445
+Current number of states: 6,846,175; states/second: 119,827
+Current number of states: 7,383,191; states/second: 107,403
+Current number of states: 7,602,674; states/second: 43,897
+Current number of states: 7,826,503; states/second: 44,765
+Current number of states: 8,045,363; states/second: 43,772
+Current number of states: 8,248,477; states/second: 40,622
+Current number of states: 8,388,607; states/second: 28,026
+Current number of states: 8,422,488; states/second: 6,776
+Current number of states: 8,642,390; states/second: 43,980
+Current number of states: 8,755,115; states/second: 22,545
+Current number of states: 8,810,987; states/second: 11,174
+Current number of states: 9,028,554; states/second: 43,513
+Current number of states: 9,348,745; states/second: 64,037
+Current number of states: 10,006,178; states/second: 131,486
+Building model done. 10,633,591 states. Time for model exploration: 186 seconds.
+Starting iteration...
+Done. Did 0 iterations in 54 seconds.
+Finished model checking. Time required: 278 seconds
+P=? [ F observe0>1  ]: 0.12047637049362744
+Wall time: 281.02s
+User time: 318.84s
+System time: 4.59s
+Memory: 5278124KB

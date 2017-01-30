@@ -1,0 +1,46 @@
+~/prism-examples/models/;mdps;csma;csma3_6.nm;all_before_max.pctl;;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 18:29:02 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/csma/csma3_6.nm ~/prism-examples/models/mdps/csma/all_before_max.pctl -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/csma/csma3_6.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/csma/all_before_max.pctl"...
+
+1 property:
+(1) Pmax=? [ !"collision_max_backoff" U "all_delivered" ]
+
+Type:        MDP
+Modules:     bus station1 station2 station3 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 s3 x3 bc3 cd3 
+
+---------------------------------------------------------------------
+
+Model checking: Pmax=? [ !"collision_max_backoff" U "all_delivered" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 151 iterations in 19.61 seconds (average 0.129881, setup 0.00)
+
+Time for model construction: 27.719 seconds.
+
+Type:        MDP
+States:      84856004 (1 initial)
+Transitions: 147200984
+Choices:     84988757
+
+Transition matrix: 289469 nodes (8 terminal), 147200984 minterms, vars: 57r/57c/13nd
+
+Prob0A: 227 iterations in 389.91 seconds (average 1.717674, setup 0.00)
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

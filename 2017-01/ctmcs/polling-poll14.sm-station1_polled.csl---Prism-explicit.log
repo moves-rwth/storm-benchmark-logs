@@ -1,0 +1,53 @@
+~/prism-examples/models/;ctmcs;polling;poll14.sm;station1_polled.csl;;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 10:54:37 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/polling/poll14.sm ~/prism-examples/models/ctmcs/polling/station1_polled.csl -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/polling/poll14.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/polling/station1_polled.csl"...
+
+1 property:
+(1) P=? [ F<=20 (s=1&a=0) ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 station4 station5 station6 station7 station8 station9 station10 station11 station12 station13 station14 
+Variables:   s a s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F<=20 (s=1&a=0) ]
+
+Building model...
+
+Computing reachable states... 45959 120319 187491 252082 320820 344064 states
+Reachable states exploration and model construction done in 15.8 secs.
+Sorting reachable states list...
+
+Time for model construction: 16.651 seconds.
+
+Type:        CTMC
+States:      344064 (1 initial)
+Transitions: 2695168
+
+Starting backwards transient probability computation...
+
+Uniformisation: q.t = 205.02000000000018 x 20.0 = 4100.400000000003
+Fox-Glynn (1.25E-7): left = 3649, right = 4645
+Backwards transient probability computation took 4646 iters and 1262.083 seconds.
+
+Value in the initial state: 1.0
+
+Time for model checking: 1262.361 seconds.
+
+Result: 1.0 (value in the initial state)
+
+Wall time: 1280.55s
+User time: 1289.22s
+System time: 2.44s
+Memory: 2940692KB

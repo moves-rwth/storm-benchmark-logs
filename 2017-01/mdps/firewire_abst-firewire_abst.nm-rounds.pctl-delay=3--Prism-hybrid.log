@@ -1,0 +1,80 @@
+~/prism-examples/models/;mdps;firewire_abst;firewire_abst.nm;rounds.pctl;delay=3;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 19:07:58 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/firewire_abst/firewire_abst.nm ~/prism-examples/models/mdps/firewire_abst/rounds.pctl -const delay=3 -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/firewire_abst/firewire_abst.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/firewire_abst/rounds.pctl"...
+
+1 property:
+(1) R{"rounds"}min=? [ F "done" ]
+
+Type:        MDP
+Modules:     abstract_firewire 
+Variables:   x s 
+
+---------------------------------------------------------------------
+
+Model checking: R{"rounds"}min=? [ F "done" ]
+Model constants: delay=3
+
+Building model...
+Model constants: delay=3
+
+Computing reachable states...
+
+Reachability (BFS): 170 iterations in 0.01 seconds (average 0.000047, setup 0.00)
+
+Time for model construction: 0.133 seconds.
+
+Type:        MDP
+States:      611 (1 initial)
+Transitions: 718
+Choices:     694
+
+Transition matrix: 342 nodes (3 terminal), 718 minterms, vars: 12r/12c/3nd
+
+Prob0A: 159 iterations in 0.01 seconds (average 0.000075, setup 0.00)
+
+Prob1E: 160 iterations in 0.01 seconds (average 0.000075, setup 0.00)
+
+Warning: PRISM hasn't checked for zero-reward loops.
+Your minimum rewards may be too low...
+
+goal = 1, inf = 0, maybe = 610
+
+Computing remaining rewards...
+Switching engine since hybrid engine does yet support this computation...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=611, nc=693, nnz=717, k=3] [13.5 KB]
+Building sparse matrix (transition rewards)... [n=611, nc=693, nnz=16, k=3] [5.3 KB]
+Creating vector for state rewards... [4.8 KB]
+Creating vector for inf... [4.8 KB]
+Allocating iteration vectors... [2 x 4.8 KB]
+TOTAL: [37.9 KB]
+
+Starting iterations...
+
+Iterative method: 5 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Value in the initial state: 1.0
+
+Time for model checking: 0.029 seconds.
+
+Result: 1.0 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 2.00s
+User time: 1.72s
+System time: 0.12s
+Memory: 107452KB

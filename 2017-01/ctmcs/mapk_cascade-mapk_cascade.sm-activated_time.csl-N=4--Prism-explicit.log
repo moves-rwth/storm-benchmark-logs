@@ -1,0 +1,65 @@
+~/prism-examples/models/;ctmcs;mapk_cascade;mapk_cascade.sm;activated_time.csl;N=4;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 08:56:36 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm ~/prism-examples/models/ctmcs/mapk_cascade/activated_time.csl -const N=4 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/mapk_cascade/activated_time.csl"...
+
+1 property:
+(1) R{"time"}=? [ F kpp=N ]
+
+Type:        CTMC
+Modules:     E1 E2 KPTASE KKPTASE MAPK MAPKK MAPKKK 
+Variables:   e1 e2 kptase kkptase k k_kkpp kp kp_kkpp kp_ptase kpp kpp_ptase kk kk_kkkp kkp kkp_kkkp kkp_ptase kkpp kkpp_ptase kkk kkk_e1 kkkp kkkp_e2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time"}=? [ F kpp=N ]
+Model constants: N=4
+
+Building model...
+Model constants: N=4
+
+Computing reachable states... 42823 99535 states
+Reachable states exploration and model construction done in 5.663 secs.
+Sorting reachable states list...
+
+Time for model construction: 6.076 seconds.
+
+Type:        CTMC
+States:      99535 (1 initial)
+Transitions: 910872
+Building reward structure...
+Building embedded DTMC...
+
+Warning: Switching to linear equation solution method "Power method"
+
+Starting expected reachability...
+Starting Prob1...
+Prob1 took 23 iterations and 3.386 seconds.
+target=1461, inf=0, rest=98074
+Starting value iteration...
+Value iteration took 1876 iterations and 212.238 seconds.
+Expected reachability took 215.63 seconds.
+
+Value in the initial state: 40.67270371188311
+
+Time for model checking: 216.039 seconds.
+
+Result: 40.67270371188311 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 223.58s
+User time: 226.53s
+System time: 1.18s
+Memory: 1410444KB

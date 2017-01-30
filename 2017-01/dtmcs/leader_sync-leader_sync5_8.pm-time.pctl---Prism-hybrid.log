@@ -1,0 +1,54 @@
+~/prism-examples/models/;dtmcs;leader_sync;leader_sync5_8.pm;time.pctl;;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 18:18:21 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/leader_sync/leader_sync5_8.pm ~/prism-examples/models/dtmcs/leader_sync/time.pctl -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/leader_sync/leader_sync5_8.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/leader_sync/time.pctl"...
+
+1 property:
+(1) R{"num_rounds"}=? [ F "elected" ]
+
+Type:        DTMC
+Modules:     counter process1 process2 process3 process4 process5 
+Variables:   c s1 u1 v1 p1 s2 u2 v2 p2 s3 u3 v3 p3 s4 u4 v4 p4 s5 u5 v5 p5 
+
+---------------------------------------------------------------------
+
+Model checking: R{"num_rounds"}=? [ F "elected" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 7 iterations in 15.76 seconds (average 2.252000, setup 0.00)
+
+Time for model construction: 114.158 seconds.
+
+Type:        DTMC
+States:      131521 (1 initial)
+Transitions: 164288
+
+Transition matrix: 1540390 nodes (3 terminal), 164288 minterms, vars: 47r/47c
+
+Prob0: 12 iterations in 6.49 seconds (average 0.541000, setup 0.00)
+
+Prob1: 1 iterations in 0.17 seconds (average 0.172000, setup 0.00)
+
+goal = 1, inf = 0, maybe = 131520
+
+Computing remaining rewards...
+Engine: Hybrid
+
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB
+Building hybrid MTBDD matrix... 

@@ -1,0 +1,11 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;repairs.csl;N=2;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R{"num_repairs"}=? [ C<=20 ]
+Finished model checking. Time required: 0 seconds
+R{"num_repairs"}=? [ C<=20 ]: No solver available to handle property "R{"num_repairs"}=?[C<=(20)]" for this model with the current settings
+Wall time: 1.97s
+User time: 7.18s
+System time: 0.65s
+Memory: 247664KB

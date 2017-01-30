@@ -1,0 +1,330 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;network.csl;c=2047;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 14:16:47 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/tandem/tandem.sm ~/prism-examples/models/ctmcs/tandem/network.csl -const c=2047 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/tandem/tandem.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/tandem/network.csl"...
+
+1 property:
+(1) P=? [ F<=0.2 sc=c&sm=c&ph=2 ]
+
+Type:        CTMC
+Modules:     serverC serverM 
+Variables:   sc ph sm 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F<=0.2 sc=c&sm=c&ph=2 ]
+Model constants: c=2047
+
+Building model...
+Model constants: c=2047
+
+Computing reachable states...
+
+Reachability (BFS): 6143 iterations in 41.98 seconds (average 0.006834, setup 0.00)
+
+Time for model construction: 46.69 seconds.
+
+Type:        CTMC
+States:      8386560 (1 initial)
+Transitions: 29337603
+
+Rate matrix: 333 nodes (6 terminal), 29337603 minterms, vars: 23r/23c
+
+Computing probabilities...
+Engine: MTBDD
+
+Number of non-absorbing states: 8386559 of 8386560 (100.0%)
+
+Computing diagonals MTBDD... [nodes=109] [2.1 Kb]
+Building iteration matrix MTBDD... [nodes=572] [11.2 Kb]
+
+Uniformisation: q.t = 8357.880000 x 0.200000 = 1671.576000
+Fox-Glynn: left = 1382, right = 2020
+
+Starting iterations...
+Iteration 127 (of 2020): 5.05 sec so far
+Iteration 168 (of 2020): 10.08 sec so far
+Iteration 194 (of 2020): 15.41 sec so far
+Iteration 207 (of 2020): 20.67 sec so far
+Iteration 223 (of 2020): 25.72 sec so far
+Iteration 235 (of 2020): 31.18 sec so far
+Iteration 246 (of 2020): 36.25 sec so far
+Iteration 260 (of 2020): 41.36 sec so far
+Iteration 271 (of 2020): 46.88 sec so far
+Iteration 283 (of 2020): 51.91 sec so far
+Iteration 292 (of 2020): 57.14 sec so far
+Iteration 300 (of 2020): 62.22 sec so far
+Iteration 311 (of 2020): 67.65 sec so far
+Iteration 319 (of 2020): 73.03 sec so far
+Iteration 326 (of 2020): 78.04 sec so far
+Iteration 336 (of 2020): 83.42 sec so far
+Iteration 345 (of 2020): 88.53 sec so far
+Iteration 355 (of 2020): 94.34 sec so far
+Iteration 365 (of 2020): 99.51 sec so far
+Iteration 375 (of 2020): 105.09 sec so far
+Iteration 385 (of 2020): 110.20 sec so far
+Iteration 395 (of 2020): 115.60 sec so far
+Iteration 404 (of 2020): 120.71 sec so far
+Iteration 411 (of 2020): 125.90 sec so far
+Iteration 419 (of 2020): 131.76 sec so far
+Iteration 427 (of 2020): 137.48 sec so far
+Iteration 433 (of 2020): 142.58 sec so far
+Iteration 441 (of 2020): 148.28 sec so far
+Iteration 449 (of 2020): 153.77 sec so far
+Iteration 457 (of 2020): 159.43 sec so far
+Iteration 465 (of 2020): 165.45 sec so far
+Iteration 473 (of 2020): 171.34 sec so far
+Iteration 481 (of 2020): 177.14 sec so far
+Iteration 489 (of 2020): 183.19 sec so far
+Iteration 492 (of 2020): 188.96 sec so far
+Iteration 497 (of 2020): 195.30 sec so far
+Iteration 500 (of 2020): 201.92 sec so far
+Iteration 505 (of 2020): 207.34 sec so far
+Iteration 508 (of 2020): 213.80 sec so far
+Iteration 514 (of 2020): 220.69 sec so far
+Iteration 519 (of 2020): 226.54 sec so far
+Iteration 522 (of 2020): 231.67 sec so far
+Iteration 527 (of 2020): 237.00 sec so far
+Iteration 530 (of 2020): 243.36 sec so far
+Iteration 535 (of 2020): 249.42 sec so far
+Iteration 537 (of 2020): 254.79 sec so far
+Iteration 542 (of 2020): 261.86 sec so far
+Iteration 544 (of 2020): 267.44 sec so far
+Iteration 548 (of 2020): 272.52 sec so far
+Iteration 551 (of 2020): 279.41 sec so far
+Iteration 556 (of 2020): 286.15 sec so far
+Iteration 561 (of 2020): 292.37 sec so far
+Iteration 564 (of 2020): 298.60 sec so far
+Iteration 569 (of 2020): 305.22 sec so far
+Iteration 572 (of 2020): 310.56 sec so far
+Iteration 575 (of 2020): 316.17 sec so far
+Iteration 577 (of 2020): 322.25 sec so far
+Iteration 581 (of 2020): 327.40 sec so far
+Iteration 583 (of 2020): 332.62 sec so far
+Iteration 587 (of 2020): 337.71 sec so far
+Iteration 590 (of 2020): 344.62 sec so far
+Iteration 594 (of 2020): 350.16 sec so far
+Iteration 596 (of 2020): 355.81 sec so far
+Iteration 600 (of 2020): 362.24 sec so far
+Iteration 602 (of 2020): 368.86 sec so far
+Iteration 606 (of 2020): 375.48 sec so far
+Iteration 608 (of 2020): 381.99 sec so far
+Iteration 612 (of 2020): 388.64 sec so far
+Iteration 614 (of 2020): 394.14 sec so far
+Iteration 618 (of 2020): 401.00 sec so far
+Iteration 621 (of 2020): 406.56 sec so far
+Iteration 624 (of 2020): 412.50 sec so far
+Iteration 627 (of 2020): 417.80 sec so far
+Iteration 630 (of 2020): 424.81 sec so far
+Iteration 633 (of 2020): 430.00 sec so far
+Iteration 636 (of 2020): 436.86 sec so far
+Iteration 640 (of 2020): 443.36 sec so far
+Iteration 642 (of 2020): 449.24 sec so far
+Iteration 646 (of 2020): 455.21 sec so far
+Iteration 648 (of 2020): 460.87 sec so far
+Iteration 652 (of 2020): 467.70 sec so far
+Iteration 655 (of 2020): 473.40 sec so far
+Iteration 658 (of 2020): 480.62 sec so far
+Iteration 661 (of 2020): 485.76 sec so far
+Iteration 663 (of 2020): 491.70 sec so far
+Iteration 665 (of 2020): 496.89 sec so far
+Iteration 668 (of 2020): 502.76 sec so far
+Iteration 671 (of 2020): 508.49 sec so far
+Iteration 674 (of 2020): 516.34 sec so far
+Iteration 678 (of 2020): 523.96 sec so far
+Iteration 680 (of 2020): 530.20 sec so far
+Iteration 684 (of 2020): 538.42 sec so far
+Iteration 687 (of 2020): 544.62 sec so far
+Iteration 689 (of 2020): 550.40 sec so far
+Iteration 692 (of 2020): 556.82 sec so far
+Iteration 694 (of 2020): 562.84 sec so far
+Iteration 697 (of 2020): 569.06 sec so far
+Iteration 699 (of 2020): 575.45 sec so far
+Iteration 702 (of 2020): 581.60 sec so far
+Iteration 704 (of 2020): 588.23 sec so far
+Iteration 707 (of 2020): 593.63 sec so far
+Iteration 709 (of 2020): 599.83 sec so far
+Iteration 712 (of 2020): 605.18 sec so far
+Iteration 714 (of 2020): 612.11 sec so far
+Iteration 717 (of 2020): 617.14 sec so far
+Iteration 719 (of 2020): 624.40 sec so far
+Iteration 722 (of 2020): 629.40 sec so far
+Iteration 724 (of 2020): 637.32 sec so far
+Iteration 728 (of 2020): 645.80 sec so far
+Iteration 731 (of 2020): 651.21 sec so far
+Iteration 733 (of 2020): 658.01 sec so far
+Iteration 737 (of 2020): 665.92 sec so far
+Iteration 740 (of 2020): 672.52 sec so far
+Iteration 742 (of 2020): 678.96 sec so far
+Iteration 745 (of 2020): 684.21 sec so far
+Iteration 747 (of 2020): 691.88 sec so far
+Iteration 750 (of 2020): 697.14 sec so far
+Iteration 752 (of 2020): 703.33 sec so far
+Iteration 755 (of 2020): 710.45 sec so far
+Iteration 757 (of 2020): 715.72 sec so far
+Iteration 760 (of 2020): 724.08 sec so far
+Iteration 763 (of 2020): 730.12 sec so far
+Iteration 765 (of 2020): 738.17 sec so far
+Iteration 768 (of 2020): 743.41 sec so far
+Iteration 770 (of 2020): 748.78 sec so far
+Iteration 773 (of 2020): 755.79 sec so far
+Iteration 776 (of 2020): 761.96 sec so far
+Iteration 778 (of 2020): 768.92 sec so far
+Iteration 781 (of 2020): 774.03 sec so far
+Iteration 783 (of 2020): 779.20 sec so far
+Iteration 786 (of 2020): 786.66 sec so far
+Iteration 789 (of 2020): 792.35 sec so far
+Iteration 791 (of 2020): 798.61 sec so far
+Iteration 794 (of 2020): 804.55 sec so far
+Iteration 796 (of 2020): 809.61 sec so far
+Iteration 799 (of 2020): 817.94 sec so far
+Iteration 802 (of 2020): 823.06 sec so far
+Iteration 805 (of 2020): 829.21 sec so far
+Iteration 807 (of 2020): 835.25 sec so far
+Iteration 810 (of 2020): 840.45 sec so far
+Iteration 813 (of 2020): 846.62 sec so far
+Iteration 815 (of 2020): 852.20 sec so far
+Iteration 818 (of 2020): 857.55 sec so far
+Iteration 821 (of 2020): 863.88 sec so far
+Iteration 823 (of 2020): 869.75 sec so far
+Iteration 826 (of 2020): 875.64 sec so far
+Iteration 829 (of 2020): 882.18 sec so far
+Iteration 831 (of 2020): 888.19 sec so far
+Iteration 834 (of 2020): 893.92 sec so far
+Iteration 837 (of 2020): 900.40 sec so far
+Iteration 839 (of 2020): 906.72 sec so far
+Iteration 842 (of 2020): 912.47 sec so far
+Iteration 845 (of 2020): 918.80 sec so far
+Iteration 847 (of 2020): 925.34 sec so far
+Iteration 850 (of 2020): 931.22 sec so far
+Iteration 853 (of 2020): 938.56 sec so far
+Iteration 855 (of 2020): 944.67 sec so far
+Iteration 858 (of 2020): 953.30 sec so far
+Iteration 861 (of 2020): 960.46 sec so far
+Iteration 863 (of 2020): 966.16 sec so far
+Iteration 865 (of 2020): 971.91 sec so far
+Iteration 867 (of 2020): 977.33 sec so far
+Iteration 869 (of 2020): 984.00 sec so far
+Iteration 872 (of 2020): 991.41 sec so far
+Iteration 874 (of 2020): 997.06 sec so far
+Iteration 876 (of 2020): 1002.94 sec so far
+Iteration 878 (of 2020): 1008.56 sec so far
+Iteration 880 (of 2020): 1015.79 sec so far
+Iteration 883 (of 2020): 1023.29 sec so far
+Iteration 885 (of 2020): 1029.14 sec so far
+Iteration 887 (of 2020): 1035.44 sec so far
+Iteration 889 (of 2020): 1040.48 sec so far
+Iteration 891 (of 2020): 1048.22 sec so far
+Iteration 894 (of 2020): 1055.96 sec so far
+Iteration 896 (of 2020): 1061.67 sec so far
+Iteration 898 (of 2020): 1068.52 sec so far
+Iteration 901 (of 2020): 1075.74 sec so far
+Iteration 903 (of 2020): 1081.15 sec so far
+Iteration 905 (of 2020): 1088.02 sec so far
+Iteration 908 (of 2020): 1095.00 sec so far
+Iteration 911 (of 2020): 1102.56 sec so far
+Iteration 914 (of 2020): 1109.67 sec so far
+Iteration 916 (of 2020): 1115.84 sec so far
+Iteration 919 (of 2020): 1123.62 sec so far
+Iteration 922 (of 2020): 1130.00 sec so far
+Iteration 925 (of 2020): 1137.00 sec so far
+Iteration 927 (of 2020): 1142.12 sec so far
+Iteration 929 (of 2020): 1147.93 sec so far
+Iteration 932 (of 2020): 1155.10 sec so far
+Iteration 935 (of 2020): 1162.32 sec so far
+Iteration 937 (of 2020): 1167.33 sec so far
+Iteration 939 (of 2020): 1172.90 sec so far
+Iteration 942 (of 2020): 1179.88 sec so far
+Iteration 945 (of 2020): 1187.14 sec so far
+Iteration 947 (of 2020): 1192.28 sec so far
+Iteration 949 (of 2020): 1198.18 sec so far
+Iteration 952 (of 2020): 1205.32 sec so far
+Iteration 955 (of 2020): 1212.91 sec so far
+Iteration 958 (of 2020): 1218.61 sec so far
+Iteration 960 (of 2020): 1224.56 sec so far
+Iteration 962 (of 2020): 1234.44 sec so far
+Iteration 965 (of 2020): 1241.15 sec so far
+Iteration 967 (of 2020): 1251.43 sec so far
+Iteration 970 (of 2020): 1258.38 sec so far
+Iteration 972 (of 2020): 1268.71 sec so far
+Iteration 975 (of 2020): 1276.08 sec so far
+Iteration 977 (of 2020): 1286.81 sec so far
+Iteration 980 (of 2020): 1294.10 sec so far
+Iteration 982 (of 2020): 1304.57 sec so far
+Iteration 985 (of 2020): 1311.56 sec so far
+Iteration 987 (of 2020): 1322.00 sec so far
+Iteration 988 (of 2020): 1328.73 sec so far
+Iteration 991 (of 2020): 1336.78 sec so far
+Iteration 993 (of 2020): 1346.91 sec so far
+Iteration 994 (of 2020): 1353.08 sec so far
+Iteration 995 (of 2020): 1360.42 sec so far
+Iteration 998 (of 2020): 1367.18 sec so far
+Iteration 1000 (of 2020): 1376.79 sec so far
+Iteration 1001 (of 2020): 1383.09 sec so far
+Iteration 1003 (of 2020): 1388.79 sec so far
+Iteration 1005 (of 2020): 1395.85 sec so far
+Iteration 1007 (of 2020): 1406.70 sec so far
+Iteration 1008 (of 2020): 1413.56 sec so far
+Iteration 1011 (of 2020): 1420.57 sec so far
+Iteration 1013 (of 2020): 1430.53 sec so far
+Iteration 1014 (of 2020): 1437.30 sec so far
+Iteration 1016 (of 2020): 1442.52 sec so far
+Iteration 1018 (of 2020): 1449.93 sec so far
+Iteration 1019 (of 2020): 1455.28 sec so far
+Iteration 1020 (of 2020): 1461.67 sec so far
+Iteration 1021 (of 2020): 1468.31 sec so far
+Iteration 1024 (of 2020): 1476.44 sec so far
+Iteration 1026 (of 2020): 1487.61 sec so far
+Iteration 1027 (of 2020): 1494.74 sec so far
+Iteration 1030 (of 2020): 1501.88 sec so far
+Iteration 1032 (of 2020): 1512.10 sec so far
+Iteration 1033 (of 2020): 1518.47 sec so far
+Iteration 1036 (of 2020): 1525.80 sec so far
+Iteration 1038 (of 2020): 1535.38 sec so far
+Iteration 1039 (of 2020): 1541.78 sec so far
+Iteration 1041 (of 2020): 1547.66 sec so far
+Iteration 1043 (of 2020): 1554.78 sec so far
+Iteration 1044 (of 2020): 1560.05 sec so far
+Iteration 1045 (of 2020): 1566.44 sec so far
+Iteration 1046 (of 2020): 1571.92 sec so far
+Iteration 1049 (of 2020): 1580.37 sec so far
+Iteration 1050 (of 2020): 1585.55 sec so far
+Iteration 1051 (of 2020): 1592.00 sec so far
+Iteration 1052 (of 2020): 1598.10 sec so far
+Iteration 1055 (of 2020): 1606.37 sec so far
+Iteration 1056 (of 2020): 1611.38 sec so far
+Iteration 1057 (of 2020): 1617.32 sec so far
+Iteration 1058 (of 2020): 1623.00 sec so far
+Iteration 1061 (of 2020): 1631.44 sec so far
+Iteration 1062 (of 2020): 1636.76 sec so far
+Iteration 1063 (of 2020): 1643.01 sec so far
+Iteration 1064 (of 2020): 1648.68 sec so far
+Iteration 1067 (of 2020): 1657.32 sec so far
+Iteration 1068 (of 2020): 1662.60 sec so far
+Iteration 1069 (of 2020): 1669.17 sec so far
+Iteration 1070 (of 2020): 1674.57 sec so far
+Iteration 1073 (of 2020): 1684.00 sec so far
+Iteration 1074 (of 2020): 1689.24 sec so far
+Iteration 1075 (of 2020): 1695.60 sec so far
+Iteration 1077 (of 2020): 1701.60 sec so far
+Iteration 1079 (of 2020): 1709.03 sec so far
+Iteration 1080 (of 2020): 1714.48 sec so far
+Iteration 1081 (of 2020): 1721.01 sec so far
+Iteration 1083 (of 2020): 1726.09 sec so far
+Iteration 1085 (of 2020): 1734.05 sec so far
+Iteration 1086 (of 2020): 1739.71 sec so far
+Iteration 1087 (of 2020): 1746.48 sec so far
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

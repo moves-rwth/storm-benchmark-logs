@@ -1,0 +1,39 @@
+~/prism-examples/models/;ctmcs;mapk_cascade;mapk_cascade.sm;activated_time.csl;N=6;;Storm-hybrid
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm --prop ~/prism-examples/models/ctmcs/mapk_cascade/activated_time.csl -const N=6 -e hybrid --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+ WARN (Program.cpp:179): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 13.495s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (symbolic)
+States: 	1373026 (8120 nodes)
+Transitions: 	15015264 (285106 nodes)
+Reward Models:  time
+Variables: 	rows: 22 meta variables (58 DD variables), columns: 22 meta variables (58 DD variables)
+Labels: 	0
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"time"}=? [F (kpp = 6)] ...
+Result (initial states): 35.96844075
+Time for model checking: 124.897s.
+Wall time: 138.74s
+User time: 137.02s
+System time: 1.58s
+Memory: 2131188KB

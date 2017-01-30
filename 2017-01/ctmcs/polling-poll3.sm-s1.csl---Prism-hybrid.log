@@ -1,0 +1,71 @@
+~/prism-examples/models/;ctmcs;polling;poll3.sm;s1.csl;;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 21:03:12 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/polling/poll3.sm ~/prism-examples/models/ctmcs/polling/s1.csl -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/polling/poll3.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/polling/s1.csl"...
+
+1 property:
+(1) S=? [ s1=1&!(s=1&a=1) ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 
+Variables:   s a s1 s2 s3 
+
+---------------------------------------------------------------------
+
+Model checking: S=? [ s1=1&!(s=1&a=1) ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 7 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Time for model construction: 0.027 seconds.
+
+Type:        CTMC
+States:      36 (1 initial)
+Transitions: 84
+
+Rate matrix: 112 nodes (4 terminal), 84 minterms, vars: 6r/6c
+
+SCCs: 1, BSCCs: 1, non-BSCC states: 0
+BSCC sizes: 1:36
+
+Computing steady state probabilities for BSCC 1
+
+Computing probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=6, nodes=118] [5.5 KB]
+Adding explicit sparse matrices... [levels=6, num=1, compact] [0.4 KB]
+Creating vector for diagonals... [dist=9, compact] [0.1 KB]
+Allocating iteration vectors... [2 x 0.3 KB]
+TOTAL: [6.6 KB]
+
+Starting iterations...
+
+Jacobi: 89 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+BSCC 1 probability: 0.13080220671359438
+
+All states are in BSCCs (so no reachability probabilities computed)
+
+Value in the initial state: 0.13080220671359438
+
+Time for model checking: 0.008 seconds.
+
+Result: 0.13080220671359438 (value in the initial state)
+
+Wall time: 2.02s
+User time: 1.62s
+System time: 0.11s
+Memory: 105300KB

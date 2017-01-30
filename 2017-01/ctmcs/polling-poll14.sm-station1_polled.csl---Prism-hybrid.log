@@ -1,0 +1,97 @@
+~/prism-examples/models/;ctmcs;polling;poll14.sm;station1_polled.csl;;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 21:04:36 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/polling/poll14.sm ~/prism-examples/models/ctmcs/polling/station1_polled.csl -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/polling/poll14.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/polling/station1_polled.csl"...
+
+1 property:
+(1) P=? [ F<=20 (s=1&a=0) ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 station4 station5 station6 station7 station8 station9 station10 station11 station12 station13 station14 
+Variables:   s a s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F<=20 (s=1&a=0) ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 29 iterations in 0.02 seconds (average 0.000552, setup 0.00)
+
+Time for model construction: 0.108 seconds.
+
+Type:        CTMC
+States:      344064 (1 initial)
+Transitions: 2695168
+
+Rate matrix: 1707 nodes (4 terminal), 2695168 minterms, vars: 19r/19c
+
+Computing probabilities...
+Engine: Hybrid
+
+Number of non-absorbing states: 327680 of 344064 (95.2%)
+
+Building hybrid MTBDD matrix... [levels=19, nodes=1738] [81.5 KB]
+Adding explicit sparse matrices... [levels=11, num=59, compact] [549.0 KB]
+Creating vector for diagonals... [dist=48, compact] [672.4 KB]
+Allocating iteration vectors... [3 x 2.6 MB]
+TOTAL: [9.1 MB]
+
+Uniformisation: q.t = 205.020000 x 20.000000 = 4100.400000
+Fox-Glynn: left = 3649, right = 4645
+
+Starting iterations...
+Iteration 167 (of 4645): max relative diff=0.086942, 5.01 sec so far
+Iteration 321 (of 4645): max relative diff=0.041164, 10.02 sec so far
+Iteration 476 (of 4645): max relative diff=0.025869, 15.05 sec so far
+Iteration 630 (of 4645): max relative diff=0.018297, 20.08 sec so far
+Iteration 783 (of 4645): max relative diff=0.013784, 25.09 sec so far
+Iteration 937 (of 4645): max relative diff=0.010760, 30.12 sec so far
+Iteration 1091 (of 4645): max relative diff=0.008609, 35.14 sec so far
+Iteration 1245 (of 4645): max relative diff=0.007004, 40.16 sec so far
+Iteration 1399 (of 4645): max relative diff=0.005764, 45.18 sec so far
+Iteration 1552 (of 4645): max relative diff=0.004786, 50.18 sec so far
+Iteration 1709 (of 4645): max relative diff=0.003975, 55.21 sec so far
+Iteration 1870 (of 4645): max relative diff=0.003295, 60.23 sec so far
+Iteration 2031 (of 4645): max relative diff=0.002734, 65.25 sec so far
+Iteration 2192 (of 4645): max relative diff=0.002267, 70.27 sec so far
+Iteration 2353 (of 4645): max relative diff=0.001874, 75.29 sec so far
+Iteration 2514 (of 4645): max relative diff=0.001544, 80.32 sec so far
+Iteration 2666 (of 4645): max relative diff=0.001279, 85.34 sec so far
+Iteration 2819 (of 4645): max relative diff=0.001052, 90.35 sec so far
+Iteration 2972 (of 4645): max relative diff=0.000860, 95.36 sec so far
+Iteration 3125 (of 4645): max relative diff=0.000697, 100.37 sec so far
+Iteration 3278 (of 4645): max relative diff=0.000560, 105.38 sec so far
+Iteration 3431 (of 4645): max relative diff=0.000446, 110.41 sec so far
+Iteration 3584 (of 4645): max relative diff=0.000351, 115.43 sec so far
+Iteration 3727 (of 4645): max relative diff=0.000278, 120.44 sec so far
+Iteration 3864 (of 4645): max relative diff=0.000221, 125.46 sec so far
+Iteration 4001 (of 4645): max relative diff=0.000173, 130.48 sec so far
+Iteration 4148 (of 4645): max relative diff=0.000132, 135.51 sec so far
+Iteration 4296 (of 4645): max relative diff=0.000100, 140.54 sec so far
+Iteration 4434 (of 4645): max relative diff=0.000076, 145.56 sec so far
+Iteration 4572 (of 4645): max relative diff=0.000057, 150.58 sec so far
+
+Iterative method: 4645 iterations in 153.28 seconds (average 0.032988, setup 0.05)
+
+Value in the initial state: 1.0
+
+Time for model checking: 153.349 seconds.
+
+Result: 1.0 (value in the initial state)
+
+Wall time: 154.77s
+User time: 155.04s
+System time: 0.19s
+Memory: 115736KB

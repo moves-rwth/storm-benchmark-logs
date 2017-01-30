@@ -1,0 +1,46 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;repairs.csl;N=2;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 18:03:25 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/cluster/cluster.sm ~/prism-examples/models/ctmcs/cluster/repairs.csl -const N=2 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/cluster/cluster.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/cluster/repairs.csl"...
+
+1 property:
+(1) R{"num_repairs"}=? [ C<=20 ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: R{"num_repairs"}=? [ C<=20 ]
+Model constants: N=2
+
+Building model...
+Model constants: N=2
+
+Computing reachable states... 276 states
+Reachable states exploration and model construction done in 0.285 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.322 seconds.
+
+Type:        CTMC
+States:      276 (1 initial)
+Transitions: 1120
+Building reward structure...
+
+Error: Explicit engine does not yet handle transition rewards for D/CTMCs.
+
+Wall time: 2.35s
+User time: 2.22s
+System time: 0.15s
+Memory: 92324KB

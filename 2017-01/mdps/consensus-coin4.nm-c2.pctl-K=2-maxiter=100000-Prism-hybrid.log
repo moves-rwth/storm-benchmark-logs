@@ -1,0 +1,71 @@
+~/prism-examples/models/;mdps;consensus;coin4.nm;c2.pctl;K=2;maxiter=100000;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 17:28:40 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/consensus/coin4.nm ~/prism-examples/models/mdps/consensus/c2.pctl -const K=2 -h -cuddmaxmem 4096m -maxiters 100000
+
+Parsing model file "~/prism-examples/models/mdps/consensus/coin4.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/consensus/c2.pctl"...
+
+1 property:
+(1) Pmin=? [ F "finished"&"all_coins_equal_1" ]
+
+Type:        MDP
+Modules:     process1 process2 process3 process4 
+Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ F "finished"&"all_coins_equal_1" ]
+Model constants: K=2
+
+Building model...
+Model constants: K=2
+
+Computing reachable states...
+
+Reachability (BFS): 99 iterations in 0.03 seconds (average 0.000283, setup 0.00)
+
+Time for model construction: 0.079 seconds.
+
+Type:        MDP
+States:      22656 (1 initial)
+Transitions: 75232
+Choices:     60544
+
+Transition matrix: 2288 nodes (3 terminal), 75232 minterms, vars: 17r/17c/4nd
+
+Prob0E: 63 iterations in 0.06 seconds (average 0.001016, setup 0.00)
+
+Prob1A: 48 iterations in 0.03 seconds (average 0.000583, setup 0.00)
+
+yes = 455, no = 12796, maybe = 9405
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrices... [nm=4, levels=17, nodes=3265] [153.0 KB]
+Adding sparse bits... [levels=17-17, num=4, compact=4/4] [235.9 KB]
+Creating vector for yes... [dist=2, compact] [44.3 KB]
+Allocating iteration vectors... [3 x 177.0 KB]
+TOTAL: [964.2 KB]
+
+Starting iterations...
+
+Iterative method: 1753 iterations in 2.26 seconds (average 0.001280, setup 0.01)
+
+Value in the initial state: 0.3173765298712353
+
+Time for model checking: 2.356 seconds.
+
+Result: 0.3173765298712353 (value in the initial state)
+
+Wall time: 3.70s
+User time: 4.02s
+System time: 0.16s
+Memory: 110016KB

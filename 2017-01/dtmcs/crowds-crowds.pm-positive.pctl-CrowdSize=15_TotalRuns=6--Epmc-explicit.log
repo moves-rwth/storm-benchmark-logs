@@ -1,0 +1,22 @@
+~/prism-examples/models/;dtmcs;crowds;crowds.pm;positive.pctl;CrowdSize=15,TotalRuns=6;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P=? [ F observe0>1  ]
+Starting to build model...
+Current number of states: 331,903; states/second: 66,379
+Current number of states: 721,608; states/second: 77,941
+Current number of states: 1,052,930; states/second: 66,264
+Current number of states: 1,301,806; states/second: 49,775
+Current number of states: 1,713,085; states/second: 82,255
+Current number of states: 2,058,074; states/second: 68,998
+Current number of states: 2,408,218; states/second: 70,028
+Building model done. 2,464,168 states. Time for model exploration: 35 seconds.
+Starting iteration...
+Done. Did 0 iterations in 9 seconds.
+Finished model checking. Time required: 53 seconds
+P=? [ F observe0>1  ]: 0.12865369502576518
+Wall time: 55.61s
+User time: 66.72s
+System time: 1.33s
+Memory: 1077592KB

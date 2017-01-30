@@ -1,0 +1,48 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;main_T.csl;MAX_COUNT=1000;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 06:23:46 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/main_T.csl -const MAX_COUNT=1000 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/main_T.csl"...
+
+1 property:
+(1) P=? [ !"down" U<=72000 "fail_main" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !"down" U<=72000 "fail_main" ]
+Model constants: MAX_COUNT=1000
+
+Building model...
+Model constants: MAX_COUNT=1000
+
+Computing reachable states... 116548 274225 416529 554539 695538 846788 states
+Reachable states exploration and model construction done in 17.95 secs.
+Sorting reachable states list...
+
+Time for model construction: 19.608 seconds.
+
+Type:        CTMC
+States:      846788 (1 initial)
+Transitions: 3574505
+
+Starting backwards transient probability computation...
+
+Uniformisation: q.t = 0.08500167110603755 x 72000.0 = 6120.120319634704
+Fox-Glynn (1.25E-7): left = 5570, right = 6786
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

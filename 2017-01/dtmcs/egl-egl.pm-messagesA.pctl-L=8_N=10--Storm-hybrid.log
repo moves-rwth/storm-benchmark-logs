@@ -1,0 +1,93 @@
+~/prism-examples/models/;dtmcs;egl;egl.pm;messagesA.pctl;L=8,N=10;;Storm-hybrid
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/dtmcs/egl/egl.pm --prop ~/prism-examples/models/dtmcs/egl/messagesA.pctl -const L=8,N=10 -e hybrid --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 10))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 11))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 12))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 13))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 14))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 15))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 16))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 17))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 18))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 19))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 10))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 11))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 12))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 13))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 14))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 15))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 16))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 17))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 18))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 19))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 10))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 11))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 12))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 13))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 14))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 15))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 16))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 17))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 18))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 19))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 10))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 11))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 12))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 13))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 14))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 15))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 16))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 17))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 18))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 1) & (n = 19))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 10))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 11))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 12))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 13))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 14))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 15))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 16))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 17))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 18))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 2) & (n = 19))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 10))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 11))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 12))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 13))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 14))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 15))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 16))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 17))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 18))' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:622): The guard '((phase = 3) & (n = 19))' is unsatisfiable.
+Time for model construction: 3.350s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	317718526 (51147 nodes)
+Transitions: 	318767101 (120213 nodes)
+Reward Models:  messages_A_needs
+Variables: 	rows: 84 meta variables (331 DD variables), columns: 84 meta variables (331 DD variables)
+Labels: 	2
+   * knowA
+   * knowB
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"messages_A_needs"}=? [F (phase = 4)] ...
+ERROR (storm.cpp:42): An unexpected exception occurred and caused Storm to terminate. The message of this exception is: std::bad_alloc
+Command exited with non-zero status 2
+Wall time: 10.67s
+User time: 8.35s
+System time: 2.29s
+Memory: 5123436KB
+External error: 2

@@ -1,0 +1,35 @@
+~/prism-examples/models/;mdps;wlan;wlan0.nm;cost_min.pctl;COL=0;;Storm-sparse
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/wlan/wlan0.nm --prop ~/prism-examples/models/mdps/wlan/cost_min.pctl -const COL=0 -e sparse -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.228s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	2954
+Transitions: 	5202
+Choices: 	3972
+Reward Models:  cost
+Labels: 	3
+   * init -> 1 state(s)
+   * deadlock -> 0 state(s)
+   * ((s1 = 12) & (s2 = 12)) -> 1 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"cost"}min=? [F ((s1 = 12) & (s2 = 12))] ...
+ WARN (SparseMdpPrctlHelper.cpp:289): Results of reward computation may be too low, because of zero-reward loops.
+Result (initial states): 7625
+Time for model checking: 0.007s.
+Wall time: 0.31s
+User time: 0.21s
+System time: 0.09s
+Memory: 219572KB

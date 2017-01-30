@@ -1,0 +1,214 @@
+~/prism-examples/models/;mdps;zeroconf;zeroconf.nm;correct_min.pctl;K=16,N=1000,reset=false;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 20:46:15 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/zeroconf/zeroconf.nm ~/prism-examples/models/mdps/zeroconf/correct_min.pctl -const 'K=16,N=1000,reset=false' -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/zeroconf/zeroconf.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/zeroconf/correct_min.pctl"...
+
+1 property:
+(1) Pmin=? [ F (l=4&ip=1) ]
+
+Type:        MDP
+Modules:     environment host0 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ F (l=4&ip=1) ]
+Model constants: reset=false,N=1000,K=16
+
+Building model...
+Model constants: reset=false,N=1000,K=16
+
+Computing reachable states...
+
+Reachability (BFS): 897 iterations in 398.26 seconds (average 0.443991, setup 0.00)
+
+Time for model construction: 401.123 seconds.
+
+Type:        MDP
+States:      5010803 (1 initial)
+Transitions: 11325290
+Choices:     9235429
+
+Transition matrix: 279357 nodes (6 terminal), 11325290 minterms, vars: 59r/59c/7nd
+
+Prob0E: 166 iterations in 19.51 seconds (average 0.117518, setup 0.00)
+
+Prob1A: 98 iterations in 12.81 seconds (average 0.130694, setup 0.00)
+
+yes = 15946, no = 1212928, maybe = 3781929
+
+Computing remaining probabilities...
+Engine: MTBDD
+
+Building iteration matrix MTBDD... [nodes=186473] [3642.1 Kb]
+
+Starting iterations...
+Iteration 17: sol=135462 nodes, 6.41 sec so far
+Iteration 20: sol=202750 nodes, 13.49 sec so far
+Iteration 23: sol=256066 nodes, 20.16 sec so far
+Iteration 25: sol=310981 nodes, 26.28 sec so far
+Iteration 27: sol=366678 nodes, 33.90 sec so far
+Iteration 29: sol=412588 nodes, 43.82 sec so far
+Iteration 30: sol=410336 nodes, 49.61 sec so far
+Iteration 31: sol=406007 nodes, 55.00 sec so far
+Iteration 33: sol=435934 nodes, 65.17 sec so far
+Iteration 34: sol=472313 nodes, 71.08 sec so far
+Iteration 35: sol=484315 nodes, 80.84 sec so far
+Iteration 36: sol=449808 nodes, 85.90 sec so far
+Iteration 37: sol=455366 nodes, 91.04 sec so far
+Iteration 38: sol=457631 nodes, 96.57 sec so far
+Iteration 39: sol=458722 nodes, 102.52 sec so far
+Iteration 40: sol=464264 nodes, 110.20 sec so far
+Iteration 41: sol=464919 nodes, 118.36 sec so far
+Iteration 42: sol=466952 nodes, 126.79 sec so far
+Iteration 43: sol=468191 nodes, 135.49 sec so far
+Iteration 44: sol=469638 nodes, 144.46 sec so far
+Iteration 45: sol=469382 nodes, 153.56 sec so far
+Iteration 46: sol=467871 nodes, 162.98 sec so far
+Iteration 47: sol=468307 nodes, 173.00 sec so far
+Iteration 48: sol=467070 nodes, 182.87 sec so far
+Iteration 49: sol=465161 nodes, 197.58 sec so far
+Iteration 50: sol=469181 nodes, 204.49 sec so far
+Iteration 51: sol=467108 nodes, 211.99 sec so far
+Iteration 52: sol=465151 nodes, 219.74 sec so far
+Iteration 53: sol=459370 nodes, 227.44 sec so far
+Iteration 54: sol=461746 nodes, 235.35 sec so far
+Iteration 55: sol=459447 nodes, 243.43 sec so far
+Iteration 56: sol=457212 nodes, 251.86 sec so far
+Iteration 57: sol=456414 nodes, 260.40 sec so far
+Iteration 58: sol=456419 nodes, 269.06 sec so far
+Iteration 59: sol=456233 nodes, 277.84 sec so far
+Iteration 60: sol=453901 nodes, 286.90 sec so far
+Iteration 61: sol=454759 nodes, 296.15 sec so far
+Iteration 62: sol=455477 nodes, 305.38 sec so far
+Iteration 63: sol=452736 nodes, 314.89 sec so far
+Iteration 64: sol=452200 nodes, 324.47 sec so far
+Iteration 65: sol=450369 nodes, 339.13 sec so far
+Iteration 66: sol=457189 nodes, 345.66 sec so far
+Iteration 67: sol=452021 nodes, 352.52 sec so far
+Iteration 68: sol=447201 nodes, 359.59 sec so far
+Iteration 69: sol=442183 nodes, 366.93 sec so far
+Iteration 70: sol=441485 nodes, 375.06 sec so far
+Iteration 71: sol=440109 nodes, 382.74 sec so far
+Iteration 72: sol=436518 nodes, 390.69 sec so far
+Iteration 73: sol=434147 nodes, 398.83 sec so far
+Iteration 74: sol=431959 nodes, 407.00 sec so far
+Iteration 75: sol=428787 nodes, 415.46 sec so far
+Iteration 76: sol=425269 nodes, 424.06 sec so far
+Iteration 77: sol=422192 nodes, 432.48 sec so far
+Iteration 78: sol=419933 nodes, 440.88 sec so far
+Iteration 79: sol=415244 nodes, 449.35 sec so far
+Iteration 80: sol=410971 nodes, 457.88 sec so far
+Iteration 81: sol=406902 nodes, 466.33 sec so far
+Iteration 82: sol=401219 nodes, 475.02 sec so far
+Iteration 83: sol=397691 nodes, 483.78 sec so far
+Iteration 84: sol=393324 nodes, 492.50 sec so far
+Iteration 85: sol=388386 nodes, 501.93 sec so far
+Iteration 86: sol=384345 nodes, 513.20 sec so far
+Iteration 87: sol=421738 nodes, 519.45 sec so far
+Iteration 88: sol=454012 nodes, 526.78 sec so far
+Iteration 89: sol=452671 nodes, 534.31 sec so far
+Iteration 90: sol=440127 nodes, 541.58 sec so far
+Iteration 91: sol=417233 nodes, 548.64 sec so far
+Iteration 92: sol=402001 nodes, 554.82 sec so far
+Iteration 93: sol=388502 nodes, 560.68 sec so far
+Iteration 94: sol=377753 nodes, 566.44 sec so far
+Iteration 95: sol=367473 nodes, 572.61 sec so far
+Iteration 96: sol=359997 nodes, 578.80 sec so far
+Iteration 97: sol=353773 nodes, 584.54 sec so far
+Iteration 98: sol=345844 nodes, 590.08 sec so far
+Iteration 99: sol=340081 nodes, 595.55 sec so far
+Iteration 100: sol=336070 nodes, 600.74 sec so far
+Iteration 101: sol=330365 nodes, 605.82 sec so far
+Iteration 102: sol=325726 nodes, 611.00 sec so far
+Iteration 103: sol=321831 nodes, 616.14 sec so far
+Iteration 104: sol=317390 nodes, 621.25 sec so far
+Iteration 105: sol=313051 nodes, 626.66 sec so far
+Iteration 106: sol=308978 nodes, 632.17 sec so far
+Iteration 107: sol=306622 nodes, 637.46 sec so far
+Iteration 108: sol=302770 nodes, 642.68 sec so far
+Iteration 110: sol=299282 nodes, 652.17 sec so far
+Iteration 112: sol=295643 nodes, 661.87 sec so far
+Iteration 114: sol=292215 nodes, 677.20 sec so far
+Iteration 115: sol=290440 nodes, 682.34 sec so far
+Iteration 117: sol=290261 nodes, 688.34 sec so far
+Iteration 119: sol=282784 nodes, 693.97 sec so far
+Iteration 121: sol=281321 nodes, 699.05 sec so far
+Iteration 124: sol=278620 nodes, 706.26 sec so far
+Iteration 127: sol=284597 nodes, 713.60 sec so far
+Iteration 130: sol=289832 nodes, 721.13 sec so far
+Iteration 132: sol=294323 nodes, 726.19 sec so far
+Iteration 134: sol=298321 nodes, 731.46 sec so far
+Iteration 136: sol=300772 nodes, 736.88 sec so far
+Iteration 138: sol=301785 nodes, 742.40 sec so far
+Iteration 140: sol=300100 nodes, 748.08 sec so far
+Iteration 142: sol=297946 nodes, 753.70 sec so far
+Iteration 144: sol=294690 nodes, 759.19 sec so far
+Iteration 146: sol=289923 nodes, 764.51 sec so far
+Iteration 148: sol=284870 nodes, 769.73 sec so far
+Iteration 150: sol=280034 nodes, 775.36 sec so far
+Iteration 153: sol=272995 nodes, 782.97 sec so far
+Iteration 156: sol=267967 nodes, 795.52 sec so far
+Iteration 158: sol=273775 nodes, 801.70 sec so far
+Iteration 161: sol=260113 nodes, 808.00 sec so far
+Iteration 164: sol=257887 nodes, 813.80 sec so far
+Iteration 167: sol=252149 nodes, 819.48 sec so far
+Iteration 170: sol=249774 nodes, 825.06 sec so far
+Iteration 173: sol=248682 nodes, 830.82 sec so far
+Iteration 176: sol=247310 nodes, 836.64 sec so far
+Iteration 179: sol=248871 nodes, 842.70 sec so far
+Iteration 182: sol=249687 nodes, 848.78 sec so far
+Iteration 185: sol=252027 nodes, 855.27 sec so far
+Iteration 188: sol=254753 nodes, 861.64 sec so far
+Iteration 191: sol=258035 nodes, 867.97 sec so far
+Iteration 194: sol=257782 nodes, 875.17 sec so far
+Iteration 197: sol=256412 nodes, 881.16 sec so far
+Iteration 200: sol=255694 nodes, 887.70 sec so far
+Iteration 201: sol=254798 nodes, 897.84 sec so far
+Iteration 204: sol=250183 nodes, 904.69 sec so far
+Iteration 208: sol=244004 nodes, 911.21 sec so far
+Iteration 212: sol=236059 nodes, 917.52 sec so far
+Iteration 216: sol=230293 nodes, 923.76 sec so far
+Iteration 220: sol=224309 nodes, 929.92 sec so far
+Iteration 224: sol=220269 nodes, 936.09 sec so far
+Iteration 228: sol=218639 nodes, 942.39 sec so far
+Iteration 232: sol=212906 nodes, 948.67 sec so far
+Iteration 236: sol=202197 nodes, 954.62 sec so far
+Iteration 240: sol=193474 nodes, 960.30 sec so far
+Iteration 244: sol=186285 nodes, 965.61 sec so far
+Iteration 248: sol=179638 nodes, 971.18 sec so far
+Iteration 252: sol=173637 nodes, 976.32 sec so far
+Iteration 257: sol=166336 nodes, 982.38 sec so far
+Iteration 261: sol=158964 nodes, 987.58 sec so far
+Iteration 268: sol=148004 nodes, 992.68 sec so far
+Iteration 277: sol=136383 nodes, 998.07 sec so far
+Iteration 284: sol=129089 nodes, 1007.16 sec so far
+Iteration 289: sol=121084 nodes, 1012.46 sec so far
+Iteration 301: sol=124309 nodes, 1017.62 sec so far
+Iteration 318: sol=118012 nodes, 1022.76 sec so far
+Iteration 334: sol=109824 nodes, 1028.07 sec so far
+Iteration 349: sol=101521 nodes, 1033.18 sec so far
+Iteration 371: sol=93452 nodes, 1038.20 sec so far
+Iteration 409: sol=90058 nodes, 1043.29 sec so far
+
+Iterative method: 413 iterations in 1043.89 seconds (average 2.527283, setup 0.12)
+
+Value in the initial state: 7.588200000000006E-15
+
+Time for model checking: 1077.341 seconds.
+
+Result: 7.588200000000006E-15 (value in the initial state)
+
+Wall time: 1481.39s
+User time: 1480.35s
+System time: 1.90s
+Memory: 1426608KB

@@ -1,0 +1,36 @@
+~/MA_experiments;mas;polling;polling-4-1-without.ma;TB_max_[0,1];;precision=0.001;Imca-ma
+ ------------------------------------------------------------------- 
+|                  Interactive Markov Chain Analyzer                |
+|                        IMCA Version 1.6 beta                      |
+|             Binary build date: Jan 20 2017 @ 17:22:22             |
+|                using SoPlex "http://soplex.zib.de/"               |
+|                                                                   |
+|                  Copyright (C) RWTH Aachen, 2012.                 |
+|          Copyright (C) University of Twente, 2013-2014.           |
+|                         Author: Dennis Guck                       |
+|           IMCA is distributed under the GPL conditions            |
+|            (GPL stands for GNU General Public License)            |
+|          This program comes with ABSOLUTELY NO WARRANTY.          |
+|   This is free software, and you are welcome to redistribute it   |
+ ------------------------------------------------------------------- 
+
+Loading the '~/MA_experiments/mas/polling/polling-4-1-without.ma' file, please wait.
+Maximum State Reward: 0
+#States: 117    #MS: 26    #PS: 91    #ND: 16
+#Initials: 1    #Goals: 3    #Transitions: 214
+The occupied space is 34592 Bytes (~33.781250 KB).
+
+
+Compute maximal time-bounded reachability inside interval [0,1] with precision 0.001, please wait.
+start value iteration
+iterations: 50000
+step duration: 2e-05
+interval step: 50000
+interval start: 0
+vector(117) [ 0.169187, 0.175045, 0.365859, 0.406788, 0.275124, 0.118290, 0.169187, 0.169187, 0.259703, 0.284197, 0.284197, 0.438784, 0.419180, 0.419180, 0.633939, 0.544035, 0.544035, 0.786435, 0.288290, 0.288290, 0.530705, 0.519256, 0.406788, 0.418035, 0.418035, 0.664010, 0.580468, 0.519256, 0.525377, 0.525377, 0.736450, 0.580468, 0.671254, 0.671254, 0.794075, 0.794075, 0.877772, 0.877772, 0.704580, 0.704580, 0.908841, 0.730531, 0.640715, 0.640715, 0.730531, 0.869893, 0.701697, 0.373152, 0.373152, 0.443447, 0.443447, 0.220860, 0.220860, 0.287040, 0.438784, 0.259703, 0.262437, 0.262437, 0.298053, 0.485417, 0.287040, 0.288142, 0.288142, 0.504518, 0.298053, 0.487327, 0.487327, 0.730531, 0.504518, 0.504518, 0.701697, 0.485417, 0.485417, 0.633939, 0.438784, 0.541028, 0.541028, 0.701697, 0.786435, 0.633939, 0.676253, 0.676253, 0.869893, 0.862827, 0.786435, 0.794781, 0.794781, 0.908841, 0.948680, 0.869893, 0.873788, 0.873788, 1.000000, 0.908841, 1.000000, 1.000000, 1.000000, 1.000000, 0.948680, 0.948680, 0.862827, 0.862827, 0.736450, 0.736450, 0.664010, 0.664010, 0.530705, 0.530705, 0.365859, 0.365859, 0.216544, 0.216544, 0.275124, 0.163925, 0.175045, 0.175045, 0.118290, ]
+Maximal time-bounded reachability probability: 0.1182900909
+Computation Time: 0.466159 seconds
+Wall time: 0.48s
+User time: 0.47s
+System time: 0.00s
+Memory: 4052KB

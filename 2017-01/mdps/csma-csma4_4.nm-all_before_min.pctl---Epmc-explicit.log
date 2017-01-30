@@ -1,0 +1,11 @@
+~/prism-examples/models/;mdps;csma;csma4_4.nm;all_before_min.pctl;;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property Pmin=? [ !"collision_max_backoff" U "all_delivered" ]
+Finished model checking. Time required: 0 seconds
+Pmin=? [ !"collision_max_backoff" U "all_delivered" ]: Variable information are inconsistent
+Wall time: 2.13s
+User time: 7.89s
+System time: 0.68s
+Memory: 262164KB

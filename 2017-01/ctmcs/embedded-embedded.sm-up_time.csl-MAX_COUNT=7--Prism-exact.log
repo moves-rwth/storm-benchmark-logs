@@ -1,0 +1,38 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;up_time.csl;MAX_COUNT=7;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 03:20:11 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/up_time.csl -const MAX_COUNT=7 -exact -politer
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/up_time.csl"...
+
+1 property:
+(1) R{"up"}=? [ F "down" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: R{"up"}=? [ F "down" ]
+Model constants: MAX_COUNT=7
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 8.688 secs.
+
+Time for model construction: 8.693 seconds.
+Building reward structure...
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

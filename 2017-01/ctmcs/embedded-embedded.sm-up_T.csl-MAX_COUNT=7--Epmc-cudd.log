@@ -1,0 +1,11 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;up_T.csl;MAX_COUNT=7;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R{"up"}=? [ C<=72000 ]
+Finished model checking. Time required: 0 seconds
+R{"up"}=? [ C<=72000 ]: No solver available to handle property "R{"up"}=?[C<=(72000)]" for this model with the current settings
+Wall time: 1.90s
+User time: 7.04s
+System time: 0.58s
+Memory: 250872KB

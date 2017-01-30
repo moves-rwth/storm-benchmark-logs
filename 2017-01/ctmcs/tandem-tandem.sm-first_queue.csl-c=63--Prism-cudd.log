@@ -1,0 +1,68 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;first_queue.csl;c=63;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 12:29:43 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/tandem/tandem.sm ~/prism-examples/models/ctmcs/tandem/first_queue.csl -const c=63 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/tandem/tandem.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/tandem/first_queue.csl"...
+
+1 property:
+(1) P=? [ F<=0.2 sc=c ]
+
+Type:        CTMC
+Modules:     serverC serverM 
+Variables:   sc ph sm 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F<=0.2 sc=c ]
+Model constants: c=63
+
+Building model...
+Model constants: c=63
+
+Computing reachable states...
+
+Reachability (BFS): 191 iterations in 0.03 seconds (average 0.000168, setup 0.00)
+
+Time for model construction: 0.066 seconds.
+
+Type:        CTMC
+States:      8128 (1 initial)
+Transitions: 27971
+
+Rate matrix: 183 nodes (6 terminal), 27971 minterms, vars: 13r/13c
+
+Computing probabilities...
+Engine: MTBDD
+
+Number of non-absorbing states: 8000 of 8128 (98.4%)
+
+Computing diagonals MTBDD... [nodes=64] [1.2 Kb]
+Building iteration matrix MTBDD... [nodes=278] [5.4 Kb]
+
+Uniformisation: q.t = 263.160000 x 0.200000 = 52.632000
+Fox-Glynn: left = 0, right = 95
+
+Starting iterations...
+
+Steady state detected at iteration 84
+
+Iterative method: 84 iterations in 0.55 seconds (average 0.006429, setup 0.01)
+
+Value in the initial state: 0.04403400155698382
+
+Time for model checking: 0.551 seconds.
+
+Result: 0.04403400155698382 (value in the initial state)
+
+Wall time: 2.02s
+User time: 2.17s
+System time: 0.15s
+Memory: 108976KB

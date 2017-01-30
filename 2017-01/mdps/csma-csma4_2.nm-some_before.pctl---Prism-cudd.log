@@ -1,0 +1,65 @@
+~/prism-examples/models/;mdps;csma;csma4_2.nm;some_before.pctl;;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 12:21:41 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/csma/csma4_2.nm ~/prism-examples/models/mdps/csma/some_before.pctl -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/csma/csma4_2.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/csma/some_before.pctl"...
+
+1 property:
+(1) Pmin=? [ F min_backoff_after_success<K ]
+
+Type:        MDP
+Modules:     bus station1 station2 station3 station4 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 s3 x3 bc3 cd3 s4 x4 bc4 cd4 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ F min_backoff_after_success<K ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 193 iterations in 3.83 seconds (average 0.019855, setup 0.00)
+
+Time for model construction: 4.223 seconds.
+
+Type:        MDP
+States:      761962 (1 initial)
+Transitions: 1327068
+Choices:     825504
+
+Transition matrix: 52233 nodes (4 terminal), 1327068 minterms, vars: 54r/54c/17nd
+
+Prob0E: 74 iterations in 1.68 seconds (average 0.022703, setup 0.00)
+
+Prob1A: 10 iterations in 0.17 seconds (average 0.017200, setup 0.00)
+
+yes = 393828, no = 367456, maybe = 678
+
+Computing remaining probabilities...
+Engine: MTBDD
+
+Building iteration matrix MTBDD... [nodes=10196] [199.1 Kb]
+
+Starting iterations...
+
+Iterative method: 21 iterations in 0.23 seconds (average 0.010667, setup 0.01)
+
+Value in the initial state: 0.35546875
+
+Time for model checking: 2.18 seconds.
+
+Result: 0.35546875 (value in the initial state)
+
+Wall time: 7.82s
+User time: 8.22s
+System time: 0.16s
+Memory: 142788KB

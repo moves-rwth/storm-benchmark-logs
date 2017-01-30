@@ -1,0 +1,11 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;operational.csl;N=512;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R{"percent_op"}=? [ I=20 ]
+Finished model checking. Time required: 0 seconds
+R{"percent_op"}=? [ I=20 ]: No solver available to handle property "R{"percent_op"}=?[I=(20)]" for this model with the current settings
+Wall time: 1.90s
+User time: 7.35s
+System time: 0.53s
+Memory: 244656KB

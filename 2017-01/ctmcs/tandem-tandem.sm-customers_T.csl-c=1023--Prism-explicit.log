@@ -1,0 +1,56 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;customers_T.csl;c=1023;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 12:48:05 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/tandem/tandem.sm ~/prism-examples/models/ctmcs/tandem/customers_T.csl -const c=1023 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/tandem/tandem.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/tandem/customers_T.csl"...
+
+1 property:
+(1) R=? [ I=0.2 ]
+
+Type:        CTMC
+Modules:     serverC serverM 
+Variables:   sc ph sm 
+
+---------------------------------------------------------------------
+
+Model checking: R=? [ I=0.2 ]
+Model constants: c=1023
+
+Building model...
+Model constants: c=1023
+
+Computing reachable states... 199755 450516 662530 835539 1047474 1224801 1424351 1603026 1765992 1892438 2096128 states
+Reachable states exploration and model construction done in 32.261 secs.
+Sorting reachable states list...
+
+Time for model construction: 34.936 seconds.
+
+Type:        CTMC
+States:      2096128 (1 initial)
+Transitions: 7328771
+Building reward structure...
+
+Starting backwards instantaneous rewards computation...
+
+Uniformisation: q.t = 4179.96 x 0.2 = 835.9920000000001
+Fox-Glynn (1.25E-7): left = 630, right = 1082
+Backwards transient instantaneous rewards computation took 1083 iters and 1622.135 seconds.
+
+Value in the initial state: 818.2969353150021
+
+Time for model checking: 1622.663 seconds.
+
+Result: 818.2969353150021 (value in the initial state)
+
+Wall time: 1659.06s
+User time: 1670.84s
+System time: 3.02s
+Memory: 3240384KB

@@ -1,0 +1,98 @@
+~/prism-examples/models/;mdps;firewire;firewire.nm;time_max.pctl;delay=100;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 13:27:22 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/firewire/firewire.nm ~/prism-examples/models/mdps/firewire/time_max.pctl -const delay=100 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/firewire/firewire.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/firewire/time_max.pctl"...
+
+1 property:
+(1) R{"time"}max=? [ F "done" ]
+
+Type:        MDP
+Modules:     wire12 node1 wire21 node2 
+Variables:   w12 y1 y2 x1 s1 w21 z1 z2 x2 s2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time"}max=? [ F "done" ]
+Model constants: delay=100
+
+Building model...
+Model constants: delay=100
+
+Computing reachable states...
+
+Reachability (BFS): 267 iterations in 49.24 seconds (average 0.184419, setup 0.00)
+
+Time for model construction: 60.511 seconds.
+
+Warning: Deadlocks detected and fixed in 9104 states
+
+Type:        MDP
+States:      3874664 (1 initial)
+Transitions: 9063660
+Choices:     9041760
+
+Transition matrix: 478053 nodes (3 terminal), 9063660 minterms, vars: 60r/60c/14nd
+
+Prob0E: 273 iterations in 49.28 seconds (average 0.180527, setup 0.00)
+
+Prob1A: 2 iterations in 1.12 seconds (average 0.560000, setup 0.00)
+
+goal = 654, inf = 3380736, maybe = 493274
+
+Computing remaining rewards...
+Engine: MTBDD
+
+Building iteration matrix MTBDD... [nodes=225174] [4397.9 Kb]
+
+Starting iterations...
+Iteration 10: 5.34 sec so far
+Iteration 19: 10.63 sec so far
+Iteration 27: 15.79 sec so far
+Iteration 35: 21.08 sec so far
+Iteration 43: 26.29 sec so far
+Iteration 49: 31.71 sec so far
+Iteration 61: 36.99 sec so far
+Iteration 73: 42.40 sec so far
+Iteration 84: 47.49 sec so far
+Iteration 95: 52.58 sec so far
+Iteration 107: 57.58 sec so far
+Iteration 119: 62.64 sec so far
+Iteration 125: 68.79 sec so far
+Iteration 137: 74.02 sec so far
+Iteration 148: 79.23 sec so far
+Iteration 162: 84.50 sec so far
+Iteration 175: 89.52 sec so far
+Iteration 188: 94.75 sec so far
+Iteration 200: 100.29 sec so far
+Iteration 210: 105.62 sec so far
+Iteration 220: 110.72 sec so far
+Iteration 230: 115.78 sec so far
+Iteration 240: 121.18 sec so far
+Iteration 251: 126.59 sec so far
+Iteration 254: 132.41 sec so far
+
+Iterative method: 272 iterations in 137.68 seconds (average 0.504529, setup 0.45)
+
+Value in the initial state: Infinity
+
+Time for model checking: 189.122 seconds.
+
+Result: Infinity (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 251.61s
+User time: 251.28s
+System time: 0.94s
+Memory: 853056KB

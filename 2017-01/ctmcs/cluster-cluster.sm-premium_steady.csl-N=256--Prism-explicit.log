@@ -1,0 +1,45 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;premium_steady.csl;N=256;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 23:00:45 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/cluster/cluster.sm ~/prism-examples/models/ctmcs/cluster/premium_steady.csl -const N=256 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/cluster/cluster.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/cluster/premium_steady.csl"...
+
+1 property:
+(1) S=? [ "premium" ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: S=? [ "premium" ]
+Model constants: N=256
+
+Building model...
+Model constants: N=256
+
+Computing reachable states... 127233 322158 479960 646703 832890 992316 1129648 1312164 1490332 1672125 1859820 2042581 2231209 2373652 states
+Reachable states exploration and model construction done in 42.579 secs.
+Sorting reachable states list...
+
+Time for model construction: 59.913 seconds.
+
+Type:        CTMC
+States:      2373652 (1 initial)
+Transitions: 11583520
+
+Error: Explicit engine does not yet handle the S operator for CTMCs.
+
+Wall time: 68.04s
+User time: 197.13s
+System time: 3.97s
+Memory: 4826060KB

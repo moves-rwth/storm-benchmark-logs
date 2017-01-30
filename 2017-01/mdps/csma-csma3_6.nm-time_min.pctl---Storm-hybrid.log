@@ -1,0 +1,36 @@
+~/prism-examples/models/;mdps;csma;csma3_6.nm;time_min.pctl;;;Storm-hybrid
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/csma/csma3_6.nm --prop ~/prism-examples/models/mdps/csma/time_min.pctl -e hybrid --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 10.164s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	84856004 (71173 nodes)
+Transitions: 	147200984 (289469 nodes)
+Choices: 	84988757
+Reward Models:  time
+Variables: 	rows: 15 meta variables (57 DD variables), columns: 15 meta variables (57 DD variables), nondeterminism: 13 meta variables (13 DD variables)
+Labels: 	3
+   * all_delivered
+   * collision_max_backoff
+   * one_delivered
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"time"}min=? [F "all_delivered"] ...
+ WARN (HybridMdpPrctlHelper.cpp:215): Results of reward computation may be too low, because of zero-reward loops.
+ERROR (storm.cpp:42): An unexpected exception occurred and caused Storm to terminate. The message of this exception is: std::bad_alloc
+Command exited with non-zero status 2
+Wall time: 281.47s
+User time: 273.15s
+System time: 8.06s
+Memory: 6887004KB
+External error: 2

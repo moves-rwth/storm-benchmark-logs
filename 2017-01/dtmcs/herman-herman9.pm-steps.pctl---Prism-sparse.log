@@ -1,0 +1,68 @@
+~/prism-examples/models/;dtmcs;herman;herman9.pm;steps.pctl;;;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 04:25:56 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/herman/herman9.pm ~/prism-examples/models/dtmcs/herman/steps.pctl -s -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/herman/herman9.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/herman/steps.pctl"...
+
+1 property:
+(1) R=? [ F "stable" ]
+
+Type:        DTMC
+Modules:     process1 process2 process3 process4 process5 process6 process7 process8 process9 
+Variables:   x1 x2 x3 x4 x5 x6 x7 x8 x9 
+
+---------------------------------------------------------------------
+
+Model checking: R=? [ F "stable" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Time for model construction: 0.028 seconds.
+
+Type:        DTMC
+States:      512 (512 initial)
+Transitions: 19684
+
+Transition matrix: 273 nodes (6 terminal), 19684 minterms, vars: 9r/9c
+
+Prob0: 4 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 18, inf = 0, maybe = 494
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix... [n=512, nnz=19646, compact] [78.8 KB]
+Creating vector for diagonals... [dist=2, compact] [1.0 KB]
+Creating vector for RHS... [dist=2, compact] [1.0 KB]
+Allocating iteration vectors... [2 x 4.0 KB]
+TOTAL: [88.8 KB]
+
+Starting iterations...
+
+Jacobi: 95 iterations in 0.01 seconds (average 0.000042, setup 0.00)
+
+Range of values over initial states: [0.0,11.999911784095342]
+
+Time for model checking: 0.015 seconds.
+
+Result: [0.0,11.999911784095342] (range of values over initial states)
+
+Wall time: 2.03s
+User time: 1.71s
+System time: 0.05s
+Memory: 105536KB

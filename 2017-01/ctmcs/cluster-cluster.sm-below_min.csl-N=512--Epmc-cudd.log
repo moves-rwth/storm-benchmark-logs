@@ -1,0 +1,11 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;below_min.csl;N=512;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R{"time_not_min"}=? [ C<=20 ]
+Finished model checking. Time required: 0 seconds
+R{"time_not_min"}=? [ C<=20 ]: No solver available to handle property "R{"time_not_min"}=?[C<=(20)]" for this model with the current settings
+Wall time: 1.94s
+User time: 7.54s
+System time: 0.62s
+Memory: 253592KB

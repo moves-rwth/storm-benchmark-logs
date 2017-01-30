@@ -1,0 +1,32 @@
+~/prism-examples/models/;dtmcs;bluetooth;bluetooth.pm;time.pctl;mrec=2;;Storm-hybrid
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/dtmcs/bluetooth/bluetooth.pm --prop ~/prism-examples/models/dtmcs/bluetooth/time.pctl -const mrec=2 -e hybrid --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 158.658s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	55300038488 (814030 nodes)
+Transitions: 	58649848345 (1783484 nodes)
+Reward Models:  time
+Variables: 	rows: 13 meta variables (53 DD variables), columns: 13 meta variables (53 DD variables)
+Labels: 	1
+   * complete
+-------------------------------------------------------------- 
+
+Model checking property R[exp]=? [F "complete"] ...
+ERROR (storm.cpp:42): An unexpected exception occurred and caused Storm to terminate. The message of this exception is: std::bad_alloc
+Command exited with non-zero status 2
+Wall time: 484.46s
+User time: 483.19s
+System time: 0.68s
+Memory: 485460KB
+External error: 2

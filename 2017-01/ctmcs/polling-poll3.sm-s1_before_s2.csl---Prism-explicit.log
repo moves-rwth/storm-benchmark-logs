@@ -1,0 +1,65 @@
+~/prism-examples/models/;ctmcs;polling;poll3.sm;s1_before_s2.csl;;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 09:59:35 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/polling/poll3.sm ~/prism-examples/models/ctmcs/polling/s1_before_s2.csl -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/polling/poll3.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/polling/s1_before_s2.csl"...
+
+1 property:
+(1) P=? [ !(s=2&a=1) U (s=1&a=1) ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 
+Variables:   s a s1 s2 s3 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !(s=2&a=1) U (s=1&a=1) ]
+
+Building model...
+
+Computing reachable states... 36 states
+Reachable states exploration and model construction done in 0.158 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.185 seconds.
+
+Type:        CTMC
+States:      36 (1 initial)
+Transitions: 84
+Building embedded DTMC...
+
+Warning: Switching to linear equation solution method "Gauss-Seidel"
+
+Starting probabilistic reachability...
+Calculating predecessor relation for discrete-time Markov chain...  done (0.0 seconds)
+Starting Prob0...
+Prob0 took 0.002 seconds.
+Starting Prob1...
+Prob1 took 0.001 seconds.
+target=4, yes=14, no=8, maybe=14
+Starting Gauss-Seidel...
+Gauss-Seidel took 1568 iterations and 0.086 seconds.
+Probabilistic reachability took 0.092 seconds.
+
+Value in the initial state: 0.521408836532809
+
+Time for model checking: 0.096 seconds.
+
+Result: 0.521408836532809 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 2.31s
+User time: 1.99s
+System time: 0.07s
+Memory: 85064KB

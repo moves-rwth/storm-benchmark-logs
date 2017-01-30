@@ -1,0 +1,14 @@
+~/prism-examples/models/;dtmcs;egl;egl.pm;unfairB.pctl;L=8,N=5;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P=? [ F !"knowB" & "knowA" ]
+Building DD model...
+Building DD model finished in 31 seconds
+Exploring model state space...
+Finished exploring the state space. Time required: 12 seconds
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

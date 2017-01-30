@@ -1,0 +1,10 @@
+~/prism-examples/models/;mdps;wlan;wlan6.nm;sent.pctl;COL=0;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P>=1 [ F s1=12 & s2=12 ]
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

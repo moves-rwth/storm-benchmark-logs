@@ -1,0 +1,58 @@
+~/prism-examples/models/;ctmcs;kanban;kanban.sm;throughput.csl;t=6;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 08:01:46 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/kanban/kanban.sm ~/prism-examples/models/ctmcs/kanban/throughput.csl -const t=6 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/kanban/kanban.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/kanban/throughput.csl"...
+
+1 property:
+(1) R{"throughput"}=? [ S ]
+
+Type:        CTMC
+Modules:     k1 k2 k3 k4 
+Variables:   w1 x1 y1 z1 w2 x2 y2 z2 w3 x3 y3 z3 w4 x4 y4 z4 
+
+---------------------------------------------------------------------
+
+Model checking: R{"throughput"}=? [ S ]
+Model constants: t=6
+
+Building model...
+Model constants: t=6
+
+Computing reachable states...
+
+Reachability (BFS): 85 iterations in 0.58 seconds (average 0.006871, setup 0.00)
+
+Time for model construction: 0.662 seconds.
+
+Type:        CTMC
+States:      11261376 (1 initial)
+Transitions: 115708992
+
+Rate matrix: 7876 nodes (14 terminal), 115708992 minterms, vars: 48r/48c
+
+SCCs: 1, BSCCs: 1, non-BSCC states: 0
+BSCC sizes: 1:11261376
+
+Computing steady state probabilities for BSCC 1
+
+Computing probabilities...
+Engine: MTBDD
+
+Iteration matrix MTBDD... [nodes=277119] [5412.5 Kb]
+Diagonals MTBDD... [nodes=15135] [295.6 Kb]
+
+Starting iterations...
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

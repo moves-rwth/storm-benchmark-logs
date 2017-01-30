@@ -1,0 +1,41 @@
+~/prism-examples/models/;mdps;firewire_abst;firewire_abst.nm;time_max.pctl;delay=100;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 13:53:29 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/firewire_abst/firewire_abst.nm ~/prism-examples/models/mdps/firewire_abst/time_max.pctl -const delay=100 -exact -politer
+
+Parsing model file "~/prism-examples/models/mdps/firewire_abst/firewire_abst.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/firewire_abst/time_max.pctl"...
+
+1 property:
+(1) R{"time"}max=? [ F "done" ]
+
+Type:        MDP
+Modules:     abstract_firewire 
+Variables:   x s 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time"}max=? [ F "done" ]
+Model constants: delay=100
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 0.791 secs.
+
+Time for model construction: 0.795 seconds.
+Building reward structure...
+
+Time for model checking: 13.549 seconds.
+
+Result (maximum expected time): 493
+Wall time: 15.80s
+User time: 22.18s
+System time: 0.48s
+Memory: 374100KB

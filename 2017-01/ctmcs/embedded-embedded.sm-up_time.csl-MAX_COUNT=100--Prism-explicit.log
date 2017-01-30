@@ -1,0 +1,61 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;up_time.csl;MAX_COUNT=100;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 04:26:38 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/up_time.csl -const MAX_COUNT=100 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/up_time.csl"...
+
+1 property:
+(1) R{"up"}=? [ F "down" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: R{"up"}=? [ F "down" ]
+Model constants: MAX_COUNT=100
+
+Building model...
+Model constants: MAX_COUNT=100
+
+Computing reachable states... 86288 states
+Reachable states exploration and model construction done in 2.419 secs.
+Sorting reachable states list...
+
+Time for model construction: 2.881 seconds.
+
+Type:        CTMC
+States:      86288 (1 initial)
+Transitions: 364205
+Building reward structure...
+Building embedded DTMC...
+
+Warning: Switching to linear equation solution method "Power method"
+
+Starting expected reachability...
+Starting Prob1...
+Prob1 took 2 iterations and 0.135 seconds.
+target=56760, inf=0, rest=29528
+Starting value iteration...
+Value iteration took 10000 iterations and 181.871 seconds.
+
+Error: Iterative method did not converge within 10000 iterations.
+Consider using a different numerical method or increasing the maximum number of iterations.
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 186.75s
+User time: 189.27s
+System time: 1.07s
+Memory: 1237712KB

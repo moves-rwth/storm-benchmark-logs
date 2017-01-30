@@ -1,0 +1,84 @@
+~/prism-examples/models/;ctmcs;fms;fms.sm;productivity.csl;n=4;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 07:31:46 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/fms/fms.sm ~/prism-examples/models/ctmcs/fms/productivity.csl -const n=4 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/fms/fms.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/fms/productivity.csl"...
+
+1 property:
+(1) R{"productivity"}=? [ S ]
+
+Type:        CTMC
+Modules:     machine1 machine2 machine3 machine12 
+Variables:   P1 P1wM1 P1M1 P1d P1s P1wP2 M1 P2 P2wM2 P2M2 P2s P2wP1 M2 P3 P3M2 P3s P12 P12wM3 P12M3 P12s M3 
+
+---------------------------------------------------------------------
+
+Model checking: R{"productivity"}=? [ S ]
+Model constants: n=4
+
+Building model...
+Model constants: n=4
+
+Computing reachable states...
+
+Reachability (BFS): 33 iterations in 0.25 seconds (average 0.007515, setup 0.00)
+
+Time for model construction: 0.411 seconds.
+
+Type:        CTMC
+States:      35910 (1 initial)
+Transitions: 237120
+
+Rate matrix: 28470 nodes (30 terminal), 237120 minterms, vars: 55r/55c
+
+SCCs: 1, BSCCs: 1, non-BSCC states: 0
+BSCC sizes: 1:35910
+
+Computing steady state probabilities for BSCC 1
+
+Computing probabilities...
+Engine: MTBDD
+
+Iteration matrix MTBDD... [nodes=491097] [9591.7 Kb]
+Diagonals MTBDD... [nodes=28886] [564.2 Kb]
+
+Starting iterations...
+Iteration 2: 6.36 sec so far
+Iteration 3: 14.13 sec so far
+Iteration 4: 22.64 sec so far
+Iteration 5: 36.06 sec so far
+Iteration 6: 44.95 sec so far
+Iteration 7: 62.88 sec so far
+Iteration 8: 80.91 sec so far
+Iteration 9: 110.77 sec so far
+Iteration 10: 178.19 sec so far
+Iteration 11: 206.43 sec so far
+Iteration 12: 280.52 sec so far
+Iteration 13: 448.35 sec so far
+Iteration 14: 490.81 sec so far
+Iteration 15: 612.89 sec so far
+Iteration 16: 788.41 sec so far
+Iteration 17: 835.26 sec so far
+Iteration 18: 940.10 sec so far
+Iteration 19: 1068.12 sec so far
+Iteration 20: 1107.17 sec so far
+Iteration 21: 1187.14 sec so far
+Iteration 22: 1326.50 sec so far
+Iteration 23: 1371.06 sec so far
+Iteration 24: 1448.23 sec so far
+Iteration 25: 1566.39 sec so far
+Iteration 26: 1602.21 sec so far
+Iteration 27: 1684.94 sec so far
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

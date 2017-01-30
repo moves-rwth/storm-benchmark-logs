@@ -1,0 +1,31 @@
+~/prism-examples/models/;dtmcs;leader_sync;leader_sync3_2.pm;time.pctl;;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R{"num_rounds"}=? [ F "elected" ]
+Starting to build model...
+Exception in thread "main" java.lang.RuntimeException: java.lang.NullPointerException
+	at epmc.graph.explicit.GraphBuilderExplorer.build(GraphBuilderExplorer.java:96)
+	at epmc.graph.UtilGraph.buildModelGraphExplicit(UtilGraph.java:37)
+	at epmc.prism.model.ModelPRISM.newLowLevelInternal(ModelPRISM.java:834)
+	at epmc.prism.model.ModelPRISM.newLowLevel(ModelPRISM.java:825)
+	at epmc.modelchecker.ModelChecker.prepareLowLevel(ModelChecker.java:181)
+	at epmc.modelchecker.ModelChecker.checkProperty(ModelChecker.java:205)
+	at epmc.modelchecker.ModelChecker.check(ModelChecker.java:151)
+	at epmc.command.CommandTaskCheck.executeInServer(CommandTaskCheck.java:22)
+	at epmc.main.Analyse.execute(Analyse.java:90)
+	at epmc.main.EPMC.execute(EPMC.java:125)
+	at epmc.main.EPMC.startInConsole(EPMC.java:108)
+	at epmc.main.EPMC.main(EPMC.java:42)
+Caused by: java.lang.NullPointerException
+	at epmc.graph.explicit.NodePropertyGeneral.<init>(NodePropertyGeneral.java:65)
+	at epmc.graph.explicit.GraphExplicitSparse.addSettableNodeProperty(GraphExplicitSparse.java:168)
+	at epmc.graph.explicit.GraphBuilderExplorer.doBuild(GraphBuilderExplorer.java:147)
+	at epmc.graph.explicit.GraphBuilderExplorer.build(GraphBuilderExplorer.java:88)
+	... 11 more
+Command exited with non-zero status 1
+Wall time: 14.41s
+User time: 21.73s
+System time: 0.70s
+Memory: 287792KB
+External error: 1

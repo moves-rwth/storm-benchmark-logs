@@ -1,0 +1,37 @@
+~/MA_experiments;mas;polling;polling-4-2-with.ma;LRA_max;;;Storm-ma
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --explicit ~/MA_experiments/mas/polling/polling-4-2-with.tra ~/MA_experiments/mas/polling/polling-4-2-with.lab --prop Smax=? [ "goal" ] 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.021s.
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	4745
+Transitions: 	11228
+Choices: 	7507
+Markovian St.: 	1923
+Max. Rate.: 	12
+Reward Models:  (default)
+Labels: 	2
+   * goal -> 768 state(s)
+   * init -> 1 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property LRAmax=? ["goal"] ...
+Result (initial states): 0.66006052
+Time for model checking: 8.218s.
+Wall time: 8.31s
+User time: 8.26s
+System time: 0.03s
+Memory: 33848KB

@@ -1,0 +1,80 @@
+~/prism-examples/models/;mdps;consensus;coin2.nm;steps_min.pctl;K=2;maxiter=100000;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 17:28:35 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/consensus/coin2.nm ~/prism-examples/models/mdps/consensus/steps_min.pctl -const K=2 -h -cuddmaxmem 4096m -maxiters 100000
+
+Parsing model file "~/prism-examples/models/mdps/consensus/coin2.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/consensus/steps_min.pctl"...
+
+1 property:
+(1) R{"steps"}min=? [ F "finished" ]
+
+Type:        MDP
+Modules:     process1 process2 
+Variables:   counter pc1 coin1 pc2 coin2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"steps"}min=? [ F "finished" ]
+Model constants: K=2
+
+Building model...
+Model constants: K=2
+
+Computing reachable states...
+
+Reachability (BFS): 37 iterations in 0.01 seconds (average 0.000216, setup 0.00)
+
+Time for model construction: 0.04 seconds.
+
+Type:        MDP
+States:      272 (1 initial)
+Transitions: 492
+Choices:     400
+
+Transition matrix: 365 nodes (3 terminal), 492 minterms, vars: 10r/10c/2nd
+
+Prob0A: 17 iterations in 0.00 seconds (average 0.000235, setup 0.00)
+
+Prob1E: 18 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Warning: PRISM hasn't checked for zero-reward loops.
+Your minimum rewards may be too low...
+
+goal = 8, inf = 0, maybe = 264
+
+Computing remaining rewards...
+Switching engine since hybrid engine does yet support this computation...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=272, nc=392, nnz=484, k=2] [8.3 KB]
+Building sparse matrix (transition rewards)... [n=272, nc=392, nnz=0, k=2] [2.6 KB]
+Creating vector for state rewards... [2.1 KB]
+Creating vector for inf... [2.1 KB]
+Allocating iteration vectors... [2 x 2.1 KB]
+TOTAL: [19.4 KB]
+
+Starting iterations...
+
+Iterative method: 390 iterations in 0.01 seconds (average 0.000021, setup 0.00)
+
+Value in the initial state: 47.998324237033074
+
+Time for model checking: 0.017 seconds.
+
+Result: 47.998324237033074 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 2.05s
+User time: 1.58s
+System time: 0.17s
+Memory: 105304KB

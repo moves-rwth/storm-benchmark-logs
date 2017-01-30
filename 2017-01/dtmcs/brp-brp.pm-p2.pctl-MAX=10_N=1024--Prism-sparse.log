@@ -1,0 +1,80 @@
+~/prism-examples/models/;dtmcs;brp;brp.pm;p2.pctl;MAX=10,N=1024;;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 00:05:12 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/brp/brp.pm ~/prism-examples/models/dtmcs/brp/p2.pctl -const 'MAX=10,N=1024' -s -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/brp/brp.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/brp/p2.pctl"...
+
+1 property:
+(1) P=? [ F s=5&srep=2 ]
+
+Type:        DTMC
+Modules:     sender receiver checker channelK channelL 
+Variables:   s srep nrtr i bs s_ab fs ls r rrep fr lr br r_ab recv T k l 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F s=5&srep=2 ]
+Model constants: N=1024,MAX=10
+
+Building model...
+Model constants: N=1024,MAX=10
+
+Computing reachable states...
+
+Reachability (BFS): 6169 iterations in 5.22 seconds (average 0.000846, setup 0.00)
+
+Time for model construction: 6.461 seconds.
+
+Warning: Deadlocks detected and fixed in 2059 states
+
+Type:        DTMC
+States:      149517 (1 initial)
+Transitions: 202755
+
+Transition matrix: 2838 nodes (6 terminal), 202755 minterms, vars: 40r/40c
+
+Prob0: 6164 iterations in 3.28 seconds (average 0.000533, setup 0.00)
+
+Prob1: 25 iterations in 0.02 seconds (average 0.000800, setup 0.00)
+
+yes = 7, no = 11290, maybe = 138220
+
+Computing remaining probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=149517, nnz=191458, compact] [893.9 KB]
+Creating vector for diagonals... [dist=1, compact] [292.0 KB]
+Creating vector for RHS... [dist=2, compact] [292.0 KB]
+Allocating iteration vectors... [2 x 1.1 MB]
+TOTAL: [3.7 MB]
+
+Starting iterations...
+Iteration 1257: max relative diff=1.000000, 5.00 sec so far
+Iteration 2500: max relative diff=1.000000, 10.01 sec so far
+Iteration 3778: max relative diff=1.000000, 15.02 sec so far
+Iteration 5067: max relative diff=1.000000, 20.02 sec so far
+
+Jacobi: 6339 iterations in 25.31 seconds (average 0.003939, setup 0.34)
+
+Value in the initial state: 1.6458038060081507E-17
+
+Time for model checking: 28.649 seconds.
+
+Result: 1.6458038060081507E-17 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 36.40s
+User time: 36.68s
+System time: 0.16s
+Memory: 117680KB

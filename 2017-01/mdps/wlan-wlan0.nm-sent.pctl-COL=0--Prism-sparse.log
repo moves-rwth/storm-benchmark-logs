@@ -1,0 +1,62 @@
+~/prism-examples/models/;mdps;wlan;wlan0.nm;sent.pctl;COL=0;;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 14:57:28 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/wlan/wlan0.nm ~/prism-examples/models/mdps/wlan/sent.pctl -const COL=0 -s -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/wlan/wlan0.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/wlan/sent.pctl"...
+
+1 property:
+(1) P>=1 [ F s1=12&s2=12 ]
+
+Type:        MDP
+Modules:     medium station1 station2 
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2 
+
+---------------------------------------------------------------------
+
+Model checking: P>=1 [ F s1=12&s2=12 ]
+Model constants: COL=0
+
+Building model...
+Model constants: COL=0
+
+Computing reachable states...
+
+Reachability (BFS): 45 iterations in 0.05 seconds (average 0.001156, setup 0.00)
+
+Time for model construction: 0.153 seconds.
+
+Type:        MDP
+States:      2954 (1 initial)
+Transitions: 5202
+Choices:     3972
+
+Transition matrix: 4173 nodes (3 terminal), 5202 minterms, vars: 33r/33c/7nd
+
+Probability bound in formula is 0/1 so not computing exact probabilities...
+
+Prob0E: 134 iterations in 0.26 seconds (average 0.001940, setup 0.00)
+
+Prob1A: 1 iterations in 0.00 seconds (average 0.004000, setup 0.00)
+
+yes = 2954, no = 0, maybe = 0
+
+Number of states satisfying P>=1 [ F s1=12&s2=12 ]: 2954 (all in model)
+
+Property satisfied in 1 of 1 initial states.
+
+Time for model checking: 0.269 seconds.
+
+Result: true (property satisfied in the initial state)
+
+Wall time: 2.03s
+User time: 2.28s
+System time: 0.07s
+Memory: 118896KB

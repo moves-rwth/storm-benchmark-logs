@@ -1,0 +1,31 @@
+~/prism-examples/models/;dtmcs;herman;herman15.pm;steps.pctl;;;Storm-cudd
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/dtmcs/herman/herman15.pm --prop ~/prism-examples/models/dtmcs/herman/steps.pctl -e dd --ddlib cudd --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.021s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	32768 (1 nodes)
+Transitions: 	14348908 (810 nodes)
+Reward Models:  steps
+Variables: 	rows: 15 meta variables (15 DD variables), columns: 15 meta variables (15 DD variables)
+Labels: 	1
+   * stable
+-------------------------------------------------------------- 
+
+Model checking property R[exp]=? [F "stable"] ...
+Result (initial states): [0, 33.33261666] (range)
+Time for model checking: 798.617s.
+Wall time: 798.73s
+User time: 797.72s
+System time: 0.48s
+Memory: 116116KB

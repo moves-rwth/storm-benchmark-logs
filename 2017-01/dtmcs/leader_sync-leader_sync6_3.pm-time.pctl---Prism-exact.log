@@ -1,0 +1,40 @@
+~/prism-examples/models/;dtmcs;leader_sync;leader_sync6_3.pm;time.pctl;;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 04:49:58 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/leader_sync/leader_sync6_3.pm ~/prism-examples/models/dtmcs/leader_sync/time.pctl -exact -politer
+
+Parsing model file "~/prism-examples/models/dtmcs/leader_sync/leader_sync6_3.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/leader_sync/time.pctl"...
+
+1 property:
+(1) R{"num_rounds"}=? [ F "elected" ]
+
+Type:        DTMC
+Modules:     counter process1 process2 process3 process4 process5 process6 
+Variables:   c s1 u1 v1 p1 s2 u2 v2 p2 s3 u3 v3 p3 s4 u4 v4 p4 s5 u5 v5 p5 s6 u6 v6 p6 
+
+---------------------------------------------------------------------
+
+Model checking: R{"num_rounds"}=? [ F "elected" ]
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 2.972 secs.
+
+Time for model construction: 2.981 seconds.
+Building reward structure...
+
+Time for model checking: 12.775 seconds.
+
+Result (expected num_rounds): 3/2
+Wall time: 17.20s
+User time: 27.74s
+System time: 0.69s
+Memory: 579260KB

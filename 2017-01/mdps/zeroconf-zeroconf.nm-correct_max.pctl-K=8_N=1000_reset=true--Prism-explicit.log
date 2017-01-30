@@ -1,0 +1,61 @@
+~/prism-examples/models/;mdps;zeroconf;zeroconf.nm;correct_max.pctl;K=8,N=1000,reset=true;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 20:24:22 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/zeroconf/zeroconf.nm ~/prism-examples/models/mdps/zeroconf/correct_max.pctl -const 'K=8,N=1000,reset=true' -ex
+
+Parsing model file "~/prism-examples/models/mdps/zeroconf/zeroconf.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/zeroconf/correct_max.pctl"...
+
+1 property:
+(1) Pmax=? [ F (l=4&ip=1) ]
+
+Type:        MDP
+Modules:     environment host0 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l 
+
+---------------------------------------------------------------------
+
+Model checking: Pmax=? [ F (l=4&ip=1) ]
+Model constants: reset=true,N=1000,K=8
+
+Building model...
+Model constants: reset=true,N=1000,K=8
+
+Computing reachable states... 1924 states
+Reachable states exploration and model construction done in 0.474 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.538 seconds.
+
+Type:        MDP
+States:      1924 (1 initial)
+Transitions: 2845
+Choices:     2411
+Max/avg:     3/1.25
+
+Starting probabilistic reachability (max)...
+Starting Prob0 (max)...
+Prob0 (max) took 104 iterations and 0.051 seconds.
+Starting Prob1 (max)...
+Prob1 (max) took 242 iterations and 0.242 seconds.
+target=20, yes=107, no=573, maybe=1244
+Starting value iteration (max)...
+Value iteration (max) took 259 iterations and 0.087 seconds.
+Probabilistic reachability took 0.383 seconds.
+
+Value in the initial state: 4.8013631807227E-8
+
+Time for model checking: 0.394 seconds.
+
+Result: 4.8013631807227E-8 (value in the initial state)
+
+Wall time: 2.37s
+User time: 3.45s
+System time: 0.14s
+Memory: 117344KB

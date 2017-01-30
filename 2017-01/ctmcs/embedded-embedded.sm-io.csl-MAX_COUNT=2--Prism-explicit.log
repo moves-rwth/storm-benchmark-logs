@@ -1,0 +1,67 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;io.csl;MAX_COUNT=2;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 02:47:06 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/io.csl -const MAX_COUNT=2 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/io.csl"...
+
+1 property:
+(1) P=? [ !"down" U "fail_io" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !"down" U "fail_io" ]
+Model constants: MAX_COUNT=2
+
+Building model...
+Model constants: MAX_COUNT=2
+
+Computing reachable states... 3478 states
+Reachable states exploration and model construction done in 0.605 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.694 seconds.
+
+Type:        CTMC
+States:      3478 (1 initial)
+Transitions: 14639
+Building embedded DTMC...
+
+Warning: Switching to linear equation solution method "Gauss-Seidel"
+
+Starting probabilistic reachability...
+Calculating predecessor relation for discrete-time Markov chain...  done (0.022 seconds)
+Starting Prob0...
+Prob0 took 0.014 seconds.
+Starting Prob1...
+Prob1 took 0.025 seconds.
+target=845, yes=845, no=1721, maybe=912
+Starting Gauss-Seidel...
+Gauss-Seidel took 295 iterations and 0.169 seconds.
+Probabilistic reachability took 0.234 seconds.
+
+Value in the initial state: 0.24251494613035454
+
+Time for model checking: 0.276 seconds.
+
+Result: 0.24251494613035454 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 2.34s
+User time: 3.47s
+System time: 0.15s
+Memory: 129936KB

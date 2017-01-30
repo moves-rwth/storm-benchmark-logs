@@ -1,0 +1,54 @@
+~/prism-examples/models/;dtmcs;nand;nand.pm;reliable.pctl;K=2,N=60;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 05:39:01 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/nand/nand.pm ~/prism-examples/models/dtmcs/nand/reliable.pctl -const 'K=2,N=60' -ex
+
+Parsing model file "~/prism-examples/models/dtmcs/nand/nand.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/nand/reliable.pctl"...
+
+1 property:
+(1) P=? [ F s=4&z/N<0.1 ]
+
+Type:        DTMC
+Modules:     multiplex 
+Variables:   u c s z zx zy x y 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F s=4&z/N<0.1 ]
+Model constants: N=60,K=2
+
+Building model...
+Model constants: N=60,K=2
+
+Computing reachable states... 268935 662966 1033832 1461708 1841851 2274759 2625533 2657007 3036852 3418235 3764935 4144974 4531874 4935844 5301289 5711145 6042319 6321244 6700433 7113716 7288663 7647068 8046716 8371335 8703000 9039703 9420422 states
+Reachable states exploration and model construction done in 102.59 secs.
+Sorting reachable states list...
+
+Time for model construction: 145.211 seconds.
+
+Type:        DTMC
+States:      9420422 (1 initial)
+Transitions: 14899892
+
+Warning: Switching to linear equation solution method "Gauss-Seidel"
+
+Starting probabilistic reachability...
+Calculating predecessor relation for discrete-time Markov chain...  done (6.87 seconds)
+Starting Prob0...
+Prob0 took 4.54 seconds.
+Starting Prob1...
+Prob1 took 7.32 seconds.
+target=6, yes=547, no=1757695, maybe=7662180
+Starting Gauss-Seidel...
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

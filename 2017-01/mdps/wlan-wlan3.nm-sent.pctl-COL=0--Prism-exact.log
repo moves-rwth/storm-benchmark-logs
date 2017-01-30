@@ -1,0 +1,46 @@
+~/prism-examples/models/;mdps;wlan;wlan3.nm;sent.pctl;COL=0;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 17:42:13 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/wlan/wlan3.nm ~/prism-examples/models/mdps/wlan/sent.pctl -const COL=0 -exact -politer
+
+Parsing model file "~/prism-examples/models/mdps/wlan/wlan3.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/wlan/sent.pctl"...
+
+1 property:
+(1) P>=1 [ F s1=12&s2=12 ]
+
+Type:        MDP
+Modules:     medium station1 station2 
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2 
+
+---------------------------------------------------------------------
+
+Model checking: P>=1 [ F s1=12&s2=12 ]
+Model constants: COL=0
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 5.953 secs.
+
+Time for model construction: 5.971 seconds.
+
+Time for model checking: 12.978 seconds.
+Exception in thread "main" java.lang.ClassCastException: param.StateBoolean cannot be cast to param.Function
+	at param.StateValues.getInitStateValueAsFunction(StateValues.java:194)
+	at prism.Prism.modelCheckExact(Prism.java:2991)
+	at prism.Prism.modelCheck(Prism.java:2720)
+	at prism.PrismCL.run(PrismCL.java:333)
+	at prism.PrismCL.main(PrismCL.java:2336)
+Command exited with non-zero status 1
+Wall time: 73.91s
+User time: 29.02s
+System time: 1.45s
+Memory: 2239160KB
+External error: 1

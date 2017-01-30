@@ -1,0 +1,34 @@
+~/prism-examples/models/;dtmcs;nand;nand.pm;reliable.pctl;K=4,N=60;;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/dtmcs/nand/nand.pm --prop ~/prism-examples/models/dtmcs/nand/reliable.pctl -const K=4,N=60 --exact --minmax:method pi -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 168.980s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	18826082
+Transitions: 	29772212
+Reward Models:  none
+Labels: 	3
+   * deadlock -> 0 state(s)
+   * init -> 1 state(s)
+   * ((s = 4) & ((z / 60) < 1/10)) -> 6 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property P=? [F ((s = 4) & ((z / 60) < 1/10))] ...
+ERROR (storm.cpp:42): An unexpected exception occurred and caused Storm to terminate. The message of this exception is: std::bad_alloc
+Command exited with non-zero status 2
+Wall time: 237.77s
+User time: 229.94s
+System time: 7.56s
+Memory: 6714400KB
+External error: 2

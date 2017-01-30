@@ -1,0 +1,73 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;io.csl;MAX_COUNT=4;;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 21:25:20 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/io.csl -const MAX_COUNT=4 -s -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/io.csl"...
+
+1 property:
+(1) P=? [ !"down" U "fail_io" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !"down" U "fail_io" ]
+Model constants: MAX_COUNT=4
+
+Building model...
+Model constants: MAX_COUNT=4
+
+Computing reachable states...
+
+Reachability (BFS): 17 iterations in 0.00 seconds (average 0.000235, setup 0.00)
+
+Time for model construction: 0.038 seconds.
+
+Type:        CTMC
+States:      5168 (1 initial)
+Transitions: 21773
+
+Rate matrix: 1448 nodes (9 terminal), 21773 minterms, vars: 15r/15c
+
+Diagonals vector: 719 nodes (69 terminal), 5168 minterms
+Embedded Markov chain: 11546 nodes (309 terminal), 21773 minterms
+
+Prob0: 9 iterations in 0.00 seconds (average 0.000444, setup 0.00)
+
+Prob1: 2 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+yes = 845, no = 2827, maybe = 1496
+
+Computing remaining probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=5168, nnz=7644, compact] [36.1 KB]
+Creating vector for diagonals... [dist=5, compact] [10.1 KB]
+Creating vector for RHS... [dist=2, compact] [10.1 KB]
+Allocating iteration vectors... [2 x 40.4 KB]
+TOTAL: [137.1 KB]
+
+Starting iterations...
+
+Jacobi: 624 iterations in 0.08 seconds (average 0.000122, setup 0.00)
+
+Value in the initial state: 0.12584718743530496
+
+Time for model checking: 0.098 seconds.
+
+Result: 0.12584718743530496 (value in the initial state)
+
+Wall time: 2.01s
+User time: 1.79s
+System time: 0.12s
+Memory: 108876KB

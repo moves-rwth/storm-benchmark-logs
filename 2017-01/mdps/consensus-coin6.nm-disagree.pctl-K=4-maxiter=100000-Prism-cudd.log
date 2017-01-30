@@ -1,0 +1,365 @@
+~/prism-examples/models/;mdps;consensus;coin6.nm;disagree.pctl;K=4;maxiter=100000;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 08:25:29 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/consensus/coin6.nm ~/prism-examples/models/mdps/consensus/disagree.pctl -const K=4 -m -cuddmaxmem 4096m -maxiters 100000
+
+Parsing model file "~/prism-examples/models/mdps/consensus/coin6.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/consensus/disagree.pctl"...
+
+1 property:
+(1) Pmax=? [ F "finished"&!"agree" ]
+
+Type:        MDP
+Modules:     process1 process2 process3 process4 process5 process6 
+Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4 pc5 coin5 pc6 coin6 
+
+---------------------------------------------------------------------
+
+Model checking: Pmax=? [ F "finished"&!"agree" ]
+Model constants: K=4
+
+Building model...
+Model constants: K=4
+
+Computing reachable states...
+
+Reachability (BFS): 293 iterations in 0.26 seconds (average 0.000901, setup 0.00)
+
+Time for model construction: 0.391 seconds.
+
+Type:        MDP
+States:      2376448 (1 initial)
+Transitions: 11835456
+Choices:     9487104
+
+Transition matrix: 7055 nodes (3 terminal), 11835456 minterms, vars: 24r/24c/6nd
+
+Prob0A: 223 iterations in 2.36 seconds (average 0.010601, setup 0.00)
+
+Prob1E: 5951 iterations in 132.05 seconds (average 0.022189, setup 0.00)
+
+yes = 1050516, no = 27270, maybe = 1298662
+
+Computing remaining probabilities...
+Engine: MTBDD
+
+Building iteration matrix MTBDD... [nodes=16528] [322.8 Kb]
+
+Starting iterations...
+Iteration 50: sol=17298 nodes, 5.01 sec so far
+Iteration 72: sol=25284 nodes, 10.10 sec so far
+Iteration 88: sol=36463 nodes, 15.16 sec so far
+Iteration 103: sol=32673 nodes, 20.30 sec so far
+Iteration 117: sol=37138 nodes, 25.55 sec so far
+Iteration 129: sol=40204 nodes, 30.66 sec so far
+Iteration 139: sol=42638 nodes, 36.05 sec so far
+Iteration 148: sol=45633 nodes, 41.53 sec so far
+Iteration 157: sol=47263 nodes, 46.77 sec so far
+Iteration 164: sol=50283 nodes, 52.12 sec so far
+Iteration 172: sol=49415 nodes, 57.22 sec so far
+Iteration 181: sol=50509 nodes, 62.61 sec so far
+Iteration 190: sol=51766 nodes, 68.19 sec so far
+Iteration 199: sol=52758 nodes, 73.57 sec so far
+Iteration 208: sol=53792 nodes, 79.00 sec so far
+Iteration 215: sol=54873 nodes, 84.52 sec so far
+Iteration 223: sol=54282 nodes, 89.69 sec so far
+Iteration 230: sol=54919 nodes, 95.03 sec so far
+Iteration 236: sol=59247 nodes, 100.59 sec so far
+Iteration 242: sol=55005 nodes, 106.26 sec so far
+Iteration 248: sol=54875 nodes, 111.54 sec so far
+Iteration 256: sol=54340 nodes, 116.92 sec so far
+Iteration 262: sol=54383 nodes, 121.98 sec so far
+Iteration 270: sol=55190 nodes, 127.17 sec so far
+Iteration 276: sol=55179 nodes, 132.20 sec so far
+Iteration 284: sol=54902 nodes, 137.42 sec so far
+Iteration 291: sol=55182 nodes, 143.01 sec so far
+Iteration 299: sol=54993 nodes, 148.33 sec so far
+Iteration 306: sol=55172 nodes, 153.84 sec so far
+Iteration 313: sol=54301 nodes, 159.56 sec so far
+Iteration 321: sol=55182 nodes, 164.73 sec so far
+Iteration 327: sol=55182 nodes, 169.90 sec so far
+Iteration 335: sol=54993 nodes, 175.22 sec so far
+Iteration 341: sol=55001 nodes, 180.34 sec so far
+Iteration 349: sol=54343 nodes, 185.70 sec so far
+Iteration 355: sol=54343 nodes, 190.76 sec so far
+Iteration 363: sol=55224 nodes, 196.11 sec so far
+Iteration 370: sol=54424 nodes, 201.68 sec so far
+Iteration 377: sol=55035 nodes, 207.47 sec so far
+Iteration 385: sol=54365 nodes, 213.00 sec so far
+Iteration 391: sol=54365 nodes, 218.22 sec so far
+Iteration 399: sol=55246 nodes, 223.58 sec so far
+Iteration 406: sol=54446 nodes, 229.05 sec so far
+Iteration 414: sol=55234 nodes, 234.33 sec so far
+Iteration 421: sol=54365 nodes, 239.90 sec so far
+Iteration 429: sol=55246 nodes, 246.30 sec so far
+Iteration 437: sol=55055 nodes, 251.46 sec so far
+Iteration 443: sol=55055 nodes, 256.47 sec so far
+Iteration 451: sol=54365 nodes, 261.55 sec so far
+Iteration 458: sol=54964 nodes, 267.02 sec so far
+Iteration 466: sol=54446 nodes, 272.28 sec so far
+Iteration 473: sol=55055 nodes, 277.78 sec so far
+Iteration 480: sol=55234 nodes, 283.34 sec so far
+Iteration 489: sol=55246 nodes, 288.67 sec so far
+Iteration 497: sol=55055 nodes, 294.16 sec so far
+Iteration 506: sol=54964 nodes, 300.13 sec so far
+Iteration 515: sol=55055 nodes, 305.40 sec so far
+Iteration 523: sol=54365 nodes, 310.90 sec so far
+Iteration 532: sol=54426 nodes, 316.92 sec so far
+Iteration 541: sol=54333 nodes, 322.07 sec so far
+Iteration 548: sol=54932 nodes, 327.36 sec so far
+Iteration 557: sol=55055 nodes, 332.48 sec so far
+Iteration 565: sol=54333 nodes, 337.95 sec so far
+Iteration 573: sol=55217 nodes, 343.38 sec so far
+Iteration 582: sol=55210 nodes, 348.46 sec so far
+Iteration 590: sol=54932 nodes, 353.92 sec so far
+Iteration 598: sol=54426 nodes, 359.43 sec so far
+Iteration 607: sol=54333 nodes, 364.55 sec so far
+Iteration 614: sol=54955 nodes, 369.92 sec so far
+Iteration 622: sol=54480 nodes, 376.20 sec so far
+Iteration 630: sol=55288 nodes, 381.50 sec so far
+Iteration 636: sol=55288 nodes, 386.56 sec so far
+Iteration 645: sol=55255 nodes, 391.62 sec so far
+Iteration 653: sol=55098 nodes, 397.14 sec so far
+Iteration 661: sol=54395 nodes, 403.50 sec so far
+Iteration 669: sol=55255 nodes, 408.63 sec so far
+Iteration 676: sol=54480 nodes, 414.20 sec so far
+Iteration 684: sol=55288 nodes, 419.43 sec so far
+Iteration 691: sol=54395 nodes, 424.96 sec so far
+Iteration 699: sol=55255 nodes, 431.20 sec so far
+Iteration 707: sol=55098 nodes, 436.56 sec so far
+Iteration 713: sol=55098 nodes, 441.75 sec so far
+Iteration 721: sol=54395 nodes, 447.06 sec so far
+Iteration 727: sol=54395 nodes, 452.20 sec so far
+Iteration 735: sol=55273 nodes, 457.55 sec so far
+Iteration 741: sol=55266 nodes, 462.64 sec so far
+Iteration 749: sol=55098 nodes, 468.01 sec so far
+Iteration 756: sol=55288 nodes, 473.46 sec so far
+Iteration 764: sol=54984 nodes, 479.71 sec so far
+Iteration 772: sol=54480 nodes, 484.96 sec so far
+Iteration 778: sol=54480 nodes, 490.06 sec so far
+Iteration 786: sol=55288 nodes, 495.36 sec so far
+Iteration 792: sol=55288 nodes, 500.41 sec so far
+Iteration 801: sol=55255 nodes, 505.67 sec so far
+Iteration 807: sol=55255 nodes, 511.13 sec so far
+Iteration 815: sol=55098 nodes, 517.24 sec so far
+Iteration 823: sol=54395 nodes, 522.51 sec so far
+Iteration 830: sol=54984 nodes, 528.05 sec so far
+Iteration 838: sol=54480 nodes, 533.18 sec so far
+Iteration 845: sol=55098 nodes, 538.76 sec so far
+Iteration 853: sol=54395 nodes, 544.10 sec so far
+Iteration 861: sol=55255 nodes, 549.61 sec so far
+Iteration 869: sol=55098 nodes, 555.14 sec so far
+Iteration 878: sol=54984 nodes, 560.25 sec so far
+Iteration 886: sol=54480 nodes, 565.73 sec so far
+Iteration 894: sol=55265 nodes, 571.22 sec so far
+Iteration 903: sol=55255 nodes, 576.36 sec so far
+Iteration 911: sol=55082 nodes, 581.90 sec so far
+Iteration 919: sol=54395 nodes, 587.50 sec so far
+Iteration 928: sol=54472 nodes, 592.62 sec so far
+Iteration 936: sol=55253 nodes, 598.11 sec so far
+Iteration 944: sol=55000 nodes, 603.58 sec so far
+Iteration 953: sol=55068 nodes, 608.80 sec so far
+Iteration 961: sol=54387 nodes, 614.28 sec so far
+Iteration 970: sol=54472 nodes, 620.38 sec so far
+Iteration 979: sol=54387 nodes, 625.47 sec so far
+Iteration 986: sol=55000 nodes, 631.07 sec so far
+Iteration 995: sol=55068 nodes, 636.84 sec so far
+Iteration 1004: sol=55000 nodes, 642.25 sec so far
+Iteration 1012: sol=54472 nodes, 647.70 sec so far
+Iteration 1021: sol=54387 nodes, 653.64 sec so far
+Iteration 1030: sol=54472 nodes, 658.96 sec so far
+Iteration 1038: sol=55253 nodes, 664.46 sec so far
+Iteration 1047: sol=55287 nodes, 670.45 sec so far
+Iteration 1056: sol=55253 nodes, 675.70 sec so far
+Iteration 1063: sol=54387 nodes, 680.76 sec so far
+Iteration 1071: sol=55287 nodes, 686.04 sec so far
+Iteration 1078: sol=54472 nodes, 691.59 sec so far
+Iteration 1086: sol=55253 nodes, 697.97 sec so far
+Iteration 1093: sol=54387 nodes, 702.98 sec so far
+Iteration 1099: sol=54387 nodes, 708.64 sec so far
+Iteration 1107: sol=55287 nodes, 714.36 sec so far
+Iteration 1115: sol=55068 nodes, 719.82 sec so far
+Iteration 1123: sol=54387 nodes, 724.99 sec so far
+Iteration 1130: sol=55000 nodes, 730.52 sec so far
+Iteration 1137: sol=55287 nodes, 736.13 sec so far
+Iteration 1145: sol=55068 nodes, 741.49 sec so far
+Iteration 1151: sol=55068 nodes, 746.57 sec so far
+Iteration 1159: sol=54387 nodes, 751.76 sec so far
+Iteration 1166: sol=55000 nodes, 757.38 sec so far
+Iteration 1175: sol=55068 nodes, 762.56 sec so far
+Iteration 1183: sol=54387 nodes, 768.06 sec so far
+Iteration 1191: sol=55287 nodes, 773.56 sec so far
+Iteration 1200: sol=55253 nodes, 778.66 sec so far
+Iteration 1208: sol=55000 nodes, 784.14 sec so far
+Iteration 1216: sol=54472 nodes, 789.67 sec so far
+Iteration 1225: sol=54387 nodes, 794.72 sec so far
+Iteration 1233: sol=55287 nodes, 800.17 sec so far
+Iteration 1241: sol=55068 nodes, 805.67 sec so far
+Iteration 1250: sol=55000 nodes, 810.76 sec so far
+Iteration 1257: sol=55287 nodes, 816.29 sec so far
+Iteration 1266: sol=55253 nodes, 822.26 sec so far
+Iteration 1275: sol=55287 nodes, 827.52 sec so far
+Iteration 1283: sol=55068 nodes, 833.01 sec so far
+Iteration 1292: sol=55000 nodes, 839.01 sec so far
+Iteration 1301: sol=55068 nodes, 844.20 sec so far
+Iteration 1309: sol=54387 nodes, 849.67 sec so far
+Iteration 1318: sol=54472 nodes, 855.74 sec so far
+Iteration 1327: sol=54387 nodes, 860.82 sec so far
+Iteration 1335: sol=55287 nodes, 866.28 sec so far
+Iteration 1343: sol=55068 nodes, 871.45 sec so far
+Iteration 1351: sol=54387 nodes, 876.49 sec so far
+Iteration 1359: sol=55287 nodes, 881.94 sec so far
+Iteration 1368: sol=55253 nodes, 887.08 sec so far
+Iteration 1376: sol=55000 nodes, 892.58 sec so far
+Iteration 1384: sol=54472 nodes, 898.11 sec so far
+Iteration 1393: sol=54387 nodes, 903.22 sec so far
+Iteration 1401: sol=55287 nodes, 908.70 sec so far
+Iteration 1409: sol=55068 nodes, 914.24 sec so far
+Iteration 1418: sol=55000 nodes, 919.31 sec so far
+Iteration 1426: sol=54472 nodes, 924.81 sec so far
+Iteration 1434: sol=55253 nodes, 930.32 sec so far
+Iteration 1443: sol=55287 nodes, 935.40 sec so far
+Iteration 1451: sol=55068 nodes, 940.89 sec so far
+Iteration 1459: sol=54387 nodes, 946.11 sec so far
+Iteration 1468: sol=54472 nodes, 951.52 sec so far
+Iteration 1476: sol=55225 nodes, 957.04 sec so far
+Iteration 1485: sol=55279 nodes, 963.00 sec so far
+Iteration 1493: sol=55019 nodes, 968.36 sec so far
+Iteration 1499: sol=55019 nodes, 974.02 sec so far
+Iteration 1507: sol=54349 nodes, 979.34 sec so far
+Iteration 1513: sol=54349 nodes, 984.48 sec so far
+Iteration 1521: sol=55213 nodes, 989.85 sec so far
+Iteration 1528: sol=54411 nodes, 995.42 sec so far
+Iteration 1536: sol=55213 nodes, 1000.72 sec so far
+Iteration 1543: sol=54349 nodes, 1006.25 sec so far
+Iteration 1550: sol=54965 nodes, 1011.98 sec so far
+Iteration 1558: sol=54411 nodes, 1017.14 sec so far
+Iteration 1564: sol=54411 nodes, 1022.17 sec so far
+Iteration 1571: sol=55019 nodes, 1027.22 sec so far
+Iteration 1577: sol=55019 nodes, 1032.75 sec so far
+Iteration 1584: sol=55213 nodes, 1037.81 sec so far
+Iteration 1590: sol=55213 nodes, 1043.32 sec so far
+Iteration 1597: sol=54349 nodes, 1048.44 sec so far
+Iteration 1603: sol=54349 nodes, 1054.02 sec so far
+Iteration 1611: sol=55213 nodes, 1059.30 sec so far
+Iteration 1618: sol=54411 nodes, 1064.90 sec so far
+Iteration 1627: sol=54349 nodes, 1070.90 sec so far
+Iteration 1636: sol=54411 nodes, 1076.15 sec so far
+Iteration 1643: sol=55019 nodes, 1081.26 sec so far
+Iteration 1652: sol=54965 nodes, 1086.43 sec so far
+Iteration 1660: sol=54411 nodes, 1091.90 sec so far
+Iteration 1668: sol=55172 nodes, 1097.40 sec so far
+Iteration 1677: sol=55185 nodes, 1102.48 sec so far
+Iteration 1685: sol=54979 nodes, 1107.98 sec so far
+Iteration 1693: sol=54317 nodes, 1113.48 sec so far
+Iteration 1702: sol=54379 nodes, 1118.57 sec so far
+Iteration 1710: sol=55172 nodes, 1124.02 sec so far
+Iteration 1718: sol=54937 nodes, 1129.56 sec so far
+Iteration 1727: sol=54979 nodes, 1134.84 sec so far
+Iteration 1734: sol=55172 nodes, 1140.33 sec so far
+Iteration 1742: sol=54965 nodes, 1145.52 sec so far
+Iteration 1749: sol=55185 nodes, 1151.00 sec so far
+Iteration 1756: sol=54411 nodes, 1156.80 sec so far
+Iteration 1764: sol=55172 nodes, 1162.20 sec so far
+Iteration 1770: sol=55172 nodes, 1167.36 sec so far
+Iteration 1778: sol=54937 nodes, 1172.65 sec so far
+Iteration 1784: sol=54937 nodes, 1177.77 sec so far
+Iteration 1792: sol=54379 nodes, 1182.78 sec so far
+Iteration 1799: sol=54979 nodes, 1188.24 sec so far
+Iteration 1807: sol=54317 nodes, 1194.08 sec so far
+Iteration 1815: sol=55185 nodes, 1199.49 sec so far
+Iteration 1822: sol=54379 nodes, 1204.99 sec so far
+Iteration 1829: sol=54979 nodes, 1210.18 sec so far
+Iteration 1835: sol=54979 nodes, 1215.86 sec so far
+Iteration 1844: sol=54965 nodes, 1221.02 sec so far
+Iteration 1852: sol=54379 nodes, 1226.57 sec so far
+Iteration 1860: sol=55172 nodes, 1232.13 sec so far
+Iteration 1869: sol=55185 nodes, 1237.24 sec so far
+Iteration 1877: sol=54979 nodes, 1242.80 sec so far
+Iteration 1885: sol=54317 nodes, 1248.32 sec so far
+Iteration 1894: sol=54379 nodes, 1253.53 sec so far
+Iteration 1901: sol=54979 nodes, 1258.95 sec so far
+Iteration 1908: sol=55190 nodes, 1264.17 sec so far
+Iteration 1914: sol=55195 nodes, 1269.73 sec so far
+Iteration 1921: sol=54317 nodes, 1274.92 sec so far
+Iteration 1927: sol=54317 nodes, 1280.37 sec so far
+Iteration 1936: sol=54379 nodes, 1286.19 sec so far
+Iteration 1945: sol=54317 nodes, 1291.66 sec so far
+Iteration 1953: sol=55185 nodes, 1297.22 sec so far
+Iteration 1962: sol=55172 nodes, 1303.24 sec so far
+Iteration 1971: sol=55185 nodes, 1308.55 sec so far
+Iteration 1979: sol=54979 nodes, 1314.06 sec so far
+Iteration 1988: sol=54937 nodes, 1320.09 sec so far
+Iteration 1997: sol=54989 nodes, 1325.34 sec so far
+Iteration 2005: sol=54317 nodes, 1330.89 sec so far
+Iteration 2014: sol=54379 nodes, 1337.01 sec so far
+Iteration 2023: sol=54317 nodes, 1342.18 sec so far
+Iteration 2031: sol=55185 nodes, 1347.72 sec so far
+Iteration 2039: sol=54979 nodes, 1352.99 sec so far
+Iteration 2048: sol=54937 nodes, 1358.46 sec so far
+Iteration 2056: sol=54379 nodes, 1363.98 sec so far
+Iteration 2065: sol=54317 nodes, 1370.00 sec so far
+Iteration 2074: sol=54329 nodes, 1375.38 sec so far
+Iteration 2081: sol=54972 nodes, 1380.40 sec so far
+Iteration 2090: sol=54881 nodes, 1385.60 sec so far
+Iteration 2098: sol=54319 nodes, 1391.16 sec so far
+Iteration 2105: sol=54934 nodes, 1396.20 sec so far
+Iteration 2114: sol=54853 nodes, 1401.38 sec so far
+Iteration 2122: sol=54319 nodes, 1406.93 sec so far
+Iteration 2130: sol=55102 nodes, 1412.49 sec so far
+Iteration 2139: sol=55119 nodes, 1417.65 sec so far
+Iteration 2147: sol=54904 nodes, 1423.20 sec so far
+Iteration 2155: sol=54259 nodes, 1428.45 sec so far
+Iteration 2164: sol=54319 nodes, 1433.90 sec so far
+Iteration 2172: sol=55102 nodes, 1439.42 sec so far
+Iteration 2181: sol=55119 nodes, 1445.43 sec so far
+Iteration 2190: sol=55120 nodes, 1450.80 sec so far
+Iteration 2198: sol=54853 nodes, 1456.34 sec so far
+Iteration 2207: sol=54904 nodes, 1462.38 sec so far
+Iteration 2216: sol=54853 nodes, 1467.68 sec so far
+Iteration 2224: sol=54312 nodes, 1473.20 sec so far
+Iteration 2233: sol=54238 nodes, 1479.30 sec so far
+Iteration 2242: sol=54290 nodes, 1484.50 sec so far
+Iteration 2250: sol=55089 nodes, 1490.02 sec so far
+Iteration 2259: sol=55117 nodes, 1496.16 sec so far
+Iteration 2268: sol=55089 nodes, 1501.28 sec so far
+Iteration 2276: sol=54832 nodes, 1506.78 sec so far
+Iteration 2284: sol=54322 nodes, 1511.99 sec so far
+Iteration 2293: sol=54238 nodes, 1517.40 sec so far
+Iteration 2301: sol=55089 nodes, 1522.88 sec so far
+Iteration 2310: sol=55089 nodes, 1528.86 sec so far
+Iteration 2319: sol=55089 nodes, 1534.20 sec so far
+Iteration 2327: sol=54883 nodes, 1539.74 sec so far
+Iteration 2336: sol=54832 nodes, 1545.74 sec so far
+Iteration 2345: sol=54893 nodes, 1551.04 sec so far
+Iteration 2353: sol=54238 nodes, 1556.72 sec so far
+Iteration 2360: sol=54860 nodes, 1562.02 sec so far
+Iteration 2368: sol=54290 nodes, 1567.59 sec so far
+Iteration 2375: sol=54883 nodes, 1572.61 sec so far
+Iteration 2383: sol=54238 nodes, 1578.37 sec so far
+Iteration 2388: sol=55089 nodes, 1583.46 sec so far
+Iteration 2395: sol=54238 nodes, 1588.66 sec so far
+Iteration 2401: sol=54238 nodes, 1594.55 sec so far
+Iteration 2408: sol=54832 nodes, 1599.69 sec so far
+Iteration 2414: sol=54832 nodes, 1605.52 sec so far
+Iteration 2423: sol=54883 nodes, 1610.67 sec so far
+Iteration 2431: sol=54238 nodes, 1616.20 sec so far
+Iteration 2439: sol=55089 nodes, 1621.66 sec so far
+Iteration 2448: sol=55073 nodes, 1627.06 sec so far
+Iteration 2456: sol=54798 nodes, 1632.63 sec so far
+Iteration 2465: sol=54848 nodes, 1638.70 sec so far
+Iteration 2474: sol=54798 nodes, 1644.03 sec so far
+Iteration 2482: sol=54252 nodes, 1649.60 sec so far
+Iteration 2491: sol=54200 nodes, 1656.48 sec so far
+Iteration 2500: sol=54284 nodes, 1661.72 sec so far
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

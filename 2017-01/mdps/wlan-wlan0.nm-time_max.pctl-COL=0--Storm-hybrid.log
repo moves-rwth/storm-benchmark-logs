@@ -1,0 +1,31 @@
+~/prism-examples/models/;mdps;wlan;wlan0.nm;time_max.pctl;COL=0;;Storm-hybrid
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/wlan/wlan0.nm --prop ~/prism-examples/models/mdps/wlan/time_max.pctl -const COL=0 -e hybrid --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.087s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	2954 (855 nodes)
+Transitions: 	5202 (4173 nodes)
+Choices: 	3972
+Reward Models:  time
+Variables: 	rows: 13 meta variables (33 DD variables), columns: 13 meta variables (33 DD variables), nondeterminism: 7 meta variables (7 DD variables)
+Labels: 	0
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"time"}max=? [F ((s1 = 12) & (s2 = 12))] ...
+Result (initial states): 3791.86378
+Time for model checking: 0.149s.
+Wall time: 0.31s
+User time: 0.30s
+System time: 0.00s
+Memory: 42436KB

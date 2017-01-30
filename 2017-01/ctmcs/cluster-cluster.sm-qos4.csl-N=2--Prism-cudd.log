@@ -1,0 +1,75 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;qos4.csl;N=2;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 18:03:24 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/cluster/cluster.sm ~/prism-examples/models/ctmcs/cluster/qos4.csl -const N=2 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/cluster/cluster.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/cluster/qos4.csl"...
+
+1 property:
+(1) P=? [ !"minimum" U>=20 "minimum" ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !"minimum" U>=20 "minimum" ]
+Model constants: N=2
+
+Building model...
+Model constants: N=2
+
+Computing reachable states...
+
+Reachability (BFS): 9 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Time for model construction: 0.036 seconds.
+
+Type:        CTMC
+States:      276 (1 initial)
+Transitions: 1120
+
+Rate matrix: 331 nodes (9 terminal), 1120 minterms, vars: 13r/13c
+
+Diagonals vector: 450 nodes (102 terminal), 276 minterms
+Embedded Markov chain: 3075 nodes (292 terminal), 1120 minterms
+
+Prob0: 6 iterations in 0.00 seconds (average 0.000667, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+yes = 276, no = 0, maybe = 0
+
+Computing probabilities...
+Engine: MTBDD
+
+Number of non-absorbing states: 144 of 276 (52.2%)
+
+Computing diagonals MTBDD... [nodes=450] [8.8 Kb]
+Building iteration matrix MTBDD... [nodes=1509] [29.5 Kb]
+
+Uniformisation: q.t = 51.004080 x 20.000000 = 1020.081600
+Fox-Glynn: left = 794, right = 1293
+
+Starting iterations...
+
+Iterative method: 1293 iterations in 3.72 seconds (average 0.002880, setup 0.00)
+
+Value in the initial state: 0.0
+
+Time for model checking: 3.744 seconds.
+
+Result: 0.0 (value in the initial state)
+
+Wall time: 5.06s
+User time: 5.43s
+System time: 0.09s
+Memory: 107256KB

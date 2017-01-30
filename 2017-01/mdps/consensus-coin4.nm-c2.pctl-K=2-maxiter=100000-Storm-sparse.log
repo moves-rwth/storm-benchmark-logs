@@ -1,0 +1,36 @@
+~/prism-examples/models/;mdps;consensus;coin4.nm;c2.pctl;K=2;maxiter=100000;Storm-sparse
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/consensus/coin4.nm --prop ~/prism-examples/models/mdps/consensus/c2.pctl -const K=2 -e sparse --maxiter 100000 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+ WARN (NativeEquationSolverSettings.cpp:87): Native is not selected as the preferred equation solver, so setting options for native might have no effect.
+Time for model construction: 0.405s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	22656
+Transitions: 	75232
+Choices: 	60544
+Reward Models:  none
+Labels: 	4
+   * deadlock -> 0 state(s)
+   * finished -> 64 state(s)
+   * init -> 1 state(s)
+   * all_coins_equal_1 -> 257 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property Pmin=? [F ("finished" & "all_coins_equal_1")] ...
+Result (initial states): 0.3173765299
+Time for model checking: 0.800s.
+Wall time: 1.28s
+User time: 1.15s
+System time: 0.12s
+Memory: 220904KB

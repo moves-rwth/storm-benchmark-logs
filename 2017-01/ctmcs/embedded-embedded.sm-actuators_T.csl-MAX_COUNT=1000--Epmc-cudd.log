@@ -1,0 +1,17 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;actuators_T.csl;MAX_COUNT=1000;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P=? [ !"down" U<=72000 "fail_sensors" ]
+Building DD model...
+Building DD model finished in 0 seconds
+Exploring model state space...
+Finished exploring the state space. Time required: 0 seconds
+Finished model checking. Time required: 1 seconds
+Time spent in DD routines converting DD<->MDD: 0 seconds
+Total time spent in DD routines: 1 seconds
+P=? [ !"down" U<=72000 "fail_sensors" ]: 0.0
+Wall time: 3.14s
+User time: 11.15s
+System time: 0.72s
+Memory: 298528KB

@@ -1,0 +1,71 @@
+~/prism-examples/models/;mdps;zeroconf;zeroconf.nm;correct_min.pctl;K=2,N=1000,reset=false;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 20:12:24 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/zeroconf/zeroconf.nm ~/prism-examples/models/mdps/zeroconf/correct_min.pctl -const 'K=2,N=1000,reset=false' -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/zeroconf/zeroconf.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/zeroconf/correct_min.pctl"...
+
+1 property:
+(1) Pmin=? [ F (l=4&ip=1) ]
+
+Type:        MDP
+Modules:     environment host0 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ F (l=4&ip=1) ]
+Model constants: reset=false,N=1000,K=2
+
+Building model...
+Model constants: reset=false,N=1000,K=2
+
+Computing reachable states...
+
+Reachability (BFS): 317 iterations in 5.48 seconds (average 0.017300, setup 0.00)
+
+Time for model construction: 6.076 seconds.
+
+Type:        MDP
+States:      89586 (1 initial)
+Transitions: 207825
+Choices:     164169
+
+Transition matrix: 31929 nodes (6 terminal), 207825 minterms, vars: 56r/56c/7nd
+
+Prob0E: 103 iterations in 1.62 seconds (average 0.015689, setup 0.00)
+
+Prob1A: 85 iterations in 0.69 seconds (average 0.008094, setup 0.00)
+
+yes = 3782, no = 26132, maybe = 59672
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrices... [nm=9, levels=56, nodes=57328] [2.6 MB]
+Adding sparse bits... [levels=56-56, num=9, compact=9/9] [1.3 MB]
+Creating vector for yes... [dist=2, compact] [175.0 KB]
+Allocating iteration vectors... [3 x 699.9 KB]
+TOTAL: [6.2 MB]
+
+Starting iterations...
+
+Iterative method: 282 iterations in 2.90 seconds (average 0.009617, setup 0.19)
+
+Value in the initial state: 1.0712022464043474E-4
+
+Time for model checking: 5.24 seconds.
+
+Result: 1.0712022464043474E-4 (value in the initial state)
+
+Wall time: 12.74s
+User time: 13.12s
+System time: 0.16s
+Memory: 169936KB

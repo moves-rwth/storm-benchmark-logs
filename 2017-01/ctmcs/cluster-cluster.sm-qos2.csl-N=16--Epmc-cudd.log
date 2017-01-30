@@ -1,0 +1,55 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;qos2.csl;N=16;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P=? [ F[20,20] !"minimum" ]
+Building DD model...
+Building DD model finished in 0 seconds
+Exploring model state space...
+Finished exploring the state space. Time required: 0 seconds
+Converting BDD graph to explicit...
+Converting BDD graph to explicit done in 0 seconds
+Converting BDD graph to explicit...
+Converting BDD graph to explicit done in 0 seconds
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -2
+	at epmc.dd.SupportWalker.value(SupportWalker.java:385)
+	at epmc.dd.SupportWalker.value(SupportWalker.java:389)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:634)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:638)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:641)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:638)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:638)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:638)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:638)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:638)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:638)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:638)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:638)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:638)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:638)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:638)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:638)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:638)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:638)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:638)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:638)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:638)
+	at epmc.graph.GraphBuilderDD.ddToValueArray(GraphBuilderDD.java:618)
+	at epmc.propertysolver.PropertySolverDDPCTL.checkUntilQuantitative(PropertySolverDDPCTL.java:281)
+	at epmc.propertysolver.PropertySolverDDPCTL.solveUntil(PropertySolverDDPCTL.java:150)
+	at epmc.propertysolver.PropertySolverDDPCTL.solve(PropertySolverDDPCTL.java:117)
+	at epmc.propertysolver.PropertySolverDDPCTL.solve(PropertySolverDDPCTL.java:371)
+	at epmc.modelchecker.ModelChecker.check(ModelChecker.java:236)
+	at epmc.modelchecker.ModelChecker.checkProperty(ModelChecker.java:207)
+	at epmc.modelchecker.ModelChecker.check(ModelChecker.java:151)
+	at epmc.command.CommandTaskCheck.executeInServer(CommandTaskCheck.java:22)
+	at epmc.main.Analyse.execute(Analyse.java:90)
+	at epmc.main.EPMC.execute(EPMC.java:125)
+	at epmc.main.EPMC.startInConsole(EPMC.java:108)
+	at epmc.main.EPMC.main(EPMC.java:42)
+Command exited with non-zero status 1
+Wall time: 3.73s
+User time: 17.09s
+System time: 1.00s
+Memory: 392668KB
+External error: 1

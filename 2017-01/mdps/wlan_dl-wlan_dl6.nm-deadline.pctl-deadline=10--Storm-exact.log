@@ -1,0 +1,34 @@
+~/prism-examples/models/;mdps;wlan_dl;wlan_dl6.nm;deadline.pctl;deadline=10;;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/wlan_dl/wlan_dl6.nm --prop ~/prism-examples/models/mdps/wlan_dl/deadline.pctl -const deadline=10 --exact --minmax:method pi -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.227s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	627
+Transitions: 	1054
+Choices: 	904
+Reward Models:  none
+Labels: 	3
+   * deadlock -> 0 state(s)
+   * init -> 1 state(s)
+   * ((1 = 12) & (s2 = 12)) -> 0 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property Pmin=? [F ((1 = 12) & (s2 = 12))] ...
+Result (initial states): 0 (approx. 0)
+Time for model checking: 0.000s.
+Wall time: 0.36s
+User time: 0.22s
+System time: 0.13s
+Memory: 221104KB

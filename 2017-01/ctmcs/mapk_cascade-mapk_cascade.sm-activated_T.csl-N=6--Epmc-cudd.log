@@ -1,0 +1,11 @@
+~/prism-examples/models/;ctmcs;mapk_cascade;mapk_cascade.sm;activated_T.csl;N=6;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R{"activated"}=? [ I=20 ]
+Finished model checking. Time required: 0 seconds
+R{"activated"}=? [ I=20 ]: No solver available to handle property "R{"activated"}=?[I=(20)]" for this model with the current settings
+Wall time: 1.98s
+User time: 7.34s
+System time: 0.56s
+Memory: 257740KB

@@ -1,0 +1,74 @@
+~/prism-examples/models/;mdps;zeroconf_dl;zeroconf_dl.nm;deadline_min.pctl;K=1,N=1000,deadline=30,reset=false;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 21:10:03 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/zeroconf_dl/zeroconf_dl.nm ~/prism-examples/models/mdps/zeroconf_dl/deadline_min.pctl -const 'K=1,N=1000,deadline=30,reset=false' -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/zeroconf_dl/zeroconf_dl.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/zeroconf_dl/deadline_min.pctl"...
+
+1 property:
+(1) Pmin=? [ !(l=4&ip=2) U t>=deadline ]
+
+Type:        MDP
+Modules:     environment host0 timer 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l t 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ !(l=4&ip=2) U t>=deadline ]
+Model constants: reset=false,deadline=30,N=1000,K=1
+
+Building model...
+Model constants: reset=false,deadline=30,N=1000,K=1
+
+Computing reachable states...
+
+Reachability (BFS): 221 iterations in 7.36 seconds (average 0.033321, setup 0.00)
+
+Time for model construction: 7.995 seconds.
+
+Warning: Deadlocks detected and fixed in 130 states
+
+Type:        MDP
+States:      132806 (1 initial)
+Transitions: 293328
+Choices:     227811
+
+Transition matrix: 68096 nodes (6 terminal), 293328 minterms, vars: 60r/60c/8nd
+
+Prob0E: 124 iterations in 3.44 seconds (average 0.027742, setup 0.00)
+
+Prob1A: 9 iterations in 0.17 seconds (average 0.018667, setup 0.00)
+
+yes = 53556, no = 51395, maybe = 27855
+
+Computing remaining probabilities...
+Engine: MTBDD
+
+Building iteration matrix MTBDD... [nodes=24249] [473.6 Kb]
+
+Starting iterations...
+Iteration 61: sol=28527 nodes, 5.15 sec so far
+
+Iterative method: 92 iterations in 8.60 seconds (average 0.093304, setup 0.01)
+
+Value in the initial state: 0.0
+
+Time for model checking: 12.315 seconds.
+
+Result: 0.0 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 21.77s
+User time: 22.09s
+System time: 0.27s
+Memory: 252716KB

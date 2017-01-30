@@ -1,0 +1,35 @@
+~/prism-examples/models/;ctmcs;fms;fms.sm;productivity.csl;n=8;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 07:51:55 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/fms/fms.sm ~/prism-examples/models/ctmcs/fms/productivity.csl -const n=8 -exact -politer
+
+Parsing model file "~/prism-examples/models/ctmcs/fms/fms.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/fms/productivity.csl"...
+
+1 property:
+(1) R{"productivity"}=? [ S ]
+
+Type:        CTMC
+Modules:     machine1 machine2 machine3 machine12 
+Variables:   P1 P1wM1 P1M1 P1d P1s P1wP2 M1 P2 P2wM2 P2M2 P2s P2wP1 M2 P3 P3M2 P3s P12 P12wM3 P12M3 P12s M3 
+
+---------------------------------------------------------------------
+
+Model checking: R{"productivity"}=? [ S ]
+Model constants: n=8
+
+Building model...
+
+Computing reachable states...
+Error: parametric analysis with rate/probability of min(1, floor((3*(8))/2)/((0+0+0+1))) not implemented.
+
+Wall time: 210.79s
+User time: 236.02s
+System time: 2.68s
+Memory: 3774096KB

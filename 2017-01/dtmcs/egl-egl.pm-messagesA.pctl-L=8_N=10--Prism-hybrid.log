@@ -1,0 +1,370 @@
+~/prism-examples/models/;dtmcs;egl;egl.pm;messagesA.pctl;L=8,N=10;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 17:57:29 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/egl/egl.pm ~/prism-examples/models/dtmcs/egl/messagesA.pctl -const 'L=8,N=10' -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/egl/egl.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/egl/messagesA.pctl"...
+
+1 property:
+(1) R{"messages_A_needs"}=? [ F phase=4 ]
+
+Type:        DTMC
+Modules:     counter partyA partyB 
+Variables:   b n phase party b0 b20 b1 b21 b2 b22 b3 b23 b4 b24 b5 b25 b6 b26 b7 b27 b8 b28 b9 b29 b10 b30 b11 b31 b12 b32 b13 b33 b14 b34 b15 b35 b16 b36 b17 b37 b18 b38 b19 b39 a0 a20 a1 a21 a2 a22 a3 a23 a4 a24 a5 a25 a6 a26 a7 a27 a8 a28 a9 a29 a10 a30 a11 a31 a12 a32 a13 a33 a14 a34 a15 a35 a16 a36 a17 a37 a18 a38 a19 a39 
+
+---------------------------------------------------------------------
+
+Model checking: R{"messages_A_needs"}=? [ F phase=4 ]
+Model constants: N=10,L=8
+
+Building model...
+Model constants: N=10,L=8
+
+Warning: Guard for command 11 of module "partyA" is never satisfied.
+
+Warning: Guard for command 12 of module "partyA" is never satisfied.
+
+Warning: Guard for command 13 of module "partyA" is never satisfied.
+
+Warning: Guard for command 14 of module "partyA" is never satisfied.
+
+Warning: Guard for command 15 of module "partyA" is never satisfied.
+
+Warning: Guard for command 16 of module "partyA" is never satisfied.
+
+Warning: Guard for command 17 of module "partyA" is never satisfied.
+
+Warning: Guard for command 18 of module "partyA" is never satisfied.
+
+Warning: Guard for command 19 of module "partyA" is never satisfied.
+
+Warning: Guard for command 20 of module "partyA" is never satisfied.
+
+Warning: Guard for command 31 of module "partyA" is never satisfied.
+
+Warning: Guard for command 32 of module "partyA" is never satisfied.
+
+Warning: Guard for command 33 of module "partyA" is never satisfied.
+
+Warning: Guard for command 34 of module "partyA" is never satisfied.
+
+Warning: Guard for command 35 of module "partyA" is never satisfied.
+
+Warning: Guard for command 36 of module "partyA" is never satisfied.
+
+Warning: Guard for command 37 of module "partyA" is never satisfied.
+
+Warning: Guard for command 38 of module "partyA" is never satisfied.
+
+Warning: Guard for command 39 of module "partyA" is never satisfied.
+
+Warning: Guard for command 40 of module "partyA" is never satisfied.
+
+Warning: Guard for command 51 of module "partyA" is never satisfied.
+
+Warning: Guard for command 52 of module "partyA" is never satisfied.
+
+Warning: Guard for command 53 of module "partyA" is never satisfied.
+
+Warning: Guard for command 54 of module "partyA" is never satisfied.
+
+Warning: Guard for command 55 of module "partyA" is never satisfied.
+
+Warning: Guard for command 56 of module "partyA" is never satisfied.
+
+Warning: Guard for command 57 of module "partyA" is never satisfied.
+
+Warning: Guard for command 58 of module "partyA" is never satisfied.
+
+Warning: Guard for command 59 of module "partyA" is never satisfied.
+
+Warning: Guard for command 60 of module "partyA" is never satisfied.
+
+Warning: Guard for command 11 of module "partyB" is never satisfied.
+
+Warning: Guard for command 12 of module "partyB" is never satisfied.
+
+Warning: Guard for command 13 of module "partyB" is never satisfied.
+
+Warning: Guard for command 14 of module "partyB" is never satisfied.
+
+Warning: Guard for command 15 of module "partyB" is never satisfied.
+
+Warning: Guard for command 16 of module "partyB" is never satisfied.
+
+Warning: Guard for command 17 of module "partyB" is never satisfied.
+
+Warning: Guard for command 18 of module "partyB" is never satisfied.
+
+Warning: Guard for command 19 of module "partyB" is never satisfied.
+
+Warning: Guard for command 20 of module "partyB" is never satisfied.
+
+Warning: Guard for command 31 of module "partyB" is never satisfied.
+
+Warning: Guard for command 32 of module "partyB" is never satisfied.
+
+Warning: Guard for command 33 of module "partyB" is never satisfied.
+
+Warning: Guard for command 34 of module "partyB" is never satisfied.
+
+Warning: Guard for command 35 of module "partyB" is never satisfied.
+
+Warning: Guard for command 36 of module "partyB" is never satisfied.
+
+Warning: Guard for command 37 of module "partyB" is never satisfied.
+
+Warning: Guard for command 38 of module "partyB" is never satisfied.
+
+Warning: Guard for command 39 of module "partyB" is never satisfied.
+
+Warning: Guard for command 40 of module "partyB" is never satisfied.
+
+Warning: Guard for command 51 of module "partyB" is never satisfied.
+
+Warning: Guard for command 52 of module "partyB" is never satisfied.
+
+Warning: Guard for command 53 of module "partyB" is never satisfied.
+
+Warning: Guard for command 54 of module "partyB" is never satisfied.
+
+Warning: Guard for command 55 of module "partyB" is never satisfied.
+
+Warning: Guard for command 56 of module "partyB" is never satisfied.
+
+Warning: Guard for command 57 of module "partyB" is never satisfied.
+
+Warning: Guard for command 58 of module "partyB" is never satisfied.
+
+Warning: Guard for command 59 of module "partyB" is never satisfied.
+
+Warning: Guard for command 60 of module "partyB" is never satisfied.
+
+Computing reachable states...
+Iteration 104: max relative diff=1.000000, 938.31 sec so far
+
+Reachability (BFS): 341 iterations in 6.33 seconds (average 0.018557, setup 0.00)
+
+Time for model construction: 7.645 seconds.
+
+Type:        DTMC
+States:      317718526 (1 initial)
+Transitions: 318767101
+
+Transition matrix: 120213 nodes (3 terminal), 318767101 minterms, vars: 331r/331c
+Iteration 105: max relative diff=1.000000, 947.11 sec so far
+
+Prob0: 341 iterations in 6.31 seconds (average 0.018499, setup 0.00)
+
+Prob1: 1 iterations in 0.01 seconds (average 0.008000, setup 0.00)
+
+goal = 1, inf = 0, maybe = 317718525
+
+Computing remaining rewards...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=331, nodes=120215] [5.5 MB]
+Adding explicit sparse matrices... [levels=240, num=196, compact] [856.5 KB]
+Iteration 106: max relative diff=1.000000, 956.65 sec so far
+Iteration 107: max relative diff=1.000000, 965.48 sec so far
+Iteration 108: max relative diff=1.000000, 973.58 sec so far
+Iteration 109: max relative diff=1.000000, 982.54 sec so far
+Iteration 110: max relative diff=1.000000, 990.99 sec so far
+Iteration 111: max relative diff=1.000000, 999.67 sec so far
+Iteration 112: max relative diff=1.000000, 1008.20 sec so far
+Iteration 113: max relative diff=1.000000, 1016.82 sec so far
+Iteration 114: max relative diff=1.000000, 1025.03 sec so far
+Iteration 115: max relative diff=1.000000, 1034.36 sec so far
+Iteration 116: max relative diff=1.000000, 1045.05 sec so far
+Iteration 117: max relative diff=1.000000, 1054.18 sec so far
+Iteration 118: max relative diff=1.000000, 1062.44 sec so far
+Iteration 119: max relative diff=1.000000, 1071.45 sec so far
+Iteration 120: max relative diff=1.000000, 1080.21 sec so far
+Iteration 121: max relative diff=1.000000, 1089.62 sec so far
+Iteration 122: max relative diff=1.000000, 1099.97 sec so far
+Iteration 123: max relative diff=1.000000, 1108.73 sec so far
+Iteration 124: max relative diff=1.000000, 1116.85 sec so far
+Iteration 125: max relative diff=1.000000, 1125.60 sec so far
+Iteration 126: max relative diff=1.000000, 1134.63 sec so far
+Iteration 127: max relative diff=1.000000, 1143.49 sec so far
+Iteration 128: max relative diff=1.000000, 1152.22 sec so far
+Iteration 129: max relative diff=1.000000, 1161.97 sec so far
+Iteration 130: max relative diff=1.000000, 1171.16 sec so far
+Iteration 131: max relative diff=1.000000, 1180.33 sec so far
+Iteration 132: max relative diff=1.000000, 1189.55 sec so far
+Iteration 133: max relative diff=1.000000, 1199.59 sec so far
+Iteration 134: max relative diff=1.000000, 1207.86 sec so far
+Iteration 135: max relative diff=1.000000, 1217.04 sec so far
+Iteration 136: max relative diff=1.000000, 1225.18 sec so far
+Iteration 137: max relative diff=1.000000, 1234.33 sec so far
+Iteration 138: max relative diff=1.000000, 1244.64 sec so far
+Iteration 139: max relative diff=1.000000, 1254.44 sec so far
+Iteration 140: max relative diff=1.000000, 1264.94 sec so far
+Iteration 141: max relative diff=1.000000, 1274.00 sec so far
+Iteration 142: max relative diff=1.000000, 1283.47 sec so far
+Iteration 143: max relative diff=1.000000, 1293.05 sec so far
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB
+Creating vector for diagonals... [dist=1, compact] [606.0 MB]
+Creating vector for RHS... [dist=2, compact] [606.0 MB]
+Allocating iteration vectors... [2 x 2.4 GB]
+TOTAL: [5.9 GB]
+
+Starting iterations...
+Iteration 1: max relative diff=1.000000, 7.53 sec so far
+Iteration 2: max relative diff=1.000000, 15.54 sec so far
+Iteration 3: max relative diff=1.000000, 24.36 sec so far
+Iteration 4: max relative diff=1.000000, 33.17 sec so far
+Iteration 5: max relative diff=1.000000, 40.66 sec so far
+Iteration 6: max relative diff=1.000000, 48.08 sec so far
+Iteration 7: max relative diff=1.000000, 55.47 sec so far
+Iteration 8: max relative diff=1.000000, 62.91 sec so far
+Iteration 9: max relative diff=1.000000, 70.29 sec so far
+Iteration 10: max relative diff=1.000000, 77.56 sec so far
+Iteration 11: max relative diff=1.000000, 85.60 sec so far
+Iteration 12: max relative diff=1.000000, 94.01 sec so far
+Iteration 13: max relative diff=1.000000, 102.42 sec so far
+Iteration 14: max relative diff=1.000000, 111.02 sec so far
+Iteration 15: max relative diff=1.000000, 119.73 sec so far
+Iteration 16: max relative diff=1.000000, 128.44 sec so far
+Iteration 17: max relative diff=1.000000, 135.95 sec so far
+Iteration 18: max relative diff=1.000000, 144.38 sec so far
+Iteration 19: max relative diff=1.000000, 153.16 sec so far
+Iteration 20: max relative diff=1.000000, 162.41 sec so far
+Iteration 21: max relative diff=1.000000, 171.80 sec so far
+Iteration 22: max relative diff=1.000000, 181.51 sec so far
+Iteration 23: max relative diff=1.000000, 191.29 sec so far
+Iteration 24: max relative diff=1.000000, 200.93 sec so far
+Iteration 25: max relative diff=1.000000, 210.42 sec so far
+Iteration 26: max relative diff=1.000000, 219.93 sec so far
+Iteration 27: max relative diff=1.000000, 229.50 sec so far
+Iteration 28: max relative diff=1.000000, 237.41 sec so far
+Iteration 29: max relative diff=1.000000, 245.40 sec so far
+Iteration 30: max relative diff=1.000000, 253.97 sec so far
+Iteration 31: max relative diff=1.000000, 263.58 sec so far
+Iteration 32: max relative diff=1.000000, 276.96 sec so far
+Iteration 33: max relative diff=1.000000, 288.55 sec so far
+Iteration 34: max relative diff=1.000000, 296.54 sec so far
+Iteration 35: max relative diff=1.000000, 305.40 sec so far
+Iteration 36: max relative diff=1.000000, 314.66 sec so far
+Iteration 37: max relative diff=1.000000, 323.08 sec so far
+Iteration 38: max relative diff=1.000000, 332.43 sec so far
+Iteration 39: max relative diff=1.000000, 341.82 sec so far
+Iteration 40: max relative diff=1.000000, 349.75 sec so far
+Iteration 41: max relative diff=1.000000, 357.68 sec so far
+Iteration 42: max relative diff=1.000000, 365.64 sec so far
+Iteration 43: max relative diff=1.000000, 373.59 sec so far
+Iteration 44: max relative diff=1.000000, 383.16 sec so far
+Iteration 45: max relative diff=1.000000, 392.44 sec so far
+Iteration 46: max relative diff=1.000000, 401.82 sec so far
+Iteration 47: max relative diff=1.000000, 410.58 sec so far
+Iteration 48: max relative diff=1.000000, 420.19 sec so far
+Iteration 49: max relative diff=1.000000, 429.78 sec so far
+Iteration 50: max relative diff=1.000000, 439.49 sec so far
+Iteration 51: max relative diff=1.000000, 449.06 sec so far
+Iteration 52: max relative diff=1.000000, 458.39 sec so far
+Iteration 53: max relative diff=1.000000, 467.69 sec so far
+Iteration 54: max relative diff=1.000000, 476.97 sec so far
+Iteration 55: max relative diff=1.000000, 486.23 sec so far
+Iteration 56: max relative diff=1.000000, 495.57 sec so far
+Iteration 57: max relative diff=1.000000, 505.01 sec so far
+Iteration 58: max relative diff=1.000000, 514.36 sec so far
+Iteration 59: max relative diff=1.000000, 523.54 sec so far
+Iteration 60: max relative diff=1.000000, 532.82 sec so far
+Iteration 61: max relative diff=1.000000, 541.98 sec so far
+Iteration 62: max relative diff=1.000000, 551.16 sec so far
+Iteration 63: max relative diff=1.000000, 560.68 sec so far
+Iteration 64: max relative diff=1.000000, 570.96 sec so far
+Iteration 65: max relative diff=1.000000, 581.30 sec so far
+Iteration 66: max relative diff=1.000000, 590.26 sec so far
+Iteration 67: max relative diff=1.000000, 600.66 sec so far
+Iteration 68: max relative diff=1.000000, 611.13 sec so far
+Iteration 69: max relative diff=1.000000, 619.92 sec so far
+Iteration 70: max relative diff=1.000000, 629.89 sec so far
+Iteration 71: max relative diff=1.000000, 640.64 sec so far
+Iteration 72: max relative diff=1.000000, 651.98 sec so far
+Iteration 73: max relative diff=1.000000, 672.61 sec so far
+Iteration 74: max relative diff=1.000000, 683.35 sec so far
+Iteration 75: max relative diff=1.000000, 692.16 sec so far
+Iteration 76: max relative diff=1.000000, 700.84 sec so far
+Iteration 77: max relative diff=1.000000, 709.52 sec so far
+Iteration 78: max relative diff=1.000000, 718.39 sec so far
+Iteration 79: max relative diff=1.000000, 727.80 sec so far
+Iteration 80: max relative diff=1.000000, 736.94 sec so far
+Iteration 81: max relative diff=1.000000, 744.91 sec so far
+Iteration 82: max relative diff=1.000000, 752.86 sec so far
+Iteration 83: max relative diff=1.000000, 760.89 sec so far
+Iteration 84: max relative diff=1.000000, 772.98 sec so far
+Iteration 85: max relative diff=1.000000, 783.68 sec so far
+Iteration 86: max relative diff=1.000000, 794.00 sec so far
+Iteration 87: max relative diff=1.000000, 804.33 sec so far
+Iteration 88: max relative diff=1.000000, 812.26 sec so far
+Iteration 89: max relative diff=1.000000, 820.19 sec so far
+Iteration 90: max relative diff=1.000000, 828.26 sec so far
+Iteration 91: max relative diff=1.000000, 837.10 sec so far
+Iteration 92: max relative diff=1.000000, 846.52 sec so far
+Iteration 93: max relative diff=1.000000, 856.53 sec so far
+Iteration 94: max relative diff=1.000000, 864.57 sec so far
+Iteration 95: max relative diff=1.000000, 872.65 sec so far
+Iteration 96: max relative diff=1.000000, 882.13 sec so far
+Iteration 97: max relative diff=1.000000, 891.72 sec so far
+Iteration 98: max relative diff=1.000000, 900.38 sec so far
+Iteration 99: max relative diff=1.000000, 909.80 sec so far
+Iteration 100: max relative diff=1.000000, 919.27 sec so far
+Iteration 101: max relative diff=1.000000, 928.57 sec so far
+Iteration 102: max relative diff=1.000000, 937.32 sec so far
+Iteration 103: max relative diff=1.000000, 946.10 sec so far
+Iteration 104: max relative diff=1.000000, 954.93 sec so far
+Iteration 105: max relative diff=1.000000, 965.16 sec so far
+Iteration 106: max relative diff=1.000000, 974.65 sec so far
+Iteration 107: max relative diff=1.000000, 984.20 sec so far
+Iteration 108: max relative diff=1.000000, 993.71 sec so far
+Iteration 109: max relative diff=1.000000, 1003.27 sec so far
+Iteration 110: max relative diff=1.000000, 1012.78 sec so far
+Iteration 111: max relative diff=1.000000, 1022.41 sec so far
+Iteration 112: max relative diff=1.000000, 1031.97 sec so far
+Iteration 113: max relative diff=1.000000, 1041.65 sec so far
+Iteration 114: max relative diff=1.000000, 1050.78 sec so far
+Iteration 115: max relative diff=1.000000, 1058.71 sec so far
+Iteration 116: max relative diff=1.000000, 1066.67 sec so far
+Iteration 117: max relative diff=1.000000, 1074.58 sec so far
+Iteration 118: max relative diff=1.000000, 1082.58 sec so far
+Iteration 119: max relative diff=1.000000, 1090.54 sec so far
+Iteration 120: max relative diff=1.000000, 1098.43 sec so far
+Iteration 121: max relative diff=1.000000, 1106.53 sec so far
+Iteration 122: max relative diff=1.000000, 1120.20 sec so far
+Iteration 123: max relative diff=1.000000, 1128.09 sec so far
+Iteration 124: max relative diff=1.000000, 1136.16 sec so far
+Iteration 125: max relative diff=1.000000, 1144.13 sec so far
+Iteration 126: max relative diff=1.000000, 1152.07 sec so far
+Iteration 127: max relative diff=1.000000, 1160.02 sec so far
+Iteration 128: max relative diff=1.000000, 1168.90 sec so far
+Iteration 129: max relative diff=1.000000, 1176.80 sec so far
+Iteration 130: max relative diff=1.000000, 1188.14 sec so far
+Iteration 131: max relative diff=1.000000, 1202.09 sec so far
+Iteration 132: max relative diff=1.000000, 1212.94 sec so far
+Iteration 133: max relative diff=1.000000, 1222.42 sec so far
+Iteration 134: max relative diff=1.000000, 1231.81 sec so far
+Iteration 135: max relative diff=1.000000, 1241.25 sec so far
+Iteration 136: max relative diff=1.000000, 1250.99 sec so far
+Iteration 137: max relative diff=1.000000, 1260.42 sec so far
+Iteration 138: max relative diff=1.000000, 1268.36 sec so far
+Iteration 139: max relative diff=1.000000, 1276.38 sec so far
+Iteration 140: max relative diff=1.000000, 1284.42 sec so far
+Iteration 141: max relative diff=1.000000, 1292.37 sec so far
+Iteration 142: max relative diff=1.000000, 1300.39 sec so far
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

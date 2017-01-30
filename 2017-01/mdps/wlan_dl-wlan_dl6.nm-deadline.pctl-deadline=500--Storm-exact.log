@@ -1,0 +1,19 @@
+~/prism-examples/models/;mdps;wlan_dl;wlan_dl6.nm;deadline.pctl;deadline=500;;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/wlan_dl/wlan_dl6.nm --prop ~/prism-examples/models/mdps/wlan_dl/deadline.pctl -const deadline=500 --exact --minmax:method pi -pc 
+Current working directory: ~/ma_scripts/scripts
+
+ERROR (storm.cpp:42): An unexpected exception occurred and caused Storm to terminate. The message of this exception is: std::bad_alloc
+Command exited with non-zero status 2
+Wall time: 1164.68s
+User time: 1156.07s
+System time: 7.17s
+Memory: 6767640KB
+External error: 2

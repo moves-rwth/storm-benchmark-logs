@@ -1,0 +1,99 @@
+~/prism-examples/models/;mdps;consensus;coin2.nm;steps_max.pctl;K=16;maxiter=100000;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 06:41:14 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/consensus/coin2.nm ~/prism-examples/models/mdps/consensus/steps_max.pctl -const K=16 -m -cuddmaxmem 4096m -maxiters 100000
+
+Parsing model file "~/prism-examples/models/mdps/consensus/coin2.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/consensus/steps_max.pctl"...
+
+1 property:
+(1) R{"steps"}max=? [ F "finished" ]
+
+Type:        MDP
+Modules:     process1 process2 
+Variables:   counter pc1 coin1 pc2 coin2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"steps"}max=? [ F "finished" ]
+Model constants: K=16
+
+Building model...
+Model constants: K=16
+
+Computing reachable states...
+
+Reachability (BFS): 289 iterations in 0.02 seconds (average 0.000069, setup 0.00)
+
+Time for model construction: 0.069 seconds.
+
+Type:        MDP
+States:      2064 (1 initial)
+Transitions: 3852
+Choices:     3088
+
+Transition matrix: 443 nodes (3 terminal), 3852 minterms, vars: 13r/13c/2nd
+
+Prob0E: 104 iterations in 0.03 seconds (average 0.000308, setup 0.00)
+
+Prob1A: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 8, inf = 0, maybe = 2056
+
+Computing remaining rewards...
+Engine: MTBDD
+
+Building iteration matrix MTBDD... [nodes=376] [7.3 Kb]
+
+Starting iterations...
+Iteration 539: 5.01 sec so far
+Iteration 1046: 10.02 sec so far
+Iteration 1554: 15.03 sec so far
+Iteration 2040: 20.04 sec so far
+Iteration 2552: 25.05 sec so far
+Iteration 3058: 30.06 sec so far
+Iteration 3537: 35.07 sec so far
+Iteration 4027: 40.07 sec so far
+Iteration 4497: 45.08 sec so far
+Iteration 4980: 50.10 sec so far
+Iteration 5484: 55.12 sec so far
+Iteration 5970: 60.13 sec so far
+Iteration 6456: 65.13 sec so far
+Iteration 6946: 70.14 sec so far
+Iteration 7415: 75.14 sec so far
+Iteration 7887: 80.15 sec so far
+Iteration 8361: 85.16 sec so far
+Iteration 8842: 90.16 sec so far
+Iteration 9323: 95.18 sec so far
+Iteration 9792: 100.18 sec so far
+Iteration 10277: 105.20 sec so far
+Iteration 10776: 110.21 sec so far
+Iteration 11269: 115.22 sec so far
+Iteration 11750: 120.22 sec so far
+Iteration 12249: 125.23 sec so far
+Iteration 12750: 130.24 sec so far
+Iteration 13247: 135.24 sec so far
+Iteration 13726: 140.26 sec so far
+Iteration 14217: 145.27 sec so far
+Iteration 14709: 150.27 sec so far
+Iteration 15198: 155.28 sec so far
+Iteration 15677: 160.29 sec so far
+
+Iterative method: 15803 iterations in 161.56 seconds (average 0.010223, setup 0.00)
+
+Value in the initial state: 3258.3866553661583
+
+Time for model checking: 161.698 seconds.
+
+Result: 3258.3866553661583 (value in the initial state)
+
+Wall time: 163.03s
+User time: 163.26s
+System time: 0.24s
+Memory: 109412KB

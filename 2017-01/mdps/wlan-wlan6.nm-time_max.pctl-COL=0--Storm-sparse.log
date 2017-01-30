@@ -1,0 +1,34 @@
+~/prism-examples/models/;mdps;wlan;wlan6.nm;time_max.pctl;COL=0;;Storm-sparse
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/wlan/wlan6.nm --prop ~/prism-examples/models/mdps/wlan/time_max.pctl -const COL=0 -e sparse -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 106.854s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	5007548
+Transitions: 	11475748
+Choices: 	6350470
+Reward Models:  time
+Labels: 	3
+   * init -> 1 state(s)
+   * deadlock -> 0 state(s)
+   * ((s1 = 12) & (s2 = 12)) -> 1 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"time"}max=? [F ((s1 = 12) & (s2 = 12))] ...
+Result (initial states): 3883.499646
+Time for model checking: 1081.255s.
+Wall time: 1188.34s
+User time: 1185.48s
+System time: 1.40s
+Memory: 1265340KB

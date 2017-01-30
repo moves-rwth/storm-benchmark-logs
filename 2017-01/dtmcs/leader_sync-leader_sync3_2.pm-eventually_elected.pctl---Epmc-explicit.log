@@ -1,0 +1,15 @@
+~/prism-examples/models/;dtmcs;leader_sync;leader_sync3_2.pm;eventually_elected.pctl;;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P>=1 [ F "elected" ]
+Starting to build model...
+Building model done. 26 states. Time for model exploration: 0 seconds.
+Starting iteration...
+Done. Did 0 iterations in 0 seconds.
+Finished model checking. Time required: 12 seconds
+P>=1 [ F "elected" ]: true
+Wall time: 15.01s
+User time: 23.69s
+System time: 0.95s
+Memory: 292480KB

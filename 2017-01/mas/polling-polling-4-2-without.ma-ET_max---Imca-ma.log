@@ -1,0 +1,32 @@
+~/MA_experiments;mas;polling;polling-4-2-without.ma;ET_max;;;Imca-ma
+ ------------------------------------------------------------------- 
+|                  Interactive Markov Chain Analyzer                |
+|                        IMCA Version 1.6 beta                      |
+|             Binary build date: Jan 20 2017 @ 17:22:22             |
+|                using SoPlex "http://soplex.zib.de/"               |
+|                                                                   |
+|                  Copyright (C) RWTH Aachen, 2012.                 |
+|          Copyright (C) University of Twente, 2013-2014.           |
+|                         Author: Dennis Guck                       |
+|           IMCA is distributed under the GPL conditions            |
+|            (GPL stands for GNU General Public License)            |
+|          This program comes with ABSOLUTELY NO WARRANTY.          |
+|   This is free software, and you are welcome to redistribute it   |
+ ------------------------------------------------------------------- 
+
+Loading the '~/MA_experiments/mas/polling/polling-4-2-without.ma' file, please wait.
+Maximum State Reward: 0
+#States: 6667    #MS: 1923    #PS: 4744    #ND: 2762
+#Initials: 1    #Goals: 1280    #Transitions: 13150
+The occupied space is 1997152 Bytes (~1.904633 MB).
+
+
+Compute maximal expected time, please wait.
+LP solved to optimality.
+
+Maximal expected time: 4.603150834
+Computation Time: 3.712588 seconds
+Wall time: 3.83s
+User time: 3.79s
+System time: 0.03s
+Memory: 19896KB

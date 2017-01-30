@@ -1,0 +1,127 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;down_T.csl;MAX_COUNT=100;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 03:50:06 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/down_T.csl -const MAX_COUNT=100 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/down_T.csl"...
+
+1 property:
+(1) R{"down"}=? [ C<=72000 ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: R{"down"}=? [ C<=72000 ]
+Model constants: MAX_COUNT=100
+
+Building model...
+Model constants: MAX_COUNT=100
+
+Computing reachable states...
+
+Reachability (BFS): 113 iterations in 0.10 seconds (average 0.000885, setup 0.00)
+
+Time for model construction: 0.152 seconds.
+
+Type:        CTMC
+States:      86288 (1 initial)
+Transitions: 364205
+
+Rate matrix: 3023 nodes (9 terminal), 364205 minterms, vars: 19r/19c
+
+Computing rewards...
+Engine: MTBDD
+
+Computing diagonals MTBDD... [nodes=1207] [23.6 Kb]
+Building iteration matrix MTBDD... [nodes=8970] [175.2 Kb]
+
+Uniformisation: q.t = 0.085002 x 72000.000000 = 6120.120320
+Fox-Glynn: left = 5570, right = 6786
+
+Starting iterations...
+Iteration 71 (of 6786): 5.05 sec so far
+Iteration 111 (of 6786): 10.20 sec so far
+Iteration 141 (of 6786): 15.38 sec so far
+Iteration 166 (of 6786): 20.45 sec so far
+Iteration 189 (of 6786): 25.46 sec so far
+Iteration 208 (of 6786): 30.56 sec so far
+Iteration 227 (of 6786): 35.80 sec so far
+Iteration 244 (of 6786): 40.93 sec so far
+Iteration 261 (of 6786): 46.02 sec so far
+Iteration 277 (of 6786): 51.06 sec so far
+Iteration 293 (of 6786): 56.18 sec so far
+Iteration 310 (of 6786): 61.41 sec so far
+Iteration 326 (of 6786): 66.58 sec so far
+Iteration 341 (of 6786): 71.74 sec so far
+Iteration 357 (of 6786): 76.77 sec so far
+Iteration 375 (of 6786): 81.84 sec so far
+Iteration 394 (of 6786): 86.87 sec so far
+Iteration 414 (of 6786): 91.97 sec so far
+Iteration 435 (of 6786): 97.13 sec so far
+Iteration 459 (of 6786): 102.20 sec so far
+Iteration 484 (of 6786): 107.36 sec so far
+Iteration 516 (of 6786): 112.46 sec so far
+Iteration 550 (of 6786): 117.52 sec so far
+Iteration 586 (of 6786): 122.54 sec so far
+Iteration 624 (of 6786): 127.58 sec so far
+Iteration 665 (of 6786): 132.62 sec so far
+Iteration 706 (of 6786): 137.72 sec so far
+Iteration 747 (of 6786): 142.80 sec so far
+Iteration 793 (of 6786): 147.82 sec so far
+Iteration 849 (of 6786): 152.86 sec so far
+Iteration 935 (of 6786): 157.90 sec so far
+Iteration 1055 (of 6786): 162.93 sec so far
+Iteration 1210 (of 6786): 167.95 sec so far
+Iteration 1392 (of 6786): 173.11 sec so far
+Iteration 1596 (of 6786): 178.12 sec so far
+Iteration 1812 (of 6786): 183.12 sec so far
+Iteration 2035 (of 6786): 188.18 sec so far
+Iteration 2255 (of 6786): 193.19 sec so far
+Iteration 2480 (of 6786): 198.20 sec so far
+Iteration 2692 (of 6786): 203.22 sec so far
+Iteration 2891 (of 6786): 208.24 sec so far
+Iteration 3090 (of 6786): 213.27 sec so far
+Iteration 3248 (of 6786): 218.28 sec so far
+Iteration 3411 (of 6786): 223.28 sec so far
+Iteration 3573 (of 6786): 228.30 sec so far
+Iteration 3729 (of 6786): 233.36 sec so far
+Iteration 3892 (of 6786): 238.38 sec so far
+Iteration 4053 (of 6786): 243.40 sec so far
+Iteration 4213 (of 6786): 248.57 sec so far
+Iteration 4377 (of 6786): 253.59 sec so far
+Iteration 4539 (of 6786): 258.62 sec so far
+Iteration 4697 (of 6786): 263.72 sec so far
+Iteration 4861 (of 6786): 268.74 sec so far
+Iteration 5023 (of 6786): 273.76 sec so far
+Iteration 5181 (of 6786): 278.83 sec so far
+Iteration 5346 (of 6786): 283.84 sec so far
+Iteration 5508 (of 6786): 288.85 sec so far
+Iteration 5665 (of 6786): 293.88 sec so far
+Iteration 5893 (of 6786): 298.90 sec so far
+Iteration 6120 (of 6786): 303.91 sec so far
+Iteration 6344 (of 6786): 308.92 sec so far
+Iteration 6535 (of 6786): 313.92 sec so far
+Iteration 6656 (of 6786): 318.94 sec so far
+
+Iterative method: 6786 iterations in 320.94 seconds (average 0.047294, setup 0.01)
+
+Value in the initial state: 0.07696369675427357
+
+Time for model checking: 321.146 seconds.
+
+Result: 0.07696369675427357 (value in the initial state)
+
+Wall time: 322.59s
+User time: 322.70s
+System time: 0.44s
+Memory: 153300KB

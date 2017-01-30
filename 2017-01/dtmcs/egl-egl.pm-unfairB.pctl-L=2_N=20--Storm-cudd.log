@@ -1,0 +1,32 @@
+~/prism-examples/models/;dtmcs;egl;egl.pm;unfairB.pctl;L=2,N=20;;Storm-cudd
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/dtmcs/egl/egl.pm --prop ~/prism-examples/models/dtmcs/egl/unfairB.pctl -const L=2,N=20 -e dd --ddlib cudd --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 1.277s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	135239930216446 (19362 nodes)
+Transitions: 	136339441844221 (49918 nodes)
+Reward Models:  none
+Variables: 	rows: 84 meta variables (170 DD variables), columns: 84 meta variables (170 DD variables)
+Labels: 	2
+   * knowA
+   * knowB
+-------------------------------------------------------------- 
+
+Model checking property P=? [F (!("knowB") & "knowA")] ...
+Result (initial states): 0.4999990463
+Time for model checking: 1.355s.
+Wall time: 2.74s
+User time: 2.66s
+System time: 0.07s
+Memory: 101064KB

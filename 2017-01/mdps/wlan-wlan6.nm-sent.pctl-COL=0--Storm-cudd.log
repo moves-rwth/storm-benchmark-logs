@@ -1,0 +1,32 @@
+~/prism-examples/models/;mdps;wlan;wlan6.nm;sent.pctl;COL=0;;Storm-cudd
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/wlan/wlan6.nm --prop ~/prism-examples/models/mdps/wlan/sent.pctl -const COL=0 -e dd --ddlib cudd --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.831s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	5007548 (3894 nodes)
+Transitions: 	11475748 (20432 nodes)
+Choices: 	6350470
+Reward Models:  none
+Variables: 	rows: 13 meta variables (47 DD variables), columns: 13 meta variables (47 DD variables), nondeterminism: 7 meta variables (7 DD variables)
+Labels: 	0
+-------------------------------------------------------------- 
+
+Model checking property P>=1 [F ((s1 = 12) & (s2 = 12))] ...
+Result (initial states): true
+
+Time for model checking: 76.377s.
+Wall time: 77.43s
+User time: 76.96s
+System time: 0.35s
+Memory: 254152KB

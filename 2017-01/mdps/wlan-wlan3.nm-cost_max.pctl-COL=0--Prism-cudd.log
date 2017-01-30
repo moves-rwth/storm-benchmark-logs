@@ -1,0 +1,128 @@
+~/prism-examples/models/;mdps;wlan;wlan3.nm;cost_max.pctl;COL=0;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 17:24:27 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/wlan/wlan3.nm ~/prism-examples/models/mdps/wlan/cost_max.pctl -const COL=0 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/wlan/wlan3.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/wlan/cost_max.pctl"...
+
+1 property:
+(1) R{"cost"}max=? [ F s1=12&s2=12 ]
+
+Type:        MDP
+Modules:     medium station1 station2 
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"cost"}max=? [ F s1=12&s2=12 ]
+Model constants: COL=0
+
+Building model...
+Model constants: COL=0
+
+Computing reachable states...
+
+Reachability (BFS): 120 iterations in 0.30 seconds (average 0.002467, setup 0.00)
+
+Time for model construction: 0.442 seconds.
+
+Type:        MDP
+States:      96302 (1 initial)
+Transitions: 204576
+Choices:     123730
+
+Transition matrix: 11092 nodes (6 terminal), 204576 minterms, vars: 39r/39c/7nd
+
+Prob0E: 470 iterations in 4.38 seconds (average 0.009328, setup 0.00)
+
+Prob1A: 1 iterations in 0.00 seconds (average 0.004000, setup 0.00)
+
+goal = 1, inf = 0, maybe = 96301
+
+Computing remaining rewards...
+Engine: MTBDD
+
+Building iteration matrix MTBDD... [nodes=11092] [216.6 Kb]
+
+Starting iterations...
+Iteration 64: 5.12 sec so far
+Iteration 99: 10.21 sec so far
+Iteration 129: 15.26 sec so far
+Iteration 149: 20.33 sec so far
+Iteration 167: 25.50 sec so far
+Iteration 188: 30.60 sec so far
+Iteration 205: 35.69 sec so far
+Iteration 222: 40.88 sec so far
+Iteration 237: 45.96 sec so far
+Iteration 253: 51.22 sec so far
+Iteration 267: 56.45 sec so far
+Iteration 282: 61.69 sec so far
+Iteration 296: 67.14 sec so far
+Iteration 311: 72.26 sec so far
+Iteration 328: 77.31 sec so far
+Iteration 342: 82.41 sec so far
+Iteration 358: 87.75 sec so far
+Iteration 373: 92.88 sec so far
+Iteration 386: 98.18 sec so far
+Iteration 400: 103.31 sec so far
+Iteration 419: 108.46 sec so far
+Iteration 436: 113.58 sec so far
+Iteration 451: 118.66 sec so far
+Iteration 465: 123.74 sec so far
+Iteration 483: 128.75 sec so far
+Iteration 496: 133.85 sec so far
+Iteration 510: 139.01 sec so far
+Iteration 523: 144.08 sec so far
+Iteration 537: 149.29 sec so far
+Iteration 553: 154.44 sec so far
+Iteration 570: 159.67 sec so far
+Iteration 585: 164.81 sec so far
+Iteration 601: 169.95 sec so far
+Iteration 617: 175.26 sec so far
+Iteration 632: 180.33 sec so far
+Iteration 647: 185.47 sec so far
+Iteration 663: 190.52 sec so far
+Iteration 678: 195.53 sec so far
+Iteration 693: 200.64 sec so far
+Iteration 709: 205.76 sec so far
+Iteration 725: 211.03 sec so far
+Iteration 740: 216.05 sec so far
+Iteration 759: 221.14 sec so far
+Iteration 775: 226.22 sec so far
+Iteration 791: 231.66 sec so far
+Iteration 807: 236.72 sec so far
+Iteration 822: 241.75 sec so far
+Iteration 837: 246.89 sec so far
+Iteration 853: 252.04 sec so far
+Iteration 869: 257.35 sec so far
+Iteration 884: 262.50 sec so far
+Iteration 899: 267.67 sec so far
+Iteration 915: 272.76 sec so far
+Iteration 930: 277.78 sec so far
+Iteration 945: 282.92 sec so far
+Iteration 961: 288.05 sec so far
+Iteration 980: 293.41 sec so far
+Iteration 999: 298.53 sec so far
+Iteration 1018: 303.66 sec so far
+Iteration 1034: 308.94 sec so far
+Iteration 1053: 314.08 sec so far
+
+Iterative method: 1059 iterations in 315.69 seconds (average 0.298021, setup 0.08)
+
+Value in the initial state: 227297.1568869716
+
+Time for model checking: 320.184 seconds.
+
+Result: 227297.1568869716 (value in the initial state)
+
+Wall time: 322.07s
+User time: 322.46s
+System time: 0.36s
+Memory: 182464KB

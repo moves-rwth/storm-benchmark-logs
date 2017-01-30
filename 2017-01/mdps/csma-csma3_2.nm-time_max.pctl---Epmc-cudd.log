@@ -1,0 +1,11 @@
+~/prism-examples/models/;mdps;csma;csma3_2.nm;time_max.pctl;;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R{"time"}max=? [ F "all_delivered" ]
+Finished model checking. Time required: 0 seconds
+R{"time"}max=? [ F "all_delivered" ]: No solver available to handle property "R{"time"}max=?[F (((s1) = (4)) ∧ ((s2) = (4)) ∧ ((s3) = (4)))]" for this model with the current settings
+Wall time: 1.99s
+User time: 7.67s
+System time: 0.52s
+Memory: 252832KB

@@ -1,0 +1,69 @@
+~/prism-examples/models/;mdps;csma;csma2_2.nm;all_before_min.pctl;;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 17:58:48 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/csma/csma2_2.nm ~/prism-examples/models/mdps/csma/all_before_min.pctl -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/csma/csma2_2.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/csma/all_before_min.pctl"...
+
+1 property:
+(1) Pmin=? [ !"collision_max_backoff" U "all_delivered" ]
+
+Type:        MDP
+Modules:     bus station1 station2 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ !"collision_max_backoff" U "all_delivered" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 85 iterations in 0.04 seconds (average 0.000518, setup 0.00)
+
+Time for model construction: 0.11 seconds.
+
+Type:        MDP
+States:      1038 (1 initial)
+Transitions: 1282
+Choices:     1054
+
+Transition matrix: 2120 nodes (4 terminal), 1282 minterms, vars: 30r/30c/9nd
+
+Prob0E: 87 iterations in 0.05 seconds (average 0.000552, setup 0.00)
+
+Prob1A: 13 iterations in 0.01 seconds (average 0.000615, setup 0.00)
+
+yes = 993, no = 16, maybe = 29
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrices... [nm=6, levels=30, nodes=962] [45.1 KB]
+Adding sparse bits... [levels=30-30, num=6, compact=6/6] [6.4 KB]
+Creating vector for yes... [dist=2, compact] [2.0 KB]
+Allocating iteration vectors... [3 x 8.1 KB]
+TOTAL: [77.9 KB]
+
+Starting iterations...
+
+Iterative method: 17 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Value in the initial state: 0.875
+
+Time for model checking: 0.072 seconds.
+
+Result: 0.875 (value in the initial state)
+
+Wall time: 2.03s
+User time: 1.82s
+System time: 0.16s
+Memory: 111408KB

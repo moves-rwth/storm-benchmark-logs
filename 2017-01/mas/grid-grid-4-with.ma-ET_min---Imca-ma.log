@@ -1,0 +1,33 @@
+~/MA_experiments;mas;grid;grid-4-with.ma;ET_min;;;Imca-ma
+ ------------------------------------------------------------------- 
+|                  Interactive Markov Chain Analyzer                |
+|                        IMCA Version 1.6 beta                      |
+|             Binary build date: Jan 20 2017 @ 17:22:22             |
+|                using SoPlex "http://soplex.zib.de/"               |
+|                                                                   |
+|                  Copyright (C) RWTH Aachen, 2012.                 |
+|          Copyright (C) University of Twente, 2013-2014.           |
+|                         Author: Dennis Guck                       |
+|           IMCA is distributed under the GPL conditions            |
+|            (GPL stands for GNU General Public License)            |
+|          This program comes with ABSOLUTELY NO WARRANTY.          |
+|   This is free software, and you are welcome to redistribute it   |
+ ------------------------------------------------------------------- 
+
+Loading the '~/MA_experiments/mas/grid/grid-4-with.ma' file, please wait.
+Maximum State Reward: 0
+#States: 20021    #MS: 5145    #PS: 14876    #ND: 10417
+#Initials: 1    #Goals: 8357    #Transitions: 43981
+The occupied space is 4586208 Bytes (~4.373749 MB).
+
+
+Compute minimal expected time, please wait.
+LP solved to optimality.
+
+Minimal expected time: 102.1921147
+
+Computation Time: 263.996982 seconds
+Wall time: 264.51s
+User time: 263.57s
+System time: 0.42s
+Memory: 49524KB

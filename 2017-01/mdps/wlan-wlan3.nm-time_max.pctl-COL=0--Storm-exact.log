@@ -1,0 +1,34 @@
+~/prism-examples/models/;mdps;wlan;wlan3.nm;time_max.pctl;COL=0;;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/wlan/wlan3.nm --prop ~/prism-examples/models/mdps/wlan/time_max.pctl -const COL=0 --exact --minmax:method pi -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 2.390s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	96302
+Transitions: 	204576
+Choices: 	123730
+Reward Models:  time
+Labels: 	3
+   * init -> 1 state(s)
+   * deadlock -> 0 state(s)
+   * ((s1 = 12) & (s2 = 12)) -> 1 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"time"}max=? [F ((s1 = 12) & (s2 = 12))] ...
+Result (initial states): 130322306383225/33558626304 (approx. 3883.421961)
+Time for model checking: 9.846s.
+Wall time: 12.35s
+User time: 11.94s
+System time: 0.39s
+Memory: 230336KB

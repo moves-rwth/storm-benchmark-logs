@@ -1,0 +1,11 @@
+~/prism-examples/models/;dtmcs;egl;egl.pm;messagesB.pctl;L=2,N=20;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R{"messages_B_needs"}=? [ F phase=4 ]
+Finished model checking. Time required: 0 seconds
+R{"messages_B_needs"}=? [ F phase=4 ]: No solver available to handle property "R{"messages_B_needs"}=?[F ((phase) = (4))]" for this model with the current settings
+Wall time: 2.15s
+User time: 7.91s
+System time: 0.57s
+Memory: 274016KB

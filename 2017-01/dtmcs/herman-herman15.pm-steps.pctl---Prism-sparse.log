@@ -1,0 +1,70 @@
+~/prism-examples/models/;dtmcs;herman;herman15.pm;steps.pctl;;;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 04:49:34 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/herman/herman15.pm ~/prism-examples/models/dtmcs/herman/steps.pctl -s -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/herman/herman15.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/herman/steps.pctl"...
+
+1 property:
+(1) R=? [ F "stable" ]
+
+Type:        DTMC
+Modules:     process1 process2 process3 process4 process5 process6 process7 process8 process9 process10 process11 process12 process13 process14 process15 
+Variables:   x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 x11 x12 x13 x14 x15 
+
+---------------------------------------------------------------------
+
+Model checking: R=? [ F "stable" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Time for model construction: 0.039 seconds.
+
+Type:        DTMC
+States:      32768 (32768 initial)
+Transitions: 14348908
+
+Transition matrix: 810 nodes (9 terminal), 14348908 minterms, vars: 15r/15c
+
+Prob0: 6 iterations in 0.01 seconds (average 0.001333, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 30, inf = 0, maybe = 32738
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix... [n=32768, nnz=14348846, compact] [54.9 MB]
+Creating vector for diagonals... [dist=2, compact] [64.0 KB]
+Creating vector for RHS... [dist=2, compact] [64.0 KB]
+Allocating iteration vectors... [2 x 256.0 KB]
+TOTAL: [55.5 MB]
+
+Starting iterations...
+Iteration 112: max relative diff=0.000349, 5.00 sec so far
+Iteration 224: max relative diff=0.000002, 10.02 sec so far
+
+Jacobi: 245 iterations in 12.56 seconds (average 0.044751, setup 1.60)
+
+Range of values over initial states: [0.0,33.332616661835104]
+
+Time for model checking: 12.615 seconds.
+
+Result: [0.0,33.332616661835104] (range of values over initial states)
+
+Wall time: 13.91s
+User time: 14.22s
+System time: 0.15s
+Memory: 161124KB

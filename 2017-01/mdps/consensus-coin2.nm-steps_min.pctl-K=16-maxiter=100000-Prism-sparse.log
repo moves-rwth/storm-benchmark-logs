@@ -1,0 +1,79 @@
+~/prism-examples/models/;mdps;consensus;coin2.nm;steps_min.pctl;K=16;maxiter=100000;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 07:36:51 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/consensus/coin2.nm ~/prism-examples/models/mdps/consensus/steps_min.pctl -const K=16 -s -cuddmaxmem 4096m -maxiters 100000
+
+Parsing model file "~/prism-examples/models/mdps/consensus/coin2.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/consensus/steps_min.pctl"...
+
+1 property:
+(1) R{"steps"}min=? [ F "finished" ]
+
+Type:        MDP
+Modules:     process1 process2 
+Variables:   counter pc1 coin1 pc2 coin2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"steps"}min=? [ F "finished" ]
+Model constants: K=16
+
+Building model...
+Model constants: K=16
+
+Computing reachable states...
+
+Reachability (BFS): 289 iterations in 0.02 seconds (average 0.000083, setup 0.00)
+
+Time for model construction: 0.072 seconds.
+
+Type:        MDP
+States:      2064 (1 initial)
+Transitions: 3852
+Choices:     3088
+
+Transition matrix: 443 nodes (3 terminal), 3852 minterms, vars: 13r/13c/2nd
+
+Prob0A: 101 iterations in 0.02 seconds (average 0.000198, setup 0.00)
+
+Prob1E: 102 iterations in 0.01 seconds (average 0.000118, setup 0.00)
+
+Warning: PRISM hasn't checked for zero-reward loops.
+Your minimum rewards may be too low...
+
+goal = 8, inf = 0, maybe = 2056
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=2064, nc=3080, nnz=3844, k=2] [65.1 KB]
+Building sparse matrix (transition rewards)... [n=2064, nc=3080, nnz=0, k=2] [20.1 KB]
+Creating vector for state rewards... [16.1 KB]
+Creating vector for inf... [16.1 KB]
+Allocating iteration vectors... [2 x 16.1 KB]
+TOTAL: [149.7 KB]
+
+Starting iterations...
+
+Iterative method: 15012 iterations in 1.36 seconds (average 0.000091, setup 0.00)
+
+Value in the initial state: 3064.382412878783
+
+Time for model checking: 1.426 seconds.
+
+Result: 3064.382412878783 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 2.76s
+User time: 3.05s
+System time: 0.14s
+Memory: 107044KB

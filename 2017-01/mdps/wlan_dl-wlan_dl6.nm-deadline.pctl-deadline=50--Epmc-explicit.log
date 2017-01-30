@@ -1,0 +1,21 @@
+~/prism-examples/models/;mdps;wlan_dl;wlan_dl6.nm;deadline.pctl;deadline=50;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property Pmin=? [ F 1=12 & s2=12 ]
+Starting to build model...
+Current number of states: 74,485; states/second: 14,896
+Current number of states: 153,770; states/second: 15,857
+Current number of states: 229,872; states/second: 15,220
+Current number of states: 307,801; states/second: 15,585
+Current number of states: 388,341; states/second: 16,107
+Current number of states: 462,339; states/second: 14,799
+Building model done. 478,881 states. Time for model exploration: 31 seconds.
+Starting iteration...
+Done. Did 0 iterations in 0 seconds.
+Finished model checking. Time required: 146 seconds
+Pmin=? [ F 1=12 & s2=12 ]: 0.0
+Wall time: 148.95s
+User time: 166.74s
+System time: 1.44s
+Memory: 739508KB

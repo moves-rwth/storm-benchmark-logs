@@ -1,0 +1,48 @@
+~/prism-examples/models/;mdps;csma;csma4_4.nm;time_min.pctl;;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 10:41:04 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/csma/csma4_4.nm ~/prism-examples/models/mdps/csma/time_min.pctl -ex
+
+Parsing model file "~/prism-examples/models/mdps/csma/csma4_4.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/csma/time_min.pctl"...
+
+1 property:
+(1) R{"time"}min=? [ F "all_delivered" ]
+
+Type:        MDP
+Modules:     bus station1 station2 station3 station4 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 s3 x3 bc3 cd3 s4 x4 bc4 cd4 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time"}min=? [ F "all_delivered" ]
+
+Building model...
+
+Computing reachable states... 80840 210765 328408 445510 579537 701717 853777 964092 1060550 1193827 1325646 1491874 1631539 1764140 1871559 1955456 2042543 2070715 2179995 2250012 2392580 2520945 2670734 2804715 2936853 3091888 3221536 3334553 3427066 3577443 3657089 3747525 3853458 3928756 4003839 4079759 4113783 4219742 4277987 4363447 4471562 4582032 4657256 4748407 4860449 4981096 5107109 5230891 5352678 5475300 5603124 5733068 5872041 6021860 6163321 6306091 6433497 6554037 6644197 6726998 6797068 6912063 7041948 7170545 7292124 7399799 7468343 7541063 7648317 7759194 7767732 7889057 7976364 8045675 8110368 8167455 8219219 8261605 8300972 8336268 8367474 8395664 8420630 8442122 8462678 8481636 8498039 8506066 8507419 8514737 8521034 8526882 8532353 8537189 8541157 8545351 8549149 8552421 8555316 8557395 8559706 8561389 8563172 8564720 8566110 8567331 8568426 8569337 8570268 8571004 8571776 8572416 8572989 8573542 8574016 8574399 8574831 8575190 8575504 8575791 8576054 8576265 8576502Exception in thread "main" java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at parser.ast.ExpressionBinaryOp.evaluate(ExpressionBinaryOp.java:149)
+	at parser.ast.Expression.evaluateBoolean(Expression.java:444)
+	at parser.ast.Expression.evaluateBoolean(Expression.java:491)
+	at simulator.Updater.calculateUpdatesForModule(Updater.java:319)
+	at simulator.Updater.calculateTransitions(Updater.java:163)
+	at simulator.SimulatorEngine.getTransitionList(SimulatorEngine.java:929)
+	at simulator.SimulatorEngine.getNumChoices(SimulatorEngine.java:940)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:221)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:110)
+	at prism.Prism.doBuildModel(Prism.java:1889)
+	at prism.Prism.buildModelIfRequired(Prism.java:1850)
+	at prism.Prism.modelCheck(Prism.java:2739)
+	at prism.PrismCL.run(PrismCL.java:333)
+	at prism.PrismCL.main(PrismCL.java:2336)
+Command exited with non-zero status 1
+Wall time: 1473.84s
+User time: 9828.86s
+System time: 36.97s
+Memory: 8497464KB
+External error: 1

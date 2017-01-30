@@ -1,0 +1,33 @@
+~/prism-examples/models/;dtmcs;crowds;crowds.pm;positive.pctl;CrowdSize=15,TotalRuns=6;;Storm-sparse
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/dtmcs/crowds/crowds.pm --prop ~/prism-examples/models/dtmcs/crowds/positive.pctl -const CrowdSize=15,TotalRuns=6 -e sparse -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 23.372s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	2341309
+Transitions: 	6992509
+Reward Models:  none
+Labels: 	3
+   * deadlock -> 50388 state(s)
+   * init -> 1 state(s)
+   * (observe0 > 1) -> 3876 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property P=? [F (observe0 > 1)] ...
+Result (initial states): 0.1286536941
+Time for model checking: 2.486s.
+Wall time: 25.96s
+User time: 25.25s
+System time: 0.66s
+Memory: 671724KB

@@ -1,0 +1,95 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;main_T.csl;MAX_COUNT=1000;;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 21:42:28 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/main_T.csl -const MAX_COUNT=1000 -s -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/main_T.csl"...
+
+1 property:
+(1) P=? [ !"down" U<=72000 "fail_main" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !"down" U<=72000 "fail_main" ]
+Model constants: MAX_COUNT=1000
+
+Building model...
+Model constants: MAX_COUNT=1000
+
+Computing reachable states...
+
+Reachability (BFS): 1013 iterations in 1.30 seconds (average 0.001283, setup 0.00)
+
+Time for model construction: 1.621 seconds.
+
+Type:        CTMC
+States:      846788 (1 initial)
+Transitions: 3574505
+
+Rate matrix: 4199 nodes (9 terminal), 3574505 minterms, vars: 22r/22c
+
+Computing probabilities...
+Engine: Sparse
+
+Number of non-absorbing states: 292328 of 846788 (34.5%)
+
+Building sparse matrix... [n=846788, nnz=1497664, compact] [6.5 MB]
+Creating vector for diagonals... [dist=35, compact] [1.6 MB]
+Allocating iteration vectors... [3 x 6.5 MB]
+TOTAL: [27.5 MB]
+
+Uniformisation: q.t = 0.085002 x 72000.000000 = 6120.120320
+Fox-Glynn: left = 5570, right = 6786
+
+Starting iterations...
+Iteration 262 (of 6786): max relative diff=0.003817, 5.01 sec so far
+Iteration 508 (of 6786): max relative diff=0.001968, 10.03 sec so far
+Iteration 770 (of 6786): max relative diff=0.001299, 15.04 sec so far
+Iteration 1021 (of 6786): max relative diff=0.000979, 20.06 sec so far
+Iteration 1272 (of 6786): max relative diff=0.000786, 25.07 sec so far
+Iteration 1534 (of 6786): max relative diff=0.000652, 30.07 sec so far
+Iteration 1797 (of 6786): max relative diff=0.000556, 35.09 sec so far
+Iteration 2061 (of 6786): max relative diff=0.000485, 40.10 sec so far
+Iteration 2326 (of 6786): max relative diff=0.000430, 45.11 sec so far
+Iteration 2585 (of 6786): max relative diff=0.000387, 50.12 sec so far
+Iteration 2848 (of 6786): max relative diff=0.000351, 55.13 sec so far
+Iteration 3110 (of 6786): max relative diff=0.000321, 60.14 sec so far
+Iteration 3357 (of 6786): max relative diff=0.000298, 65.15 sec so far
+Iteration 3619 (of 6786): max relative diff=0.000276, 70.16 sec so far
+Iteration 3882 (of 6786): max relative diff=0.000257, 75.18 sec so far
+Iteration 4145 (of 6786): max relative diff=0.000241, 80.20 sec so far
+Iteration 4392 (of 6786): max relative diff=0.000228, 85.20 sec so far
+Iteration 4644 (of 6786): max relative diff=0.000215, 90.21 sec so far
+Iteration 4889 (of 6786): max relative diff=0.000204, 95.23 sec so far
+Iteration 5152 (of 6786): max relative diff=0.000194, 100.24 sec so far
+Iteration 5400 (of 6786): max relative diff=0.000185, 105.26 sec so far
+Iteration 5649 (of 6786): max relative diff=0.000177, 110.26 sec so far
+Iteration 5878 (of 6786): max relative diff=0.000170, 115.27 sec so far
+Iteration 6100 (of 6786): max relative diff=0.000163, 120.28 sec so far
+Iteration 6325 (of 6786): max relative diff=0.000158, 125.30 sec so far
+Iteration 6554 (of 6786): max relative diff=0.000152, 130.31 sec so far
+Iteration 6776 (of 6786): max relative diff=0.000147, 135.33 sec so far
+
+Iterative method: 6786 iterations in 136.01 seconds (average 0.019976, setup 0.46)
+
+Value in the initial state: 0.002278516137352506
+
+Time for model checking: 136.297 seconds.
+
+Result: 0.002278516137352506 (value in the initial state)
+
+Wall time: 139.25s
+User time: 139.39s
+System time: 0.31s
+Memory: 138804KB

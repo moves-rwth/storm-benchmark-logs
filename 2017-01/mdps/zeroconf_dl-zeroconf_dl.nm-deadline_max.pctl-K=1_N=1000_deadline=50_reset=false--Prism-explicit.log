@@ -1,0 +1,67 @@
+~/prism-examples/models/;mdps;zeroconf_dl;zeroconf_dl.nm;deadline_max.pctl;K=1,N=1000,deadline=50,reset=false;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 21:10:57 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/zeroconf_dl/zeroconf_dl.nm ~/prism-examples/models/mdps/zeroconf_dl/deadline_max.pctl -const 'K=1,N=1000,deadline=50,reset=false' -ex
+
+Parsing model file "~/prism-examples/models/mdps/zeroconf_dl/zeroconf_dl.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/zeroconf_dl/deadline_max.pctl"...
+
+1 property:
+(1) Pmax=? [ !(l=4&ip=2) U t>=deadline ]
+
+Type:        MDP
+Modules:     environment host0 timer 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l t 
+
+---------------------------------------------------------------------
+
+Model checking: Pmax=? [ !(l=4&ip=2) U t>=deadline ]
+Model constants: reset=false,deadline=50,N=1000,K=1
+
+Building model...
+Model constants: reset=false,deadline=50,N=1000,K=1
+
+Computing reachable states... 83073 210121 330176 411031 states
+Reachable states exploration and model construction done in 11.272 secs.
+Sorting reachable states list...
+
+Time for model construction: 12.193 seconds.
+
+Warning: Deadlocks detected and fixed in 150 states
+
+Type:        MDP
+States:      411031 (1 initial)
+Transitions: 937536
+Choices:     733578
+Max/avg:     5/1.78
+
+Starting probabilistic reachability (max)...
+Starting Prob0 (max)...
+Prob0 (max) took 53 iterations and 1.077 seconds.
+Starting Prob1 (max)...
+Prob1 (max) took 901 iterations and 18.982 seconds.
+target=35121, yes=248532, no=85478, maybe=77021
+Starting value iteration (max)...
+Value iteration (max) took 74 iterations and 0.62 seconds.
+Probabilistic reachability took 20.694 seconds.
+
+Value in the initial state: 0.005397646460506247
+
+Time for model checking: 21.006 seconds.
+
+Result: 0.005397646460506247 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 34.71s
+User time: 42.98s
+System time: 1.68s
+Memory: 2659800KB

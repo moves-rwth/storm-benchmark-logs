@@ -1,0 +1,33 @@
+~/prism-examples/models/;dtmcs;brp;brp.pm;p2.pctl;MAX=20,N=8192;;Storm-sparse
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/dtmcs/brp/brp.pm --prop ~/prism-examples/models/dtmcs/brp/p2.pctl -const MAX=20,N=8192 -e sparse -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 22.996s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	2261011
+Transitions: 	3096575
+Reward Models:  none
+Labels: 	3
+   * init -> 1 state(s)
+   * deadlock -> 16403 state(s)
+   * ((s = 5) & (srep = 2)) -> 2 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property P=? [F ((s = 5) & (srep = 2))] ...
+Result (initial states): -6.751203004e-09
+Time for model checking: 440.535s.
+Wall time: 463.62s
+User time: 462.29s
+System time: 0.87s
+Memory: 1436968KB

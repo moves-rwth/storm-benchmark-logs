@@ -1,0 +1,68 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;up_T.csl;MAX_COUNT=7;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 20:14:17 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/up_T.csl -const MAX_COUNT=7 -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/up_T.csl"...
+
+1 property:
+(1) R{"up"}=? [ C<=72000 ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: R{"up"}=? [ C<=72000 ]
+Model constants: MAX_COUNT=7
+
+Building model...
+Model constants: MAX_COUNT=7
+
+Computing reachable states...
+
+Reachability (BFS): 20 iterations in 0.01 seconds (average 0.000600, setup 0.00)
+
+Time for model construction: 0.045 seconds.
+
+Type:        CTMC
+States:      7703 (1 initial)
+Transitions: 32474
+
+Rate matrix: 1950 nodes (9 terminal), 32474 minterms, vars: 16r/16c
+
+Computing rewards...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=16, nodes=2619] [122.8 KB]
+Adding explicit sparse matrices... [levels=16, num=1, compact] [134.4 KB]
+Creating vector for diagonals... [dist=68, compact] [15.6 KB]
+Allocating iteration vectors... [3 x 60.2 KB]
+TOTAL: [453.3 KB]
+
+Uniformisation: q.t = 0.085002 x 72000.000000 = 6120.120320
+Fox-Glynn: left = 5570, right = 6786
+
+Starting iterations...
+Iteration 5210 (of 6786): max relative diff=0.000012, 5.00 sec so far
+
+Iterative method: 6786 iterations in 7.99 seconds (average 0.001176, setup 0.01)
+
+Value in the initial state: 19.902503549813407
+
+Time for model checking: 7.989 seconds.
+
+Result: 19.902503549813407 (value in the initial state)
+
+Wall time: 9.31s
+User time: 9.70s
+System time: 0.12s
+Memory: 107588KB

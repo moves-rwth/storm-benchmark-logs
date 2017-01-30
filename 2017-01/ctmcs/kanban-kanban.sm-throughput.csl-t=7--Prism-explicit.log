@@ -1,0 +1,46 @@
+~/prism-examples/models/;ctmcs;kanban;kanban.sm;throughput.csl;t=7;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 08:26:01 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/kanban/kanban.sm ~/prism-examples/models/ctmcs/kanban/throughput.csl -const t=7 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/kanban/kanban.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/kanban/throughput.csl"...
+
+1 property:
+(1) R{"throughput"}=? [ S ]
+
+Type:        CTMC
+Modules:     k1 k2 k3 k4 
+Variables:   w1 x1 y1 z1 w2 x2 y2 z2 w3 x3 y3 z3 w4 x4 y4 z4 
+
+---------------------------------------------------------------------
+
+Model checking: R{"throughput"}=? [ S ]
+Model constants: t=7
+
+Building model...
+Model constants: t=7
+
+Computing reachable states... 70070 168870 250838 326155 399521 483996 561441 629051 690515 772696 855736 919600 1000312 1075265 1133212 1208002 1280544 1340139 1408388 1462311 1536828 1598845 1664978 1734574 1787391 1851082 1908172 1974433 2029738 2094626 2156699 2211109 2283657 2332886 2394271 2437919 2502908 2539344 2607736 2655971 2716173 2772595 2837561 2898704 2959373 3008002 3063739 3108149 3171746 3223372 3285877 3329702 3387936 3429713 3492711 3540035 3601077 3663585 3709003 3768516 3815105 3876415 3905075 3969778 4031188 4088809 4138344 4193727 4243396 4304510 4358449 4420979 4481999 4534931 4592105 4638934 4693709 4745144 4803704 4852079 4918139 4962859 5018538 5058768 5112742 5156988 5215328 5258861 5317150 5318320 5372215 5417792 5456206 5490361 5518854 5543500 5565371 5585411 5601964 5615910 5628199 5638252 5648224 5656522 5663572 5670302 5676014 5680890 5685255 5688686 5691923 5694899 5697338 5699422 5701461 5703206 5704871 5706498 5707835 5708906 5709867 5710657 5711455 5712068 5712584 5713023 5713419 5713760 5714036 5714284 5714545 5714766 5714939 5715092 5715239 5715353 5715445 5715527Exception in thread "main" java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at parser.ast.Expression.evaluateDouble(Expression.java:396)
+	at simulator.Updater.calculateStateRewards(Updater.java:270)
+	at simulator.SimulatorEngine.initialisePath(SimulatorEngine.java:238)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:219)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:110)
+	at prism.Prism.doBuildModel(Prism.java:1889)
+	at prism.Prism.buildModelIfRequired(Prism.java:1850)
+	at prism.Prism.modelCheck(Prism.java:2739)
+	at prism.PrismCL.run(PrismCL.java:333)
+	at prism.PrismCL.main(PrismCL.java:2336)
+Command exited with non-zero status 1
+Wall time: 1752.77s
+User time: 11533.90s
+System time: 51.28s
+Memory: 8470176KB
+External error: 1

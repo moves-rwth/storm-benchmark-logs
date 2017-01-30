@@ -1,0 +1,76 @@
+~/prism-examples/models/;ctmcs;polling;poll9.sm;station1_polled.csl;;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 10:17:37 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/polling/poll9.sm ~/prism-examples/models/ctmcs/polling/station1_polled.csl -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/polling/poll9.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/polling/station1_polled.csl"...
+
+1 property:
+(1) P=? [ F<=20 (s=1&a=0) ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 station4 station5 station6 station7 station8 station9 
+Variables:   s a s1 s2 s3 s4 s5 s6 s7 s8 s9 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F<=20 (s=1&a=0) ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 19 iterations in 0.01 seconds (average 0.000421, setup 0.00)
+
+Time for model construction: 0.056 seconds.
+
+Type:        CTMC
+States:      6912 (1 initial)
+Transitions: 36864
+
+Rate matrix: 765 nodes (4 terminal), 36864 minterms, vars: 14r/14c
+
+Computing probabilities...
+Engine: MTBDD
+
+Number of non-absorbing states: 6400 of 6912 (92.6%)
+
+Computing diagonals MTBDD... [nodes=286] [5.6 Kb]
+Building iteration matrix MTBDD... [nodes=1324] [25.9 Kb]
+
+Uniformisation: q.t = 205.020000 x 20.000000 = 4100.400000
+Fox-Glynn: left = 3649, right = 4645
+
+Starting iterations...
+Iteration 430 (of 4645): 5.01 sec so far
+Iteration 873 (of 4645): 10.02 sec so far
+Iteration 1233 (of 4645): 15.02 sec so far
+Iteration 1554 (of 4645): 20.04 sec so far
+Iteration 1879 (of 4645): 25.05 sec so far
+Iteration 2217 (of 4645): 30.06 sec so far
+Iteration 2563 (of 4645): 35.06 sec so far
+Iteration 2933 (of 4645): 40.07 sec so far
+Iteration 3327 (of 4645): 45.08 sec so far
+Iteration 3711 (of 4645): 50.09 sec so far
+Iteration 4023 (of 4645): 55.10 sec so far
+Iteration 4340 (of 4645): 60.11 sec so far
+
+Iterative method: 4645 iterations in 65.03 seconds (average 0.014000, setup 0.00)
+
+Value in the initial state: 1.0
+
+Time for model checking: 65.086 seconds.
+
+Result: 1.0 (value in the initial state)
+
+Wall time: 66.41s
+User time: 66.64s
+System time: 0.17s
+Memory: 109956KB

@@ -1,0 +1,19 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;second_queue.csl;c=2047;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P=? [ sm=c U<=0.2 sm<c ]
+Building DD model...
+Building DD model finished in 0 seconds
+Exploring model state space...
+Finished exploring the state space. Time required: 19 seconds
+Converting BDD graph to explicit...
+Converting BDD graph to explicit done in 0 seconds
+Finished model checking. Time required: 22 seconds
+Time spent in DD routines converting DD<->MDD: 0 seconds
+Total time spent in DD routines: 21 seconds
+P=? [ sm=c U<=0.2 sm<c ]: 0.9999999999999998
+Wall time: 24.38s
+User time: 37.98s
+System time: 1.13s
+Memory: 553260KB

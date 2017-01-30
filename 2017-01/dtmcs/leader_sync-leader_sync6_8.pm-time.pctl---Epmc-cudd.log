@@ -1,0 +1,11 @@
+~/prism-examples/models/;dtmcs;leader_sync;leader_sync6_8.pm;time.pctl;;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R{"num_rounds"}=? [ F "elected" ]
+Finished model checking. Time required: 0 seconds
+R{"num_rounds"}=? [ F "elected" ]: No solver available to handle property "R{"num_rounds"}=?[F (((s1) = (3)) ∧ ((s2) = (3)) ∧ ((s3) = (3)) ∧ ((s4) = (3)) ∧ ((s5) = (3)) ∧ ((s6) = (3)))]" for this model with the current settings
+Wall time: 7.21s
+User time: 17.95s
+System time: 1.22s
+Memory: 1336812KB

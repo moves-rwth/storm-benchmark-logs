@@ -1,0 +1,21 @@
+~/prism-examples/models/;dtmcs;crowds;crowds.pm;positive.pctl;CrowdSize=20,TotalRuns=3;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P=? [ F observe0>1  ]
+Building DD model...
+Building DD model finished in 0 seconds
+Exploring model state space...
+Finished exploring the state space. Time required: 0 seconds
+Converting BDD graph to explicit...
+Converting BDD graph to explicit done in 0 seconds
+Starting iteration...
+Done. Did 0 iterations in 0 seconds.
+Finished model checking. Time required: 5 seconds
+Time spent in DD routines converting DD<->MDD: 1 seconds
+Total time spent in DD routines: 4 seconds
+P=? [ F observe0>1  ]: 0.029713032437639557
+Wall time: 7.11s
+User time: 21.88s
+System time: 1.20s
+Memory: 676532KB

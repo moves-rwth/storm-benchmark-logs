@@ -1,0 +1,39 @@
+~/prism-examples/models/;ctmcs;polling;poll9.sm;station1_polled.csl;;;Storm-hybrid
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/ctmcs/polling/poll9.sm --prop ~/prism-examples/models/ctmcs/polling/station1_polled.csl -e hybrid --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+ WARN (Program.cpp:179): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 0.042s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (symbolic)
+States: 	6912 (30 nodes)
+Transitions: 	36864 (765 nodes)
+Reward Models:  none
+Variables: 	rows: 11 meta variables (14 DD variables), columns: 11 meta variables (14 DD variables)
+Labels: 	0
+-------------------------------------------------------------- 
+
+Model checking property P=? [true U<=20 ((s = 1) & (a = 0))] ...
+Result (initial states): 1
+Time for model checking: 0.904s.
+Wall time: 1.03s
+User time: 0.99s
+System time: 0.03s
+Memory: 37848KB

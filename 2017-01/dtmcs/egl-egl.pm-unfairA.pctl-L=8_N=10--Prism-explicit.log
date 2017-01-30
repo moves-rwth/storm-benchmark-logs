@@ -1,0 +1,48 @@
+~/prism-examples/models/;dtmcs;egl;egl.pm;unfairA.pctl;L=8,N=10;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 03:57:57 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/egl/egl.pm ~/prism-examples/models/dtmcs/egl/unfairA.pctl -const 'L=8,N=10' -ex
+
+Parsing model file "~/prism-examples/models/dtmcs/egl/egl.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/egl/unfairA.pctl"...
+
+1 property:
+(1) P=? [ F !"knowA"&"knowB" ]
+
+Type:        DTMC
+Modules:     counter partyA partyB 
+Variables:   b n phase party b0 b20 b1 b21 b2 b22 b3 b23 b4 b24 b5 b25 b6 b26 b7 b27 b8 b28 b9 b29 b10 b30 b11 b31 b12 b32 b13 b33 b14 b34 b15 b35 b16 b36 b17 b37 b18 b38 b19 b39 a0 a20 a1 a21 a2 a22 a3 a23 a4 a24 a5 a25 a6 a26 a7 a27 a8 a28 a9 a29 a10 a30 a11 a31 a12 a32 a13 a33 a14 a34 a15 a35 a16 a36 a17 a37 a18 a38 a19 a39 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F !"knowA"&"knowB" ]
+Model constants: N=10,L=8
+
+Building model...
+Model constants: N=10,L=8
+
+Computing reachable states... 61112 149615 219851 291470 376553 448346 505048 585141 663072 737310 815207 879306 953299 1026281 1112191 1213398 1305965 1421373 1514931 1616159 1714489 1817657 1910029 1997515 2098859 2190573 2275690 2380825 2470296 2549822 2630122 2713458 2797350 2883371 2959011 3053196 3145448 3239553 3333973 3429630 3527300 3618034 3708131 3805735 3901805 3985989 4070354 4154975 4252847 4352801 4433162 4517392 4599771 4679887 4761445 4843670 4933014 5026650 5108770 5193882 5222158 5320462 5419936 5507993 5598126 5681417 5757227 5851844 5935369 6012729 6106211 6181631 6259492 6338943 6434153 6527371 6620590 6713808 6807026 6899968 6972797 7050453 7128672 7205244 7268334 7360409 7361552 7454770 7544383 7627969 7705894 7778606 7846414 7909660 7968661 8023713 8075091 8122998 8167675 8209348 8248225 8284502 8318358 8349910 8379371 8406834 8432439 8456313 8478578 8499346 8518751 8536852 8553736 8569486 8584178 8597882 8610665 8622589 8633712 8644087 8653766 8662793 8671215 8679070 8686397 8693232 8699608 8705555 8711103 8716277 8721104 8725607 8729807 8733725 8737379 8740788 8743968 8746935 8749701 8752282 8754690 8756936 8759030 8760984 8762807 8764507 8766093 8767573 8768953 8770240 8771441 8772561 8773605 8774580 8775489 8776337 8777128 8777866 8778554 8779196 8779795Exception in thread "main" java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at parser.ast.Expression.evaluateBoolean(Expression.java:491)
+	at simulator.Updater.calculateUpdatesForModule(Updater.java:319)
+	at simulator.Updater.calculateTransitions(Updater.java:163)
+	at simulator.SimulatorEngine.getTransitionList(SimulatorEngine.java:929)
+	at simulator.SimulatorEngine.getNumChoices(SimulatorEngine.java:940)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:221)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:110)
+	at prism.Prism.doBuildModel(Prism.java:1889)
+	at prism.Prism.buildModelIfRequired(Prism.java:1850)
+	at prism.Prism.modelCheck(Prism.java:2739)
+	at prism.PrismCL.run(PrismCL.java:333)
+	at prism.PrismCL.main(PrismCL.java:2336)
+Command exited with non-zero status 1
+Wall time: 1305.58s
+User time: 8097.13s
+System time: 30.18s
+Memory: 8495412KB
+External error: 1

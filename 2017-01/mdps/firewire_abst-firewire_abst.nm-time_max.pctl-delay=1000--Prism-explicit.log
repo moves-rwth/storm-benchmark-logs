@@ -1,0 +1,60 @@
+~/prism-examples/models/;mdps;firewire_abst;firewire_abst.nm;time_max.pctl;delay=1000;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 13:54:03 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/firewire_abst/firewire_abst.nm ~/prism-examples/models/mdps/firewire_abst/time_max.pctl -const delay=1000 -ex
+
+Parsing model file "~/prism-examples/models/mdps/firewire_abst/firewire_abst.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/firewire_abst/time_max.pctl"...
+
+1 property:
+(1) R{"time"}max=? [ F "done" ]
+
+Type:        MDP
+Modules:     abstract_firewire 
+Variables:   x s 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time"}max=? [ F "done" ]
+Model constants: delay=1000
+
+Building model...
+Model constants: delay=1000
+
+Computing reachable states... 1436 states
+Reachable states exploration and model construction done in 0.47 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.542 seconds.
+
+Type:        MDP
+States:      1436 (1 initial)
+Transitions: 4069
+Choices:     3055
+Max/avg:     3/2.13
+Building reward structure...
+
+Starting expected reachability (max)...
+Starting Prob1 (min)...
+Prob1 (min) took 338 iterations and 0.141 seconds.
+target=1, inf=1099, rest=336
+Starting value iteration (max)...
+Value iteration (max) took 168 iterations and 0.049 seconds.
+Expected reachability took 0.192 seconds.
+
+Value in the initial state: Infinity
+
+Time for model checking: 0.213 seconds.
+
+Result: Infinity (value in the initial state)
+
+Wall time: 2.34s
+User time: 3.07s
+System time: 0.10s
+Memory: 106712KB

@@ -1,0 +1,69 @@
+~/prism-examples/models/;dtmcs;herman;herman13.pm;steps.pctl;;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 18:04:28 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/herman/herman13.pm ~/prism-examples/models/dtmcs/herman/steps.pctl -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/herman/herman13.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/herman/steps.pctl"...
+
+1 property:
+(1) R=? [ F "stable" ]
+
+Type:        DTMC
+Modules:     process1 process2 process3 process4 process5 process6 process7 process8 process9 process10 process11 process12 process13 
+Variables:   x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 x11 x12 x13 
+
+---------------------------------------------------------------------
+
+Model checking: R=? [ F "stable" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 1 iterations in 0.00 seconds (average 0.004000, setup 0.00)
+
+Time for model construction: 0.035 seconds.
+
+Type:        DTMC
+States:      8192 (8192 initial)
+Transitions: 1594324
+
+Transition matrix: 599 nodes (8 terminal), 1594324 minterms, vars: 13r/13c
+
+Prob0: 5 iterations in 0.00 seconds (average 0.000800, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 26, inf = 0, maybe = 8166
+
+Computing remaining rewards...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=13, nodes=892] [41.8 KB]
+Adding explicit sparse matrices... [levels=9, num=18, compact] [1.0 MB]
+Creating vector for diagonals... [dist=2, compact] [16.0 KB]
+Creating vector for RHS... [dist=2, compact] [16.0 KB]
+Allocating iteration vectors... [2 x 64.0 KB]
+TOTAL: [1.2 MB]
+
+Starting iterations...
+
+Jacobi: 188 iterations in 0.96 seconds (average 0.005021, setup 0.02)
+
+Range of values over initial states: [0.0,24.614986453061135]
+
+Time for model checking: 0.98 seconds.
+
+Result: [0.0,24.614986453061135] (range of values over initial states)
+
+Wall time: 2.27s
+User time: 2.57s
+System time: 0.14s
+Memory: 105820KB

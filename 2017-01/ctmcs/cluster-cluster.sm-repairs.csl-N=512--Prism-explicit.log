@@ -1,0 +1,51 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;repairs.csl;N=512;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 02:24:13 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/cluster/cluster.sm ~/prism-examples/models/ctmcs/cluster/repairs.csl -const N=512 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/cluster/cluster.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/cluster/repairs.csl"...
+
+1 property:
+(1) R{"num_repairs"}=? [ C<=20 ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: R{"num_repairs"}=? [ C<=20 ]
+Model constants: N=512
+
+Building model...
+Model constants: N=512
+
+Computing reachable states... 131265 325697 483221 667535 866870 1025807 1180419 1382009 1557909 1753729 1915836 2112301 2256806 2451780 2617530 2741594 2937072 3073259 3232964 3426590 3545451 3730641 3882442 4023615 4203177 4336161 4468727 4583015 4769908 4956873 5143781 5324281 5511083 5697797 5884423 6071005 6257484 6443890 6631955 6745044 6846869 7034916 7095748 7241147 7427207 7609930 7704100 7851897 8000976 8186481 8346822 8500653 8645077 8830594 8974756 9112954 9219493 9404158 9406208 9465876 states
+Reachable states exploration and model construction done in 283.189 secs.
+Sorting reachable states list...
+Exception in thread "main" java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at java.lang.Integer.valueOf(Integer.java:642)
+	at explicit.Distribution.add(Distribution.java:100)
+	at explicit.Distribution.<init>(Distribution.java:79)
+	at explicit.DTMCSimple.<init>(DTMCSimple.java:92)
+	at explicit.CTMCSimple.<init>(CTMCSimple.java:84)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:320)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:110)
+	at prism.Prism.doBuildModel(Prism.java:1889)
+	at prism.Prism.buildModelIfRequired(Prism.java:1850)
+	at prism.Prism.modelCheck(Prism.java:2739)
+	at prism.PrismCL.run(PrismCL.java:333)
+	at prism.PrismCL.main(PrismCL.java:2336)
+Command exited with non-zero status 1
+Wall time: 1396.95s
+User time: 9631.63s
+System time: 35.48s
+Memory: 8504692KB
+External error: 1

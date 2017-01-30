@@ -1,0 +1,11 @@
+~/prism-examples/models/;ctmcs;polling;poll14.sm;served.csl;;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R{"served"}=? [ C<=20 ]
+Finished model checking. Time required: 0 seconds
+R{"served"}=? [ C<=20 ]: No solver available to handle property "R{"served"}=?[C<=(20)]" for this model with the current settings
+Wall time: 1.93s
+User time: 7.15s
+System time: 0.69s
+Memory: 252548KB

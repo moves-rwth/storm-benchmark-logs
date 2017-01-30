@@ -1,0 +1,70 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;danger_time.csl;MAX_COUNT=2;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 02:45:07 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/danger_time.csl -const MAX_COUNT=2 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/danger_time.csl"...
+
+1 property:
+(1) R{"danger"}=? [ F "down" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: R{"danger"}=? [ F "down" ]
+Model constants: MAX_COUNT=2
+
+Building model...
+Model constants: MAX_COUNT=2
+
+Computing reachable states...
+
+Reachability (BFS): 15 iterations in 0.00 seconds (average 0.000267, setup 0.00)
+
+Time for model construction: 0.037 seconds.
+
+Type:        CTMC
+States:      3478 (1 initial)
+Transitions: 14639
+
+Rate matrix: 1144 nodes (9 terminal), 14639 minterms, vars: 14r/14c
+
+Diagonals vector: 551 nodes (69 terminal), 3478 minterms
+Embedded Markov chain: 9286 nodes (309 terminal), 14639 minterms
+
+Prob0: 2 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 2566, inf = 0, maybe = 912
+
+Computing remaining rewards...
+Engine: MTBDD
+
+Iteration matrix MTBDD... [nodes=5778] [112.9 Kb]
+Diagonals MTBDD... [nodes=83] [1.6 Kb]
+
+Starting iterations...
+
+Jacobi: 570 iterations in 1.62 seconds (average 0.002835, setup 0.00)
+
+Value in the initial state: 0.29317088355397347
+
+Time for model checking: 1.631 seconds.
+
+Result: 0.29317088355397347 (value in the initial state)
+
+Wall time: 2.94s
+User time: 3.33s
+System time: 0.12s
+Memory: 110408KB

@@ -1,0 +1,64 @@
+~/prism-examples/models/;ctmcs;mapk_cascade;mapk_cascade.sm;activated_T.csl;N=6;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 09:15:27 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm ~/prism-examples/models/ctmcs/mapk_cascade/activated_T.csl -const N=6 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/mapk_cascade/activated_T.csl"...
+
+1 property:
+(1) R{"activated"}=? [ I=20 ]
+
+Type:        CTMC
+Modules:     E1 E2 KPTASE KKPTASE MAPK MAPKK MAPKKK 
+Variables:   e1 e2 kptase kkptase k k_kkpp kp kp_kkpp kp_ptase kpp kpp_ptase kk kk_kkkp kkp kkp_kkkp kkp_ptase kkpp kkpp_ptase kkk kkk_e1 kkkp kkkp_e2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"activated"}=? [ I=20 ]
+Model constants: N=6
+
+Building model...
+Model constants: N=6
+
+Computing reachable states...
+
+Reachability (BFS): 64 iterations in 29.89 seconds (average 0.467062, setup 0.00)
+
+Time for model construction: 31.269 seconds.
+
+Type:        CTMC
+States:      1373026 (1 initial)
+Transitions: 15015264
+
+Rate matrix: 285106 nodes (25 terminal), 15015264 minterms, vars: 58r/58c
+
+Computing probabilities...
+Engine: MTBDD
+
+Number of non-absorbing states: 1373026 of 1373026 (100.0%)
+
+Computing diagonals MTBDD... [nodes=429381] [8386.3 Kb]
+Building iteration matrix MTBDD... [nodes=752896] [14705.0 Kb]
+
+Uniformisation: q.t = 2754.000000 x 20.000000 = 55080.000000
+Fox-Glynn: left = 53434, right = 57073
+
+Starting iterations...
+Iteration 1 (of 57073): 6.66 sec so far
+Iteration 2 (of 57073): 26.81 sec so far
+Iteration 3 (of 57073): 81.02 sec so far
+Iteration 4 (of 57073): 285.07 sec so far
+Iteration 5 (of 57073): 669.66 sec so far
+Iteration 6 (of 57073): 1213.68 sec so far
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

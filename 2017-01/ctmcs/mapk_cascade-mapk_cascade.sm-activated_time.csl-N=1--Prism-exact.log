@@ -1,0 +1,41 @@
+~/prism-examples/models/;ctmcs;mapk_cascade;mapk_cascade.sm;activated_time.csl;N=1;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 08:34:13 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm ~/prism-examples/models/ctmcs/mapk_cascade/activated_time.csl -const N=1 -exact -politer
+
+Parsing model file "~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/mapk_cascade/activated_time.csl"...
+
+1 property:
+(1) R{"time"}=? [ F kpp=N ]
+
+Type:        CTMC
+Modules:     E1 E2 KPTASE KKPTASE MAPK MAPKK MAPKKK 
+Variables:   e1 e2 kptase kkptase k k_kkpp kp kp_kkpp kp_ptase kpp kpp_ptase kk kk_kkkp kkp kkp_kkkp kkp_ptase kkpp kkpp_ptase kkk kkk_e1 kkkp kkkp_e2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time"}=? [ F kpp=N ]
+Model constants: N=1
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 0.62 secs.
+
+Time for model construction: 0.629 seconds.
+Building reward structure...
+
+Time for model checking: 8.454 seconds.
+
+Result (expected time): 3914582430427568423218267765012785245017765784290219366306020212248124142524832173701/59141768166795548314461317389304859636300010464634225134555497637721643167764049800
+Wall time: 10.51s
+User time: 18.54s
+System time: 3.52s
+Memory: 602368KB

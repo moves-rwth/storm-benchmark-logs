@@ -1,0 +1,39 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;qos1.csl;N=16;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 22:23:13 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/cluster/cluster.sm ~/prism-examples/models/ctmcs/cluster/qos1.csl -const N=16 -exact -politer
+
+Parsing model file "~/prism-examples/models/ctmcs/cluster/cluster.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/cluster/qos1.csl"...
+
+1 property:
+(1) P=? [ F<=20 !"minimum" ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F<=20 !"minimum" ]
+Model constants: N=16
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 6.84 secs.
+
+Time for model construction: 6.846 seconds.
+
+Error: Bounded until operator not supported by parametric engine.
+
+Wall time: 10.14s
+User time: 20.28s
+System time: 2.34s
+Memory: 646684KB

@@ -1,0 +1,32 @@
+~/prism-examples/models/;mdps;wlan;wlan3.nm;cost_max.pctl;COL=0;;Storm-hybrid
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/wlan/wlan3.nm --prop ~/prism-examples/models/mdps/wlan/cost_max.pctl -const COL=0 -e hybrid --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+ WARN (DdPrismModelBuilder.cpp:1169): The reward model does not assign any non-zero rewards.
+Time for model construction: 0.215s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	96302 (2198 nodes)
+Transitions: 	204576 (11092 nodes)
+Choices: 	123730
+Reward Models:  cost
+Variables: 	rows: 13 meta variables (39 DD variables), columns: 13 meta variables (39 DD variables), nondeterminism: 7 meta variables (7 DD variables)
+Labels: 	0
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"cost"}max=? [F ((s1 = 12) & (s2 = 12))] ...
+Result (initial states): 227297.1569
+Time for model checking: 4.376s.
+Wall time: 4.69s
+User time: 4.60s
+System time: 0.08s
+Memory: 118160KB

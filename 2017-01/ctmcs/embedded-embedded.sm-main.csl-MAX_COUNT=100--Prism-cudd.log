@@ -1,0 +1,93 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;main.csl;MAX_COUNT=100;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 03:59:02 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/main.csl -const MAX_COUNT=100 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/main.csl"...
+
+1 property:
+(1) P=? [ !"down" U "fail_main" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !"down" U "fail_main" ]
+Model constants: MAX_COUNT=100
+
+Building model...
+Model constants: MAX_COUNT=100
+
+Computing reachable states...
+
+Reachability (BFS): 113 iterations in 0.09 seconds (average 0.000814, setup 0.00)
+
+Time for model construction: 0.144 seconds.
+
+Type:        CTMC
+States:      86288 (1 initial)
+Transitions: 364205
+
+Rate matrix: 3023 nodes (9 terminal), 364205 minterms, vars: 19r/19c
+
+Diagonals vector: 1207 nodes (69 terminal), 86288 minterms
+Embedded Markov chain: 23450 nodes (309 terminal), 364205 minterms
+
+Prob0: 2 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Prob1: 104 iterations in 0.03 seconds (average 0.000269, setup 0.00)
+
+yes = 47275, no = 9485, maybe = 29528
+
+Computing remaining probabilities...
+Engine: MTBDD
+
+Iteration matrix MTBDD... [nodes=13332] [260.4 Kb]
+Diagonals MTBDD... [nodes=158] [3.1 Kb]
+
+Starting iterations...
+Iteration 72: 5.12 sec so far
+Iteration 102: 10.22 sec so far
+Iteration 129: 15.30 sec so far
+Iteration 159: 20.34 sec so far
+Iteration 189: 25.38 sec so far
+Iteration 219: 30.46 sec so far
+Iteration 249: 35.52 sec so far
+Iteration 272: 40.54 sec so far
+Iteration 293: 45.65 sec so far
+Iteration 314: 50.79 sec so far
+Iteration 335: 55.94 sec so far
+Iteration 356: 61.09 sec so far
+Iteration 377: 66.25 sec so far
+Iteration 398: 71.31 sec so far
+Iteration 419: 76.48 sec so far
+Iteration 444: 81.64 sec so far
+Iteration 468: 86.74 sec so far
+Iteration 492: 91.82 sec so far
+Iteration 517: 96.94 sec so far
+Iteration 541: 102.00 sec so far
+Iteration 565: 107.33 sec so far
+Iteration 587: 112.62 sec so far
+Iteration 608: 117.79 sec so far
+
+Jacobi: 624 iterations in 121.56 seconds (average 0.194795, setup 0.01)
+
+Value in the initial state: 0.05457857320354115
+
+Time for model checking: 121.708 seconds.
+
+Result: 0.05457857320354115 (value in the initial state)
+
+Wall time: 123.21s
+User time: 123.45s
+System time: 0.25s
+Memory: 134864KB

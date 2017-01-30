@@ -1,0 +1,41 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;customers.csl;c=5;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 12:28:13 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/tandem/tandem.sm ~/prism-examples/models/ctmcs/tandem/customers.csl -const c=5 -exact -politer
+
+Parsing model file "~/prism-examples/models/ctmcs/tandem/tandem.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/tandem/customers.csl"...
+
+1 property:
+(1) R{"customers"}=? [ S ]
+
+Type:        CTMC
+Modules:     serverC serverM 
+Variables:   sc ph sm 
+
+---------------------------------------------------------------------
+
+Model checking: R{"customers"}=? [ S ]
+Model constants: c=5
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 0.389 secs.
+
+Time for model construction: 0.391 seconds.
+Building reward structure...
+
+Time for model checking: 8.239 seconds.
+
+Result (expected customers): 16557934983059838031215455023655274836602871190669283785615964212/2915514390064647008533483983529316230817441799285053612509393093
+Wall time: 10.02s
+User time: 15.90s
+System time: 4.31s
+Memory: 630884KB

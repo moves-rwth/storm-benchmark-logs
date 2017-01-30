@@ -1,0 +1,72 @@
+~/prism-examples/models/;ctmcs;polling;poll3.sm;s1_before_s2.csl;;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 21:03:14 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/polling/poll3.sm ~/prism-examples/models/ctmcs/polling/s1_before_s2.csl -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/polling/poll3.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/polling/s1_before_s2.csl"...
+
+1 property:
+(1) P=? [ !(s=2&a=1) U (s=1&a=1) ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 
+Variables:   s a s1 s2 s3 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !(s=2&a=1) U (s=1&a=1) ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 7 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Time for model construction: 0.026 seconds.
+
+Type:        CTMC
+States:      36 (1 initial)
+Transitions: 84
+
+Rate matrix: 112 nodes (4 terminal), 84 minterms, vars: 6r/6c
+
+Diagonals vector: 33 nodes (8 terminal), 36 minterms
+Embedded Markov chain: 176 nodes (12 terminal), 84 minterms
+
+Prob0: 6 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Prob1: 5 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+yes = 14, no = 8, maybe = 14
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=6, nodes=114] [5.3 KB]
+Adding explicit sparse matrices... [levels=6, num=1, compact] [0.3 KB]
+Creating vector for diagonals... [dist=1, compact] [0.1 KB]
+Creating vector for RHS... [dist=2, compact] [0.1 KB]
+Allocating iteration vectors... [2 x 0.3 KB]
+TOTAL: [6.3 KB]
+
+Starting iterations...
+
+Jacobi: 2090 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Value in the initial state: 0.5213273456658089
+
+Time for model checking: 0.009 seconds.
+
+Result: 0.5213273456658089 (value in the initial state)
+
+Wall time: 2.00s
+User time: 1.54s
+System time: 0.14s
+Memory: 105280KB

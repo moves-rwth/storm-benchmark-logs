@@ -1,0 +1,80 @@
+~/prism-examples/models/;mdps;csma;csma4_4.nm;all_before_min.pctl;;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 17:59:04 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/csma/csma4_4.nm ~/prism-examples/models/mdps/csma/all_before_min.pctl -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/csma/csma4_4.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/csma/all_before_min.pctl"...
+
+1 property:
+(1) Pmin=? [ !"collision_max_backoff" U "all_delivered" ]
+
+Type:        MDP
+Modules:     bus station1 station2 station3 station4 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 s3 x3 bc3 cd3 s4 x4 bc4 cd4 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ !"collision_max_backoff" U "all_delivered" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 179 iterations in 35.17 seconds (average 0.196492, setup 0.00)
+
+Time for model construction: 44.534 seconds.
+
+Type:        MDP
+States:      133301572 (1 initial)
+Transitions: 258474290
+Choices:     135347434
+
+Transition matrix: 553488 nodes (6 terminal), 258474290 minterms, vars: 66r/66c/17nd
+
+Prob0E: 177 iterations in 99.20 seconds (average 0.560475, setup 0.00)
+
+Prob1A: 43 iterations in 150.24 seconds (average 3.493953, setup 0.00)
+
+yes = 8940841, no = 3327996, maybe = 121032735
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrices... [nm=18, levels=66, nodes=2179923] [99.8 MB]
+Adding sparse bits... [levels=8-48, num=29145, compact=18/18] [14.5 MB]
+Creating vector for yes... [dist=2, compact] [254.3 MB]
+Allocating iteration vectors... [3 x 1017.0 MB]
+TOTAL: [3.3 GB]
+
+Starting iterations...
+Iteration 1: max relative diff=1.000000, 19.07 sec so far
+Iteration 2: max relative diff=1.000000, 38.06 sec so far
+Iteration 3: max relative diff=1.000000, 57.09 sec so far
+Iteration 4: max relative diff=1.000000, 76.10 sec so far
+Iteration 5: max relative diff=1.000000, 96.08 sec so far
+Iteration 6: max relative diff=1.000000, 130.94 sec so far
+Iteration 7: max relative diff=1.000000, 165.54 sec so far
+Iteration 8: max relative diff=1.000000, 200.05 sec so far
+Iteration 9: max relative diff=1.000000, 234.48 sec so far
+Iteration 10: max relative diff=1.000000, 268.51 sec so far
+Iteration 11: max relative diff=1.000000, 302.55 sec so far
+Iteration 12: max relative diff=1.000000, 336.64 sec so far
+Iteration 13: max relative diff=1.000000, 362.68 sec so far
+Iteration 14: max relative diff=1.000000, 387.84 sec so far
+Iteration 15: max relative diff=1.000000, 413.10 sec so far
+Iteration 16: max relative diff=1.000000, 438.40 sec so far
+Iteration 17: max relative diff=1.000000, 463.62 sec so far
+Iteration 18: max relative diff=1.000000, 498.16 sec so far
+Iteration 19: max relative diff=1.000000, 532.85 sec so far
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

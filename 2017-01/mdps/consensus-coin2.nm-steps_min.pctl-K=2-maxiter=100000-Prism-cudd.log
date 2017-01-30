@@ -1,0 +1,74 @@
+~/prism-examples/models/;mdps;consensus;coin2.nm;steps_min.pctl;K=2;maxiter=100000;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 06:39:01 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/consensus/coin2.nm ~/prism-examples/models/mdps/consensus/steps_min.pctl -const K=2 -m -cuddmaxmem 4096m -maxiters 100000
+
+Parsing model file "~/prism-examples/models/mdps/consensus/coin2.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/consensus/steps_min.pctl"...
+
+1 property:
+(1) R{"steps"}min=? [ F "finished" ]
+
+Type:        MDP
+Modules:     process1 process2 
+Variables:   counter pc1 coin1 pc2 coin2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"steps"}min=? [ F "finished" ]
+Model constants: K=2
+
+Building model...
+Model constants: K=2
+
+Computing reachable states...
+
+Reachability (BFS): 37 iterations in 0.00 seconds (average 0.000108, setup 0.00)
+
+Time for model construction: 0.033 seconds.
+
+Type:        MDP
+States:      272 (1 initial)
+Transitions: 492
+Choices:     400
+
+Transition matrix: 365 nodes (3 terminal), 492 minterms, vars: 10r/10c/2nd
+
+Prob0A: 17 iterations in 0.00 seconds (average 0.000235, setup 0.00)
+
+Prob1E: 18 iterations in 0.00 seconds (average 0.000222, setup 0.00)
+
+Warning: PRISM hasn't checked for zero-reward loops.
+Your minimum rewards may be too low...
+
+goal = 8, inf = 0, maybe = 264
+
+Computing remaining rewards...
+Engine: MTBDD
+
+Building iteration matrix MTBDD... [nodes=310] [6.1 Kb]
+
+Starting iterations...
+
+Iterative method: 390 iterations in 0.51 seconds (average 0.001303, setup 0.00)
+
+Value in the initial state: 47.998324237033074
+
+Time for model checking: 0.52 seconds.
+
+Result: 47.998324237033074 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 2.00s
+User time: 2.08s
+System time: 0.11s
+Memory: 106292KB

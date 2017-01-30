@@ -1,0 +1,39 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;second_queue.csl;c=1023;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 13:23:37 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/tandem/tandem.sm ~/prism-examples/models/ctmcs/tandem/second_queue.csl -const c=1023 -exact -politer
+
+Parsing model file "~/prism-examples/models/ctmcs/tandem/tandem.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/tandem/second_queue.csl"...
+
+1 property:
+(1) P=? [ sm=c U<=0.2 sm<c ]
+
+Type:        CTMC
+Modules:     serverC serverM 
+Variables:   sc ph sm 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ sm=c U<=0.2 sm<c ]
+Model constants: c=1023
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 573.567 secs.
+
+Time for model construction: 573.569 seconds.
+
+Error: Bounded until operator not supported by parametric engine.
+
+Wall time: 630.48s
+User time: 775.50s
+System time: 287.66s
+Memory: 3385012KB

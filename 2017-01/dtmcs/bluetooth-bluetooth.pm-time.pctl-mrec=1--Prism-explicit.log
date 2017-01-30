@@ -1,0 +1,49 @@
+~/prism-examples/models/;dtmcs;bluetooth;bluetooth.pm;time.pctl;mrec=1;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 00:00:17 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/bluetooth/bluetooth.pm ~/prism-examples/models/dtmcs/bluetooth/time.pctl -const mrec=1 -ex
+
+Parsing model file "~/prism-examples/models/dtmcs/bluetooth/bluetooth.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/bluetooth/time.pctl"...
+
+1 property:
+(1) R=? [ F "complete" ]
+
+Type:        DTMC
+Modules:     receiver1 frequency1 sender_frequency replies 
+Variables:   y1 receiver freq1 train1 z1 f1 t1 send freq train c rep rec 
+
+---------------------------------------------------------------------
+
+Model checking: R=? [ F "complete" ]
+Model constants: mrec=1
+
+Building model...
+Model constants: mrec=1
+
+Computing reachable states...Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.util.Arrays.copyOf(Arrays.java:2219)
+	at java.util.ArrayList.grow(ArrayList.java:242)
+	at java.util.ArrayList.ensureExplicitCapacity(ArrayList.java:216)
+	at java.util.ArrayList.ensureCapacityInternal(ArrayList.java:208)
+	at java.util.ArrayList.add(ArrayList.java:440)
+	at parser.VarList.getAllStates(VarList.java:453)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:196)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:110)
+	at prism.Prism.doBuildModel(Prism.java:1889)
+	at prism.Prism.buildModelIfRequired(Prism.java:1850)
+	at prism.Prism.modelCheck(Prism.java:2739)
+	at prism.PrismCL.run(PrismCL.java:333)
+	at prism.PrismCL.main(PrismCL.java:2336)
+Command exited with non-zero status 1
+Wall time: 192.28s
+User time: 1344.73s
+System time: 11.62s
+Memory: 7997292KB
+External error: 1

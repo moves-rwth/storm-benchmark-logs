@@ -1,0 +1,73 @@
+~/prism-examples/models/;dtmcs;brp;brp.pm;p2.pctl;MAX=20,N=8192;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 01:01:09 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/brp/brp.pm ~/prism-examples/models/dtmcs/brp/p2.pctl -const 'MAX=20,N=8192' -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/brp/brp.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/brp/p2.pctl"...
+
+1 property:
+(1) P=? [ F s=5&srep=2 ]
+
+Type:        DTMC
+Modules:     sender receiver checker channelK channelL 
+Variables:   s srep nrtr i bs s_ab fs ls r rrep fr lr br r_ab recv T k l 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F s=5&srep=2 ]
+Model constants: N=8192,MAX=20
+
+Building model...
+Model constants: N=8192,MAX=20
+
+Computing reachable states...
+
+Reachability (BFS): 49197 iterations in 73.28 seconds (average 0.001489, setup 0.00)
+
+Time for model construction: 181.265 seconds.
+
+Warning: Deadlocks detected and fixed in 16405 states
+
+Type:        DTMC
+States:      2261015 (1 initial)
+Transitions: 3096579
+
+Transition matrix: 3165 nodes (6 terminal), 3096579 minterms, vars: 44r/44c
+
+Prob0: 49192 iterations in 40.78 seconds (average 0.000829, setup 0.00)
+
+Prob1: 45 iterations in 0.05 seconds (average 0.001067, setup 0.00)
+
+yes = 7, no = 90168, maybe = 2170840
+
+Computing remaining probabilities...
+Engine: MTBDD
+
+Iteration matrix MTBDD... [nodes=2208] [43.1 Kb]
+Diagonals MTBDD... [nodes=764] [14.9 Kb]
+
+Starting iterations...
+
+Jacobi: 32 iterations in 0.03 seconds (average 0.000750, setup 0.00)
+
+Value in the initial state: 0.0
+
+Time for model checking: 40.824 seconds.
+
+Result: 0.0 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 223.38s
+User time: 223.93s
+System time: 0.26s
+Memory: 147144KB

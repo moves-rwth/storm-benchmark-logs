@@ -1,0 +1,31 @@
+~/prism-examples/models/;mdps;firewire_impl_dl;firewire_impl_dl.nm;deadline.pctl;deadline=200,delay=3;;Storm-hybrid
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/firewire_impl_dl/firewire_impl_dl.nm --prop ~/prism-examples/models/mdps/firewire_impl_dl/deadline.pctl -const deadline=200,delay=3 -e hybrid --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 1.630s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	80806 (15854 nodes)
+Transitions: 	112568 (56578 nodes)
+Choices: 	110362
+Reward Models:  none
+Variables: 	rows: 11 meta variables (64 DD variables), columns: 11 meta variables (64 DD variables), nondeterminism: 15 meta variables (15 DD variables)
+Labels: 	0
+-------------------------------------------------------------- 
+
+Model checking property Pmin=? [F (((s1 = 8) & (s2 = 7)) | ((s1 = 7) & (s2 = 8)))] ...
+Result (initial states): 0.5
+Time for model checking: 0.570s.
+Wall time: 2.43s
+User time: 2.34s
+System time: 0.08s
+Memory: 97944KB

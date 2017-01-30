@@ -1,0 +1,11 @@
+~/prism-examples/models/;mdps;firewire;firewire.nm;time_sending.pctl;delay=36;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R{"time_sending"}max=? [ F "done" ]
+Finished model checking. Time required: 0 seconds
+R{"time_sending"}max=? [ F "done" ]: No solver available to handle property "R{"time_sending"}max=?[F ((((s1) = (8)) ∧ ((s2) = (7))) ∨ (((s1) = (7)) ∧ ((s2) = (8))))]" for this model with the current settings
+Wall time: 2.11s
+User time: 7.95s
+System time: 0.65s
+Memory: 272592KB

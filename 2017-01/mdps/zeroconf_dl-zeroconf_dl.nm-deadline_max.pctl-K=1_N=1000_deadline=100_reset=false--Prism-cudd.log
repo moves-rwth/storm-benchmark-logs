@@ -1,0 +1,78 @@
+~/prism-examples/models/;mdps;zeroconf_dl;zeroconf_dl.nm;deadline_max.pctl;K=1,N=1000,deadline=100,reset=false;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 21:25:01 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/zeroconf_dl/zeroconf_dl.nm ~/prism-examples/models/mdps/zeroconf_dl/deadline_max.pctl -const 'K=1,N=1000,deadline=100,reset=false' -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/zeroconf_dl/zeroconf_dl.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/zeroconf_dl/deadline_max.pctl"...
+
+1 property:
+(1) Pmax=? [ !(l=4&ip=2) U t>=deadline ]
+
+Type:        MDP
+Modules:     environment host0 timer 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l t 
+
+---------------------------------------------------------------------
+
+Model checking: Pmax=? [ !(l=4&ip=2) U t>=deadline ]
+Model constants: reset=false,deadline=100,N=1000,K=1
+
+Building model...
+Model constants: reset=false,deadline=100,N=1000,K=1
+
+Computing reachable states...
+
+Reachability (BFS): 531 iterations in 75.46 seconds (average 0.142117, setup 0.00)
+
+Time for model construction: 77.453 seconds.
+
+Warning: Deadlocks detected and fixed in 166 states
+
+Type:        MDP
+States:      1764491 (1 initial)
+Transitions: 4119555
+Choices:     3242509
+
+Transition matrix: 236101 nodes (6 terminal), 4119555 minterms, vars: 62r/62c/8nd
+
+Prob0A: 85 iterations in 10.51 seconds (average 0.123624, setup 0.00)
+
+Prob1E: 2241 iterations in 423.24 seconds (average 0.188860, setup 0.00)
+
+yes = 935115, no = 431264, maybe = 398112
+
+Computing remaining probabilities...
+Engine: MTBDD
+
+Building iteration matrix MTBDD... [nodes=115164] [2249.3 Kb]
+
+Starting iterations...
+Iteration 18: sol=67309 nodes, 5.14 sec so far
+Iteration 30: sol=72296 nodes, 10.84 sec so far
+Iteration 45: sol=78388 nodes, 15.88 sec so far
+Iteration 58: sol=76467 nodes, 21.11 sec so far
+Iteration 76: sol=77590 nodes, 27.09 sec so far
+
+Iterative method: 85 iterations in 30.31 seconds (average 0.344941, setup 0.99)
+
+Value in the initial state: 0.005397647283054
+
+Time for model checking: 464.761 seconds.
+
+Result: 0.005397647283054 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 543.79s
+User time: 543.57s
+System time: 0.78s
+Memory: 377648KB

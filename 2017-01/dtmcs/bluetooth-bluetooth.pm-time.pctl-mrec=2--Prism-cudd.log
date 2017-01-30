@@ -1,0 +1,37 @@
+~/prism-examples/models/;dtmcs;bluetooth;bluetooth.pm;time.pctl;mrec=2;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 00:00:17 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/bluetooth/bluetooth.pm ~/prism-examples/models/dtmcs/bluetooth/time.pctl -const mrec=2 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/bluetooth/bluetooth.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/bluetooth/time.pctl"...
+
+1 property:
+(1) R=? [ F "complete" ]
+
+Type:        DTMC
+Modules:     receiver1 frequency1 sender_frequency replies 
+Variables:   y1 receiver freq1 train1 z1 f1 t1 send freq train c rep rec 
+
+---------------------------------------------------------------------
+
+Model checking: R=? [ F "complete" ]
+Model constants: mrec=2
+
+Building model...
+Model constants: mrec=2
+
+Computing reachable states...
+
+Reachability (BFS): 343 iterations in 266.21 seconds (average 0.776128, setup 0.00)
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

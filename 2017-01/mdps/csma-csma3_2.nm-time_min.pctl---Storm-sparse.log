@@ -1,0 +1,35 @@
+~/prism-examples/models/;mdps;csma;csma3_2.nm;time_min.pctl;;;Storm-sparse
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/csma/csma3_2.nm --prop ~/prism-examples/models/mdps/csma/time_min.pctl -e sparse -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.784s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	36850
+Transitions: 	55862
+Choices: 	38456
+Reward Models:  time
+Labels: 	3
+   * deadlock -> 0 state(s)
+   * init -> 1 state(s)
+   * all_delivered -> 7 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"time"}min=? [F "all_delivered"] ...
+ WARN (SparseMdpPrctlHelper.cpp:289): Results of reward computation may be too low, because of zero-reward loops.
+Result (initial states): 93.62408924
+Time for model checking: 0.156s.
+Wall time: 1.02s
+User time: 0.92s
+System time: 0.10s
+Memory: 221576KB

@@ -1,0 +1,69 @@
+~/prism-examples/models/;dtmcs;herman;herman3.pm;steps.pctl;;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 18:04:24 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/herman/herman3.pm ~/prism-examples/models/dtmcs/herman/steps.pctl -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/herman/herman3.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/herman/steps.pctl"...
+
+1 property:
+(1) R=? [ F "stable" ]
+
+Type:        DTMC
+Modules:     process1 process2 process3 
+Variables:   x1 x2 x3 
+
+---------------------------------------------------------------------
+
+Model checking: R=? [ F "stable" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Time for model construction: 0.02 seconds.
+
+Type:        DTMC
+States:      8 (8 initial)
+Transitions: 28
+
+Transition matrix: 24 nodes (3 terminal), 28 minterms, vars: 3r/3c
+
+Prob0: 2 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 6, inf = 0, maybe = 2
+
+Computing remaining rewards...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=3, nodes=20] [0.9 KB]
+Adding explicit sparse matrices... [levels=3, num=1, compact] [0.1 KB]
+Creating vector for diagonals... [dist=2, compact] [0.0 KB]
+Creating vector for RHS... [dist=2, compact] [0.0 KB]
+Allocating iteration vectors... [2 x 0.1 KB]
+TOTAL: [1.2 KB]
+
+Starting iterations...
+
+Jacobi: 8 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Range of values over initial states: [0.0,1.3333332755111582]
+
+Time for model checking: 0.004 seconds.
+
+Result: [0.0,1.3333332755111582] (range of values over initial states)
+
+Wall time: 2.03s
+User time: 1.54s
+System time: 0.14s
+Memory: 105320KB

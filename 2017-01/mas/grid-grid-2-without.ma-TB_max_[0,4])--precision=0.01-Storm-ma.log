@@ -1,0 +1,37 @@
+~/MA_experiments;mas;grid;grid-2-without.ma;TB_max_[0,4]);;precision=0.01;Storm-ma
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --explicit ~/MA_experiments/mas/grid/grid-2-without.tra ~/MA_experiments/mas/grid/grid-2-without.lab --prop Pmax=? [ F[0,4] "goal" ] --precision 0.01 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.012s.
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	2508
+Transitions: 	4608
+Choices: 	3874
+Markovian St.: 	461
+Max. Rate.: 	31
+Reward Models:  (default)
+Labels: 	2
+   * goal -> 1398 state(s)
+   * init -> 1 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property Pmax=? [true U[0, 4] "goal"] ...
+Result (initial states): 0.9816811526
+Time for model checking: 54.823s.
+Wall time: 54.89s
+User time: 54.87s
+System time: 0.00s
+Memory: 23952KB

@@ -1,0 +1,15 @@
+~/prism-examples/models/;dtmcs;nand;nand.pm;reliable.pctl;K=1,N=20;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P=? [ F s=4 & z/N<0.1 ]
+Starting to build model...
+Building model done. 78,332 states. Time for model exploration: 0 seconds.
+Starting iteration...
+Done. Did 0 iterations in 0 seconds.
+Finished model checking. Time required: 1 seconds
+P=? [ F s=4 & z/N<0.1 ]: 0.28641904638485005
+Wall time: 3.82s
+User time: 12.65s
+System time: 0.82s
+Memory: 310604KB

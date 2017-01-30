@@ -1,0 +1,37 @@
+~/MA_experiments;mas;grid;grid-3-with.ma;TB_min_[0,3]);;precision=0.01;Storm-ma
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --explicit ~/MA_experiments/mas/grid/grid-3-with.tra ~/MA_experiments/mas/grid/grid-3-with.lab --prop Pmin=? [ F[0,3] "goal" ] --precision 0.01 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.027s.
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	7201
+Transitions: 	15101
+Choices: 	11514
+Markovian St.: 	1837
+Max. Rate.: 	31
+Reward Models:  (default)
+Labels: 	2
+   * goal -> 3613 state(s)
+   * init -> 1 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property Pmin=? [true U[0, 3] "goal"] ...
+Result (initial states): 0.1758300242
+Time for model checking: 106.780s.
+Wall time: 106.86s
+User time: 106.82s
+System time: 0.01s
+Memory: 23688KB

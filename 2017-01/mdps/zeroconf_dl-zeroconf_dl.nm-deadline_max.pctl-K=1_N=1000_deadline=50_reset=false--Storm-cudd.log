@@ -1,0 +1,31 @@
+~/prism-examples/models/;mdps;zeroconf_dl;zeroconf_dl.nm;deadline_max.pctl;K=1,N=1000,deadline=50,reset=false;;Storm-cudd
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/zeroconf_dl/zeroconf_dl.nm --prop ~/prism-examples/models/mdps/zeroconf_dl/deadline_max.pctl -const K=1,N=1000,deadline=50,reset=false -e dd --ddlib cudd --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 10.510s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	381236 (17917 nodes)
+Transitions: 	865132 (125067 nodes)
+Choices: 	678579
+Reward Models:  none
+Variables: 	rows: 23 meta variables (61 DD variables), columns: 23 meta variables (61 DD variables), nondeterminism: 8 meta variables (8 DD variables)
+Labels: 	0
+-------------------------------------------------------------- 
+
+Model checking property Pmax=? [!(((l = 4) & (ip = 2))) U (t >= 50)] ...
+Result (initial states): 0.005397646461
+Time for model checking: 35.924s.
+Wall time: 46.86s
+User time: 46.60s
+System time: 0.20s
+Memory: 256092KB

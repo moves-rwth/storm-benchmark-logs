@@ -1,0 +1,68 @@
+~/prism-examples/models/;ctmcs;polling;poll3.sm;s1.csl;;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 09:59:28 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/polling/poll3.sm ~/prism-examples/models/ctmcs/polling/s1.csl -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/polling/poll3.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/polling/s1.csl"...
+
+1 property:
+(1) S=? [ s1=1&!(s=1&a=1) ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 
+Variables:   s a s1 s2 s3 
+
+---------------------------------------------------------------------
+
+Model checking: S=? [ s1=1&!(s=1&a=1) ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 7 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Time for model construction: 0.027 seconds.
+
+Type:        CTMC
+States:      36 (1 initial)
+Transitions: 84
+
+Rate matrix: 112 nodes (4 terminal), 84 minterms, vars: 6r/6c
+
+SCCs: 1, BSCCs: 1, non-BSCC states: 0
+BSCC sizes: 1:36
+
+Computing steady state probabilities for BSCC 1
+
+Computing probabilities...
+Engine: MTBDD
+
+Iteration matrix MTBDD... [nodes=204] [4.0 Kb]
+Diagonals MTBDD... [nodes=33] [0.6 Kb]
+
+Starting iterations...
+
+Jacobi: 89 iterations in 0.02 seconds (average 0.000270, setup 0.00)
+
+BSCC 1 probability: 0.13080220671363768
+
+All states are in BSCCs (so no reachability probabilities computed)
+
+Value in the initial state: 0.13080220671363768
+
+Time for model checking: 0.031 seconds.
+
+Result: 0.13080220671363768 (value in the initial state)
+
+Wall time: 2.00s
+User time: 1.65s
+System time: 0.12s
+Memory: 105260KB

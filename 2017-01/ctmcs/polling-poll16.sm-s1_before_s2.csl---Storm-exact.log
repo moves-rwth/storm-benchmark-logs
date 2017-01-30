@@ -1,0 +1,45 @@
+~/prism-examples/models/;ctmcs;polling;poll16.sm;s1_before_s2.csl;;;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/ctmcs/polling/poll16.sm --prop ~/prism-examples/models/ctmcs/polling/s1_before_s2.csl --exact --minmax:method pi -pc 
+Current working directory: ~/ma_scripts/scripts
+
+ WARN (Program.cpp:179): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 97.006s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	1572864
+Transitions: 	13647872
+Reward Models:  none
+Labels: 	4
+   * init -> 1 state(s)
+   * ((s = 2) & (a = 1)) -> 32768 state(s)
+   * deadlock -> 0 state(s)
+   * ((s = 1) & (a = 1)) -> 32768 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property P=? [!(((s = 2) & (a = 1))) U ((s = 1) & (a = 1))] ...
+ERROR (storm.cpp:42): An unexpected exception occurred and caused Storm to terminate. The message of this exception is: std::bad_alloc
+Command exited with non-zero status 2
+Wall time: 867.24s
+User time: 860.94s
+System time: 5.50s
+Memory: 7315536KB
+External error: 2

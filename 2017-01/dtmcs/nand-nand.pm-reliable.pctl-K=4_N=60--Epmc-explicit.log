@@ -1,0 +1,35 @@
+~/prism-examples/models/;dtmcs;nand;nand.pm;reliable.pctl;K=4,N=60;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P=? [ F s=4 & z/N<0.1 ]
+Starting to build model...
+Current number of states: 961,695; states/second: 192,336
+Current number of states: 2,011,718; states/second: 210,005
+Current number of states: 2,790,412; states/second: 155,739
+Current number of states: 4,194,303; states/second: 280,779
+Current number of states: 4,662,176; states/second: 93,572
+Current number of states: 5,579,554; states/second: 183,474
+Current number of states: 6,696,272; states/second: 223,344
+Current number of states: 8,277,599; states/second: 316,265
+Current number of states: 8,388,608; states/second: 22,202
+Current number of states: 9,210,692; states/second: 164,416
+Current number of states: 10,609,373; states/second: 279,737
+Current number of states: 10,849,398; states/second: 48,004
+Current number of states: 12,331,066; states/second: 296,333
+Current number of states: 13,350,248; states/second: 203,836
+Current number of states: 14,885,953; states/second: 307,141
+Current number of states: 16,428,487; states/second: 308,506
+Current number of states: 16,777,216; states/second: 69,746
+Current number of states: 16,777,216; states/second: 0
+Current number of states: 16,777,216; states/second: 0
+Current number of states: 17,731,877; states/second: 190,930
+Building model done. 18,826,082 states. Time for model exploration: 103 seconds.
+Starting iteration...
+Done. Did 0 iterations in 494 seconds.
+Finished model checking. Time required: 669 seconds
+P=? [ F s=4 & z/N<0.1 ]: 0.6867214589192253
+Wall time: 671.42s
+User time: 696.79s
+System time: 5.00s
+Memory: 6368052KB

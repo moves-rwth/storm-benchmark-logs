@@ -1,0 +1,156 @@
+~/prism-examples/models/;mdps;csma;csma4_2.nm;time_max.pctl;;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 12:23:52 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/csma/csma4_2.nm ~/prism-examples/models/mdps/csma/time_max.pctl -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/csma/csma4_2.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/csma/time_max.pctl"...
+
+1 property:
+(1) R{"time"}max=? [ F "all_delivered" ]
+
+Type:        MDP
+Modules:     bus station1 station2 station3 station4 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 s3 x3 bc3 cd3 s4 x4 bc4 cd4 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time"}max=? [ F "all_delivered" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 193 iterations in 3.30 seconds (average 0.017119, setup 0.00)
+
+Time for model construction: 3.637 seconds.
+
+Type:        MDP
+States:      761962 (1 initial)
+Transitions: 1327068
+Choices:     825504
+
+Transition matrix: 52233 nodes (4 terminal), 1327068 minterms, vars: 54r/54c/17nd
+
+Prob0E: 204 iterations in 4.73 seconds (average 0.023176, setup 0.00)
+
+Prob1A: 1 iterations in 0.02 seconds (average 0.016000, setup 0.00)
+
+goal = 9, inf = 0, maybe = 761953
+
+Computing remaining rewards...
+Engine: MTBDD
+
+Building iteration matrix MTBDD... [nodes=52314] [1021.8 Kb]
+
+Starting iterations...
+Iteration 14: 5.62 sec so far
+Iteration 20: 11.33 sec so far
+Iteration 25: 16.44 sec so far
+Iteration 29: 21.56 sec so far
+Iteration 33: 26.93 sec so far
+Iteration 37: 32.10 sec so far
+Iteration 41: 38.27 sec so far
+Iteration 45: 44.77 sec so far
+Iteration 48: 50.55 sec so far
+Iteration 52: 56.71 sec so far
+Iteration 55: 62.44 sec so far
+Iteration 59: 68.66 sec so far
+Iteration 62: 74.23 sec so far
+Iteration 66: 80.49 sec so far
+Iteration 70: 87.93 sec so far
+Iteration 74: 94.12 sec so far
+Iteration 78: 101.35 sec so far
+Iteration 82: 107.58 sec so far
+Iteration 86: 114.84 sec so far
+Iteration 89: 120.26 sec so far
+Iteration 93: 126.64 sec so far
+Iteration 96: 133.40 sec so far
+Iteration 99: 140.05 sec so far
+Iteration 102: 145.72 sec so far
+Iteration 106: 151.95 sec so far
+Iteration 110: 159.21 sec so far
+Iteration 114: 165.44 sec so far
+Iteration 118: 172.68 sec so far
+Iteration 122: 178.88 sec so far
+Iteration 126: 186.09 sec so far
+Iteration 130: 192.26 sec so far
+Iteration 134: 199.46 sec so far
+Iteration 138: 205.58 sec so far
+Iteration 142: 212.76 sec so far
+Iteration 146: 218.84 sec so far
+Iteration 150: 225.98 sec so far
+Iteration 154: 232.03 sec so far
+Iteration 158: 239.21 sec so far
+Iteration 162: 245.34 sec so far
+Iteration 166: 252.54 sec so far
+Iteration 170: 258.63 sec so far
+Iteration 174: 265.81 sec so far
+Iteration 178: 271.86 sec so far
+Iteration 182: 279.00 sec so far
+Iteration 186: 284.99 sec so far
+Iteration 190: 292.06 sec so far
+Iteration 194: 298.01 sec so far
+Iteration 198: 305.04 sec so far
+Iteration 202: 310.99 sec so far
+Iteration 206: 318.01 sec so far
+Iteration 210: 323.97 sec so far
+Iteration 214: 330.99 sec so far
+Iteration 218: 336.93 sec so far
+Iteration 222: 343.99 sec so far
+Iteration 226: 350.03 sec so far
+Iteration 230: 357.14 sec so far
+Iteration 234: 363.18 sec so far
+Iteration 238: 370.31 sec so far
+Iteration 242: 376.32 sec so far
+Iteration 246: 383.40 sec so far
+Iteration 250: 389.40 sec so far
+Iteration 254: 396.45 sec so far
+Iteration 258: 402.44 sec so far
+Iteration 262: 409.49 sec so far
+Iteration 266: 415.47 sec so far
+Iteration 270: 422.50 sec so far
+Iteration 274: 428.46 sec so far
+Iteration 278: 435.51 sec so far
+Iteration 282: 441.46 sec so far
+Iteration 286: 448.46 sec so far
+Iteration 290: 454.43 sec so far
+Iteration 294: 461.47 sec so far
+Iteration 298: 467.52 sec so far
+Iteration 302: 474.64 sec so far
+Iteration 306: 480.70 sec so far
+Iteration 310: 487.82 sec so far
+Iteration 314: 493.87 sec so far
+Iteration 318: 500.96 sec so far
+Iteration 322: 507.00 sec so far
+Iteration 326: 514.08 sec so far
+Iteration 330: 520.09 sec so far
+Iteration 334: 527.13 sec so far
+Iteration 338: 533.12 sec so far
+Iteration 342: 540.18 sec so far
+Iteration 346: 546.14 sec so far
+Iteration 350: 553.14 sec so far
+Iteration 354: 559.06 sec so far
+Iteration 358: 565.28 sec so far
+Iteration 361: 570.69 sec so far
+Iteration 365: 576.79 sec so far
+Iteration 368: 582.53 sec so far
+
+Iterative method: 370 iterations in 585.49 seconds (average 1.582281, setup 0.04)
+
+Value in the initial state: 142.21031856044027
+
+Time for model checking: 590.696 seconds.
+
+Result: 142.21031856044027 (value in the initial state)
+
+Wall time: 595.94s
+User time: 595.97s
+System time: 0.74s
+Memory: 461756KB

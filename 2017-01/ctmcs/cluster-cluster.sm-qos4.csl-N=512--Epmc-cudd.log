@@ -1,0 +1,17 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;qos4.csl;N=512;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P=? [ !"minimum" U>=20 "minimum" ]
+Building DD model...
+Building DD model finished in 1 seconds
+Exploring model state space...
+Finished exploring the state space. Time required: 33 seconds
+Finished model checking. Time required: 74 seconds
+Time spent in DD routines converting DD<->MDD: 0 seconds
+Total time spent in DD routines: 74 seconds
+P=? [ !"minimum" U>=20 "minimum" ]: 1.0
+Wall time: 76.74s
+User time: 85.17s
+System time: 1.03s
+Memory: 333824KB

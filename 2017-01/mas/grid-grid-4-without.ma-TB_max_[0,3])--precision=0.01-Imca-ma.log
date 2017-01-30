@@ -1,0 +1,34 @@
+~/MA_experiments;mas;grid;grid-4-without.ma;TB_max_[0,3]);;precision=0.01;Imca-ma
+ ------------------------------------------------------------------- 
+|                  Interactive Markov Chain Analyzer                |
+|                        IMCA Version 1.6 beta                      |
+|             Binary build date: Jan 20 2017 @ 17:22:22             |
+|                using SoPlex "http://soplex.zib.de/"               |
+|                                                                   |
+|                  Copyright (C) RWTH Aachen, 2012.                 |
+|          Copyright (C) University of Twente, 2013-2014.           |
+|                         Author: Dennis Guck                       |
+|           IMCA is distributed under the GPL conditions            |
+|            (GPL stands for GNU General Public License)            |
+|          This program comes with ABSOLUTELY NO WARRANTY.          |
+|   This is free software, and you are welcome to redistribute it   |
+ ------------------------------------------------------------------- 
+
+Loading the '~/MA_experiments/mas/grid/grid-4-without.ma' file, please wait.
+Maximum State Reward: 0
+#States: 31832    #MS: 5145    #PS: 26687    #ND: 14958
+#Initials: 1    #Goals: 10424    #Transitions: 62356
+The occupied space is 7267296 Bytes (~6.930634 MB).
+
+
+Compute maximal time-bounded reachability inside interval [0,3] with precision 0.01, please wait.
+start value iteration
+iterations: 432450
+step duration: 6.93722e-06
+interval step: 432450
+interval start: 0
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

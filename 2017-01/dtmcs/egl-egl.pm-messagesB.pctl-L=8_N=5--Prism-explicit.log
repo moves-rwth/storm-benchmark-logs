@@ -1,0 +1,46 @@
+~/prism-examples/models/;dtmcs;egl;egl.pm;messagesB.pctl;L=8,N=5;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 03:27:32 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/egl/egl.pm ~/prism-examples/models/dtmcs/egl/messagesB.pctl -const 'L=8,N=5' -ex
+
+Parsing model file "~/prism-examples/models/dtmcs/egl/egl.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/egl/messagesB.pctl"...
+
+1 property:
+(1) R{"messages_B_needs"}=? [ F phase=4 ]
+
+Type:        DTMC
+Modules:     counter partyA partyB 
+Variables:   b n phase party b0 b20 b1 b21 b2 b22 b3 b23 b4 b24 b5 b25 b6 b26 b7 b27 b8 b28 b9 b29 b10 b30 b11 b31 b12 b32 b13 b33 b14 b34 b15 b35 b16 b36 b17 b37 b18 b38 b19 b39 a0 a20 a1 a21 a2 a22 a3 a23 a4 a24 a5 a25 a6 a26 a7 a27 a8 a28 a9 a29 a10 a30 a11 a31 a12 a32 a13 a33 a14 a34 a15 a35 a16 a36 a17 a37 a18 a38 a19 a39 
+
+---------------------------------------------------------------------
+
+Model checking: R{"messages_B_needs"}=? [ F phase=4 ]
+Model constants: N=5,L=8
+
+Building model...
+Model constants: N=5,L=8
+
+Computing reachable states... 69380 156670 states
+Reachable states exploration and model construction done in 5.276 secs.
+Sorting reachable states list...
+
+Time for model construction: 5.672 seconds.
+
+Type:        DTMC
+States:      156670 (1 initial)
+Transitions: 157693
+Building reward structure...
+
+Error: Explicit engine does not yet handle transition rewards for D/CTMCs.
+
+Wall time: 7.21s
+User time: 9.26s
+System time: 0.61s
+Memory: 783540KB

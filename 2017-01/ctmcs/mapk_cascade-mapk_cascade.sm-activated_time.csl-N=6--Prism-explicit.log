@@ -1,0 +1,53 @@
+~/prism-examples/models/;ctmcs;mapk_cascade;mapk_cascade.sm;activated_time.csl;N=6;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 09:29:26 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm ~/prism-examples/models/ctmcs/mapk_cascade/activated_time.csl -const N=6 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/mapk_cascade/activated_time.csl"...
+
+1 property:
+(1) R{"time"}=? [ F kpp=N ]
+
+Type:        CTMC
+Modules:     E1 E2 KPTASE KKPTASE MAPK MAPKK MAPKKK 
+Variables:   e1 e2 kptase kkptase k k_kkpp kp kp_kkpp kp_ptase kpp kpp_ptase kk kk_kkkp kkp kkp_kkkp kkp_ptase kkpp kkpp_ptase kkk kkk_e1 kkkp kkkp_e2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time"}=? [ F kpp=N ]
+Model constants: N=6
+
+Building model...
+Model constants: N=6
+
+Computing reachable states... 45366 108401 153511 214622 269126 323138 368734 418030 470195 520172 574734 629570 673905 726321 781664 822425 873509 919861 967126 1014974 1063985 1110832 1122430 1169199 1215008 1258396 1302724 1344433 1373026 states
+Reachable states exploration and model construction done in 97.432 secs.
+Sorting reachable states list...
+
+Time for model construction: 102.705 seconds.
+
+Type:        CTMC
+States:      1373026 (1 initial)
+Transitions: 15015264
+Building reward structure...
+Building embedded DTMC...
+
+Warning: Switching to linear equation solution method "Power method"
+
+Starting expected reachability...
+Starting Prob1...
+Prob1 took 31 iterations and 65.1 seconds.
+target=7063, inf=0, rest=1365963
+Starting value iteration...
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

@@ -1,0 +1,77 @@
+~/prism-examples/models/;mdps;zeroconf_dl;zeroconf_dl.nm;deadline_min.pctl;K=1,N=1000,deadline=30,reset=false;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 20:19:14 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/zeroconf_dl/zeroconf_dl.nm ~/prism-examples/models/mdps/zeroconf_dl/deadline_min.pctl -const 'K=1,N=1000,deadline=30,reset=false' -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/zeroconf_dl/zeroconf_dl.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/zeroconf_dl/deadline_min.pctl"...
+
+1 property:
+(1) Pmin=? [ !(l=4&ip=2) U t>=deadline ]
+
+Type:        MDP
+Modules:     environment host0 timer 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l t 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ !(l=4&ip=2) U t>=deadline ]
+Model constants: reset=false,deadline=30,N=1000,K=1
+
+Building model...
+Model constants: reset=false,deadline=30,N=1000,K=1
+
+Computing reachable states...
+
+Reachability (BFS): 221 iterations in 7.18 seconds (average 0.032507, setup 0.00)
+
+Time for model construction: 7.877 seconds.
+
+Warning: Deadlocks detected and fixed in 130 states
+
+Type:        MDP
+States:      132806 (1 initial)
+Transitions: 293328
+Choices:     227811
+
+Transition matrix: 68096 nodes (6 terminal), 293328 minterms, vars: 60r/60c/8nd
+
+Prob0E: 124 iterations in 3.18 seconds (average 0.025613, setup 0.00)
+
+Prob1A: 9 iterations in 0.20 seconds (average 0.022222, setup 0.00)
+
+yes = 53556, no = 51395, maybe = 27855
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrices... [nm=9, levels=60, nodes=49823] [2.3 MB]
+Adding sparse bits... [levels=60-60, num=9, compact=9/9] [1.4 MB]
+Creating vector for yes... [dist=2, compact] [259.4 KB]
+Allocating iteration vectors... [3 x 1.0 MB]
+TOTAL: [7.0 MB]
+
+Starting iterations...
+
+Iterative method: 154 iterations in 1.78 seconds (average 0.010701, setup 0.14)
+
+Value in the initial state: 5.760746776269268E-25
+
+Time for model checking: 5.228 seconds.
+
+Result: 5.760746776269268E-25 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 14.55s
+User time: 14.93s
+System time: 0.20s
+Memory: 206456KB

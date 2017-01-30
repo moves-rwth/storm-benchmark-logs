@@ -1,0 +1,33 @@
+~/prism-examples/models/;dtmcs;herman;herman13.pm;steps.pctl;;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 04:20:35 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/herman/herman13.pm ~/prism-examples/models/dtmcs/herman/steps.pctl -exact -politer
+
+Parsing model file "~/prism-examples/models/dtmcs/herman/herman13.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/herman/steps.pctl"...
+
+1 property:
+(1) R=? [ F "stable" ]
+
+Type:        DTMC
+Modules:     process1 process2 process3 process4 process5 process6 process7 process8 process9 process10 process11 process12 process13 
+Variables:   x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 x11 x12 x13 
+
+---------------------------------------------------------------------
+
+Model checking: R=? [ F "stable" ]
+
+Building model...
+
+Error: Cannot do explicit-state reachability if there are multiple initial states.
+
+Wall time: 2.03s
+User time: 1.71s
+System time: 0.11s
+Memory: 84012KB

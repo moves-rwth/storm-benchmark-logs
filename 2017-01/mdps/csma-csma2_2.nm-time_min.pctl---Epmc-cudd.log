@@ -1,0 +1,11 @@
+~/prism-examples/models/;mdps;csma;csma2_2.nm;time_min.pctl;;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R{"time"}min=? [ F "all_delivered" ]
+Finished model checking. Time required: 0 seconds
+R{"time"}min=? [ F "all_delivered" ]: No solver available to handle property "R{"time"}min=?[F (((s1) = (4)) ∧ ((s2) = (4)))]" for this model with the current settings
+Wall time: 1.91s
+User time: 7.34s
+System time: 0.71s
+Memory: 252764KB

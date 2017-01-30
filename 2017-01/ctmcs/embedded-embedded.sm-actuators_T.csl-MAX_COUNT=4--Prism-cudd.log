@@ -1,0 +1,70 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;actuators_T.csl;MAX_COUNT=4;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 02:50:02 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/actuators_T.csl -const MAX_COUNT=4 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/actuators_T.csl"...
+
+1 property:
+(1) P=? [ !"down" U<=72000 "fail_sensors" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !"down" U<=72000 "fail_sensors" ]
+Model constants: MAX_COUNT=4
+
+Building model...
+Model constants: MAX_COUNT=4
+
+Computing reachable states...
+
+Reachability (BFS): 17 iterations in 0.01 seconds (average 0.000471, setup 0.00)
+
+Time for model construction: 0.04 seconds.
+
+Type:        CTMC
+States:      5168 (1 initial)
+Transitions: 21773
+
+Rate matrix: 1448 nodes (9 terminal), 21773 minterms, vars: 15r/15c
+
+Computing probabilities...
+Engine: MTBDD
+
+Number of non-absorbing states: 1496 of 5168 (28.9%)
+
+Computing diagonals MTBDD... [nodes=719] [14.0 Kb]
+Building iteration matrix MTBDD... [nodes=2680] [52.3 Kb]
+
+Uniformisation: q.t = 0.085002 x 72000.000000 = 6120.120320
+Fox-Glynn: left = 5570, right = 6786
+
+Starting iterations...
+Iteration 1407 (of 6786): 5.00 sec so far
+Iteration 2878 (of 6786): 10.01 sec so far
+Iteration 4365 (of 6786): 15.02 sec so far
+Iteration 5792 (of 6786): 20.02 sec so far
+
+Iterative method: 6786 iterations in 24.03 seconds (average 0.003540, setup 0.00)
+
+Value in the initial state: 0.002198364958250331
+
+Time for model checking: 24.104 seconds.
+
+Result: 0.002198364958250331 (value in the initial state)
+
+Wall time: 25.42s
+User time: 25.68s
+System time: 0.23s
+Memory: 109368KB

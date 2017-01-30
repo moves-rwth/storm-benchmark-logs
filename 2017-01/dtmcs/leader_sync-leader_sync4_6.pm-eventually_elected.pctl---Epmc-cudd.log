@@ -1,0 +1,17 @@
+~/prism-examples/models/;dtmcs;leader_sync;leader_sync4_6.pm;eventually_elected.pctl;;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P>=1 [ F "elected" ]
+Building DD model...
+Building DD model finished in 1,174 seconds
+Exploring model state space...
+Finished exploring the state space. Time required: 2 seconds
+Finished model checking. Time required: 1,327 seconds
+Time spent in DD routines converting DD<->MDD: 393 seconds
+Total time spent in DD routines: 1,328 seconds
+P>=1 [ F "elected" ]: true
+Wall time: 1330.65s
+User time: 1376.15s
+System time: 5.10s
+Memory: 3441176KB

@@ -1,0 +1,46 @@
+~/prism-examples/models/;ctmcs;kanban;kanban.sm;throughput.csl;t=1;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 07:55:26 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/kanban/kanban.sm ~/prism-examples/models/ctmcs/kanban/throughput.csl -const t=1 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/kanban/kanban.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/kanban/throughput.csl"...
+
+1 property:
+(1) R{"throughput"}=? [ S ]
+
+Type:        CTMC
+Modules:     k1 k2 k3 k4 
+Variables:   w1 x1 y1 z1 w2 x2 y2 z2 w3 x3 y3 z3 w4 x4 y4 z4 
+
+---------------------------------------------------------------------
+
+Model checking: R{"throughput"}=? [ S ]
+Model constants: t=1
+
+Building model...
+Model constants: t=1
+
+Computing reachable states... 160 states
+Reachable states exploration and model construction done in 0.229 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.26 seconds.
+
+Type:        CTMC
+States:      160 (1 initial)
+Transitions: 616
+Building reward structure...
+
+Error: Explicit engine does not yet handle transition rewards for D/CTMCs.
+
+Wall time: 2.35s
+User time: 1.92s
+System time: 0.12s
+Memory: 84336KB

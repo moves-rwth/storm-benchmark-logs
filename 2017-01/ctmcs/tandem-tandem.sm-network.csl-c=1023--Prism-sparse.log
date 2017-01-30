@@ -1,0 +1,81 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;network.csl;c=1023;;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 23:01:32 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/tandem/tandem.sm ~/prism-examples/models/ctmcs/tandem/network.csl -const c=1023 -s -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/tandem/tandem.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/tandem/network.csl"...
+
+1 property:
+(1) P=? [ F<=0.2 sc=c&sm=c&ph=2 ]
+
+Type:        CTMC
+Modules:     serverC serverM 
+Variables:   sc ph sm 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F<=0.2 sc=c&sm=c&ph=2 ]
+Model constants: c=1023
+
+Building model...
+Model constants: c=1023
+
+Computing reachable states...
+
+Reachability (BFS): 3071 iterations in 8.31 seconds (average 0.002705, setup 0.00)
+
+Time for model construction: 9.61 seconds.
+
+Type:        CTMC
+States:      2096128 (1 initial)
+Transitions: 7328771
+
+Rate matrix: 303 nodes (6 terminal), 7328771 minterms, vars: 21r/21c
+
+Computing probabilities...
+Engine: Sparse
+
+Number of non-absorbing states: 2096127 of 2096128 (100.0%)
+
+Building sparse matrix... [n=2096128, nnz=7328770, compact] [30.0 MB]
+Creating vector for diagonals... [dist=9, compact] [4.0 MB]
+Allocating iteration vectors... [3 x 16.0 MB]
+TOTAL: [81.9 MB]
+
+Uniformisation: q.t = 4179.960000 x 0.200000 = 835.992000
+Fox-Glynn: left = 630, right = 1082
+
+Starting iterations...
+Iteration 87 (of 1082): max relative diff=1.000000, 5.04 sec so far
+Iteration 174 (of 1082): max relative diff=1.000000, 10.07 sec so far
+Iteration 257 (of 1082): max relative diff=1.000000, 15.08 sec so far
+Iteration 342 (of 1082): max relative diff=1.000000, 20.13 sec so far
+Iteration 429 (of 1082): max relative diff=1.000000, 25.18 sec so far
+Iteration 515 (of 1082): max relative diff=1.000000, 30.22 sec so far
+Iteration 599 (of 1082): max relative diff=1.000000, 35.26 sec so far
+Iteration 676 (of 1082): max relative diff=1.000000, 40.33 sec so far
+Iteration 746 (of 1082): max relative diff=1.000000, 45.37 sec so far
+Iteration 816 (of 1082): max relative diff=1.000000, 50.43 sec so far
+Iteration 886 (of 1082): max relative diff=1.000000, 55.49 sec so far
+Iteration 954 (of 1082): max relative diff=1.000000, 60.52 sec so far
+Iteration 1023 (of 1082): max relative diff=1.000000, 65.59 sec so far
+
+Iterative method: 1082 iterations in 71.88 seconds (average 0.064799, setup 1.76)
+
+Value in the initial state: 0.0
+
+Time for model checking: 72.086 seconds.
+
+Result: 0.0 (value in the initial state)
+
+Wall time: 82.98s
+User time: 83.17s
+System time: 0.26s
+Memory: 201168KB

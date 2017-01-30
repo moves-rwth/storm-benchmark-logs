@@ -1,0 +1,73 @@
+~/prism-examples/models/;dtmcs;brp;brp.pm;p1.pctl;MAX=2,N=16;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 00:00:23 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/brp/brp.pm ~/prism-examples/models/dtmcs/brp/p1.pctl -const 'MAX=2,N=16' -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/brp/brp.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/brp/p1.pctl"...
+
+1 property:
+(1) P=? [ F s=5 ]
+
+Type:        DTMC
+Modules:     sender receiver checker channelK channelL 
+Variables:   s srep nrtr i bs s_ab fs ls r rrep fr lr br r_ab recv T k l 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F s=5 ]
+Model constants: N=16,MAX=2
+
+Building model...
+Model constants: N=16,MAX=2
+
+Computing reachable states...
+
+Reachability (BFS): 105 iterations in 0.05 seconds (average 0.000495, setup 0.00)
+
+Time for model construction: 0.104 seconds.
+
+Warning: Deadlocks detected and fixed in 35 states
+
+Type:        DTMC
+States:      677 (1 initial)
+Transitions: 867
+
+Transition matrix: 2182 nodes (6 terminal), 867 minterms, vars: 32r/32c
+
+Prob0: 11 iterations in 0.01 seconds (average 0.000727, setup 0.00)
+
+Prob1: 97 iterations in 0.04 seconds (average 0.000371, setup 0.00)
+
+yes = 112, no = 73, maybe = 492
+
+Computing remaining probabilities...
+Engine: MTBDD
+
+Iteration matrix MTBDD... [nodes=1577] [30.8 Kb]
+Diagonals MTBDD... [nodes=578] [11.3 Kb]
+
+Starting iterations...
+
+Jacobi: 119 iterations in 0.35 seconds (average 0.002958, setup 0.00)
+
+Value in the initial state: 4.2333330027993635E-4
+
+Time for model checking: 0.41 seconds.
+
+Result: 4.2333330027993635E-4 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 2.06s
+User time: 2.13s
+System time: 0.12s
+Memory: 110604KB

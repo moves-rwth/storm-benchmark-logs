@@ -1,0 +1,33 @@
+~/prism-examples/models/;mdps;csma;csma3_6.nm;some_before.pctl;;;Storm-cudd
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/csma/csma3_6.nm --prop ~/prism-examples/models/mdps/csma/some_before.pctl -e dd --ddlib cudd --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 7.906s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	83960719 (60450 nodes)
+Transitions: 	145108459 (256494 nodes)
+Choices: 	84092500
+Reward Models:  none
+Variables: 	rows: 15 meta variables (57 DD variables), columns: 15 meta variables (57 DD variables), nondeterminism: 13 meta variables (13 DD variables)
+Labels: 	3
+   * all_delivered
+   * collision_max_backoff
+   * one_delivered
+-------------------------------------------------------------- 
+
+Model checking property Pmin=? [F ((min((min(((s1 = 4) ? cd1 : (6 + 1)), ((s2 = 4) ? cd2 : (6 + 1)))), ((s3 = 4) ? cd3 : (6 + 1)))) < 6)] ...
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

@@ -1,0 +1,55 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;second_queue.csl;c=63;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 12:30:09 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/tandem/tandem.sm ~/prism-examples/models/ctmcs/tandem/second_queue.csl -const c=63 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/tandem/tandem.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/tandem/second_queue.csl"...
+
+1 property:
+(1) P=? [ sm=c U<=0.2 sm<c ]
+
+Type:        CTMC
+Modules:     serverC serverM 
+Variables:   sc ph sm 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ sm=c U<=0.2 sm<c ]
+Model constants: c=63
+
+Building model...
+Model constants: c=63
+
+Computing reachable states... 8128 states
+Reachable states exploration and model construction done in 0.722 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.835 seconds.
+
+Type:        CTMC
+States:      8128 (1 initial)
+Transitions: 27971
+
+Starting backwards transient probability computation...
+
+Uniformisation: q.t = 261.324 x 0.2 = 52.26480000000001
+Fox-Glynn (1.25E-7): left = 0, right = 95
+Backwards transient probability computation took 96 iters and 0.1 seconds.
+
+Value in the initial state: 1.0
+
+Time for model checking: 0.136 seconds.
+
+Result: 1.0 (value in the initial state)
+
+Wall time: 2.32s
+User time: 3.60s
+System time: 0.19s
+Memory: 124684KB

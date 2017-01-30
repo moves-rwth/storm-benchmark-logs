@@ -1,0 +1,40 @@
+~/prism-examples/models/;dtmcs;nand;nand.pm;reliable.pctl;K=1,N=20;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 05:26:34 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/nand/nand.pm ~/prism-examples/models/dtmcs/nand/reliable.pctl -const 'K=1,N=20' -exact -politer
+
+Parsing model file "~/prism-examples/models/dtmcs/nand/nand.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/nand/reliable.pctl"...
+
+1 property:
+(1) P=? [ F s=4&z/N<0.1 ]
+
+Type:        DTMC
+Modules:     multiplex 
+Variables:   u c s z zx zy x y 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F s=4&z/N<0.1 ]
+Model constants: N=20,K=1
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 8.955 secs.
+
+Time for model construction: 8.959 seconds.
+
+Time for model checking: 646.7 seconds.
+
+Result (probability): 454145248959466263206300672080823961584243126656236807230574990948755414929234065950885444364672074670801081404922816501/1585597238352817012091618498084205900866241992472115126058557904586976405880704987794160842895507812500000000000000000000
+Wall time: 657.25s
+User time: 684.62s
+System time: 28.16s
+Memory: 1423648KB

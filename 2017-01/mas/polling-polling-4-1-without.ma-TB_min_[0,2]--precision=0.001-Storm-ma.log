@@ -1,0 +1,37 @@
+~/MA_experiments;mas;polling;polling-4-1-without.ma;TB_min_[0,2];;precision=0.001;Storm-ma
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --explicit ~/MA_experiments/mas/polling/polling-4-1-without.tra ~/MA_experiments/mas/polling/polling-4-1-without.lab --prop Pmin=? [ F[0,2] "goal" ] --precision 0.001 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.002s.
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	117
+Transitions: 	214
+Choices: 	133
+Markovian St.: 	26
+Max. Rate.: 	10
+Reward Models:  (default)
+Labels: 	2
+   * goal -> 3 state(s)
+   * init -> 1 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property Pmin=? [true U[0, 2] "goal"] ...
+Result (initial states): 0.4763400426
+Time for model checking: 1.189s.
+Wall time: 1.26s
+User time: 1.24s
+System time: 0.00s
+Memory: 23560KB

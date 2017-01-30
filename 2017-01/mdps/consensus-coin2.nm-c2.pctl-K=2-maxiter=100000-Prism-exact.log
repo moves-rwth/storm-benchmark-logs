@@ -1,0 +1,40 @@
+~/prism-examples/models/;mdps;consensus;coin2.nm;c2.pctl;K=2;maxiter=100000;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 06:38:42 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/consensus/coin2.nm ~/prism-examples/models/mdps/consensus/c2.pctl -const K=2 -exact -politer -maxiters 100000
+
+Parsing model file "~/prism-examples/models/mdps/consensus/coin2.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/consensus/c2.pctl"...
+
+1 property:
+(1) Pmin=? [ F "finished"&"all_coins_equal_1" ]
+
+Type:        MDP
+Modules:     process1 process2 
+Variables:   counter pc1 coin1 pc2 coin2 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ F "finished"&"all_coins_equal_1" ]
+Model constants: K=2
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 0.251 secs.
+
+Time for model construction: 0.256 seconds.
+
+Time for model checking: 1.364 seconds.
+
+Result (minimum probability): 49/128
+Wall time: 2.98s
+User time: 5.36s
+System time: 0.15s
+Memory: 149088KB

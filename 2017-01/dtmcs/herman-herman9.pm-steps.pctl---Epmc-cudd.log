@@ -1,0 +1,11 @@
+~/prism-examples/models/;dtmcs;herman;herman9.pm;steps.pctl;;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R=? [ F "stable" ]
+Finished model checking. Time required: 0 seconds
+R=? [ F "stable" ]: No solver available to handle property "R=?[F (((((x1) = (x2)) ? (1) : (0)) + (((x2) = (x3)) ? (1) : (0)) + (((x3) = (x4)) ? (1) : (0)) + (((x4) = (x5)) ? (1) : (0)) + (((x5) = (x6)) ? (1) : (0)) + (((x6) = (x7)) ? (1) : (0)) + (((x7) = (x8)) ? (1) : (0)) + (((x8) = (x9)) ? (1) : (0)) + (((x9) = (x1)) ? (1) : (0))) = (1))]" for this model with the current settings
+Wall time: 2.26s
+User time: 8.41s
+System time: 0.62s
+Memory: 326700KB

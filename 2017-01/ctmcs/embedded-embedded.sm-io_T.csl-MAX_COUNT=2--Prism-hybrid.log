@@ -1,0 +1,69 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;io_T.csl;MAX_COUNT=2;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 20:12:41 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/io_T.csl -const MAX_COUNT=2 -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/io_T.csl"...
+
+1 property:
+(1) P=? [ !"down" U<=72000 "fail_io" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !"down" U<=72000 "fail_io" ]
+Model constants: MAX_COUNT=2
+
+Building model...
+Model constants: MAX_COUNT=2
+
+Computing reachable states...
+
+Reachability (BFS): 15 iterations in 0.00 seconds (average 0.000267, setup 0.00)
+
+Time for model construction: 0.04 seconds.
+
+Type:        CTMC
+States:      3478 (1 initial)
+Transitions: 14639
+
+Rate matrix: 1144 nodes (9 terminal), 14639 minterms, vars: 14r/14c
+
+Computing probabilities...
+Engine: Hybrid
+
+Number of non-absorbing states: 912 of 3478 (26.2%)
+
+Building hybrid MTBDD matrix... [levels=14, nodes=1050] [49.2 KB]
+Adding explicit sparse matrices... [levels=14, num=1, compact] [21.6 KB]
+Creating vector for diagonals... [dist=35, compact] [7.1 KB]
+Allocating iteration vectors... [3 x 27.2 KB]
+TOTAL: [159.4 KB]
+
+Uniformisation: q.t = 0.085002 x 72000.000000 = 6120.120320
+Fox-Glynn: left = 5570, right = 6786
+
+Starting iterations...
+
+Iterative method: 6786 iterations in 0.66 seconds (average 0.000097, setup 0.00)
+
+Value in the initial state: 0.01131091790684493
+
+Time for model checking: 0.675 seconds.
+
+Result: 0.01131091790684493 (value in the initial state)
+
+Wall time: 1.99s
+User time: 2.34s
+System time: 0.09s
+Memory: 107520KB

@@ -1,0 +1,67 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;main.csl;MAX_COUNT=100;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 03:58:50 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/main.csl -const MAX_COUNT=100 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/main.csl"...
+
+1 property:
+(1) P=? [ !"down" U "fail_main" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ !"down" U "fail_main" ]
+Model constants: MAX_COUNT=100
+
+Building model...
+Model constants: MAX_COUNT=100
+
+Computing reachable states... 86288 states
+Reachable states exploration and model construction done in 2.367 secs.
+Sorting reachable states list...
+
+Time for model construction: 2.771 seconds.
+
+Type:        CTMC
+States:      86288 (1 initial)
+Transitions: 364205
+Building embedded DTMC...
+
+Warning: Switching to linear equation solution method "Gauss-Seidel"
+
+Starting probabilistic reachability...
+Calculating predecessor relation for discrete-time Markov chain...  done (0.201 seconds)
+Starting Prob0...
+Prob0 took 0.153 seconds.
+Starting Prob1...
+Prob1 took 0.156 seconds.
+target=47275, yes=47275, no=9485, maybe=29528
+Starting Gauss-Seidel...
+Gauss-Seidel took 322 iterations and 10.588 seconds.
+Probabilistic reachability took 11.104 seconds.
+
+Value in the initial state: 0.05458015389958546
+
+Time for model checking: 11.385 seconds.
+
+Result: 0.05458015389958546 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 15.48s
+User time: 17.68s
+System time: 0.44s
+Memory: 670880KB

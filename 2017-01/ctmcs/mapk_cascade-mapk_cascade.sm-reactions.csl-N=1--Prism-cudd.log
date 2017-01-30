@@ -1,0 +1,92 @@
+~/prism-examples/models/;ctmcs;mapk_cascade;mapk_cascade.sm;reactions.csl;N=1;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 18:04:24 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm ~/prism-examples/models/ctmcs/mapk_cascade/reactions.csl -const N=1 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/mapk_cascade/reactions.csl"...
+
+1 property:
+(1) R{"reactions"}=? [ C<=20 ]
+
+Type:        CTMC
+Modules:     E1 E2 KPTASE KKPTASE MAPK MAPKK MAPKKK 
+Variables:   e1 e2 kptase kkptase k k_kkpp kp kp_kkpp kp_ptase kpp kpp_ptase kk kk_kkkp kkp kkp_kkkp kkp_ptase kkpp kkpp_ptase kkk kkk_e1 kkkp kkkp_e2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"reactions"}=? [ C<=20 ]
+Model constants: N=1
+
+Building model...
+Model constants: N=1
+
+Computing reachable states...
+
+Reachability (BFS): 19 iterations in 0.02 seconds (average 0.001053, setup 0.00)
+
+Time for model construction: 0.077 seconds.
+
+Type:        CTMC
+States:      118 (1 initial)
+Transitions: 468
+
+Rate matrix: 1976 nodes (3 terminal), 468 minterms, vars: 22r/22c
+
+Computing rewards...
+Engine: MTBDD
+
+Computing diagonals MTBDD... [nodes=533] [10.4 Kb]
+Building iteration matrix MTBDD... [nodes=2987] [58.3 Kb]
+
+Uniformisation: q.t = 918.000000 x 20.000000 = 18360.000000
+Fox-Glynn: left = 17409, right = 19512
+
+Starting iterations...
+Iteration 786 (of 19512): 5.01 sec so far
+Iteration 1445 (of 19512): 10.01 sec so far
+Iteration 2106 (of 19512): 15.03 sec so far
+Iteration 2763 (of 19512): 20.03 sec so far
+Iteration 3462 (of 19512): 25.04 sec so far
+Iteration 4239 (of 19512): 30.04 sec so far
+Iteration 4938 (of 19512): 35.06 sec so far
+Iteration 5715 (of 19512): 40.06 sec so far
+Iteration 6489 (of 19512): 45.06 sec so far
+Iteration 7151 (of 19512): 50.07 sec so far
+Iteration 7848 (of 19512): 55.08 sec so far
+Iteration 8623 (of 19512): 60.08 sec so far
+Iteration 9388 (of 19512): 65.08 sec so far
+Iteration 10163 (of 19512): 70.09 sec so far
+Iteration 10938 (of 19512): 75.10 sec so far
+Iteration 11530 (of 19512): 80.11 sec so far
+Iteration 12125 (of 19512): 85.12 sec so far
+Iteration 12721 (of 19512): 90.12 sec so far
+Iteration 13317 (of 19512): 95.13 sec so far
+Iteration 13914 (of 19512): 100.15 sec so far
+Iteration 14511 (of 19512): 105.15 sec so far
+Iteration 15168 (of 19512): 110.16 sec so far
+Iteration 15828 (of 19512): 115.17 sec so far
+Iteration 16490 (of 19512): 120.18 sec so far
+Iteration 17153 (of 19512): 125.19 sec so far
+Iteration 17810 (of 19512): 130.19 sec so far
+Iteration 18470 (of 19512): 135.20 sec so far
+Iteration 19129 (of 19512): 140.21 sec so far
+
+Iterative method: 19512 iterations in 142.87 seconds (average 0.007322, setup 0.00)
+
+Value in the initial state: 4.128976506517532
+
+Time for model checking: 143.044 seconds.
+
+Result: 4.128976506517532 (value in the initial state)
+
+Wall time: 144.45s
+User time: 144.75s
+System time: 0.27s
+Memory: 110964KB

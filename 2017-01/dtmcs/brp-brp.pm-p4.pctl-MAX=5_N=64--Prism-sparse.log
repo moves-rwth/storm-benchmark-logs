@@ -1,0 +1,76 @@
+~/prism-examples/models/;dtmcs;brp;brp.pm;p4.pctl;MAX=5,N=64;;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 00:01:54 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/brp/brp.pm ~/prism-examples/models/dtmcs/brp/p4.pctl -const 'MAX=5,N=64' -s -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/brp/brp.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/brp/p4.pctl"...
+
+1 property:
+(1) P=? [ F !(srep=0)&!recv ]
+
+Type:        DTMC
+Modules:     sender receiver checker channelK channelL 
+Variables:   s srep nrtr i bs s_ab fs ls r rrep fr lr br r_ab recv T k l 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F !(srep=0)&!recv ]
+Model constants: N=64,MAX=5
+
+Building model...
+Model constants: N=64,MAX=5
+
+Computing reachable states...
+
+Reachability (BFS): 399 iterations in 0.22 seconds (average 0.000561, setup 0.00)
+
+Time for model construction: 0.286 seconds.
+
+Warning: Deadlocks detected and fixed in 134 states
+
+Type:        DTMC
+States:      5192 (1 initial)
+Transitions: 6915
+
+Transition matrix: 2410 nodes (6 terminal), 6915 minterms, vars: 35r/35c
+
+Prob0: 15 iterations in 0.00 seconds (average 0.000267, setup 0.00)
+
+Prob1: 3 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+yes = 5, no = 5175, maybe = 12
+
+Computing remaining probabilities...
+Engine: Sparse
+
+Building sparse matrix... [n=5192, nnz=18, compact] [5.2 KB]
+Creating vector for diagonals... [dist=1, compact] [10.1 KB]
+Creating vector for RHS... [dist=2, compact] [10.2 KB]
+Allocating iteration vectors... [2 x 40.6 KB]
+TOTAL: [106.6 KB]
+
+Starting iterations...
+
+Jacobi: 13 iterations in 0.00 seconds (average 0.000308, setup 0.00)
+
+Value in the initial state: 6.400000000000001E-11
+
+Time for model checking: 0.016 seconds.
+
+Result: 6.400000000000001E-11 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 2.06s
+User time: 1.92s
+System time: 0.12s
+Memory: 109704KB

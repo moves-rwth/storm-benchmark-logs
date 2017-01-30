@@ -1,0 +1,34 @@
+~/prism-examples/models/;mdps;csma;csma3_2.nm;some_before.pctl;;;Storm-hybrid
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/csma/csma3_2.nm --prop ~/prism-examples/models/mdps/csma/some_before.pctl -e hybrid --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.274s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	33808 (1892 nodes)
+Transitions: 	51830 (11859 nodes)
+Choices: 	35360
+Reward Models:  none
+Variables: 	rows: 15 meta variables (42 DD variables), columns: 15 meta variables (42 DD variables), nondeterminism: 13 meta variables (13 DD variables)
+Labels: 	3
+   * all_delivered
+   * collision_max_backoff
+   * one_delivered
+-------------------------------------------------------------- 
+
+Model checking property Pmin=? [F ((min((min(((s1 = 4) ? cd1 : (2 + 1)), ((s2 = 4) ? cd2 : (2 + 1)))), ((s3 = 4) ? cd3 : (2 + 1)))) < 2)] ...
+Result (initial states): 0.5859375
+Time for model checking: 0.169s.
+Wall time: 0.54s
+User time: 0.50s
+System time: 0.03s
+Memory: 61188KB

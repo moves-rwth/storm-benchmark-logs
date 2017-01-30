@@ -1,0 +1,34 @@
+~/prism-examples/models/;mdps;firewire_dl;firewire_dl.nm;deadline.pctl;deadline=1000,delay=36;;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/firewire_dl/firewire_dl.nm --prop ~/prism-examples/models/mdps/firewire_dl/deadline.pctl -const deadline=1000,delay=36 --exact --minmax:method pi -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 5.610s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	686165
+Transitions: 	1236870
+Choices: 	1041954
+Reward Models:  none
+Labels: 	3
+   * deadlock -> 0 state(s)
+   * init -> 1 state(s)
+   * (s = 9) -> 961 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property Pmin=? [F (s = 9)] ...
+Result (initial states): 7985/8192 (approx. 0.9747314453)
+Time for model checking: 2.966s.
+Wall time: 8.70s
+User time: 8.34s
+System time: 0.34s
+Memory: 463436KB

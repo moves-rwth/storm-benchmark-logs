@@ -1,0 +1,15 @@
+~/prism-examples/models/;mdps;wlan_dl;wlan_dl5.nm;deadline.pctl;deadline=10;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property Pmin=? [ F 1=12 & s2=12 ]
+Starting to build model...
+Building model done. 627 states. Time for model exploration: 0 seconds.
+Starting iteration...
+Done. Did 0 iterations in 0 seconds.
+Finished model checking. Time required: 109 seconds
+Pmin=? [ F 1=12 & s2=12 ]: 0.0
+Wall time: 111.42s
+User time: 121.86s
+System time: 1.11s
+Memory: 345872KB

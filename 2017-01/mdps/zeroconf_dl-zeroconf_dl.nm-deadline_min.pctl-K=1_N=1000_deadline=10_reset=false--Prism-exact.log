@@ -1,0 +1,40 @@
+~/prism-examples/models/;mdps;zeroconf_dl;zeroconf_dl.nm;deadline_min.pctl;K=1,N=1000,deadline=10,reset=false;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 20:51:38 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/zeroconf_dl/zeroconf_dl.nm ~/prism-examples/models/mdps/zeroconf_dl/deadline_min.pctl -const 'K=1,N=1000,deadline=10,reset=false' -exact -politer
+
+Parsing model file "~/prism-examples/models/mdps/zeroconf_dl/zeroconf_dl.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/zeroconf_dl/deadline_min.pctl"...
+
+1 property:
+(1) Pmin=? [ !(l=4&ip=2) U t>=deadline ]
+
+Type:        MDP
+Modules:     environment host0 timer 
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l t 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ !(l=4&ip=2) U t>=deadline ]
+Model constants: reset=false,deadline=10,N=1000,K=1
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 3.029 secs.
+
+Time for model construction: 3.038 seconds.
+
+Time for model checking: 9.676 seconds.
+
+Result (minimum probability): 39696537626745106387798585770828466696012847812728225684804221010828592491629917920285285/27860808040510006551159600987724908857727959794723085670433832591547351755688373342821154816
+Wall time: 14.16s
+User time: 27.00s
+System time: 1.16s
+Memory: 649368KB

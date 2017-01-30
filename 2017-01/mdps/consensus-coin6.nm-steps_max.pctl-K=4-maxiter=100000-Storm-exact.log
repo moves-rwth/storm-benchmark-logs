@@ -1,0 +1,35 @@
+~/prism-examples/models/;mdps;consensus;coin6.nm;steps_max.pctl;K=4;maxiter=100000;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/consensus/coin6.nm --prop ~/prism-examples/models/mdps/consensus/steps_max.pctl -const K=4 --exact --minmax:method pi --maxiter 100000 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+ WARN (NativeEquationSolverSettings.cpp:87): Native is not selected as the preferred equation solver, so setting options for native might have no effect.
+Time for model construction: 50.047s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	2376448
+Transitions: 	11835456
+Choices: 	9487104
+Reward Models:  steps
+Labels: 	3
+   * deadlock -> 0 state(s)
+   * init -> 1 state(s)
+   * finished -> 384 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"steps"}max=? [F "finished"] ...
+Result (initial states): 2523 (approx. 2523)
+Time for model checking: 351.919s.
+Wall time: 402.30s
+User time: 389.28s
+System time: 12.40s
+Memory: 4526196KB

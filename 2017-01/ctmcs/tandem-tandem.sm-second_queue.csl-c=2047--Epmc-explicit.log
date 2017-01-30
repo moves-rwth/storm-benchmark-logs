@@ -1,0 +1,21 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;second_queue.csl;c=2047;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P=? [ sm=c U<=0.2 sm<c ]
+Starting to build model...
+Current number of states: 922,565; states/second: 184,510
+Current number of states: 1,904,145; states/second: 196,316
+Current number of states: 2,398,282; states/second: 98,829
+Current number of states: 3,915,756; states/second: 303,493
+Current number of states: 4,194,304; states/second: 55,710
+Current number of states: 4,795,612; states/second: 120,261
+Current number of states: 6,238,206; states/second: 288,517
+Current number of states: 7,859,482; states/second: 324,254
+Building model done. 8,386,560 states. Time for model exploration: 41 seconds.
+Finished model checking. Time required: 55 seconds
+P=? [ sm=c U<=0.2 sm<c ]: 0.9999999999999998
+Wall time: 57.35s
+User time: 72.14s
+System time: 2.34s
+Memory: 2217868KB

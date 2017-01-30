@@ -1,0 +1,34 @@
+~/prism-examples/models/;mdps;wlan;wlan6.nm;num_collisions.pctl;COL=0;;Storm-sparse
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/wlan/wlan6.nm --prop ~/prism-examples/models/mdps/wlan/num_collisions.pctl -const COL=0 -e sparse -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 106.383s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	5007548
+Transitions: 	11475748
+Choices: 	6350470
+Reward Models:  collisions
+Labels: 	3
+   * init -> 1 state(s)
+   * deadlock -> 0 state(s)
+   * ((s1 = 12) & (s2 = 12)) -> 1 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"collisions"}max=? [F ((s1 = 12) & (s2 = 12))] ...
+Result (initial states): 1.201439404
+Time for model checking: 1091.681s.
+Wall time: 1198.28s
+User time: 1195.28s
+System time: 1.40s
+Memory: 1255128KB

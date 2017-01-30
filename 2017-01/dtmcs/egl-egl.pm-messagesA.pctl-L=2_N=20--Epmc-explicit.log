@@ -1,0 +1,10 @@
+~/prism-examples/models/;dtmcs;egl;egl.pm;messagesA.pctl;L=2,N=20;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R{"messages_A_needs"}=? [ F phase=4 ]
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

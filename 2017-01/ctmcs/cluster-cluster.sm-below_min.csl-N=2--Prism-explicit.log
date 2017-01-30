@@ -1,0 +1,56 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;below_min.csl;N=2;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 18:03:14 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/cluster/cluster.sm ~/prism-examples/models/ctmcs/cluster/below_min.csl -const N=2 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/cluster/cluster.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/cluster/below_min.csl"...
+
+1 property:
+(1) R{"time_not_min"}=? [ C<=20 ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time_not_min"}=? [ C<=20 ]
+Model constants: N=2
+
+Building model...
+Model constants: N=2
+
+Computing reachable states... 276 states
+Reachable states exploration and model construction done in 0.292 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.329 seconds.
+
+Type:        CTMC
+States:      276 (1 initial)
+Transitions: 1120
+Building reward structure...
+
+Starting backwards cumulative rewards computation...
+
+Uniformisation: q.t = 51.00408000000001 x 20.0 = 1020.0816000000002
+Fox-Glynn (1.25E-7): left = 794, right = 1293
+Backwards transient cumulative rewards computation took 1294 iters and 0.188 seconds.
+
+Value in the initial state: 2.7292096639614333E-5
+
+Time for model checking: 0.198 seconds.
+
+Result: 2.7292096639614333E-5 (value in the initial state)
+
+Wall time: 2.40s
+User time: 2.52s
+System time: 0.16s
+Memory: 107152KB

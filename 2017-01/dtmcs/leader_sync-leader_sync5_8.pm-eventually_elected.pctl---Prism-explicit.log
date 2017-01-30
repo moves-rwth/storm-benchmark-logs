@@ -1,0 +1,66 @@
+~/prism-examples/models/;dtmcs;leader_sync;leader_sync5_8.pm;eventually_elected.pctl;;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 04:50:16 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/leader_sync/leader_sync5_8.pm ~/prism-examples/models/dtmcs/leader_sync/eventually_elected.pctl -ex
+
+Parsing model file "~/prism-examples/models/dtmcs/leader_sync/leader_sync5_8.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/leader_sync/eventually_elected.pctl"...
+
+1 property:
+(1) P>=1 [ F "elected" ]
+
+Type:        DTMC
+Modules:     counter process1 process2 process3 process4 process5 
+Variables:   c s1 u1 v1 p1 s2 u2 v2 p2 s3 u3 v3 p3 s4 u4 v4 p4 s5 u5 v5 p5 
+
+---------------------------------------------------------------------
+
+Model checking: P>=1 [ F "elected" ]
+
+Building model...
+
+Computing reachable states... 118020 131521 states
+Reachable states exploration and model construction done in 3.162 secs.
+Sorting reachable states list...
+
+Time for model construction: 3.518 seconds.
+
+Type:        DTMC
+States:      131521 (1 initial)
+Transitions: 164288
+
+Warning: Switching to linear equation solution method "Gauss-Seidel"
+
+Starting probabilistic reachability...
+Calculating predecessor relation for discrete-time Markov chain...  done (0.182 seconds)
+Starting Prob0...
+Prob0 took 0.131 seconds.
+Starting Prob1...
+Prob1 took 0.102 seconds.
+target=1, yes=131521, no=0, maybe=0
+Starting Gauss-Seidel...
+Gauss-Seidel took 1 iterations and 0.014 seconds.
+Probabilistic reachability took 0.466 seconds.
+
+Number of states satisfying P>=1 [ F "elected" ]: 131521 (all in model)
+
+Property satisfied in 1 of 1 initial states.
+
+Time for model checking: 0.731 seconds.
+
+Result: true (property satisfied in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 5.55s
+User time: 7.90s
+System time: 0.42s
+Memory: 649912KB

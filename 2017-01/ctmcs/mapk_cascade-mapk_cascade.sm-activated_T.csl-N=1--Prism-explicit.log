@@ -1,0 +1,56 @@
+~/prism-examples/models/;ctmcs;mapk_cascade;mapk_cascade.sm;activated_T.csl;N=1;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 18:04:21 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm ~/prism-examples/models/ctmcs/mapk_cascade/activated_T.csl -const N=1 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/mapk_cascade/activated_T.csl"...
+
+1 property:
+(1) R{"activated"}=? [ I=20 ]
+
+Type:        CTMC
+Modules:     E1 E2 KPTASE KKPTASE MAPK MAPKK MAPKKK 
+Variables:   e1 e2 kptase kkptase k k_kkpp kp kp_kkpp kp_ptase kpp kpp_ptase kk kk_kkkp kkp kkp_kkkp kkp_ptase kkpp kkpp_ptase kkk kkk_e1 kkkp kkkp_e2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"activated"}=? [ I=20 ]
+Model constants: N=1
+
+Building model...
+Model constants: N=1
+
+Computing reachable states... 118 states
+Reachable states exploration and model construction done in 0.255 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.285 seconds.
+
+Type:        CTMC
+States:      118 (1 initial)
+Transitions: 468
+Building reward structure...
+
+Starting backwards instantaneous rewards computation...
+
+Uniformisation: q.t = 918.0 x 20.0 = 18360.0
+Fox-Glynn (1.25E-7): left = 17409, right = 19512
+Backwards transient instantaneous rewards computation took 19513 iters and 0.693 seconds.
+
+Value in the initial state: 0.04011352443919893
+
+Time for model checking: 0.699 seconds.
+
+Result: 0.04011352443919893 (value in the initial state)
+
+Wall time: 2.43s
+User time: 3.06s
+System time: 0.18s
+Memory: 184020KB

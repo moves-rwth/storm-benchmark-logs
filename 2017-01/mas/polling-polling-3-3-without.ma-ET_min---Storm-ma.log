@@ -1,0 +1,37 @@
+~/MA_experiments;mas;polling;polling-3-3-without.ma;ET_min;;;Storm-ma
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --explicit ~/MA_experiments/mas/polling/polling-3-3-without.tra ~/MA_experiments/mas/polling/polling-3-3-without.lab --prop Tmin=? [ F "goal" ] 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.034s.
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	14322
+Transitions: 	28328
+Choices: 	22087
+Markovian St.: 	4801
+Max. Rate.: 	14
+Reward Models:  (default)
+Labels: 	2
+   * goal -> 5103 state(s)
+   * init -> 1 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property T[exp]min=? [F "goal"] ...
+Result (initial states): 1.442451784
+Time for model checking: 0.046s.
+Wall time: 0.13s
+User time: 0.12s
+System time: 0.00s
+Memory: 25604KB

@@ -1,0 +1,117 @@
+~/prism-examples/models/;ctmcs;mapk_cascade;mapk_cascade.sm;activated_T.csl;N=4;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 08:45:27 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm ~/prism-examples/models/ctmcs/mapk_cascade/activated_T.csl -const N=4 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/mapk_cascade/activated_T.csl"...
+
+1 property:
+(1) R{"activated"}=? [ I=20 ]
+
+Type:        CTMC
+Modules:     E1 E2 KPTASE KKPTASE MAPK MAPKK MAPKKK 
+Variables:   e1 e2 kptase kkptase k k_kkpp kp kp_kkpp kp_ptase kpp kpp_ptase kk kk_kkkp kkp kkp_kkkp kkp_ptase kkpp kkpp_ptase kkk kkk_e1 kkkp kkkp_e2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"activated"}=? [ I=20 ]
+Model constants: N=4
+
+Building model...
+Model constants: N=4
+
+Computing reachable states...
+
+Reachability (BFS): 44 iterations in 6.35 seconds (average 0.144364, setup 0.00)
+
+Time for model construction: 6.913 seconds.
+
+Type:        CTMC
+States:      99535 (1 initial)
+Transitions: 910872
+
+Rate matrix: 111563 nodes (14 terminal), 910872 minterms, vars: 58r/58c
+
+Computing probabilities...
+Engine: MTBDD
+
+Number of non-absorbing states: 99535 of 99535 (100.0%)
+
+Computing diagonals MTBDD... [nodes=52485] [1025.1 Kb]
+Building iteration matrix MTBDD... [nodes=215878] [4216.4 Kb]
+
+Uniformisation: q.t = 2142.000000 x 20.000000 = 42840.000000
+Fox-Glynn: left = 41388, right = 44598
+
+Starting iterations...
+Iteration 3 (of 44598): 6.86 sec so far
+Iteration 4 (of 44598): 17.95 sec so far
+Iteration 5 (of 44598): 34.28 sec so far
+Iteration 6 (of 44598): 60.79 sec so far
+Iteration 7 (of 44598): 86.34 sec so far
+Iteration 8 (of 44598): 111.97 sec so far
+Iteration 9 (of 44598): 141.95 sec so far
+Iteration 10 (of 44598): 164.13 sec so far
+Iteration 11 (of 44598): 194.51 sec so far
+Iteration 12 (of 44598): 216.55 sec so far
+Iteration 13 (of 44598): 244.52 sec so far
+Iteration 14 (of 44598): 275.86 sec so far
+Iteration 15 (of 44598): 298.16 sec so far
+Iteration 16 (of 44598): 342.97 sec so far
+Iteration 17 (of 44598): 363.74 sec so far
+Iteration 18 (of 44598): 386.76 sec so far
+Iteration 19 (of 44598): 422.87 sec so far
+Iteration 20 (of 44598): 444.06 sec so far
+Iteration 21 (of 44598): 467.52 sec so far
+Iteration 22 (of 44598): 502.44 sec so far
+Iteration 23 (of 44598): 524.13 sec so far
+Iteration 24 (of 44598): 547.84 sec so far
+Iteration 25 (of 44598): 583.13 sec so far
+Iteration 26 (of 44598): 615.12 sec so far
+Iteration 27 (of 44598): 649.92 sec so far
+Iteration 28 (of 44598): 700.09 sec so far
+Iteration 29 (of 44598): 722.02 sec so far
+Iteration 30 (of 44598): 757.34 sec so far
+Iteration 31 (of 44598): 777.69 sec so far
+Iteration 32 (of 44598): 799.71 sec so far
+Iteration 33 (of 44598): 834.26 sec so far
+Iteration 34 (of 44598): 855.08 sec so far
+Iteration 35 (of 44598): 877.46 sec so far
+Iteration 36 (of 44598): 925.08 sec so far
+Iteration 37 (of 44598): 956.12 sec so far
+Iteration 38 (of 44598): 986.51 sec so far
+Iteration 39 (of 44598): 1038.13 sec so far
+Iteration 40 (of 44598): 1063.82 sec so far
+Iteration 41 (of 44598): 1091.40 sec so far
+Iteration 42 (of 44598): 1124.23 sec so far
+Iteration 43 (of 44598): 1155.08 sec so far
+Iteration 44 (of 44598): 1211.20 sec so far
+Iteration 45 (of 44598): 1237.90 sec so far
+Iteration 46 (of 44598): 1259.87 sec so far
+Iteration 47 (of 44598): 1294.15 sec so far
+Iteration 48 (of 44598): 1319.25 sec so far
+Iteration 49 (of 44598): 1347.46 sec so far
+Iteration 50 (of 44598): 1390.56 sec so far
+Iteration 51 (of 44598): 1421.14 sec so far
+Iteration 52 (of 44598): 1454.60 sec so far
+Iteration 53 (of 44598): 1504.74 sec so far
+Iteration 54 (of 44598): 1526.01 sec so far
+Iteration 55 (of 44598): 1572.20 sec so far
+Iteration 56 (of 44598): 1593.76 sec so far
+Iteration 57 (of 44598): 1615.41 sec so far
+Iteration 58 (of 44598): 1649.88 sec so far
+Iteration 59 (of 44598): 1673.96 sec so far
+Iteration 60 (of 44598): 1707.14 sec so far
+Iteration 61 (of 44598): 1760.18 sec so far
+External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

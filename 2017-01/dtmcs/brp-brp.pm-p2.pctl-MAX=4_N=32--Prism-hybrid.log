@@ -1,0 +1,77 @@
+~/prism-examples/models/;dtmcs;brp;brp.pm;p2.pctl;MAX=4,N=32;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 17:26:36 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/brp/brp.pm ~/prism-examples/models/dtmcs/brp/p2.pctl -const 'MAX=4,N=32' -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/brp/brp.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/brp/p2.pctl"...
+
+1 property:
+(1) P=? [ F s=5&srep=2 ]
+
+Type:        DTMC
+Modules:     sender receiver checker channelK channelL 
+Variables:   s srep nrtr i bs s_ab fs ls r rrep fr lr br r_ab recv T k l 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F s=5&srep=2 ]
+Model constants: N=32,MAX=4
+
+Building model...
+Model constants: N=32,MAX=4
+
+Computing reachable states...
+
+Reachability (BFS): 205 iterations in 0.11 seconds (average 0.000546, setup 0.00)
+
+Time for model construction: 0.171 seconds.
+
+Warning: Deadlocks detected and fixed in 69 states
+
+Type:        DTMC
+States:      2183 (1 initial)
+Transitions: 2883
+
+Transition matrix: 2327 nodes (6 terminal), 2883 minterms, vars: 34r/34c
+
+Prob0: 200 iterations in 0.07 seconds (average 0.000360, setup 0.00)
+
+Prob1: 13 iterations in 0.01 seconds (average 0.000615, setup 0.00)
+
+yes = 7, no = 360, maybe = 1816
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=34, nodes=2214] [103.8 KB]
+Adding explicit sparse matrices... [levels=34, num=1, compact] [12.0 KB]
+Creating vector for diagonals... [dist=1, compact] [4.3 KB]
+Creating vector for RHS... [dist=2, compact] [4.3 KB]
+Allocating iteration vectors... [2 x 17.1 KB]
+TOTAL: [158.4 KB]
+
+Starting iterations...
+
+Jacobi: 229 iterations in 0.01 seconds (average 0.000052, setup 0.00)
+
+Value in the initial state: 2.3500687030255616E-8
+
+Time for model checking: 0.104 seconds.
+
+Result: 2.3500687030255616E-8 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 2.07s
+User time: 1.90s
+System time: 0.12s
+Memory: 109064KB

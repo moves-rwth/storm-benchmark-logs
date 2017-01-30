@@ -1,0 +1,14 @@
+~/prism-examples/models/;ctmcs;polling;poll14.sm;station1_polled.csl;;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P=? [ F<=20 (s=1 & a=0) ]
+Starting to build model...
+Current number of states: 214,157; states/second: 42,830
+Building model done. 344,064 states. Time for model exploration: 8 seconds.
+Finished model checking. Time required: 134 seconds
+P=? [ F<=20 (s=1 & a=0) ]: 1.0000000000000002
+Wall time: 136.74s
+User time: 147.62s
+System time: 1.22s
+Memory: 749296KB

@@ -1,0 +1,80 @@
+~/prism-examples/models/;ctmcs;polling;poll9.sm;s1.csl;;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 10:00:04 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/polling/poll9.sm ~/prism-examples/models/ctmcs/polling/s1.csl -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/polling/poll9.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/polling/s1.csl"...
+
+1 property:
+(1) S=? [ s1=1&!(s=1&a=1) ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 station4 station5 station6 station7 station8 station9 
+Variables:   s a s1 s2 s3 s4 s5 s6 s7 s8 s9 
+
+---------------------------------------------------------------------
+
+Model checking: S=? [ s1=1&!(s=1&a=1) ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 19 iterations in 0.00 seconds (average 0.000211, setup 0.00)
+
+Time for model construction: 0.059 seconds.
+
+Type:        CTMC
+States:      6912 (1 initial)
+Transitions: 36864
+
+Rate matrix: 765 nodes (4 terminal), 36864 minterms, vars: 14r/14c
+
+SCCs: 1, BSCCs: 1, non-BSCC states: 0
+BSCC sizes: 1:6912
+
+Computing steady state probabilities for BSCC 1
+
+Computing probabilities...
+Engine: MTBDD
+
+Iteration matrix MTBDD... [nodes=2849] [55.6 Kb]
+Diagonals MTBDD... [nodes=286] [5.6 Kb]
+
+Starting iterations...
+Iteration 51: 5.20 sec so far
+Iteration 86: 10.29 sec so far
+Iteration 119: 15.47 sec so far
+Iteration 150: 20.58 sec so far
+Iteration 180: 25.63 sec so far
+Iteration 212: 30.69 sec so far
+Iteration 246: 35.74 sec so far
+Iteration 281: 40.78 sec so far
+Iteration 319: 45.84 sec so far
+Iteration 371: 50.93 sec so far
+Iteration 444: 55.98 sec so far
+Iteration 528: 61.02 sec so far
+
+Jacobi: 571 iterations in 63.20 seconds (average 0.110676, setup 0.00)
+
+BSCC 1 probability: 0.14208480412582658
+
+All states are in BSCCs (so no reachability probabilities computed)
+
+Value in the initial state: 0.14208480412582658
+
+Time for model checking: 63.3 seconds.
+
+Result: 0.14208480412582658 (value in the initial state)
+
+Wall time: 64.66s
+User time: 64.94s
+System time: 0.19s
+Memory: 122892KB

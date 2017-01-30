@@ -1,0 +1,69 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;up_T.csl;MAX_COUNT=7;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 03:19:43 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/up_T.csl -const MAX_COUNT=7 -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/up_T.csl"...
+
+1 property:
+(1) R{"up"}=? [ C<=72000 ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: R{"up"}=? [ C<=72000 ]
+Model constants: MAX_COUNT=7
+
+Building model...
+Model constants: MAX_COUNT=7
+
+Computing reachable states...
+
+Reachability (BFS): 20 iterations in 0.01 seconds (average 0.000400, setup 0.00)
+
+Time for model construction: 0.043 seconds.
+
+Type:        CTMC
+States:      7703 (1 initial)
+Transitions: 32474
+
+Rate matrix: 1950 nodes (9 terminal), 32474 minterms, vars: 16r/16c
+
+Computing rewards...
+Engine: MTBDD
+
+Computing diagonals MTBDD... [nodes=925] [18.1 Kb]
+Building iteration matrix MTBDD... [nodes=5972] [116.6 Kb]
+
+Uniformisation: q.t = 0.085002 x 72000.000000 = 6120.120320
+Fox-Glynn: left = 5570, right = 6786
+
+Starting iterations...
+Iteration 830 (of 6786): 5.00 sec so far
+Iteration 2166 (of 6786): 10.01 sec so far
+Iteration 3418 (of 6786): 15.01 sec so far
+Iteration 4735 (of 6786): 20.02 sec so far
+Iteration 6065 (of 6786): 25.02 sec so far
+
+Iterative method: 6786 iterations in 26.82 seconds (average 0.003951, setup 0.01)
+
+Value in the initial state: 19.902503547428683
+
+Time for model checking: 26.866 seconds.
+
+Result: 19.902503547428683 (value in the initial state)
+
+Wall time: 28.20s
+User time: 28.52s
+System time: 0.15s
+Memory: 115348KB

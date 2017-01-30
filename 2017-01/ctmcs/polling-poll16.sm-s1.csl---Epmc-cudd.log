@@ -1,0 +1,11 @@
+~/prism-examples/models/;ctmcs;polling;poll16.sm;s1.csl;;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property S=? [ s1=1 & !(s=1 & a=1) ]
+Finished model checking. Time required: 0 seconds
+S=? [ s1=1 & !(s=1 & a=1) ]: No solver available to handle property "((s1) = (1)) ∧ (!(((s) = (1)) ∧ ((a) = (1))))" for this model with the current settings
+Wall time: 1.98s
+User time: 7.74s
+System time: 0.65s
+Memory: 252768KB

@@ -1,0 +1,32 @@
+~/prism-examples/models/;dtmcs;herman;herman19.pm;steps.pctl;;;Storm-hybrid
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/dtmcs/herman/herman19.pm --prop ~/prism-examples/models/dtmcs/herman/steps.pctl -e hybrid --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.023s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	524288 (1 nodes)
+Transitions: 	1162261468 (1328 nodes)
+Reward Models:  steps
+Variables: 	rows: 19 meta variables (19 DD variables), columns: 19 meta variables (19 DD variables)
+Labels: 	1
+   * stable
+-------------------------------------------------------------- 
+
+Model checking property R[exp]=? [F "stable"] ...
+ERROR (storm.cpp:42): An unexpected exception occurred and caused Storm to terminate. The message of this exception is: std::bad_alloc
+Command exited with non-zero status 2
+Wall time: 0.12s
+User time: 0.09s
+System time: 0.02s
+Memory: 44652KB
+External error: 2

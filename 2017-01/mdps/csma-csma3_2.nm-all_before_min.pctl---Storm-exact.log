@@ -1,0 +1,35 @@
+~/prism-examples/models/;mdps;csma;csma3_2.nm;all_before_min.pctl;;;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/csma/csma3_2.nm --prop ~/prism-examples/models/mdps/csma/all_before_min.pctl --exact --minmax:method pi -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.929s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	36850
+Transitions: 	55862
+Choices: 	38456
+Reward Models:  none
+Labels: 	4
+   * deadlock -> 0 state(s)
+   * init -> 1 state(s)
+   * collision_max_backoff -> 119 state(s)
+   * all_delivered -> 7 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property Pmin=? [!("collision_max_backoff") U "all_delivered"] ...
+Result (initial states): 16047436019417766735/36893488147419103232 (approx. 0.4349666249)
+Time for model checking: 0.390s.
+Wall time: 1.41s
+User time: 1.26s
+System time: 0.13s
+Memory: 221536KB

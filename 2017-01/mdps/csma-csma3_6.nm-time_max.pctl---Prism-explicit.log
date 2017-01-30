@@ -1,0 +1,48 @@
+~/prism-examples/models/;mdps;csma;csma3_6.nm;time_max.pctl;;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 11:37:03 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/csma/csma3_6.nm ~/prism-examples/models/mdps/csma/time_max.pctl -ex
+
+Parsing model file "~/prism-examples/models/mdps/csma/csma3_6.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/csma/time_max.pctl"...
+
+1 property:
+(1) R{"time"}max=? [ F "all_delivered" ]
+
+Type:        MDP
+Modules:     bus station1 station2 station3 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 s3 x3 bc3 cd3 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time"}max=? [ F "all_delivered" ]
+
+Building model...
+
+Computing reachable states... 91179 263471 398414 565914 710360 840595 995242 1105132 1250748 1430845 1592061 1728808 1835691 1946771 2097365 2134879 2332527 2503886 2638148 2817351 2988193 3093764 3206872 3348618 3466808 3597429 3765642 3918474 4082055 4245289 4383366 4521404 4669754 4765145 4856765 4927621 5073153 5237118 5357187 5421147 5514206 5653555 5800269 5953716 6127247 6289224 6434788 6568933 6623457 6723479 6864011 6999102 7098013 7205596 7324197 7463472 7570614 7678022 7739356 7889353 8030303 8162595 8167877 8305779 8310127 8435412 8440281 8562089 8665405 8763499 8856475 8942820 9022485 9095815 9163771 9226793 9284558 9338532 9389013 9435123 9478053 9518346 9556144 9591648 9625035 9656378 9685908 9713532 9739627 9763721 9785706 9806674 9826051 9843130 9850136 9853751Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.util.Arrays.copyOf(Arrays.java:2219)
+	at java.util.ArrayList.grow(ArrayList.java:242)
+	at java.util.ArrayList.ensureExplicitCapacity(ArrayList.java:216)
+	at java.util.ArrayList.ensureCapacityInternal(ArrayList.java:208)
+	at java.util.ArrayList.add(ArrayList.java:440)
+	at explicit.MDPSimple.addStates(MDPSimple.java:267)
+	at explicit.MDPSimple.addState(MDPSimple.java:259)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:237)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:110)
+	at prism.Prism.doBuildModel(Prism.java:1889)
+	at prism.Prism.buildModelIfRequired(Prism.java:1850)
+	at prism.Prism.modelCheck(Prism.java:2739)
+	at prism.PrismCL.run(PrismCL.java:333)
+	at prism.PrismCL.main(PrismCL.java:2336)
+Command exited with non-zero status 1
+Wall time: 1028.26s
+User time: 6510.78s
+System time: 28.04s
+Memory: 8443188KB
+External error: 1

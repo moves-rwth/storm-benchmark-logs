@@ -1,0 +1,33 @@
+~/prism-examples/models/;dtmcs;crowds;crowds.pm;positive.pctl;CrowdSize=15,TotalRuns=6;;Storm-exact
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/dtmcs/crowds/crowds.pm --prop ~/prism-examples/models/dtmcs/crowds/positive.pctl -const CrowdSize=15,TotalRuns=6 --exact --minmax:method pi -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 39.071s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	2341309
+Transitions: 	6992509
+Reward Models:  none
+Labels: 	3
+   * deadlock -> 50388 state(s)
+   * init -> 1 state(s)
+   * (observe0 > 1) -> 3876 state(s)
+choice labels: 	no
+-------------------------------------------------------------- 
+
+Model checking property P=? [F (observe0 > 1)] ...
+Result (initial states): 2411341047075878849894054815541/18742882116032135486602783203125 (approx. 0.1286536954)
+Time for model checking: 27.992s.
+Wall time: 68.08s
+User time: 66.31s
+System time: 1.68s
+Memory: 1941968KB

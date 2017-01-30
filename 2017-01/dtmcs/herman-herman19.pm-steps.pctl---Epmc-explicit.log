@@ -1,0 +1,10 @@
+~/prism-examples/models/;dtmcs;herman;herman19.pm;steps.pctl;;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Unexpected error occurred during parsing: java.lang.OutOfMemoryError: GC overhead limit exceeded
+Command exited with non-zero status 1
+Wall time: 392.38s
+User time: 2722.45s
+System time: 9.82s
+Memory: 8592416KB
+External error: 1

@@ -1,0 +1,30 @@
+~/prism-examples/models/;dtmcs;brp;brp.pm;p4.pctl;MAX=3,N=64;;Storm-cudd
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/dtmcs/brp/brp.pm --prop ~/prism-examples/models/dtmcs/brp/p4.pctl -const MAX=3,N=64 -e dd --ddlib cudd --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.142s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	3526 (600 nodes)
+Transitions: 	4611 (2359 nodes)
+Reward Models:  none
+Variables: 	rows: 18 meta variables (34 DD variables), columns: 18 meta variables (34 DD variables)
+Labels: 	0
+-------------------------------------------------------------- 
+
+Model checking property P=? [F (!((srep = 0)) & !(recv))] ...
+Result (initial states): 1.6e-07
+Time for model checking: 0.013s.
+Wall time: 0.23s
+User time: 0.20s
+System time: 0.02s
+Memory: 39208KB

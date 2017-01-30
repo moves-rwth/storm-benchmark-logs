@@ -1,0 +1,74 @@
+~/prism-examples/models/;ctmcs;mapk_cascade;mapk_cascade.sm;activated_time.csl;N=1;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 20:37:25 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm ~/prism-examples/models/ctmcs/mapk_cascade/activated_time.csl -const N=1 -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/mapk_cascade/activated_time.csl"...
+
+1 property:
+(1) R{"time"}=? [ F kpp=N ]
+
+Type:        CTMC
+Modules:     E1 E2 KPTASE KKPTASE MAPK MAPKK MAPKKK 
+Variables:   e1 e2 kptase kkptase k k_kkpp kp kp_kkpp kp_ptase kpp kpp_ptase kk kk_kkkp kkp kkp_kkkp kkp_ptase kkpp kkpp_ptase kkk kkk_e1 kkkp kkkp_e2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time"}=? [ F kpp=N ]
+Model constants: N=1
+
+Building model...
+Model constants: N=1
+
+Computing reachable states...
+
+Reachability (BFS): 19 iterations in 0.02 seconds (average 0.001263, setup 0.00)
+
+Time for model construction: 0.076 seconds.
+
+Type:        CTMC
+States:      118 (1 initial)
+Transitions: 468
+
+Rate matrix: 1976 nodes (3 terminal), 468 minterms, vars: 22r/22c
+
+Diagonals vector: 533 nodes (12 terminal), 118 minterms
+Embedded Markov chain: 3561 nodes (14 terminal), 468 minterms
+
+Prob0: 11 iterations in 0.01 seconds (average 0.000727, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 22, inf = 0, maybe = 96
+
+Computing remaining rewards...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=22, nodes=3327] [156.0 KB]
+Adding explicit sparse matrices... [levels=22, num=1, compact] [1.7 KB]
+Creating vector for diagonals... [dist=1, compact] [0.2 KB]
+Creating vector for RHS... [dist=12, compact] [0.3 KB]
+Allocating iteration vectors... [2 x 0.9 KB]
+TOTAL: [160.1 KB]
+
+Starting iterations...
+
+Jacobi: 2117 iterations in 0.01 seconds (average 0.000006, setup 0.00)
+
+Value in the initial state: 66.18239710702922
+
+Time for model checking: 0.027 seconds.
+
+Result: 66.18239710702922 (value in the initial state)
+
+Wall time: 2.00s
+User time: 1.87s
+System time: 0.07s
+Memory: 109740KB

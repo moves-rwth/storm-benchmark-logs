@@ -1,0 +1,73 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;danger_time.csl;MAX_COUNT=100;;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 21:27:25 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/danger_time.csl -const MAX_COUNT=100 -s -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/danger_time.csl"...
+
+1 property:
+(1) R{"danger"}=? [ F "down" ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: R{"danger"}=? [ F "down" ]
+Model constants: MAX_COUNT=100
+
+Building model...
+Model constants: MAX_COUNT=100
+
+Computing reachable states...
+
+Reachability (BFS): 113 iterations in 0.09 seconds (average 0.000814, setup 0.00)
+
+Time for model construction: 0.136 seconds.
+
+Type:        CTMC
+States:      86288 (1 initial)
+Transitions: 364205
+
+Rate matrix: 3023 nodes (9 terminal), 364205 minterms, vars: 19r/19c
+
+Diagonals vector: 1207 nodes (69 terminal), 86288 minterms
+Embedded Markov chain: 23450 nodes (309 terminal), 364205 minterms
+
+Prob0: 2 iterations in 0.00 seconds (average 0.002000, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 56760, inf = 0, maybe = 29528
+
+Computing remaining rewards...
+Engine: Sparse
+
+Building sparse matrix... [n=86288, nnz=151260, compact] [676.4 KB]
+Creating vector for diagonals... [dist=5, compact] [168.6 KB]
+Creating vector for RHS... [dist=25, compact] [168.7 KB]
+Allocating iteration vectors... [2 x 674.1 KB]
+TOTAL: [2.3 MB]
+
+Starting iterations...
+
+Jacobi: 623 iterations in 1.42 seconds (average 0.002170, setup 0.07)
+
+Value in the initial state: 0.3322708264853296
+
+Time for model checking: 1.458 seconds.
+
+Result: 0.3322708264853296 (value in the initial state)
+
+Wall time: 2.85s
+User time: 3.24s
+System time: 0.12s
+Memory: 111964KB

@@ -1,0 +1,73 @@
+~/prism-examples/models/;ctmcs;embedded;embedded.sm;down_T.csl;MAX_COUNT=100;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 20:16:09 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/embedded/embedded.sm ~/prism-examples/models/ctmcs/embedded/down_T.csl -const MAX_COUNT=100 -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/embedded/embedded.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/embedded/down_T.csl"...
+
+1 property:
+(1) R{"down"}=? [ C<=72000 ]
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus 
+Variables:   s i a o m count comp reqi reqo 
+
+---------------------------------------------------------------------
+
+Model checking: R{"down"}=? [ C<=72000 ]
+Model constants: MAX_COUNT=100
+
+Building model...
+Model constants: MAX_COUNT=100
+
+Computing reachable states...
+
+Reachability (BFS): 113 iterations in 0.10 seconds (average 0.000850, setup 0.00)
+
+Time for model construction: 0.143 seconds.
+
+Type:        CTMC
+States:      86288 (1 initial)
+Transitions: 364205
+
+Rate matrix: 3023 nodes (9 terminal), 364205 minterms, vars: 19r/19c
+
+Computing rewards...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=19, nodes=4187] [196.3 KB]
+Adding explicit sparse matrices... [levels=15, num=10, compact] [524.9 KB]
+Creating vector for diagonals... [dist=68, compact] [169.1 KB]
+Allocating iteration vectors... [3 x 674.1 KB]
+TOTAL: [2.8 MB]
+
+Uniformisation: q.t = 0.085002 x 72000.000000 = 6120.120320
+Fox-Glynn: left = 5570, right = 6786
+
+Starting iterations...
+Iteration 1081 (of 6786): max relative diff=0.001409, 5.00 sec so far
+Iteration 2160 (of 6786): max relative diff=0.000600, 10.01 sec so far
+Iteration 3242 (of 6786): max relative diff=0.000391, 15.02 sec so far
+Iteration 4326 (of 6786): max relative diff=0.000294, 20.02 sec so far
+Iteration 5408 (of 6786): max relative diff=0.000238, 25.02 sec so far
+Iteration 6525 (of 6786): max relative diff=0.000200, 30.03 sec so far
+
+Iterative method: 6786 iterations in 31.22 seconds (average 0.004597, setup 0.02)
+
+Value in the initial state: 0.07696369766461776
+
+Time for model checking: 31.252 seconds.
+
+Result: 0.07696369766461776 (value in the initial state)
+
+Wall time: 32.65s
+User time: 33.01s
+System time: 0.12s
+Memory: 110820KB

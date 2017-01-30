@@ -1,0 +1,63 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;qos2.csl;N=512;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P=? [ F[20,20] !"minimum" ]
+Starting to build model...
+Current number of states: 302,069; states/second: 60,412
+Current number of states: 620,467; states/second: 63,680
+Current number of states: 925,643; states/second: 61,035
+Current number of states: 1,232,558; states/second: 61,383
+Current number of states: 1,671,036; states/second: 87,695
+Current number of states: 1,958,628; states/second: 57,518
+Current number of states: 2,122,529; states/second: 32,780
+Current number of states: 2,582,569; states/second: 92,007
+Current number of states: 3,043,591; states/second: 92,204
+Current number of states: 3,428,983; states/second: 77,078
+Current number of states: 3,606,608; states/second: 35,524
+Current number of states: 4,070,352; states/second: 92,749
+Current number of states: 4,194,304; states/second: 24,790
+Current number of states: 4,399,894; states/second: 41,117
+Current number of states: 4,859,062; states/second: 91,833
+Current number of states: 5,314,552; states/second: 91,098
+Current number of states: 5,770,176; states/second: 91,124
+Current number of states: 6,225,537; states/second: 91,072
+Current number of states: 6,605,351; states/second: 75,962
+Current number of states: 6,863,255; states/second: 51,581
+Current number of states: 6,952,392; states/second: 17,827
+Current number of states: 7,404,969; states/second: 90,515
+Current number of states: 7,856,725; states/second: 90,351
+Current number of states: 8,305,976; states/second: 89,850
+Current number of states: 8,388,608; states/second: 16,526
+Current number of states: 8,388,608; states/second: 0
+Current number of states: 8,422,798; states/second: 6,837
+Current number of states: 8,885,470; states/second: 92,534
+Current number of states: 9,347,356; states/second: 92,377
+Building model done. 9,465,876 states. Time for model exploration: 146 seconds.
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f1d5c12cf41, pid=31647, tid=139764720645888
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_73-b02) (build 1.8.0_73-b02)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.73-b02 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [jna715686098884820932.tmp+0xf41]  double_ctmc_bounded+0x101
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# An error report file with more information is saved as:
+# ~/benchmarking_pmc/scripts/hs_err_pid31647.log
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+~/epmc/run_epmc.sh: line 2: 31647 Aborted                 /import/sw/jdk1.8.0_73/bin/java -Xmx"$1" -Xss4m -XX:ParallelGCThreads=8 -jar ~/epmc/epmc-standard.jar "${@:2}"
+Command exited with non-zero status 134
+Wall time: 316.21s
+User time: 336.88s
+System time: 4.46s
+Memory: 5599516KB
+External error: 134

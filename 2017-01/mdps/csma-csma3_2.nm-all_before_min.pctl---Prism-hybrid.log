@@ -1,0 +1,69 @@
+~/prism-examples/models/;mdps;csma;csma3_2.nm;all_before_min.pctl;;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 17:58:53 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/csma/csma3_2.nm ~/prism-examples/models/mdps/csma/all_before_min.pctl -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/csma/csma3_2.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/csma/all_before_min.pctl"...
+
+1 property:
+(1) Pmin=? [ !"collision_max_backoff" U "all_delivered" ]
+
+Type:        MDP
+Modules:     bus station1 station2 station3 
+Variables:   b y1 y2 s1 x1 bc1 cd1 s2 x2 bc2 cd2 s3 x3 bc3 cd3 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ !"collision_max_backoff" U "all_delivered" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 135 iterations in 0.46 seconds (average 0.003378, setup 0.00)
+
+Time for model construction: 0.592 seconds.
+
+Type:        MDP
+States:      36850 (1 initial)
+Transitions: 55862
+Choices:     38456
+
+Transition matrix: 12759 nodes (4 terminal), 55862 minterms, vars: 42r/42c/13nd
+
+Prob0E: 139 iterations in 0.60 seconds (average 0.004345, setup 0.00)
+
+Prob1A: 47 iterations in 0.25 seconds (average 0.005362, setup 0.00)
+
+yes = 13885, no = 1298, maybe = 21667
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrices... [nm=14, levels=42, nodes=18210] [853.6 KB]
+Adding sparse bits... [levels=42-42, num=14, compact=14/14] [648.2 KB]
+Creating vector for yes... [dist=2, compact] [72.0 KB]
+Allocating iteration vectors... [3 x 287.9 KB]
+TOTAL: [2.4 MB]
+
+Starting iterations...
+
+Iterative method: 97 iterations in 0.46 seconds (average 0.004289, setup 0.04)
+
+Value in the initial state: 0.4349662700161495
+
+Time for model checking: 1.353 seconds.
+
+Result: 0.4349662700161495 (value in the initial state)
+
+Wall time: 3.33s
+User time: 3.70s
+System time: 0.14s
+Memory: 123872KB

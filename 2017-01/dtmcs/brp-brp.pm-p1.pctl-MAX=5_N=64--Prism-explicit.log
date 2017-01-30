@@ -1,0 +1,68 @@
+~/prism-examples/models/;dtmcs;brp;brp.pm;p1.pctl;MAX=5,N=64;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 00:01:29 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/brp/brp.pm ~/prism-examples/models/dtmcs/brp/p1.pctl -const 'MAX=5,N=64' -ex
+
+Parsing model file "~/prism-examples/models/dtmcs/brp/brp.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/brp/p1.pctl"...
+
+1 property:
+(1) P=? [ F s=5 ]
+
+Type:        DTMC
+Modules:     sender receiver checker channelK channelL 
+Variables:   s srep nrtr i bs s_ab fs ls r rrep fr lr br r_ab recv T k l 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F s=5 ]
+Model constants: N=64,MAX=5
+
+Building model...
+Model constants: N=64,MAX=5
+
+Computing reachable states... 5192 states
+Reachable states exploration and model construction done in 0.589 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.691 seconds.
+
+Warning: Deadlocks detected and fixed in 134 states
+
+Type:        DTMC
+States:      5192 (1 initial)
+Transitions: 6915
+
+Warning: Switching to linear equation solution method "Gauss-Seidel"
+
+Starting probabilistic reachability...
+Calculating predecessor relation for discrete-time Markov chain...  done (0.022 seconds)
+Starting Prob0...
+Prob0 took 0.022 seconds.
+Starting Prob1...
+Prob1 took 0.03 seconds.
+target=128, yes=448, no=274, maybe=4470
+Starting Gauss-Seidel...
+Gauss-Seidel took 279 iterations and 0.383 seconds.
+Probabilistic reachability took 0.462 seconds.
+
+Value in the initial state: 4.4820564458044946E-8
+
+Time for model checking: 0.481 seconds.
+
+Result: 4.4820564458044946E-8 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There were 2 warnings during computation.
+
+Wall time: 2.44s
+User time: 3.66s
+System time: 0.16s
+Memory: 179536KB

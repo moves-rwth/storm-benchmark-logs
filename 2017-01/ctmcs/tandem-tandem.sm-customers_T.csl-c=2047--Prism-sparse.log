@@ -1,0 +1,234 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;customers_T.csl;c=2047;;Prism-sparse
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 23:04:18 CET 2017
+Hostname: uc02-02
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/tandem/tandem.sm ~/prism-examples/models/ctmcs/tandem/customers_T.csl -const c=2047 -s -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/tandem/tandem.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/tandem/customers_T.csl"...
+
+1 property:
+(1) R=? [ I=0.2 ]
+
+Type:        CTMC
+Modules:     serverC serverM 
+Variables:   sc ph sm 
+
+---------------------------------------------------------------------
+
+Model checking: R=? [ I=0.2 ]
+Model constants: c=2047
+
+Building model...
+Model constants: c=2047
+
+Computing reachable states...
+
+Reachability (BFS): 6143 iterations in 44.51 seconds (average 0.007246, setup 0.00)
+
+Time for model construction: 49.362 seconds.
+
+Type:        CTMC
+States:      8386560 (1 initial)
+Transitions: 29337603
+
+Rate matrix: 333 nodes (6 terminal), 29337603 minterms, vars: 23r/23c
+
+Computing probabilities...
+Engine: Sparse
+
+Number of non-absorbing states: 8386560 of 8386560 (100.0%)
+
+Building sparse matrix... [n=8386560, nnz=29337603, compact] [119.9 MB]
+Creating vector for diagonals... [dist=9, compact] [16.0 MB]
+Allocating iteration vectors... [3 x 64.0 MB]
+TOTAL: [327.9 MB]
+
+Uniformisation: q.t = 8357.880000 x 0.200000 = 1671.576000
+Fox-Glynn: left = 1382, right = 2020
+
+Starting iterations...
+Iteration 13 (of 2020): max relative diff=0.076923, 5.14 sec so far
+Iteration 26 (of 2020): max relative diff=0.038461, 10.24 sec so far
+Iteration 39 (of 2020): max relative diff=0.025641, 15.32 sec so far
+Iteration 52 (of 2020): max relative diff=0.019231, 20.42 sec so far
+Iteration 64 (of 2020): max relative diff=0.015625, 25.45 sec so far
+Iteration 77 (of 2020): max relative diff=0.012987, 30.76 sec so far
+Iteration 90 (of 2020): max relative diff=0.011111, 36.08 sec so far
+Iteration 103 (of 2020): max relative diff=0.009709, 41.39 sec so far
+Iteration 116 (of 2020): max relative diff=0.008621, 46.51 sec so far
+Iteration 129 (of 2020): max relative diff=0.007752, 51.59 sec so far
+Iteration 142 (of 2020): max relative diff=0.007042, 56.68 sec so far
+Iteration 155 (of 2020): max relative diff=0.006452, 61.77 sec so far
+Iteration 168 (of 2020): max relative diff=0.005952, 66.86 sec so far
+Iteration 181 (of 2020): max relative diff=0.005525, 71.96 sec so far
+Iteration 194 (of 2020): max relative diff=0.005155, 77.05 sec so far
+Iteration 207 (of 2020): max relative diff=0.004831, 82.14 sec so far
+Iteration 220 (of 2020): max relative diff=0.004545, 87.23 sec so far
+Iteration 233 (of 2020): max relative diff=0.004292, 92.32 sec so far
+Iteration 246 (of 2020): max relative diff=0.004065, 97.42 sec so far
+Iteration 259 (of 2020): max relative diff=0.003861, 102.53 sec so far
+Iteration 271 (of 2020): max relative diff=0.003690, 107.95 sec so far
+Iteration 283 (of 2020): max relative diff=0.003534, 113.36 sec so far
+Iteration 295 (of 2020): max relative diff=0.003390, 118.76 sec so far
+Iteration 307 (of 2020): max relative diff=0.003257, 124.17 sec so far
+Iteration 319 (of 2020): max relative diff=0.003135, 129.29 sec so far
+Iteration 331 (of 2020): max relative diff=0.003021, 134.36 sec so far
+Iteration 343 (of 2020): max relative diff=0.002915, 139.52 sec so far
+Iteration 356 (of 2020): max relative diff=0.002809, 144.64 sec so far
+Iteration 368 (of 2020): max relative diff=0.002717, 150.05 sec so far
+Iteration 379 (of 2020): max relative diff=0.002638, 155.48 sec so far
+Iteration 391 (of 2020): max relative diff=0.002558, 160.90 sec so far
+Iteration 403 (of 2020): max relative diff=0.002481, 166.30 sec so far
+Iteration 415 (of 2020): max relative diff=0.002410, 171.72 sec so far
+Iteration 427 (of 2020): max relative diff=0.002342, 177.13 sec so far
+Iteration 439 (of 2020): max relative diff=0.002278, 182.21 sec so far
+Iteration 451 (of 2020): max relative diff=0.002217, 187.22 sec so far
+Iteration 463 (of 2020): max relative diff=0.002160, 192.22 sec so far
+Iteration 475 (of 2020): max relative diff=0.002105, 197.27 sec so far
+Iteration 487 (of 2020): max relative diff=0.002053, 202.28 sec so far
+Iteration 499 (of 2020): max relative diff=0.002004, 207.30 sec so far
+Iteration 511 (of 2020): max relative diff=0.001957, 212.36 sec so far
+Iteration 523 (of 2020): max relative diff=0.001912, 217.41 sec so far
+Iteration 535 (of 2020): max relative diff=0.001869, 222.44 sec so far
+Iteration 547 (of 2020): max relative diff=0.001828, 227.46 sec so far
+Iteration 559 (of 2020): max relative diff=0.001789, 232.49 sec so far
+Iteration 571 (of 2020): max relative diff=0.001751, 237.50 sec so far
+Iteration 583 (of 2020): max relative diff=0.001715, 242.58 sec so far
+Iteration 595 (of 2020): max relative diff=0.001681, 247.66 sec so far
+Iteration 606 (of 2020): max relative diff=0.001650, 252.97 sec so far
+Iteration 617 (of 2020): max relative diff=0.001621, 258.29 sec so far
+Iteration 628 (of 2020): max relative diff=0.001592, 263.58 sec so far
+Iteration 639 (of 2020): max relative diff=0.001565, 268.92 sec so far
+Iteration 650 (of 2020): max relative diff=0.001538, 274.23 sec so far
+Iteration 661 (of 2020): max relative diff=0.001513, 279.51 sec so far
+Iteration 672 (of 2020): max relative diff=0.001488, 284.80 sec so far
+Iteration 683 (of 2020): max relative diff=0.001464, 290.08 sec so far
+Iteration 694 (of 2020): max relative diff=0.001441, 295.35 sec so far
+Iteration 706 (of 2020): max relative diff=0.001416, 300.51 sec so far
+Iteration 719 (of 2020): max relative diff=0.001391, 305.92 sec so far
+Iteration 732 (of 2020): max relative diff=0.001366, 311.33 sec so far
+Iteration 745 (of 2020): max relative diff=0.001342, 316.74 sec so far
+Iteration 758 (of 2020): max relative diff=0.001319, 322.15 sec so far
+Iteration 771 (of 2020): max relative diff=0.001297, 327.56 sec so far
+Iteration 784 (of 2020): max relative diff=0.001275, 332.98 sec so far
+Iteration 797 (of 2020): max relative diff=0.001255, 338.39 sec so far
+Iteration 810 (of 2020): max relative diff=0.001235, 343.80 sec so far
+Iteration 823 (of 2020): max relative diff=0.001215, 349.22 sec so far
+Iteration 836 (of 2020): max relative diff=0.001196, 354.63 sec so far
+Iteration 849 (of 2020): max relative diff=0.001178, 360.04 sec so far
+Iteration 862 (of 2020): max relative diff=0.001160, 365.46 sec so far
+Iteration 875 (of 2020): max relative diff=0.001143, 370.87 sec so far
+Iteration 888 (of 2020): max relative diff=0.001126, 376.28 sec so far
+Iteration 901 (of 2020): max relative diff=0.001110, 381.69 sec so far
+Iteration 914 (of 2020): max relative diff=0.001094, 387.10 sec so far
+Iteration 927 (of 2020): max relative diff=0.001079, 392.51 sec so far
+Iteration 940 (of 2020): max relative diff=0.001064, 397.92 sec so far
+Iteration 953 (of 2020): max relative diff=0.001049, 403.34 sec so far
+Iteration 966 (of 2020): max relative diff=0.001035, 408.75 sec so far
+Iteration 979 (of 2020): max relative diff=0.001021, 414.16 sec so far
+Iteration 992 (of 2020): max relative diff=0.001008, 419.58 sec so far
+Iteration 1005 (of 2020): max relative diff=0.000995, 424.99 sec so far
+Iteration 1017 (of 2020): max relative diff=0.000983, 429.99 sec so far
+Iteration 1030 (of 2020): max relative diff=0.000971, 435.40 sec so far
+Iteration 1043 (of 2020): max relative diff=0.000959, 440.82 sec so far
+Iteration 1056 (of 2020): max relative diff=0.000947, 446.22 sec so far
+Iteration 1069 (of 2020): max relative diff=0.000935, 451.64 sec so far
+Iteration 1082 (of 2020): max relative diff=0.000924, 457.06 sec so far
+Iteration 1095 (of 2020): max relative diff=0.000913, 462.47 sec so far
+Iteration 1108 (of 2020): max relative diff=0.000902, 467.88 sec so far
+Iteration 1121 (of 2020): max relative diff=0.000892, 473.29 sec so far
+Iteration 1134 (of 2020): max relative diff=0.000882, 478.65 sec so far
+Iteration 1147 (of 2020): max relative diff=0.000872, 483.98 sec so far
+Iteration 1160 (of 2020): max relative diff=0.000862, 489.31 sec so far
+Iteration 1173 (of 2020): max relative diff=0.000852, 494.64 sec so far
+Iteration 1186 (of 2020): max relative diff=0.000843, 499.98 sec so far
+Iteration 1199 (of 2020): max relative diff=0.000834, 505.31 sec so far
+Iteration 1212 (of 2020): max relative diff=0.000825, 510.64 sec so far
+Iteration 1225 (of 2020): max relative diff=0.000816, 515.97 sec so far
+Iteration 1238 (of 2020): max relative diff=0.000808, 521.30 sec so far
+Iteration 1251 (of 2020): max relative diff=0.000799, 526.64 sec so far
+Iteration 1264 (of 2020): max relative diff=0.000791, 531.97 sec so far
+Iteration 1277 (of 2020): max relative diff=0.000783, 537.30 sec so far
+Iteration 1290 (of 2020): max relative diff=0.000775, 542.62 sec so far
+Iteration 1303 (of 2020): max relative diff=0.000767, 547.95 sec so far
+Iteration 1316 (of 2020): max relative diff=0.000760, 553.28 sec so far
+Iteration 1329 (of 2020): max relative diff=0.000752, 558.61 sec so far
+Iteration 1342 (of 2020): max relative diff=0.000745, 563.95 sec so far
+Iteration 1355 (of 2020): max relative diff=0.000738, 569.28 sec so far
+Iteration 1368 (of 2020): max relative diff=0.000731, 574.61 sec so far
+Iteration 1381 (of 2020): max relative diff=0.000724, 579.94 sec so far
+Iteration 1393 (of 2020): max relative diff=0.000718, 585.28 sec so far
+Iteration 1405 (of 2020): max relative diff=0.000712, 590.72 sec so far
+Iteration 1416 (of 2020): max relative diff=0.000706, 595.77 sec so far
+Iteration 1427 (of 2020): max relative diff=0.000701, 600.80 sec so far
+Iteration 1439 (of 2020): max relative diff=0.000695, 606.24 sec so far
+Iteration 1451 (of 2020): max relative diff=0.000689, 611.64 sec so far
+Iteration 1463 (of 2020): max relative diff=0.000683, 617.02 sec so far
+Iteration 1475 (of 2020): max relative diff=0.000678, 622.39 sec so far
+Iteration 1487 (of 2020): max relative diff=0.000672, 627.76 sec so far
+Iteration 1498 (of 2020): max relative diff=0.000668, 632.78 sec so far
+Iteration 1509 (of 2020): max relative diff=0.000663, 637.80 sec so far
+Iteration 1521 (of 2020): max relative diff=0.000657, 643.24 sec so far
+Iteration 1533 (of 2020): max relative diff=0.000652, 648.62 sec so far
+Iteration 1545 (of 2020): max relative diff=0.000647, 654.00 sec so far
+Iteration 1557 (of 2020): max relative diff=0.000642, 659.37 sec so far
+Iteration 1569 (of 2020): max relative diff=0.000637, 664.74 sec so far
+Iteration 1581 (of 2020): max relative diff=0.000632, 670.14 sec so far
+Iteration 1592 (of 2020): max relative diff=0.000628, 675.18 sec so far
+Iteration 1603 (of 2020): max relative diff=0.000624, 680.21 sec so far
+Iteration 1614 (of 2020): max relative diff=0.000620, 685.25 sec so far
+Iteration 1625 (of 2020): max relative diff=0.000615, 690.26 sec so far
+Iteration 1637 (of 2020): max relative diff=0.000611, 695.70 sec so far
+Iteration 1649 (of 2020): max relative diff=0.000606, 701.06 sec so far
+Iteration 1661 (of 2020): max relative diff=0.000602, 706.44 sec so far
+Iteration 1673 (of 2020): max relative diff=0.000598, 711.81 sec so far
+Iteration 1685 (of 2020): max relative diff=0.000593, 717.20 sec so far
+Iteration 1697 (of 2020): max relative diff=0.000589, 722.65 sec so far
+Iteration 1708 (of 2020): max relative diff=0.000585, 727.69 sec so far
+Iteration 1719 (of 2020): max relative diff=0.000582, 732.72 sec so far
+Iteration 1731 (of 2020): max relative diff=0.000578, 738.17 sec so far
+Iteration 1743 (of 2020): max relative diff=0.000574, 743.54 sec so far
+Iteration 1755 (of 2020): max relative diff=0.000570, 748.91 sec so far
+Iteration 1767 (of 2020): max relative diff=0.000566, 754.28 sec so far
+Iteration 1779 (of 2020): max relative diff=0.000562, 759.67 sec so far
+Iteration 1790 (of 2020): max relative diff=0.000559, 764.69 sec so far
+Iteration 1801 (of 2020): max relative diff=0.000555, 769.73 sec so far
+Iteration 1812 (of 2020): max relative diff=0.000552, 774.74 sec so far
+Iteration 1824 (of 2020): max relative diff=0.000548, 780.16 sec so far
+Iteration 1836 (of 2020): max relative diff=0.000545, 785.54 sec so far
+Iteration 1848 (of 2020): max relative diff=0.000541, 790.91 sec so far
+Iteration 1860 (of 2020): max relative diff=0.000538, 796.34 sec so far
+Iteration 1871 (of 2020): max relative diff=0.000534, 801.37 sec so far
+Iteration 1882 (of 2020): max relative diff=0.000531, 806.41 sec so far
+Iteration 1893 (of 2020): max relative diff=0.000528, 811.44 sec so far
+Iteration 1905 (of 2020): max relative diff=0.000525, 816.86 sec so far
+Iteration 1917 (of 2020): max relative diff=0.000522, 822.23 sec so far
+Iteration 1929 (of 2020): max relative diff=0.000518, 827.60 sec so far
+Iteration 1941 (of 2020): max relative diff=0.000515, 832.97 sec so far
+Iteration 1952 (of 2020): max relative diff=0.000512, 838.04 sec so far
+Iteration 1963 (of 2020): max relative diff=0.000509, 843.06 sec so far
+Iteration 1973 (of 2020): max relative diff=0.000507, 848.65 sec so far
+Iteration 1982 (of 2020): max relative diff=0.000505, 853.81 sec so far
+Iteration 1991 (of 2020): max relative diff=0.000502, 859.00 sec so far
+Iteration 2000 (of 2020): max relative diff=0.000500, 864.16 sec so far
+Iteration 2009 (of 2020): max relative diff=0.000498, 869.30 sec so far
+Iteration 2018 (of 2020): max relative diff=0.000496, 874.44 sec so far
+
+Iterative method: 2020 iterations in 883.08 seconds (average 0.433519, setup 7.37)
+
+Value in the initial state: 1637.4968272699466
+
+Time for model checking: 883.724 seconds.
+
+Result: 1637.4968272699466 (value in the initial state)
+
+Wall time: 934.39s
+User time: 934.37s
+System time: 0.67s
+Memory: 534344KB

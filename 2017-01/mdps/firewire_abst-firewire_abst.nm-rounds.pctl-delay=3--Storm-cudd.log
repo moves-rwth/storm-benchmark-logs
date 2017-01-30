@@ -1,0 +1,33 @@
+~/prism-examples/models/;mdps;firewire_abst;firewire_abst.nm;rounds.pctl;delay=3;;Storm-cudd
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/firewire_abst/firewire_abst.nm --prop ~/prism-examples/models/mdps/firewire_abst/rounds.pctl -const delay=3 -e dd --ddlib cudd --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 0.217s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	611 (29 nodes)
+Transitions: 	718 (342 nodes)
+Choices: 	694
+Reward Models:  rounds
+Variables: 	rows: 2 meta variables (12 DD variables), columns: 2 meta variables (12 DD variables), nondeterminism: 3 meta variables (3 DD variables)
+Labels: 	1
+   * done
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"rounds"}min=? [F "done"] ...
+ WARN (SymbolicMdpPrctlHelper.cpp:171): Results of reward computation may be too low, because of zero-reward loops.
+Result (initial states): 1
+Time for model checking: 0.020s.
+Wall time: 0.30s
+User time: 0.28s
+System time: 0.02s
+Memory: 36804KB

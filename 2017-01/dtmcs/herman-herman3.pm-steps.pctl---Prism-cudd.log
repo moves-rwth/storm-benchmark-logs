@@ -1,0 +1,65 @@
+~/prism-examples/models/;dtmcs;herman;herman3.pm;steps.pctl;;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 04:19:45 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/herman/herman3.pm ~/prism-examples/models/dtmcs/herman/steps.pctl -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/herman/herman3.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/herman/steps.pctl"...
+
+1 property:
+(1) R=? [ F "stable" ]
+
+Type:        DTMC
+Modules:     process1 process2 process3 
+Variables:   x1 x2 x3 
+
+---------------------------------------------------------------------
+
+Model checking: R=? [ F "stable" ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Time for model construction: 0.021 seconds.
+
+Type:        DTMC
+States:      8 (8 initial)
+Transitions: 28
+
+Transition matrix: 24 nodes (3 terminal), 28 minterms, vars: 3r/3c
+
+Prob0: 2 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 6, inf = 0, maybe = 2
+
+Computing remaining rewards...
+Engine: MTBDD
+
+Iteration matrix MTBDD... [nodes=17] [0.3 Kb]
+Diagonals MTBDD... [nodes=7] [0.1 Kb]
+
+Starting iterations...
+
+Jacobi: 8 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Range of values over initial states: [0.0,1.333333275511158]
+
+Time for model checking: 0.003 seconds.
+
+Result: [0.0,1.333333275511158] (range of values over initial states)
+
+Wall time: 2.07s
+User time: 1.66s
+System time: 0.13s
+Memory: 105200KB

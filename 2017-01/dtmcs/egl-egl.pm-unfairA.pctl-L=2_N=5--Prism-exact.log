@@ -1,0 +1,40 @@
+~/prism-examples/models/;dtmcs;egl;egl.pm;unfairA.pctl;L=2,N=5;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 01:55:37 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/egl/egl.pm ~/prism-examples/models/dtmcs/egl/unfairA.pctl -const 'L=2,N=5' -exact -politer
+
+Parsing model file "~/prism-examples/models/dtmcs/egl/egl.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/egl/unfairA.pctl"...
+
+1 property:
+(1) P=? [ F !"knowA"&"knowB" ]
+
+Type:        DTMC
+Modules:     counter partyA partyB 
+Variables:   b n phase party b0 b20 b1 b21 b2 b22 b3 b23 b4 b24 b5 b25 b6 b26 b7 b27 b8 b28 b9 b29 b10 b30 b11 b31 b12 b32 b13 b33 b14 b34 b15 b35 b16 b36 b17 b37 b18 b38 b19 b39 a0 a20 a1 a21 a2 a22 a3 a23 a4 a24 a5 a25 a6 a26 a7 a27 a8 a28 a9 a29 a10 a30 a11 a31 a12 a32 a13 a33 a14 a34 a15 a35 a16 a36 a17 a37 a18 a38 a19 a39 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F !"knowA"&"knowB" ]
+Model constants: N=5,L=2
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 4.212 secs.
+
+Time for model construction: 4.238 seconds.
+
+Time for model checking: 38.962 seconds.
+
+Result (probability): 33/64
+Wall time: 44.90s
+User time: 55.45s
+System time: 1.82s
+Memory: 2697184KB

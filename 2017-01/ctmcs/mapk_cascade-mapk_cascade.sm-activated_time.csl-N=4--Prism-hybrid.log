@@ -1,0 +1,94 @@
+~/prism-examples/models/;ctmcs;mapk_cascade;mapk_cascade.sm;activated_time.csl;N=4;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 20:37:28 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm ~/prism-examples/models/ctmcs/mapk_cascade/activated_time.csl -const N=4 -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/mapk_cascade/mapk_cascade.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/mapk_cascade/activated_time.csl"...
+
+1 property:
+(1) R{"time"}=? [ F kpp=N ]
+
+Type:        CTMC
+Modules:     E1 E2 KPTASE KKPTASE MAPK MAPKK MAPKKK 
+Variables:   e1 e2 kptase kkptase k k_kkpp kp kp_kkpp kp_ptase kpp kpp_ptase kk kk_kkkp kkp kkp_kkkp kkp_ptase kkpp kkpp_ptase kkk kkk_e1 kkkp kkkp_e2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"time"}=? [ F kpp=N ]
+Model constants: N=4
+
+Building model...
+Model constants: N=4
+
+Computing reachable states...
+
+Reachability (BFS): 44 iterations in 5.27 seconds (average 0.119727, setup 0.00)
+
+Time for model construction: 5.917 seconds.
+
+Type:        CTMC
+States:      99535 (1 initial)
+Transitions: 910872
+
+Rate matrix: 111563 nodes (14 terminal), 910872 minterms, vars: 58r/58c
+
+Diagonals vector: 52485 nodes (128 terminal), 99535 minterms
+Embedded Markov chain: 929797 nodes (681 terminal), 910872 minterms
+
+Prob0: 23 iterations in 0.70 seconds (average 0.030609, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.004000, setup 0.00)
+
+goal = 1461, inf = 0, maybe = 98074
+
+Computing remaining rewards...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=58, nodes=915103] [41.9 MB]
+Adding explicit sparse matrices... [levels=24, num=25482, compact] [904.1 KB]
+Creating vector for diagonals... [dist=1, compact] [194.4 KB]
+Creating vector for RHS... [dist=128, compact] [195.4 KB]
+Allocating iteration vectors... [2 x 777.6 KB]
+TOTAL: [44.7 MB]
+
+Starting iterations...
+Iteration 128: max relative diff=0.014423, 5.02 sec so far
+Iteration 255: max relative diff=0.004629, 10.06 sec so far
+Iteration 355: max relative diff=0.002374, 15.09 sec so far
+Iteration 483: max relative diff=0.001127, 20.11 sec so far
+Iteration 610: max relative diff=0.000570, 25.15 sec so far
+Iteration 690: max relative diff=0.000376, 30.16 sec so far
+Iteration 770: max relative diff=0.000249, 35.21 sec so far
+Iteration 851: max relative diff=0.000165, 40.24 sec so far
+Iteration 931: max relative diff=0.000110, 45.26 sec so far
+Iteration 1010: max relative diff=0.000074, 50.32 sec so far
+Iteration 1089: max relative diff=0.000050, 55.33 sec so far
+Iteration 1169: max relative diff=0.000033, 60.35 sec so far
+Iteration 1252: max relative diff=0.000022, 65.36 sec so far
+Iteration 1337: max relative diff=0.000014, 70.41 sec so far
+Iteration 1421: max relative diff=0.000010, 75.44 sec so far
+Iteration 1506: max relative diff=0.000006, 80.48 sec so far
+Iteration 1590: max relative diff=0.000004, 85.51 sec so far
+Iteration 1674: max relative diff=0.000003, 90.53 sec so far
+Iteration 1759: max relative diff=0.000002, 95.56 sec so far
+Iteration 1843: max relative diff=0.000001, 100.56 sec so far
+
+Jacobi: 1875 iterations in 629.80 seconds (average 0.054637, setup 527.36)
+
+Value in the initial state: 40.67270371188303
+
+Time for model checking: 633.956 seconds.
+
+Result: 40.67270371188303 (value in the initial state)
+
+Wall time: 641.49s
+User time: 641.54s
+System time: 0.58s
+Memory: 298292KB

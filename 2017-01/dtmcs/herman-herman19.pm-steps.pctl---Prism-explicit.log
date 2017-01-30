@@ -1,0 +1,32 @@
+~/prism-examples/models/;dtmcs;herman;herman19.pm;steps.pctl;;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 04:38:33 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/herman/herman19.pm ~/prism-examples/models/dtmcs/herman/steps.pctl -ex
+
+Parsing model file "~/prism-examples/models/dtmcs/herman/herman19.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/herman/steps.pctl"...
+
+1 property:
+(1) R=? [ F "stable" ]
+
+Type:        DTMC
+Modules:     process1 process2 process3 process4 process5 process6 process7 process8 process9 process10 process11 process12 process13 process14 process15 process16 process17 process18 process19 
+Variables:   x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 x11 x12 x13 x14 x15 x16 x17 x18 x19 
+
+---------------------------------------------------------------------
+
+Model checking: R=? [ F "stable" ]
+
+Building model...
+
+Computing reachable states... 1 5 13 20 32 49 63 73 97 117 127 142 192 217 238 249 256 281 326 388 435 458 488 506 513 553 591 705 769 797 865 903 945 971 996 1014 1023 1037 1081 1151 1255 1407 1530 1545 1595 1661 1781 1799 1847 1912 1933 1971 1993 2017 2038 2045 2050 2077 2150 2242 2330 2512 2609 2931 3049 3080 3121 3194 3295 3351 3553 3586 3613 3681 3760 3839 3861 3904 3969 4001 4037 4049 4073 4089 4096 4113 4161 4239 4352 4537 4608 4868 5064 5139 5584 5860 6056 6144 6171 6229 6329 6424 6626 6719 7003 7153 7181 7229 7296 7417 7581 7679 7696 7747 7821 7933 7953 8007 8065 8087 8129 8136 8161 8175 8184 8190 8193 8201 8219 8241 8257 8294 8317 8333 8385 8415 8433 8445 8452 8480 8519 8575 8585 8608 8639 8647 8665 8673 8681 8689 8695 8699 8702 8704 8705 8707 8712 8719 8728 8735 8740 8753 8762 8767 8769 8781 8799 8803 8814 8818 8825 8828 8830 8832 8833 8835 8839 8845 8849 8859 8864 8871 8881External error: Timeout
+Wall time: 1800s
+User time: 0s
+System time: 0s
+Memory: 0KB

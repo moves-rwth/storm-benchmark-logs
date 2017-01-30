@@ -1,0 +1,73 @@
+~/prism-examples/models/;dtmcs;brp;brp.pm;p4.pctl;MAX=20,N=8192;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 01:04:19 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/dtmcs/brp/brp.pm ~/prism-examples/models/dtmcs/brp/p4.pctl -const 'MAX=20,N=8192' -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/dtmcs/brp/brp.pm"...
+
+Parsing properties file "~/prism-examples/models/dtmcs/brp/p4.pctl"...
+
+1 property:
+(1) P=? [ F !(srep=0)&!recv ]
+
+Type:        DTMC
+Modules:     sender receiver checker channelK channelL 
+Variables:   s srep nrtr i bs s_ab fs ls r rrep fr lr br r_ab recv T k l 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F !(srep=0)&!recv ]
+Model constants: N=8192,MAX=20
+
+Building model...
+Model constants: N=8192,MAX=20
+
+Computing reachable states...
+
+Reachability (BFS): 49197 iterations in 63.94 seconds (average 0.001300, setup 0.00)
+
+Time for model construction: 149.994 seconds.
+
+Warning: Deadlocks detected and fixed in 16405 states
+
+Type:        DTMC
+States:      2261015 (1 initial)
+Transitions: 3096579
+
+Transition matrix: 3165 nodes (6 terminal), 3096579 minterms, vars: 44r/44c
+
+Prob0: 45 iterations in 0.01 seconds (average 0.000267, setup 0.00)
+
+Prob1: 3 iterations in 0.00 seconds (average 0.001333, setup 0.00)
+
+yes = 5, no = 2260968, maybe = 42
+
+Computing remaining probabilities...
+Engine: MTBDD
+
+Iteration matrix MTBDD... [nodes=331] [6.5 Kb]
+Diagonals MTBDD... [nodes=764] [14.9 Kb]
+
+Starting iterations...
+
+Jacobi: 17 iterations in 0.00 seconds (average 0.000235, setup 0.00)
+
+Value in the initial state: 0.0
+
+Time for model checking: 0.03 seconds.
+
+Result: 0.0 (value in the initial state)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+Wall time: 151.32s
+User time: 151.86s
+System time: 0.17s
+Memory: 140836KB

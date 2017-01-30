@@ -1,0 +1,41 @@
+~/prism-examples/models/;ctmcs;polling;poll16.sm;served.csl;;;Storm-cudd
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/ctmcs/polling/poll16.sm --prop ~/prism-examples/models/ctmcs/polling/served.csl -e dd --ddlib cudd --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+ WARN (Program.cpp:179): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1104): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 0.080s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (symbolic)
+States: 	1572864 (48 nodes)
+Transitions: 	13893632 (2188 nodes)
+Reward Models:  served
+Variables: 	rows: 18 meta variables (21 DD variables), columns: 18 meta variables (21 DD variables)
+Labels: 	0
+-------------------------------------------------------------- 
+
+Model checking property R[exp]{"served"}=? [C<=20] ...
+ERROR (storm.h:592): This functionality is not yet implemented.
+ERROR (storm.cpp:39): An exception caused Storm to terminate. The message of the exception is: This functionality is not yet implemented.
+Command exited with non-zero status 1
+Wall time: 0.16s
+User time: 0.14s
+System time: 0.02s
+Memory: 37884KB
+External error: 1

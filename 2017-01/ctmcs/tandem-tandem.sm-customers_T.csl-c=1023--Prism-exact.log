@@ -1,0 +1,40 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;customers_T.csl;c=1023;;Prism-exact
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 12:59:11 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/tandem/tandem.sm ~/prism-examples/models/ctmcs/tandem/customers_T.csl -const c=1023 -exact -politer
+
+Parsing model file "~/prism-examples/models/ctmcs/tandem/tandem.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/tandem/customers_T.csl"...
+
+1 property:
+(1) R=? [ I=0.2 ]
+
+Type:        CTMC
+Modules:     serverC serverM 
+Variables:   sc ph sm 
+
+---------------------------------------------------------------------
+
+Model checking: R=? [ I=0.2 ]
+Model constants: c=1023
+
+Building model...
+
+Computing reachable states...
+Reachable states exploration and model construction done in 737.522 secs.
+
+Time for model construction: 737.525 seconds.
+Building reward structure...
+
+Error: Parametric engine does not yet handle the I operator in the R operator.
+
+Wall time: 856.73s
+User time: 956.01s
+System time: 452.89s
+Memory: 2985180KB

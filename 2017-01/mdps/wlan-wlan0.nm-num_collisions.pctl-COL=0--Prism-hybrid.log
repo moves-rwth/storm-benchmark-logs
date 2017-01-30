@@ -1,0 +1,73 @@
+~/prism-examples/models/;mdps;wlan;wlan0.nm;num_collisions.pctl;COL=0;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 19:28:51 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/wlan/wlan0.nm ~/prism-examples/models/mdps/wlan/num_collisions.pctl -const COL=0 -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/mdps/wlan/wlan0.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/wlan/num_collisions.pctl"...
+
+1 property:
+(1) R{"collisions"}max=? [ F s1=12&s2=12 ]
+
+Type:        MDP
+Modules:     medium station1 station2 
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2 
+
+---------------------------------------------------------------------
+
+Model checking: R{"collisions"}max=? [ F s1=12&s2=12 ]
+Model constants: COL=0
+
+Building model...
+Model constants: COL=0
+
+Computing reachable states...
+
+Reachability (BFS): 45 iterations in 0.06 seconds (average 0.001244, setup 0.00)
+
+Time for model construction: 0.17 seconds.
+
+Type:        MDP
+States:      2954 (1 initial)
+Transitions: 5202
+Choices:     3972
+
+Transition matrix: 4173 nodes (3 terminal), 5202 minterms, vars: 33r/33c/7nd
+
+Prob0E: 134 iterations in 0.30 seconds (average 0.002209, setup 0.00)
+
+Prob1A: 1 iterations in 0.00 seconds (average 0.004000, setup 0.00)
+
+goal = 1, inf = 0, maybe = 2953
+
+Computing remaining rewards...
+Switching engine since hybrid engine does yet support this computation...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=2954, nc=3971, nnz=5201, k=3] [88.0 KB]
+Building sparse matrix (transition rewards)... [n=2954, nc=3971, nnz=6, k=3] [27.1 KB]
+Creating vector for state rewards... [23.1 KB]
+Creating vector for inf... [23.1 KB]
+Allocating iteration vectors... [2 x 23.1 KB]
+TOTAL: [207.4 KB]
+
+Starting iterations...
+
+Iterative method: 340 iterations in 0.05 seconds (average 0.000118, setup 0.01)
+
+Value in the initial state: 1.224873058284048
+
+Time for model checking: 0.36 seconds.
+
+Result: 1.224873058284048 (value in the initial state)
+
+Wall time: 2.01s
+User time: 2.28s
+System time: 0.13s
+Memory: 118816KB

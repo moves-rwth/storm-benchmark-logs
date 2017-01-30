@@ -1,0 +1,55 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;qos2.csl;N=2;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 18:03:19 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/cluster/cluster.sm ~/prism-examples/models/ctmcs/cluster/qos2.csl -const N=2 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/cluster/cluster.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/cluster/qos2.csl"...
+
+1 property:
+(1) P=? [ F[20,20] !"minimum" ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F[20,20] !"minimum" ]
+Model constants: N=2
+
+Building model...
+Model constants: N=2
+
+Computing reachable states... 276 states
+Reachable states exploration and model construction done in 0.286 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.322 seconds.
+
+Type:        CTMC
+States:      276 (1 initial)
+Transitions: 1120
+
+Starting backwards transient probability computation...
+
+Uniformisation: q.t = 51.00408000000001 x 20.0 = 1020.0816000000002
+Fox-Glynn (1.25E-7): left = 794, right = 1293
+Backwards transient probability computation took 1294 iters and 0.208 seconds.
+
+Value in the initial state: 2.201599927333956E-6
+
+Time for model checking: 0.217 seconds.
+
+Result: 2.201599927333956E-6 (value in the initial state)
+
+Wall time: 2.34s
+User time: 2.55s
+System time: 0.11s
+Memory: 110528KB

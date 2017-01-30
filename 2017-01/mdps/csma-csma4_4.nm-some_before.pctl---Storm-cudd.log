@@ -1,0 +1,34 @@
+~/prism-examples/models/;mdps;csma;csma4_4.nm;some_before.pctl;;;Storm-cudd
+Storm
+---------------
+
+version: 0.10.1 (+405 commits) build from revision g5bbf4ab (DIRTY).
+
+Linked with GNU Linear Programming Kit v4.57.
+Linked with Microsoft Z3 Optimizer v4.5 Build 0 Rev 0.
+Linked with CARL.
+Command line arguments: --prism ~/prism-examples/models/mdps/csma/csma4_4.nm --prop ~/prism-examples/models/mdps/csma/some_before.pctl -e dd --ddlib cudd --cudd:maxmem 4096 -pc 
+Current working directory: ~/ma_scripts/scripts
+
+Time for model construction: 15.914s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	129203556 (85347 nodes)
+Transitions: 	250558922 (543547 nodes)
+Choices: 	131222866
+Reward Models:  none
+Variables: 	rows: 19 meta variables (66 DD variables), columns: 19 meta variables (66 DD variables), nondeterminism: 17 meta variables (17 DD variables)
+Labels: 	3
+   * all_delivered
+   * collision_max_backoff
+   * one_delivered
+-------------------------------------------------------------- 
+
+Model checking property Pmin=? [F ((min((min((min(((s1 = 4) ? cd1 : (4 + 1)), ((s2 = 4) ? cd2 : (4 + 1)))), ((s3 = 4) ? cd3 : (4 + 1)))), ((s4 = 4) ? cd4 : (4 + 1)))) < 4)] ...
+Result (initial states): 0.9754408228
+Time for model checking: 609.417s.
+Wall time: 627.03s
+User time: 625.92s
+System time: 0.54s
+Memory: 294312KB

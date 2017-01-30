@@ -1,0 +1,11 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;customers_T.csl;c=63;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property R=? [ I=0.2 ]
+Finished model checking. Time required: 0 seconds
+R=? [ I=0.2 ]: No solver available to handle property "R=?[I=(0.2)]" for this model with the current settings
+Wall time: 1.96s
+User time: 7.17s
+System time: 0.55s
+Memory: 248644KB

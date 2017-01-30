@@ -1,0 +1,66 @@
+~/prism-examples/models/;ctmcs;polling;poll3.sm;station1_polled.csl;;;Prism-cudd
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 18:04:31 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/polling/poll3.sm ~/prism-examples/models/ctmcs/polling/station1_polled.csl -m -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/polling/poll3.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/polling/station1_polled.csl"...
+
+1 property:
+(1) P=? [ F<=20 (s=1&a=0) ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 
+Variables:   s a s1 s2 s3 
+
+---------------------------------------------------------------------
+
+Model checking: P=? [ F<=20 (s=1&a=0) ]
+
+Building model...
+
+Computing reachable states...
+
+Reachability (BFS): 7 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Time for model construction: 0.026 seconds.
+
+Type:        CTMC
+States:      36 (1 initial)
+Transitions: 84
+
+Rate matrix: 112 nodes (4 terminal), 84 minterms, vars: 6r/6c
+
+Computing probabilities...
+Engine: MTBDD
+
+Number of non-absorbing states: 28 of 36 (77.8%)
+
+Computing diagonals MTBDD... [nodes=33] [0.6 Kb]
+Building iteration matrix MTBDD... [nodes=155] [3.0 Kb]
+
+Uniformisation: q.t = 205.020000 x 20.000000 = 4100.400000
+Fox-Glynn: left = 3649, right = 4645
+
+Starting iterations...
+
+Steady state detected at iteration 3142
+
+Iterative method: 3142 iterations in 0.62 seconds (average 0.000199, setup 0.00)
+
+Value in the initial state: 1.0
+
+Time for model checking: 0.644 seconds.
+
+Result: 1.0 (value in the initial state)
+
+Wall time: 2.02s
+User time: 2.17s
+System time: 0.18s
+Memory: 104876KB

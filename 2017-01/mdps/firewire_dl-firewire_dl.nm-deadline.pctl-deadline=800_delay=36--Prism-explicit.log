@@ -1,0 +1,61 @@
+~/prism-examples/models/;mdps;firewire_dl;firewire_dl.nm;deadline.pctl;deadline=800,delay=36;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 14:05:38 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/mdps/firewire_dl/firewire_dl.nm ~/prism-examples/models/mdps/firewire_dl/deadline.pctl -const 'deadline=800,delay=36' -ex
+
+Parsing model file "~/prism-examples/models/mdps/firewire_dl/firewire_dl.nm"...
+
+Parsing properties file "~/prism-examples/models/mdps/firewire_dl/deadline.pctl"...
+
+1 property:
+(1) Pmin=? [ F s=9 ]
+
+Type:        MDP
+Modules:     abstract_firewire 
+Variables:   y x s 
+
+---------------------------------------------------------------------
+
+Model checking: Pmin=? [ F s=9 ]
+Model constants: deadline=800,delay=36
+
+Building model...
+Model constants: deadline=800,delay=36
+
+Computing reachable states... 277634 530965 states
+Reachable states exploration and model construction done in 4.908 secs.
+Sorting reachable states list...
+
+Time for model construction: 5.765 seconds.
+
+Type:        MDP
+States:      530965 (1 initial)
+Transitions: 954670
+Choices:     804154
+Max/avg:     3/1.51
+
+Starting probabilistic reachability (min)...
+Starting Prob0 (min)...
+Prob0 (min) took 375 iterations and 10.209 seconds.
+Starting Prob1 (min)...
+Prob1 (min) took 2131 iterations and 58.156 seconds.
+target=761, yes=200681, no=132459, maybe=197825
+Starting value iteration (min)...
+Value iteration (min) took 621 iterations and 8.749 seconds.
+Probabilistic reachability took 77.13 seconds.
+
+Value in the initial state: 0.939453125
+
+Time for model checking: 77.314 seconds.
+
+Result: 0.939453125 (value in the initial state)
+
+Wall time: 84.59s
+User time: 91.32s
+System time: 1.59s
+Memory: 2717992KB

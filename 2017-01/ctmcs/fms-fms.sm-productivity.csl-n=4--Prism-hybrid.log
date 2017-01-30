@@ -1,0 +1,73 @@
+~/prism-examples/models/;ctmcs;fms;fms.sm;productivity.csl;n=4;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 20:30:27 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/fms/fms.sm ~/prism-examples/models/ctmcs/fms/productivity.csl -const n=4 -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/fms/fms.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/fms/productivity.csl"...
+
+1 property:
+(1) R{"productivity"}=? [ S ]
+
+Type:        CTMC
+Modules:     machine1 machine2 machine3 machine12 
+Variables:   P1 P1wM1 P1M1 P1d P1s P1wP2 M1 P2 P2wM2 P2M2 P2s P2wP1 M2 P3 P3M2 P3s P12 P12wM3 P12M3 P12s M3 
+
+---------------------------------------------------------------------
+
+Model checking: R{"productivity"}=? [ S ]
+Model constants: n=4
+
+Building model...
+Model constants: n=4
+
+Computing reachable states...
+
+Reachability (BFS): 33 iterations in 0.27 seconds (average 0.008242, setup 0.00)
+
+Time for model construction: 0.451 seconds.
+
+Type:        CTMC
+States:      35910 (1 initial)
+Transitions: 237120
+
+Rate matrix: 28470 nodes (30 terminal), 237120 minterms, vars: 55r/55c
+
+SCCs: 1, BSCCs: 1, non-BSCC states: 0
+BSCC sizes: 1:35910
+
+Computing steady state probabilities for BSCC 1
+
+Computing probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=55, nodes=29778] [1.4 MB]
+Adding explicit sparse matrices... [levels=41, num=104, compact] [912.0 KB]
+Creating vector for diagonals... [dist=437, compact] [73.6 KB]
+Allocating iteration vectors... [2 x 280.5 KB]
+TOTAL: [2.9 MB]
+
+Starting iterations...
+
+Jacobi: 729 iterations in 1.75 seconds (average 0.002019, setup 0.28)
+
+BSCC 1 Reward: 59.551385094382596
+
+All states are in BSCCs (so no reachability probabilities computed)
+
+Value in the initial state: 59.551385094382596
+
+Time for model checking: 2.346 seconds.
+
+Result: 59.551385094382596 (value in the initial state)
+
+Wall time: 4.15s
+User time: 4.51s
+System time: 0.10s
+Memory: 127548KB

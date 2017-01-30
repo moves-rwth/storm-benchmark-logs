@@ -1,0 +1,15 @@
+~/prism-examples/models/;mdps;firewire_abst;firewire_abst.nm;elected.pctl;delay=36;;Epmc-explicit
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property P>=1 [ F "done" ]
+Starting to build model...
+Building model done. 776 states. Time for model exploration: 0 seconds.
+Starting iteration...
+Done. Did 0 iterations in 0 seconds.
+Finished model checking. Time required: 0 seconds
+P>=1 [ F "done" ]: true
+Wall time: 2.72s
+User time: 10.07s
+System time: 0.64s
+Memory: 264280KB

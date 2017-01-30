@@ -1,0 +1,56 @@
+~/prism-examples/models/;ctmcs;cluster;cluster.sm;operational.csl;N=16;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Fri Jan 20 22:14:51 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/cluster/cluster.sm ~/prism-examples/models/ctmcs/cluster/operational.csl -const N=16 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/cluster/cluster.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/cluster/operational.csl"...
+
+1 property:
+(1) R{"percent_op"}=? [ I=20 ]
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight 
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n 
+
+---------------------------------------------------------------------
+
+Model checking: R{"percent_op"}=? [ I=20 ]
+Model constants: N=16
+
+Building model...
+Model constants: N=16
+
+Computing reachable states... 10132 states
+Reachable states exploration and model construction done in 0.824 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.952 seconds.
+
+Type:        CTMC
+States:      10132 (1 initial)
+Transitions: 48160
+Building reward structure...
+
+Starting backwards instantaneous rewards computation...
+
+Uniformisation: q.t = 51.06120000000001 x 20.0 = 1021.2240000000002
+Fox-Glynn (1.25E-7): left = 795, right = 1294
+Backwards transient instantaneous rewards computation took 1295 iters and 8.428 seconds.
+
+Value in the initial state: 99.87281916141423
+
+Time for model checking: 8.484 seconds.
+
+Result: 99.87281916141423 (value in the initial state)
+
+Wall time: 10.70s
+User time: 12.10s
+System time: 0.15s
+Memory: 153112KB

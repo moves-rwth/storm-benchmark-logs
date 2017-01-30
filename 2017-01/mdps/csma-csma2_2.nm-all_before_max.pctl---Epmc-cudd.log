@@ -1,0 +1,14 @@
+~/prism-examples/models/;mdps;csma;csma2_2.nm;all_before_max.pctl;;;Epmc-cudd
+Running EPMC revision 7425
+Assertions are disabled. In case of incorrect results or otherwise strange behaviour, please run the JVM with "-ea" parameter.
+Starting model checking...
+Analysing property Pmax=? [ !"collision_max_backoff" U "all_delivered" ]
+Building DD model...
+Finished model checking. Time required: 0 seconds
+Time spent in DD routines converting DD<->MDD: 0 seconds
+Total time spent in DD routines: 0 seconds
+Pmax=? [ !"collision_max_backoff" U "all_delivered" ]: Variable information are inconsistent
+Wall time: 2.41s
+User time: 8.66s
+System time: 0.77s
+Memory: 269956KB

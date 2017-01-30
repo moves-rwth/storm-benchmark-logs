@@ -1,0 +1,46 @@
+~/prism-examples/models/;ctmcs;tandem;tandem.sm;customers.csl;c=1023;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 12:30:22 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/tandem/tandem.sm ~/prism-examples/models/ctmcs/tandem/customers.csl -const c=1023 -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/tandem/tandem.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/tandem/customers.csl"...
+
+1 property:
+(1) R{"customers"}=? [ S ]
+
+Type:        CTMC
+Modules:     serverC serverM 
+Variables:   sc ph sm 
+
+---------------------------------------------------------------------
+
+Model checking: R{"customers"}=? [ S ]
+Model constants: c=1023
+
+Building model...
+Model constants: c=1023
+
+Computing reachable states... 205225 439885 613940 765784 929708 1106401 1285234 1445269 1601234 1754458 1886889 2096128 states
+Reachable states exploration and model construction done in 35.514 secs.
+Sorting reachable states list...
+
+Time for model construction: 38.29 seconds.
+
+Type:        CTMC
+States:      2096128 (1 initial)
+Transitions: 7328771
+Building reward structure...
+
+Error: Explicit engine does not yet handle the S reward operator.
+
+Wall time: 40.30s
+User time: 51.77s
+System time: 2.29s
+Memory: 3229196KB

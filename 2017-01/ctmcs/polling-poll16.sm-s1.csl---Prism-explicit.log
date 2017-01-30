@@ -1,0 +1,43 @@
+~/prism-examples/models/;ctmcs;polling;poll16.sm;s1.csl;;;Prism-explicit
+PRISM
+=====
+
+Version: 4.3.1
+Date: Sat Jan 21 11:15:58 CET 2017
+Hostname: uc02-04
+Memory limits: cudd=1g, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/polling/poll16.sm ~/prism-examples/models/ctmcs/polling/s1.csl -ex
+
+Parsing model file "~/prism-examples/models/ctmcs/polling/poll16.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/polling/s1.csl"...
+
+1 property:
+(1) S=? [ s1=1&!(s=1&a=1) ]
+
+Type:        CTMC
+Modules:     server station1 station2 station3 station4 station5 station6 station7 station8 station9 station10 station11 station12 station13 station14 station15 station16 
+Variables:   s a s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 
+
+---------------------------------------------------------------------
+
+Model checking: S=? [ s1=1&!(s=1&a=1) ]
+
+Building model...
+
+Computing reachable states... 36110 91198 147784 198149 257800 316976 378704 427166 473826 529561 589449 645179 698493 752144 809008 857485 913459 971223 1020549 1069218 1121575 1177759 1234587 1291698 1336804 1395208 1455418 1475655 1540904 1572864 states
+Reachable states exploration and model construction done in 99.598 secs.
+Sorting reachable states list...
+
+Time for model construction: 103.764 seconds.
+
+Type:        CTMC
+States:      1572864 (1 initial)
+Transitions: 13893632
+
+Error: Explicit engine does not yet handle the S operator for CTMCs.
+
+Wall time: 106.15s
+User time: 214.11s
+System time: 3.40s
+Memory: 4226152KB

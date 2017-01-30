@@ -1,0 +1,68 @@
+~/prism-examples/models/;ctmcs;kanban;kanban.sm;throughput.csl;t=1;;Prism-hybrid
+PRISM
+=====
+
+Version: 4.3.1
+Date: Mon Jan 23 20:32:05 CET 2017
+Hostname: uc02-05
+Memory limits: cudd=4096m, java(heap)=6.9g
+Command line: prism -javamaxmem 8000m ~/prism-examples/models/ctmcs/kanban/kanban.sm ~/prism-examples/models/ctmcs/kanban/throughput.csl -const t=1 -h -cuddmaxmem 4096m
+
+Parsing model file "~/prism-examples/models/ctmcs/kanban/kanban.sm"...
+
+Parsing properties file "~/prism-examples/models/ctmcs/kanban/throughput.csl"...
+
+1 property:
+(1) R{"throughput"}=? [ S ]
+
+Type:        CTMC
+Modules:     k1 k2 k3 k4 
+Variables:   w1 x1 y1 z1 w2 x2 y2 z2 w3 x3 y3 z3 w4 x4 y4 z4 
+
+---------------------------------------------------------------------
+
+Model checking: R{"throughput"}=? [ S ]
+Model constants: t=1
+
+Building model...
+Model constants: t=1
+
+Computing reachable states...
+
+Reachability (BFS): 15 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+Time for model construction: 0.041 seconds.
+
+Type:        CTMC
+States:      160 (1 initial)
+Transitions: 616
+
+Rate matrix: 499 nodes (14 terminal), 616 minterms, vars: 16r/16c
+
+SCCs: 1, BSCCs: 1, non-BSCC states: 0
+BSCC sizes: 1:160
+
+Computing steady state probabilities for BSCC 1
+
+Computing probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=16, nodes=499] [23.4 KB]
+Adding explicit sparse matrices... [levels=16, num=1, compact] [2.7 KB]
+Creating vector for diagonals... [dist=60, compact] [0.8 KB]
+Allocating iteration vectors... [2 x 1.2 KB]
+TOTAL: [29.3 KB]
+
+Starting iterations...
+
+Jacobi: 10000 iterations in 0.04 seconds (average 0.000004, setup 0.00)
+
+Error: Iterative method did not converge within 10000 iterations.
+Consider using a different numerical method or increasing the maximum number of iterations.
+
+Warning: CUDD reports 18 non-zero references.
+
+Wall time: 2.03s
+User time: 1.68s
+System time: 0.14s
+Memory: 105852KB
