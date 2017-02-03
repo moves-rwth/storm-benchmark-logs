@@ -83,6 +83,13 @@
       },
     ],
   });
+
+  table.on("column-sizing.dt", function ( e, settings ) {
+    // Change on sizing to only trigger once for group show/hide
+    updateBest(table);
+  } );
+
+  updateBest(table);
 </script>
 <table id="table" class="display">
   <thead>
@@ -110,421 +117,1191 @@
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/bluetooth/time.pctl">time.pctl</a></td>
       <td>mrec=1</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Storm-sparse.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Prism-explicit.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Epmc-explicit.log">Err</a></td>      <td><b><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Storm-cudd.log">23.94s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Prism-cudd.log">31.34s</a></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Storm-hybrid.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Prism-sparse.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Epmc-cudd.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Prism-hybrid.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Storm-exact.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Prism-exact.log">n.s.</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Storm-sparse.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Prism-explicit.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Epmc-explicit.log">Err</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Storm-cudd.log">23.94s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Prism-cudd.log">31.34s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Storm-hybrid.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Prism-sparse.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Epmc-cudd.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Prism-hybrid.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Storm-exact.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=1--Prism-exact.log">n.s.</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/bluetooth/bluetooth.pm">bluetooth.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/bluetooth/time.pctl">time.pctl</a></td>
       <td>mrec=2</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Storm-sparse.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Prism-explicit.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Epmc-explicit.log">Err</a></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Storm-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Prism-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Storm-hybrid.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Prism-sparse.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Epmc-cudd.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Prism-hybrid.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Storm-exact.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Prism-exact.log">n.s.</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Storm-sparse.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Prism-explicit.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Epmc-explicit.log">Err</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Storm-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Prism-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Storm-hybrid.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Prism-sparse.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Epmc-cudd.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Prism-hybrid.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Storm-exact.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/bluetooth-bluetooth.pm-time.pctl-mrec=2--Prism-exact.log">n.s.</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p1.pctl">p1.pctl</a></td>
       <td>MAX=10<br>N=1024</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Storm-sparse.log">2.82s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Prism-explicit.log">303.34s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Epmc-explicit.log">4.50s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Storm-cudd.log">5.65s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Prism-cudd.log">12.06s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Storm-hybrid.log">120.16s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Prism-sparse.log">36.55s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Epmc-cudd.log">75.51s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Prism-hybrid.log">37.59s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Storm-exact.log">662.43s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Storm-sparse.log">2.82s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Prism-explicit.log">303.34s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Epmc-explicit.log">4.50s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Storm-cudd.log">5.65s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Prism-cudd.log">12.06s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Storm-hybrid.log">120.16s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Prism-sparse.log">36.55s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Epmc-cudd.log">75.51s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Prism-hybrid.log">37.59s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Storm-exact.log">662.43s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=10_N=1024--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p1.pctl">p1.pctl</a></td>
       <td>MAX=15<br>N=4096</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Storm-sparse.log">106.68s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Prism-explicit.log">TO</a></td>      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Epmc-explicit.log">11.63s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Storm-cudd.log">34.47s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Prism-cudd.log">61.21s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Storm-hybrid.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Prism-sparse.log">Err</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Epmc-cudd.log">397.16s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Prism-hybrid.log">Err</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Storm-exact.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Storm-sparse.log">106.68s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Prism-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Epmc-explicit.log">11.63s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Storm-cudd.log">34.47s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Prism-cudd.log">61.21s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Storm-hybrid.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Prism-sparse.log">Err</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Epmc-cudd.log">397.16s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Prism-hybrid.log">Err</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Storm-exact.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=15_N=4096--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p1.pctl">p1.pctl</a></td>
       <td>MAX=20<br>N=8192</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Storm-sparse.log">708.08s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Prism-explicit.log">TO</a></td>      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Epmc-explicit.log">25.34s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Storm-cudd.log">84.41s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Prism-cudd.log">198.54s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Storm-hybrid.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Prism-sparse.log">Err</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Epmc-cudd.log">1174.72s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Prism-hybrid.log">Err</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Storm-exact.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Storm-sparse.log">708.08s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Prism-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Epmc-explicit.log">25.34s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Storm-cudd.log">84.41s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Prism-cudd.log">198.54s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Storm-hybrid.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Prism-sparse.log">Err</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Epmc-cudd.log">1174.72s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Prism-hybrid.log">Err</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Storm-exact.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=20_N=8192--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p1.pctl">p1.pctl</a></td>
       <td>MAX=2<br>N=16</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Storm-sparse.log">0.32s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Prism-explicit.log">2.39s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Epmc-explicit.log">2.51s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Storm-cudd.log">0.78s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Prism-cudd.log">2.06s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Storm-hybrid.log">0.18s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Prism-sparse.log">2.01s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Epmc-cudd.log">3.76s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Prism-hybrid.log">2.13s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Storm-exact.log">0.34s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Prism-exact.log">3.69s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Storm-sparse.log">0.32s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Prism-explicit.log">2.39s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Epmc-explicit.log">2.51s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Storm-cudd.log">0.78s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Prism-cudd.log">2.06s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Storm-hybrid.log">0.18s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Prism-sparse.log">2.01s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Epmc-cudd.log">3.76s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Prism-hybrid.log">2.13s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Storm-exact.log">0.34s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=2_N=16--Prism-exact.log">3.69s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p1.pctl">p1.pctl</a></td>
       <td>MAX=3<br>N=64</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Storm-sparse.log">0.28s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Prism-explicit.log">2.37s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Epmc-explicit.log">2.61s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Storm-cudd.log">7.57s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Prism-cudd.log">5.41s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Storm-hybrid.log">0.47s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Prism-sparse.log">2.02s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Epmc-cudd.log">5.33s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Prism-hybrid.log">2.06s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Storm-exact.log">0.36s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Prism-exact.log">14.97s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Storm-sparse.log">0.28s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Prism-explicit.log">2.37s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Epmc-explicit.log">2.61s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Storm-cudd.log">7.57s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Prism-cudd.log">5.41s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Storm-hybrid.log">0.47s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Prism-sparse.log">2.02s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Epmc-cudd.log">5.33s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Prism-hybrid.log">2.06s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Storm-exact.log">0.36s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=3_N=64--Prism-exact.log">14.97s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p1.pctl">p1.pctl</a></td>
       <td>MAX=4<br>N=32</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Storm-sparse.log">0.26s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Prism-explicit.log">2.32s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Epmc-explicit.log">2.55s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Storm-cudd.log">3.35s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Prism-cudd.log">3.27s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Storm-hybrid.log">0.27s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Prism-sparse.log">2.04s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Epmc-cudd.log">4.59s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Prism-hybrid.log">2.06s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Storm-exact.log">0.30s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Prism-exact.log">7.24s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Storm-sparse.log">0.26s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Prism-explicit.log">2.32s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Epmc-explicit.log">2.55s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Storm-cudd.log">3.35s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Prism-cudd.log">3.27s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Storm-hybrid.log">0.27s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Prism-sparse.log">2.04s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Epmc-cudd.log">4.59s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Prism-hybrid.log">2.06s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Storm-exact.log">0.30s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=4_N=32--Prism-exact.log">7.24s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p1.pctl">p1.pctl</a></td>
       <td>MAX=5<br>N=64</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Storm-sparse.log">0.30s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Prism-explicit.log">2.44s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Epmc-explicit.log">2.65s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Storm-cudd.log">11.23s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Prism-cudd.log">7.51s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Storm-hybrid.log">0.62s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Prism-sparse.log">2.03s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Epmc-cudd.log">6.46s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Prism-hybrid.log">2.01s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Storm-exact.log">0.50s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Prism-exact.log">27.49s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Storm-sparse.log">0.30s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Prism-explicit.log">2.44s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Epmc-explicit.log">2.65s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Storm-cudd.log">11.23s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Prism-cudd.log">7.51s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Storm-hybrid.log">0.62s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Prism-sparse.log">2.03s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Epmc-cudd.log">6.46s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Prism-hybrid.log">2.01s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Storm-exact.log">0.50s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=5_N=64--Prism-exact.log">27.49s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p1.pctl">p1.pctl</a></td>
       <td>MAX=7<br>N=256</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Storm-sparse.log">0.59s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Prism-explicit.log">15.63s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Epmc-explicit.log">3.03s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Storm-cudd.log">166.02s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Prism-cudd.log">150.81s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Storm-hybrid.log">6.18s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Prism-sparse.log">4.52s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Epmc-cudd.log">19.02s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Prism-hybrid.log">4.29s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Storm-exact.log">8.65s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Storm-sparse.log">0.59s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Prism-explicit.log">15.63s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Epmc-explicit.log">3.03s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Storm-cudd.log">166.02s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Prism-cudd.log">150.81s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Storm-hybrid.log">6.18s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Prism-sparse.log">4.52s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Epmc-cudd.log">19.02s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Prism-hybrid.log">4.29s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Storm-exact.log">8.65s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p1.pctl-MAX=7_N=256--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p2.pctl">p2.pctl</a></td>
       <td>MAX=10<br>N=1024</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Storm-sparse.log">3.03s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Prism-explicit.log">209.34s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Epmc-explicit.log">4.70s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Storm-cudd.log">6.05s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Prism-cudd.log">11.10s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Storm-hybrid.log">127.35s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Prism-sparse.log">36.40s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Epmc-cudd.log">82.19s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Prism-hybrid.log">37.21s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Storm-exact.log">695.35s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Storm-sparse.log">3.03s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Prism-explicit.log">209.34s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Epmc-explicit.log">4.70s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Storm-cudd.log">6.05s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Prism-cudd.log">11.10s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Storm-hybrid.log">127.35s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Prism-sparse.log">36.40s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Epmc-cudd.log">82.19s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Prism-hybrid.log">37.21s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Storm-exact.log">695.35s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=10_N=1024--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p2.pctl">p2.pctl</a></td>
       <td>MAX=15<br>N=4096</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Storm-sparse.log">132.74s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Prism-explicit.log">TO</a></td>      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Epmc-explicit.log">12.24s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Storm-cudd.log">33.24s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Prism-cudd.log">67.85s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Storm-hybrid.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Prism-sparse.log">Err</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Epmc-cudd.log">437.47s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Prism-hybrid.log">Err</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Storm-exact.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Storm-sparse.log">132.74s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Prism-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Epmc-explicit.log">12.24s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Storm-cudd.log">33.24s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Prism-cudd.log">67.85s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Storm-hybrid.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Prism-sparse.log">Err</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Epmc-cudd.log">437.47s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Prism-hybrid.log">Err</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Storm-exact.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=15_N=4096--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p2.pctl">p2.pctl</a></td>
       <td>MAX=20<br>N=8192</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Storm-sparse.log">463.62s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Prism-explicit.log">TO</a></td>      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Epmc-explicit.log">27.63s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Storm-cudd.log">107.69s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Prism-cudd.log">223.38s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Storm-hybrid.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Prism-sparse.log">Err</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Epmc-cudd.log">1325.00s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Prism-hybrid.log">Err</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Storm-exact.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Storm-sparse.log">463.62s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Prism-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Epmc-explicit.log">27.63s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Storm-cudd.log">107.69s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Prism-cudd.log">223.38s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Storm-hybrid.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Prism-sparse.log">Err</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Epmc-cudd.log">1325.00s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Prism-hybrid.log">Err</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Storm-exact.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=20_N=8192--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p2.pctl">p2.pctl</a></td>
       <td>MAX=2<br>N=16</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Storm-sparse.log">0.30s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Prism-explicit.log">2.33s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Epmc-explicit.log">2.42s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Storm-cudd.log">0.62s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Prism-cudd.log">2.00s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Storm-hybrid.log">0.16s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Prism-sparse.log">2.04s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Epmc-cudd.log">3.64s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Prism-hybrid.log">2.12s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Storm-exact.log">0.26s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Prism-exact.log">3.78s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Storm-sparse.log">0.30s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Prism-explicit.log">2.33s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Epmc-explicit.log">2.42s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Storm-cudd.log">0.62s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Prism-cudd.log">2.00s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Storm-hybrid.log">0.16s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Prism-sparse.log">2.04s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Epmc-cudd.log">3.64s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Prism-hybrid.log">2.12s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Storm-exact.log">0.26s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=2_N=16--Prism-exact.log">3.78s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p2.pctl">p2.pctl</a></td>
       <td>MAX=3<br>N=64</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Storm-sparse.log">0.29s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Prism-explicit.log">2.32s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Epmc-explicit.log">2.62s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Storm-cudd.log">7.37s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Prism-cudd.log">4.71s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Storm-hybrid.log">0.49s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Prism-sparse.log">2.01s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Epmc-cudd.log">5.67s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Prism-hybrid.log">2.06s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Storm-exact.log">0.37s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Prism-exact.log">15.05s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Storm-sparse.log">0.29s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Prism-explicit.log">2.32s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Epmc-explicit.log">2.62s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Storm-cudd.log">7.37s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Prism-cudd.log">4.71s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Storm-hybrid.log">0.49s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Prism-sparse.log">2.01s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Epmc-cudd.log">5.67s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Prism-hybrid.log">2.06s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Storm-exact.log">0.37s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=3_N=64--Prism-exact.log">15.05s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p2.pctl">p2.pctl</a></td>
       <td>MAX=4<br>N=32</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Storm-sparse.log">0.27s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Prism-explicit.log">2.34s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Epmc-explicit.log">2.59s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Storm-cudd.log">4.22s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Prism-cudd.log">2.36s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Storm-hybrid.log">0.28s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Prism-sparse.log">2.03s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Epmc-cudd.log">4.86s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Prism-hybrid.log">2.07s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Storm-exact.log">0.30s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Prism-exact.log">7.46s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Storm-sparse.log">0.27s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Prism-explicit.log">2.34s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Epmc-explicit.log">2.59s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Storm-cudd.log">4.22s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Prism-cudd.log">2.36s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Storm-hybrid.log">0.28s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Prism-sparse.log">2.03s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Epmc-cudd.log">4.86s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Prism-hybrid.log">2.07s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Storm-exact.log">0.30s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=4_N=32--Prism-exact.log">7.46s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p2.pctl">p2.pctl</a></td>
       <td>MAX=5<br>N=64</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Storm-sparse.log">0.30s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Prism-explicit.log">2.43s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Epmc-explicit.log">2.66s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Storm-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Prism-cudd.log">3.67s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Storm-hybrid.log">0.65s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Prism-sparse.log">2.03s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Epmc-cudd.log">6.53s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Prism-hybrid.log">2.07s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Storm-exact.log">0.51s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Prism-exact.log">28.59s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Storm-sparse.log">0.30s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Prism-explicit.log">2.43s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Epmc-explicit.log">2.66s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Storm-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Prism-cudd.log">3.67s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Storm-hybrid.log">0.65s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Prism-sparse.log">2.03s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Epmc-cudd.log">6.53s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Prism-hybrid.log">2.07s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Storm-exact.log">0.51s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=5_N=64--Prism-exact.log">28.59s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p2.pctl">p2.pctl</a></td>
       <td>MAX=7<br>N=256</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Storm-sparse.log">0.60s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Prism-explicit.log">11.54s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Epmc-explicit.log">3.03s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Storm-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Prism-cudd.log">6.37s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Storm-hybrid.log">6.83s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Prism-sparse.log">4.50s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Epmc-cudd.log">18.13s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Prism-hybrid.log">4.11s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Storm-exact.log">8.00s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Storm-sparse.log">0.60s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Prism-explicit.log">11.54s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Epmc-explicit.log">3.03s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Storm-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Prism-cudd.log">6.37s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Storm-hybrid.log">6.83s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Prism-sparse.log">4.50s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Epmc-cudd.log">18.13s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Prism-hybrid.log">4.11s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Storm-exact.log">8.00s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p2.pctl-MAX=7_N=256--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p4.pctl">p4.pctl</a></td>
       <td>MAX=10<br>N=1024</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Storm-sparse.log">1.82s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Prism-explicit.log">4.91s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Epmc-explicit.log">4.56s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Storm-cudd.log">4.31s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Prism-cudd.log">7.83s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Storm-hybrid.log">3.99s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Prism-sparse.log">8.40s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Epmc-cudd.log">23.02s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Prism-hybrid.log">7.91s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Storm-exact.log">2.23s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Prism-exact.log">39.37s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Storm-sparse.log">1.82s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Prism-explicit.log">4.91s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Epmc-explicit.log">4.56s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Storm-cudd.log">4.31s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Prism-cudd.log">7.83s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Storm-hybrid.log">3.99s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Prism-sparse.log">8.40s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Epmc-cudd.log">23.02s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Prism-hybrid.log">7.91s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Storm-exact.log">2.23s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=10_N=1024--Prism-exact.log">39.37s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p4.pctl">p4.pctl</a></td>
       <td>MAX=15<br>N=4096</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Storm-sparse.log">9.24s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Prism-explicit.log">16.45s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Epmc-explicit.log">12.00s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Storm-cudd.log">30.44s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Prism-cudd.log">45.24s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Storm-hybrid.log">26.29s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Prism-sparse.log">54.14s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Epmc-cudd.log">130.34s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Prism-hybrid.log">46.24s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Storm-exact.log">11.99s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Prism-exact.log">239.71s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Storm-sparse.log">9.24s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Prism-explicit.log">16.45s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Epmc-explicit.log">12.00s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Storm-cudd.log">30.44s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Prism-cudd.log">45.24s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Storm-hybrid.log">26.29s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Prism-sparse.log">54.14s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Epmc-cudd.log">130.34s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Prism-hybrid.log">46.24s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Storm-exact.log">11.99s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=15_N=4096--Prism-exact.log">239.71s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p4.pctl">p4.pctl</a></td>
       <td>MAX=20<br>N=8192</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Storm-sparse.log">23.73s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Prism-explicit.log">38.70s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Epmc-explicit.log">26.71s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Storm-cudd.log">72.46s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Prism-cudd.log">151.32s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Storm-hybrid.log">99.92s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Prism-sparse.log">173.99s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Epmc-cudd.log">345.27s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Prism-hybrid.log">162.49s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Storm-exact.log">30.14s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Prism-exact.log">1001.27s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Storm-sparse.log">23.73s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Prism-explicit.log">38.70s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Epmc-explicit.log">26.71s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Storm-cudd.log">72.46s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Prism-cudd.log">151.32s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Storm-hybrid.log">99.92s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Prism-sparse.log">173.99s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Epmc-cudd.log">345.27s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Prism-hybrid.log">162.49s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Storm-exact.log">30.14s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=20_N=8192--Prism-exact.log">1001.27s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p4.pctl">p4.pctl</a></td>
       <td>MAX=2<br>N=16</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Storm-sparse.log">0.25s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Prism-explicit.log">2.34s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Epmc-explicit.log">2.49s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Storm-cudd.log">0.14s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Prism-cudd.log">2.03s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Storm-hybrid.log">0.13s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Prism-sparse.log">2.00s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Epmc-cudd.log">3.15s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Prism-hybrid.log">2.14s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Storm-exact.log">0.24s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Prism-exact.log">2.69s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Storm-sparse.log">0.25s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Prism-explicit.log">2.34s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Epmc-explicit.log">2.49s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Storm-cudd.log">0.14s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Prism-cudd.log">2.03s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Storm-hybrid.log">0.13s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Prism-sparse.log">2.00s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Epmc-cudd.log">3.15s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Prism-hybrid.log">2.14s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Storm-exact.log">0.24s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=2_N=16--Prism-exact.log">2.69s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p4.pctl">p4.pctl</a></td>
       <td>MAX=3<br>N=64</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Storm-sparse.log">0.28s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Prism-explicit.log">2.37s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Epmc-explicit.log">2.59s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Storm-cudd.log">0.23s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Prism-cudd.log">2.02s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Storm-hybrid.log">0.23s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Prism-sparse.log">2.02s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Epmc-cudd.log">3.53s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Prism-hybrid.log">2.05s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Storm-exact.log">0.29s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Prism-exact.log">4.74s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Storm-sparse.log">0.28s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Prism-explicit.log">2.37s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Epmc-explicit.log">2.59s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Storm-cudd.log">0.23s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Prism-cudd.log">2.02s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Storm-hybrid.log">0.23s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Prism-sparse.log">2.02s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Epmc-cudd.log">3.53s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Prism-hybrid.log">2.05s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Storm-exact.log">0.29s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=3_N=64--Prism-exact.log">4.74s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p4.pctl">p4.pctl</a></td>
       <td>MAX=4<br>N=32</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Storm-sparse.log">0.27s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Prism-explicit.log">2.34s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Epmc-explicit.log">2.53s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Storm-cudd.log">0.17s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Prism-cudd.log">2.00s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Storm-hybrid.log">0.16s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Prism-sparse.log">2.02s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Epmc-cudd.log">3.50s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Prism-hybrid.log">2.05s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Storm-exact.log">0.27s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Prism-exact.log">3.86s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Storm-sparse.log">0.27s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Prism-explicit.log">2.34s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Epmc-explicit.log">2.53s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Storm-cudd.log">0.17s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Prism-cudd.log">2.00s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Storm-hybrid.log">0.16s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Prism-sparse.log">2.02s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Epmc-cudd.log">3.50s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Prism-hybrid.log">2.05s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Storm-exact.log">0.27s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=4_N=32--Prism-exact.log">3.86s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p4.pctl">p4.pctl</a></td>
       <td>MAX=5<br>N=64</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Storm-sparse.log">0.30s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Prism-explicit.log">2.31s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Epmc-explicit.log">2.62s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Storm-cudd.log">0.24s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Prism-cudd.log">1.99s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Storm-hybrid.log">0.24s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Prism-sparse.log">2.06s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Epmc-cudd.log">3.86s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Prism-hybrid.log">2.03s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Storm-exact.log">0.31s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Prism-exact.log">5.41s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Storm-sparse.log">0.30s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Prism-explicit.log">2.31s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Epmc-explicit.log">2.62s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Storm-cudd.log">0.24s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Prism-cudd.log">1.99s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Storm-hybrid.log">0.24s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Prism-sparse.log">2.06s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Epmc-cudd.log">3.86s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Prism-hybrid.log">2.03s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Storm-exact.log">0.31s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=5_N=64--Prism-exact.log">5.41s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/brp.pm">brp.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/brp/p4.pctl">p4.pctl</a></td>
       <td>MAX=7<br>N=256</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Storm-sparse.log">0.54s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Prism-explicit.log">2.75s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Epmc-explicit.log">3.08s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Storm-cudd.log">0.82s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Prism-cudd.log">2.48s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Storm-hybrid.log">0.77s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Prism-sparse.log">2.52s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Epmc-cudd.log">7.61s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Prism-hybrid.log">2.51s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Storm-exact.log">0.60s</a></td>       <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Prism-exact.log">10.82s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Storm-sparse.log">0.54s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Prism-explicit.log">2.75s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Epmc-explicit.log">3.08s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Storm-cudd.log">0.82s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Prism-cudd.log">2.48s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Storm-hybrid.log">0.77s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Prism-sparse.log">2.52s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Epmc-cudd.log">7.61s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Prism-hybrid.log">2.51s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Storm-exact.log">0.60s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/brp-brp.pm-p4.pctl-MAX=7_N=256--Prism-exact.log">10.82s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/crowds/crowds.pm">crowds.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/crowds/positive.pctl">positive.pctl</a></td>
       <td>CrowdSize=10<br>TotalRuns=5</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Storm-sparse.log">1.43s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Prism-explicit.log">5.64s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Epmc-explicit.log">4.84s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Storm-cudd.log">8.07s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Prism-cudd.log">5.57s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Storm-hybrid.log">1.01s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Prism-sparse.log">2.80s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Epmc-cudd.log">23.88s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Prism-hybrid.log">2.36s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Storm-exact.log">2.62s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Storm-sparse.log">1.43s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Prism-explicit.log">5.64s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Epmc-explicit.log">4.84s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Storm-cudd.log">8.07s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Prism-cudd.log">5.57s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Storm-hybrid.log">1.01s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Prism-sparse.log">2.80s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Epmc-cudd.log">23.88s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Prism-hybrid.log">2.36s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Storm-exact.log">2.62s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=10_TotalRuns=5--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/crowds/crowds.pm">crowds.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/crowds/positive.pctl">positive.pctl</a></td>
       <td>CrowdSize=15<br>TotalRuns=6</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Storm-sparse.log">25.96s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Prism-explicit.log">89.91s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Epmc-explicit.log">55.61s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Storm-cudd.log">24.99s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Prism-cudd.log">14.50s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Storm-hybrid.log">12.96s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Prism-sparse.log">23.53s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Epmc-cudd.log">254.14s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Prism-hybrid.log">15.06s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Storm-exact.log">68.08s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Storm-sparse.log">25.96s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Prism-explicit.log">89.91s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Epmc-explicit.log">55.61s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Storm-cudd.log">24.99s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Prism-cudd.log">14.50s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Storm-hybrid.log">12.96s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Prism-sparse.log">23.53s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Epmc-cudd.log">254.14s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Prism-hybrid.log">15.06s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Storm-exact.log">68.08s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=15_TotalRuns=6--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/crowds/crowds.pm">crowds.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/crowds/positive.pctl">positive.pctl</a></td>
       <td>CrowdSize=20<br>TotalRuns=3</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Storm-sparse.log">0.73s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Prism-explicit.log">3.42s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Epmc-explicit.log">3.59s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Storm-cudd.log">2.21s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Prism-cudd.log">2.57s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Storm-hybrid.log">0.43s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Prism-sparse.log">2.01s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Epmc-cudd.log">7.11s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Prism-hybrid.log">1.99s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Storm-exact.log">1.21s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Prism-exact.log">284.30s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Storm-sparse.log">0.73s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Prism-explicit.log">3.42s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Epmc-explicit.log">3.59s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Storm-cudd.log">2.21s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Prism-cudd.log">2.57s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Storm-hybrid.log">0.43s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Prism-sparse.log">2.01s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Epmc-cudd.log">7.11s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Prism-hybrid.log">1.99s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Storm-exact.log">1.21s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=3--Prism-exact.log">284.30s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/crowds/crowds.pm">crowds.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/crowds/positive.pctl">positive.pctl</a></td>
       <td>CrowdSize=20<br>TotalRuns=6</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Storm-sparse.log">125.00s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Prism-explicit.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Epmc-explicit.log">281.02s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Storm-cudd.log">50.48s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Prism-cudd.log">23.49s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Storm-hybrid.log">41.30s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Prism-sparse.log">81.67s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Epmc-cudd.log">789.25s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Prism-hybrid.log">61.85s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Storm-exact.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Storm-sparse.log">125.00s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Prism-explicit.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Epmc-explicit.log">281.02s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Storm-cudd.log">50.48s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Prism-cudd.log">23.49s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Storm-hybrid.log">41.30s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Prism-sparse.log">81.67s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Epmc-cudd.log">789.25s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Prism-hybrid.log">61.85s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Storm-exact.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=20_TotalRuns=6--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/crowds/crowds.pm">crowds.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/crowds/positive.pctl">positive.pctl</a></td>
       <td>CrowdSize=30<br>TotalRuns=5</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Storm-sparse.log">0.43s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Prism-explicit.log">2.37s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Epmc-explicit.log">2.42s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Storm-cudd.log">0.31s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Prism-cudd.log">2.02s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Storm-hybrid.log">0.32s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Prism-sparse.log">2.00s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Epmc-cudd.log">4.66s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Prism-hybrid.log">2.03s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Storm-exact.log">0.43s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Prism-exact.log">1.99s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Storm-sparse.log">0.43s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Prism-explicit.log">2.37s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Epmc-explicit.log">2.42s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Storm-cudd.log">0.31s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Prism-cudd.log">2.02s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Storm-hybrid.log">0.32s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Prism-sparse.log">2.00s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Epmc-cudd.log">4.66s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Prism-hybrid.log">2.03s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Storm-exact.log">0.43s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=5--Prism-exact.log">1.99s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/crowds/crowds.pm">crowds.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/crowds/positive.pctl">positive.pctl</a></td>
       <td>CrowdSize=30<br>TotalRuns=6</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Storm-sparse.log">0.41s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Prism-explicit.log">2.41s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Epmc-explicit.log">2.46s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Storm-cudd.log">0.28s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Prism-cudd.log">2.01s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Storm-hybrid.log">0.28s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Prism-sparse.log">2.01s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Epmc-cudd.log">4.79s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Prism-hybrid.log">2.00s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Storm-exact.log">0.42s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Prism-exact.log">2.01s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Storm-sparse.log">0.41s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Prism-explicit.log">2.41s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Epmc-explicit.log">2.46s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Storm-cudd.log">0.28s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Prism-cudd.log">2.01s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Storm-hybrid.log">0.28s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Prism-sparse.log">2.01s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Epmc-cudd.log">4.79s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Prism-hybrid.log">2.00s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Storm-exact.log">0.42s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=30_TotalRuns=6--Prism-exact.log">2.01s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/crowds/crowds.pm">crowds.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/crowds/positive.pctl">positive.pctl</a></td>
       <td>CrowdSize=5<br>TotalRuns=3</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Storm-sparse.log">0.27s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Prism-explicit.log">2.42s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Epmc-explicit.log">2.55s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Storm-cudd.log">0.96s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Prism-cudd.log">2.02s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Storm-hybrid.log">0.21s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Prism-sparse.log">2.00s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Epmc-cudd.log">4.83s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Prism-hybrid.log">1.99s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Storm-exact.log">0.27s</a></td>       <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Prism-exact.log">4.04s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Storm-sparse.log">0.27s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Prism-explicit.log">2.42s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Epmc-explicit.log">2.55s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Storm-cudd.log">0.96s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Prism-cudd.log">2.02s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Storm-hybrid.log">0.21s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Prism-sparse.log">2.00s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Epmc-cudd.log">4.83s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Prism-hybrid.log">1.99s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Storm-exact.log">0.27s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/crowds-crowds.pm-positive.pctl-CrowdSize=5_TotalRuns=3--Prism-exact.log">4.04s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/egl.pm">egl.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/messagesA.pctl">messagesA.pctl</a></td>
       <td>L=2<br>N=20</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Storm-sparse.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Prism-explicit.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Epmc-explicit.log">TO</a></td>      <td><b><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Storm-cudd.log">13.33s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Prism-cudd.log">16.62s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Storm-hybrid.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Prism-sparse.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Epmc-cudd.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Prism-hybrid.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Storm-exact.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Storm-sparse.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Prism-explicit.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Storm-cudd.log">13.33s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Prism-cudd.log">16.62s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Storm-hybrid.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Prism-sparse.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Epmc-cudd.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Prism-hybrid.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Storm-exact.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=20--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/egl.pm">egl.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/messagesA.pctl">messagesA.pctl</a></td>
       <td>L=2<br>N=5</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Storm-sparse.log">1.37s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Prism-explicit.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Epmc-explicit.log">TO</a></td>      <td><b><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Storm-cudd.log">0.96s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Prism-cudd.log">2.02s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Storm-hybrid.log">1.41s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Prism-sparse.log">2.15s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Epmc-cudd.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Prism-hybrid.log">1.99s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Storm-exact.log">1.97s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Storm-sparse.log">1.37s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Prism-explicit.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Storm-cudd.log">0.96s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Prism-cudd.log">2.02s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Storm-hybrid.log">1.41s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Prism-sparse.log">2.15s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Epmc-cudd.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Prism-hybrid.log">1.99s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Storm-exact.log">1.97s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=2_N=5--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/egl.pm">egl.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/messagesA.pctl">messagesA.pctl</a></td>
       <td>L=8<br>N=10</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Storm-sparse.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Prism-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Epmc-explicit.log">TO</a></td>      <td><b><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Storm-cudd.log">61.92s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Prism-cudd.log">74.80s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Storm-hybrid.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Prism-sparse.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Epmc-cudd.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Prism-hybrid.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Storm-exact.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Storm-sparse.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Prism-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Storm-cudd.log">61.92s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Prism-cudd.log">74.80s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Storm-hybrid.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Prism-sparse.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Epmc-cudd.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Prism-hybrid.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Storm-exact.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=10--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/egl.pm">egl.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/messagesA.pctl">messagesA.pctl</a></td>
       <td>L=8<br>N=5</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Storm-sparse.log">4.38s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Prism-explicit.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Storm-cudd.log">11.79s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Prism-cudd.log">12.95s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Storm-hybrid.log">11.03s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Prism-sparse.log">8.83s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Epmc-cudd.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Prism-hybrid.log">6.30s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Storm-exact.log">6.63s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Storm-sparse.log">4.38s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Prism-explicit.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Storm-cudd.log">11.79s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Prism-cudd.log">12.95s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Storm-hybrid.log">11.03s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Prism-sparse.log">8.83s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Epmc-cudd.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Prism-hybrid.log">6.30s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Storm-exact.log">6.63s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesA.pctl-L=8_N=5--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/egl.pm">egl.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/messagesB.pctl">messagesB.pctl</a></td>
       <td>L=2<br>N=20</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Storm-sparse.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Prism-explicit.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Storm-cudd.log">23.37s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Prism-cudd.log">21.69s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Storm-hybrid.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Prism-sparse.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Epmc-cudd.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Prism-hybrid.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Storm-exact.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Storm-sparse.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Prism-explicit.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Storm-cudd.log">23.37s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Prism-cudd.log">21.69s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Storm-hybrid.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Prism-sparse.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Epmc-cudd.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Prism-hybrid.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Storm-exact.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=20--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/egl.pm">egl.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/messagesB.pctl">messagesB.pctl</a></td>
       <td>L=2<br>N=5</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Storm-sparse.log">1.37s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Prism-explicit.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Epmc-explicit.log">TO</a></td>      <td><b><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Storm-cudd.log">0.82s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Prism-cudd.log">2.02s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Storm-hybrid.log">1.42s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Prism-sparse.log">2.13s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Epmc-cudd.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Prism-hybrid.log">2.01s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Storm-exact.log">1.93s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Storm-sparse.log">1.37s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Prism-explicit.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Storm-cudd.log">0.82s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Prism-cudd.log">2.02s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Storm-hybrid.log">1.42s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Prism-sparse.log">2.13s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Epmc-cudd.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Prism-hybrid.log">2.01s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Storm-exact.log">1.93s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=2_N=5--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/egl.pm">egl.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/messagesB.pctl">messagesB.pctl</a></td>
       <td>L=8<br>N=10</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Storm-sparse.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Prism-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Storm-cudd.log">160.73s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Prism-cudd.log">125.40s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Storm-hybrid.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Prism-sparse.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Epmc-cudd.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Prism-hybrid.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Storm-exact.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Prism-exact.log">MO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Storm-sparse.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Prism-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Storm-cudd.log">160.73s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Prism-cudd.log">125.40s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Storm-hybrid.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Prism-sparse.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Epmc-cudd.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Prism-hybrid.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Storm-exact.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=10--Prism-exact.log">MO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/egl.pm">egl.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/messagesB.pctl">messagesB.pctl</a></td>
       <td>L=8<br>N=5</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Storm-sparse.log">4.35s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Prism-explicit.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Storm-cudd.log">17.73s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Prism-cudd.log">17.57s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Storm-hybrid.log">10.03s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Prism-sparse.log">8.38s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Epmc-cudd.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Prism-hybrid.log">6.19s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Storm-exact.log">6.99s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Storm-sparse.log">4.35s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Prism-explicit.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Storm-cudd.log">17.73s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Prism-cudd.log">17.57s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Storm-hybrid.log">10.03s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Prism-sparse.log">8.38s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Epmc-cudd.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Prism-hybrid.log">6.19s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Storm-exact.log">6.99s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-messagesB.pctl-L=8_N=5--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/egl.pm">egl.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/unfairA.pctl">unfairA.pctl</a></td>
       <td>L=2<br>N=20</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Storm-sparse.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Prism-explicit.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Epmc-explicit.log">TO</a></td>      <td><b><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Storm-cudd.log">3.62s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Prism-cudd.log">8.96s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Storm-hybrid.log">10.15s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Prism-sparse.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Epmc-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Prism-hybrid.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Storm-exact.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Storm-sparse.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Prism-explicit.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Storm-cudd.log">3.62s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Prism-cudd.log">8.96s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Storm-hybrid.log">10.15s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Prism-sparse.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Epmc-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Prism-hybrid.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Storm-exact.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=20--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/egl.pm">egl.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/unfairA.pctl">unfairA.pctl</a></td>
       <td>L=2<br>N=5</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Storm-sparse.log">1.20s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Prism-explicit.log">4.40s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Storm-cudd.log">0.56s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Prism-cudd.log">2.00s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Storm-hybrid.log">0.53s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Prism-sparse.log">2.02s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Epmc-cudd.log">862.65s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Prism-hybrid.log">2.00s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Storm-exact.log">1.78s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Prism-exact.log">44.90s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Storm-sparse.log">1.20s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Prism-explicit.log">4.40s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Storm-cudd.log">0.56s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Prism-cudd.log">2.00s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Storm-hybrid.log">0.53s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Prism-sparse.log">2.02s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Epmc-cudd.log">862.65s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Prism-hybrid.log">2.00s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Storm-exact.log">1.78s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=2_N=5--Prism-exact.log">44.90s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/egl.pm">egl.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/unfairA.pctl">unfairA.pctl</a></td>
       <td>L=8<br>N=10</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Storm-sparse.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Prism-explicit.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Storm-cudd.log">12.62s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Prism-cudd.log">29.48s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Storm-hybrid.log">9.73s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Prism-sparse.log">887.90s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Epmc-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Prism-hybrid.log">882.90s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Storm-exact.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Storm-sparse.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Prism-explicit.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Storm-cudd.log">12.62s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Prism-cudd.log">29.48s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Storm-hybrid.log">9.73s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Prism-sparse.log">887.90s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Epmc-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Prism-hybrid.log">882.90s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Storm-exact.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=10--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/egl.pm">egl.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/unfairA.pctl">unfairA.pctl</a></td>
       <td>L=8<br>N=5</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Storm-sparse.log">4.30s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Prism-explicit.log">10.48s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Storm-cudd.log">3.52s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Prism-cudd.log">7.33s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Storm-hybrid.log">3.38s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Prism-sparse.log">6.82s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Epmc-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Prism-hybrid.log">6.92s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Storm-exact.log">6.10s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Prism-exact.log">182.05s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Storm-sparse.log">4.30s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Prism-explicit.log">10.48s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Storm-cudd.log">3.52s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Prism-cudd.log">7.33s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Storm-hybrid.log">3.38s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Prism-sparse.log">6.82s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Epmc-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Prism-hybrid.log">6.92s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Storm-exact.log">6.10s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairA.pctl-L=8_N=5--Prism-exact.log">182.05s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/egl.pm">egl.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/unfairB.pctl">unfairB.pctl</a></td>
       <td>L=2<br>N=20</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Storm-sparse.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Prism-explicit.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Epmc-explicit.log">TO</a></td>      <td><b><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Storm-cudd.log">2.74s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Prism-cudd.log">9.38s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Storm-hybrid.log">10.81s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Prism-sparse.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Epmc-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Prism-hybrid.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Storm-exact.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Storm-sparse.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Prism-explicit.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Storm-cudd.log">2.74s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Prism-cudd.log">9.38s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Storm-hybrid.log">10.81s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Prism-sparse.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Epmc-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Prism-hybrid.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Storm-exact.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=20--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/egl.pm">egl.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/unfairB.pctl">unfairB.pctl</a></td>
       <td>L=2<br>N=5</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Storm-sparse.log">1.21s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Prism-explicit.log">4.41s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Storm-cudd.log">0.57s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Prism-cudd.log">1.99s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Storm-hybrid.log">0.51s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Prism-sparse.log">2.02s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Epmc-cudd.log">786.28s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Prism-hybrid.log">2.00s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Storm-exact.log">1.78s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Prism-exact.log">42.48s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Storm-sparse.log">1.21s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Prism-explicit.log">4.41s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Storm-cudd.log">0.57s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Prism-cudd.log">1.99s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Storm-hybrid.log">0.51s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Prism-sparse.log">2.02s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Epmc-cudd.log">786.28s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Prism-hybrid.log">2.00s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Storm-exact.log">1.78s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=2_N=5--Prism-exact.log">42.48s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/egl.pm">egl.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/unfairB.pctl">unfairB.pctl</a></td>
       <td>L=8<br>N=10</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Storm-sparse.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Prism-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Storm-cudd.log">7.71s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Prism-cudd.log">27.16s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Storm-hybrid.log">7.59s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Prism-sparse.log">884.41s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Epmc-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Prism-hybrid.log">886.52s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Storm-exact.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Storm-sparse.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Prism-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Storm-cudd.log">7.71s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Prism-cudd.log">27.16s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Storm-hybrid.log">7.59s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Prism-sparse.log">884.41s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Epmc-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Prism-hybrid.log">886.52s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Storm-exact.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=10--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/egl.pm">egl.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/egl/unfairB.pctl">unfairB.pctl</a></td>
       <td>L=8<br>N=5</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Storm-sparse.log">4.22s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Prism-explicit.log">9.88s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Storm-cudd.log">2.09s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Prism-cudd.log">6.50s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Storm-hybrid.log">1.94s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Prism-sparse.log">5.80s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Epmc-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Prism-hybrid.log">5.84s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Storm-exact.log">6.05s</a></td>       <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Prism-exact.log">157.26s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Storm-sparse.log">4.22s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Prism-explicit.log">9.88s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Storm-cudd.log">2.09s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Prism-cudd.log">6.50s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Storm-hybrid.log">1.94s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Prism-sparse.log">5.80s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Epmc-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Prism-hybrid.log">5.84s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Storm-exact.log">6.05s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/egl-egl.pm-unfairB.pctl-L=8_N=5--Prism-exact.log">157.26s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/herman/herman13.pm">herman13.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/herman/steps.pctl">steps.pctl</a></td>
       <td>=</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Storm-sparse.log">59.29s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Prism-explicit.log">39.44s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Storm-cudd.log">85.24s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Prism-cudd.log">75.84s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Storm-hybrid.log">1.15s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Prism-sparse.log">2.29s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Epmc-cudd.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Prism-hybrid.log">2.27s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Storm-exact.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Prism-exact.log">n.s.</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Storm-sparse.log">59.29s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Prism-explicit.log">39.44s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Storm-cudd.log">85.24s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Prism-cudd.log">75.84s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Storm-hybrid.log">1.15s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Prism-sparse.log">2.29s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Epmc-cudd.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Prism-hybrid.log">2.27s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Storm-exact.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman13.pm-steps.pctl---Prism-exact.log">n.s.</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/herman/herman15.pm">herman15.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/herman/steps.pctl">steps.pctl</a></td>
       <td>=</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Storm-sparse.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Prism-explicit.log">487.93s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Epmc-explicit.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Storm-cudd.log">798.73s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Prism-cudd.log">791.14s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Storm-hybrid.log">10.91s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Prism-sparse.log">13.91s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Epmc-cudd.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Prism-hybrid.log">12.98s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Storm-exact.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Prism-exact.log">n.s.</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Storm-sparse.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Prism-explicit.log">487.93s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Epmc-explicit.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Storm-cudd.log">798.73s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Prism-cudd.log">791.14s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Storm-hybrid.log">10.91s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Prism-sparse.log">13.91s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Epmc-cudd.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Prism-hybrid.log">12.98s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Storm-exact.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman15.pm-steps.pctl---Prism-exact.log">n.s.</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/herman/herman17.pm">herman17.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/herman/steps.pctl">steps.pctl</a></td>
       <td>=</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Storm-sparse.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Prism-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Epmc-explicit.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Storm-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Prism-cudd.log">TO</a></td>      <td><b><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Storm-hybrid.log">98.90s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Prism-sparse.log">181.73s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Epmc-cudd.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Prism-hybrid.log">133.26s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Storm-exact.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Prism-exact.log">n.s.</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Storm-sparse.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Prism-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Epmc-explicit.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Storm-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Prism-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Storm-hybrid.log">98.90s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Prism-sparse.log">181.73s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Epmc-cudd.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Prism-hybrid.log">133.26s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Storm-exact.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman17.pm-steps.pctl---Prism-exact.log">n.s.</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/herman/herman19.pm">herman19.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/herman/steps.pctl">steps.pctl</a></td>
       <td>=</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Storm-sparse.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Prism-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Epmc-explicit.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Storm-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Prism-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Storm-hybrid.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Prism-sparse.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Epmc-cudd.log">MO</a></td>      <td><b><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Prism-hybrid.log">1449.31s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Storm-exact.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Prism-exact.log">n.s.</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Storm-sparse.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Prism-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Epmc-explicit.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Storm-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Prism-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Storm-hybrid.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Prism-sparse.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Epmc-cudd.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Prism-hybrid.log">1449.31s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Storm-exact.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman19.pm-steps.pctl---Prism-exact.log">n.s.</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/herman/herman3.pm">herman3.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/herman/steps.pctl">steps.pctl</a></td>
       <td>=</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Storm-sparse.log">0.24s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Prism-explicit.log">2.34s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Epmc-explicit.log">Err</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Storm-cudd.log">0.08s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Prism-cudd.log">2.07s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Storm-hybrid.log">0.07s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Prism-sparse.log">2.00s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Epmc-cudd.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Prism-hybrid.log">2.03s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Storm-exact.log">0.23s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Prism-exact.log">n.s.</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Storm-sparse.log">0.24s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Prism-explicit.log">2.34s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Epmc-explicit.log">Err</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Storm-cudd.log">0.08s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Prism-cudd.log">2.07s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Storm-hybrid.log">0.07s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Prism-sparse.log">2.00s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Epmc-cudd.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Prism-hybrid.log">2.03s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Storm-exact.log">0.23s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman3.pm-steps.pctl---Prism-exact.log">n.s.</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/herman/herman9.pm">herman9.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/herman/steps.pctl">steps.pctl</a></td>
       <td>=</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Storm-sparse.log">0.54s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Prism-explicit.log">2.39s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Storm-cudd.log">0.84s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Prism-cudd.log">2.19s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Storm-hybrid.log">0.08s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Prism-sparse.log">2.03s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Epmc-cudd.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Prism-hybrid.log">2.01s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Storm-exact.log">71.01s</a></td>       <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Prism-exact.log">n.s.</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Storm-sparse.log">0.54s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Prism-explicit.log">2.39s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Storm-cudd.log">0.84s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Prism-cudd.log">2.19s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Storm-hybrid.log">0.08s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Prism-sparse.log">2.03s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Epmc-cudd.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Prism-hybrid.log">2.01s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Storm-exact.log">71.01s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/herman-herman9.pm-steps.pctl---Prism-exact.log">n.s.</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/leader_sync3_2.pm">leader_sync3_2.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/eventually_elected.pctl">eventually_elected.pctl</a></td>
       <td>=</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Storm-sparse.log">0.25s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Prism-explicit.log">2.35s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Epmc-explicit.log">15.01s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Storm-cudd.log">0.09s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Prism-cudd.log">2.03s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Storm-hybrid.log">0.10s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Prism-sparse.log">2.08s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Epmc-cudd.log">3.15s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Prism-hybrid.log">2.04s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Storm-exact.log">0.25s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Prism-exact.log">Err</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Storm-sparse.log">0.25s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Prism-explicit.log">2.35s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Epmc-explicit.log">15.01s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Storm-cudd.log">0.09s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Prism-cudd.log">2.03s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Storm-hybrid.log">0.10s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Prism-sparse.log">2.08s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Epmc-cudd.log">3.15s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Prism-hybrid.log">2.04s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Storm-exact.log">0.25s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-eventually_elected.pctl---Prism-exact.log">Err</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/leader_sync3_2.pm">leader_sync3_2.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/time.pctl">time.pctl</a></td>
       <td>=</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Storm-sparse.log">0.25s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Prism-explicit.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Epmc-explicit.log">Err</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Storm-cudd.log">0.10s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Prism-cudd.log">2.02s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Storm-hybrid.log">0.09s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Prism-sparse.log">2.06s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Epmc-cudd.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Prism-hybrid.log">2.01s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Storm-exact.log">0.25s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Prism-exact.log">2.02s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Storm-sparse.log">0.25s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Prism-explicit.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Epmc-explicit.log">Err</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Storm-cudd.log">0.10s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Prism-cudd.log">2.02s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Storm-hybrid.log">0.09s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Prism-sparse.log">2.06s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Epmc-cudd.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Prism-hybrid.log">2.01s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Storm-exact.log">0.25s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync3_2.pm-time.pctl---Prism-exact.log">2.02s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/leader_sync4_6.pm">leader_sync4_6.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/eventually_elected.pctl">eventually_elected.pctl</a></td>
       <td>=</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Storm-sparse.log">0.32s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Prism-explicit.log">2.35s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Storm-cudd.log">0.32s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Prism-cudd.log">2.11s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Storm-hybrid.log">0.32s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Prism-sparse.log">2.12s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Epmc-cudd.log">1330.65s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Prism-hybrid.log">2.00s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Storm-exact.log">0.33s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Prism-exact.log">Err</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Storm-sparse.log">0.32s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Prism-explicit.log">2.35s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Storm-cudd.log">0.32s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Prism-cudd.log">2.11s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Storm-hybrid.log">0.32s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Prism-sparse.log">2.12s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Epmc-cudd.log">1330.65s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Prism-hybrid.log">2.00s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Storm-exact.log">0.33s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-eventually_elected.pctl---Prism-exact.log">Err</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/leader_sync4_6.pm">leader_sync4_6.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/time.pctl">time.pctl</a></td>
       <td>=</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Storm-sparse.log">0.32s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Prism-explicit.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Storm-cudd.log">0.63s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Prism-cudd.log">2.35s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Storm-hybrid.log">0.63s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Prism-sparse.log">2.26s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Epmc-cudd.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Prism-hybrid.log">4.03s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Storm-exact.log">1.81s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Prism-exact.log">17.11s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Storm-sparse.log">0.32s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Prism-explicit.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Storm-cudd.log">0.63s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Prism-cudd.log">2.35s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Storm-hybrid.log">0.63s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Prism-sparse.log">2.26s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Epmc-cudd.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Prism-hybrid.log">4.03s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Storm-exact.log">1.81s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync4_6.pm-time.pctl---Prism-exact.log">17.11s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/leader_sync5_8.pm">leader_sync5_8.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/eventually_elected.pctl">eventually_elected.pctl</a></td>
       <td>=</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Storm-sparse.log">3.45s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Prism-explicit.log">5.55s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Storm-cudd.log">12.18s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Prism-cudd.log">147.25s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Storm-hybrid.log">12.18s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Prism-sparse.log">125.35s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Epmc-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Prism-hybrid.log">124.05s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Storm-exact.log">6.86s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Prism-exact.log">Err</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Storm-sparse.log">3.45s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Prism-explicit.log">5.55s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Storm-cudd.log">12.18s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Prism-cudd.log">147.25s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Storm-hybrid.log">12.18s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Prism-sparse.log">125.35s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Epmc-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Prism-hybrid.log">124.05s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Storm-exact.log">6.86s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-eventually_elected.pctl---Prism-exact.log">Err</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/leader_sync5_8.pm">leader_sync5_8.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/time.pctl">time.pctl</a></td>
       <td>=</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Storm-sparse.log">3.82s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Prism-explicit.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Storm-cudd.log">19.00s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Prism-cudd.log">134.43s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Storm-hybrid.log">23.31s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Prism-sparse.log">125.57s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Epmc-cudd.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Prism-hybrid.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Storm-exact.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Storm-sparse.log">3.82s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Prism-explicit.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Storm-cudd.log">19.00s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Prism-cudd.log">134.43s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Storm-hybrid.log">23.31s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Prism-sparse.log">125.57s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Epmc-cudd.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Prism-hybrid.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Storm-exact.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync5_8.pm-time.pctl---Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/leader_sync6_3.pm">leader_sync6_3.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/eventually_elected.pctl">eventually_elected.pctl</a></td>
       <td>=</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Storm-sparse.log">0.33s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Prism-explicit.log">2.37s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Epmc-explicit.log">TO</a></td>      <td><b><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Storm-cudd.log">0.28s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Prism-cudd.log">2.03s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Storm-hybrid.log">0.28s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Prism-sparse.log">2.01s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Epmc-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Prism-hybrid.log">2.03s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Storm-exact.log">0.35s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Prism-exact.log">Err</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Storm-sparse.log">0.33s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Prism-explicit.log">2.37s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Storm-cudd.log">0.28s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Prism-cudd.log">2.03s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Storm-hybrid.log">0.28s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Prism-sparse.log">2.01s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Epmc-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Prism-hybrid.log">2.03s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Storm-exact.log">0.35s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-eventually_elected.pctl---Prism-exact.log">Err</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/leader_sync6_3.pm">leader_sync6_3.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/time.pctl">time.pctl</a></td>
       <td>=</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Storm-sparse.log">0.33s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Prism-explicit.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Storm-cudd.log">1.13s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Prism-cudd.log">2.52s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Storm-hybrid.log">0.50s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Prism-sparse.log">2.01s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Epmc-cudd.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Prism-hybrid.log">2.95s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Storm-exact.log">1.85s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Prism-exact.log">17.20s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Storm-sparse.log">0.33s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Prism-explicit.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Storm-cudd.log">1.13s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Prism-cudd.log">2.52s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Storm-hybrid.log">0.50s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Prism-sparse.log">2.01s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Epmc-cudd.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Prism-hybrid.log">2.95s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Storm-exact.log">1.85s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_3.pm-time.pctl---Prism-exact.log">17.20s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/leader_sync6_8.pm">leader_sync6_8.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/eventually_elected.pctl">eventually_elected.pctl</a></td>
       <td>=</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Storm-sparse.log">109.00s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Prism-explicit.log">32.12s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Storm-cudd.log">254.20s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Prism-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Storm-hybrid.log">238.68s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Prism-sparse.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Epmc-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Prism-hybrid.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Storm-exact.log">547.38s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Storm-sparse.log">109.00s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Prism-explicit.log">32.12s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Storm-cudd.log">254.20s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Prism-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Storm-hybrid.log">238.68s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Prism-sparse.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Epmc-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Prism-hybrid.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Storm-exact.log">547.38s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-eventually_elected.pctl---Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/leader_sync6_8.pm">leader_sync6_8.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/leader_sync/time.pctl">time.pctl</a></td>
       <td>=</td>
       <td></td>
-      <td><b><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Storm-sparse.log">113.90s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Prism-explicit.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Epmc-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Storm-cudd.log">383.61s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Prism-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Storm-hybrid.log">412.08s</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Prism-sparse.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Epmc-cudd.log">n.s.</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Prism-hybrid.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Storm-exact.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Storm-sparse.log">113.90s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Prism-explicit.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Epmc-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Storm-cudd.log">383.61s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Prism-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Storm-hybrid.log">412.08s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Prism-sparse.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Epmc-cudd.log">n.s.</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Prism-hybrid.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Storm-exact.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/leader_sync-leader_sync6_8.pm-time.pctl---Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/nand/nand.pm">nand.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/nand/reliable.pctl">reliable.pctl</a></td>
       <td>K=1<br>N=20</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Storm-sparse.log">0.78s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Prism-explicit.log">8.49s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Epmc-explicit.log">3.82s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Storm-cudd.log">4.96s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Prism-cudd.log">5.02s</a></td>      <td><b><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Storm-hybrid.log">0.63s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Prism-sparse.log">2.73s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Epmc-cudd.log">36.84s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Prism-hybrid.log">2.71s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Storm-exact.log">1.96s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Prism-exact.log">657.25s</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Storm-sparse.log">0.78s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Prism-explicit.log">8.49s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Epmc-explicit.log">3.82s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Storm-cudd.log">4.96s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Prism-cudd.log">5.02s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Storm-hybrid.log">0.63s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Prism-sparse.log">2.73s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Epmc-cudd.log">36.84s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Prism-hybrid.log">2.71s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Storm-exact.log">1.96s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=1_N=20--Prism-exact.log">657.25s</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/nand/nand.pm">nand.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/nand/reliable.pctl">reliable.pctl</a></td>
       <td>K=2<br>N=60</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Storm-sparse.log">65.61s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Prism-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Epmc-explicit.log">279.21s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Storm-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Prism-cudd.log">TO</a></td>      <td><b><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Storm-hybrid.log">35.70s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Prism-sparse.log">406.56s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Epmc-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Prism-hybrid.log">384.74s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Storm-exact.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Storm-sparse.log">65.61s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Prism-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Epmc-explicit.log">279.21s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Storm-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Prism-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Storm-hybrid.log">35.70s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Prism-sparse.log">406.56s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Epmc-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Prism-hybrid.log">384.74s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Storm-exact.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=2_N=60--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/nand/nand.pm">nand.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/nand/reliable.pctl">reliable.pctl</a></td>
       <td>K=3<br>N=40</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Storm-sparse.log">21.20s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Prism-explicit.log">1569.32s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Epmc-explicit.log">82.31s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Storm-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Prism-cudd.log">TO</a></td>      <td><b><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Storm-hybrid.log">13.32s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Prism-sparse.log">112.35s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Epmc-cudd.log">1689.15s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Prism-hybrid.log">118.16s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Storm-exact.log">318.13s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Storm-sparse.log">21.20s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Prism-explicit.log">1569.32s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Epmc-explicit.log">82.31s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Storm-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Prism-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Storm-hybrid.log">13.32s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Prism-sparse.log">112.35s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Epmc-cudd.log">1689.15s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Prism-hybrid.log">118.16s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Storm-exact.log">318.13s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=3_N=40--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/nand/nand.pm">nand.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/nand/reliable.pctl">reliable.pctl</a></td>
       <td>K=4<br>N=60</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Storm-sparse.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Prism-explicit.log">TO</a></td>      <td><b><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Epmc-explicit.log">671.42s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Storm-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Prism-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Storm-hybrid.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Prism-sparse.log">1506.00s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Epmc-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Prism-hybrid.log">1143.60s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Storm-exact.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Storm-sparse.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Prism-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Epmc-explicit.log">671.42s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Storm-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Prism-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Storm-hybrid.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Prism-sparse.log">1506.00s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Epmc-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Prism-hybrid.log">1143.60s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Storm-exact.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=4_N=60--Prism-exact.log">TO</a></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/nand/nand.pm">nand.pm</a></td>
       <td><a href="https://github.com/prismmodelchecker/prism-benchmarks/tree/master/models/dtmcs/nand/reliable.pctl">reliable.pctl</a></td>
       <td>K=7<br>N=40</td>
       <td></td>
-       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Storm-sparse.log">50.53s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Prism-explicit.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Epmc-explicit.log">249.20s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Storm-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Prism-cudd.log">TO</a></td>      <td><b><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Storm-hybrid.log">31.16s</a></b></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Prism-sparse.log">492.27s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Epmc-cudd.log">TO</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Prism-hybrid.log">522.68s</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Storm-exact.log">MO</a></td>       <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Prism-exact.log">TO</a></td>    </tr>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Storm-sparse.log">50.53s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Prism-explicit.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Epmc-explicit.log">249.20s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Storm-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Prism-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Storm-hybrid.log">31.16s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Prism-sparse.log">492.27s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Epmc-cudd.log">TO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Prism-hybrid.log">522.68s</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Storm-exact.log">MO</a></td>
+      <td><a href="../logs/2017-01/dtmcs/nand-nand.pm-reliable.pctl-K=7_N=40--Prism-exact.log">TO</a></td>
+    </tr>
   </tbody>
   <tfoot>
     <tr>
@@ -596,20 +1373,6 @@
       <td>4/70</td>
       <td>0/70</td>
       <td>4/70</td>
-    </tr>
-    <tr>
-      <td># Fastest time:</td><td></td><td></td><td></td>
-      <td>22/70</td>
-      <td>1/70</td>
-      <td>5/70</td>
-      <td>13/70</td>
-      <td>3/70</td>
-      <td>24/70</td>
-      <td>0/70</td>
-      <td>0/70</td>
-      <td>1/70</td>
-      <td>0/70</td>
-      <td>0/70</td>
     </tr>
   </tfoot>
 </table>

@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Benchmark results for DTMCs</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.2/css/fixedHeader.dataTables.min.css">
 
-  <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
   <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js"></script>
   <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
@@ -17,6 +18,35 @@
     $(document).ready(function() {
       $("#content").load("dtmc.html");
     } );
+
+    function updateBest(table) {
+      // Remove old best ones
+      table.cells().every( function() {
+        $(this.node()).removeClass("best");
+      });
+      table.rows().every( function ( rowIdx, tableLoop, rowLoop ) {
+          var bestValue = -1
+          var bestIndex = -1
+          $.each( this.data(), function( index, value ){
+            if (index > 3 && table.column(index).visible()) {
+              // Get value
+              var text = $(value).text()
+              if (text != "TO" && text != "MO" && text != "Err" && text != "n.s.") {
+                var number = parseFloat(text.slice(0, -1));
+                if (bestValue == -1 || bestValue > number) {
+                  // New best value
+                  bestValue = number;
+                  bestIndex = index;
+                }
+              }
+            }
+          });
+          // Set new best
+          if (bestIndex >= 0) {
+            $(table.cell(rowIdx, bestIndex).node()).addClass("best");
+          }
+      } );
+  }
   </script>
 
 </head>
