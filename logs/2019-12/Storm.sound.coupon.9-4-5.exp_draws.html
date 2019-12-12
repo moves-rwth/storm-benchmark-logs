@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.sound - coupon exp_draws 9-4-5</title>
+	<link rel="stylesheet" type="text/css" href=style.css>
+</head>
+<body>
+<h1>Storm.sound</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#coupon">coupon</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 9, <span class="tt">DRAWS</span> = 4, <span class="tt">B</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">exp_draws</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (sound)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">storm/build/bin/storm --jani qcomp/benchmarks/dtmc/coupon/coupon.9-4.jani --janiproperty exp_draws --constants B=5 --sound --timemem</pre>
+	Sparse engine with sound model checking
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">184.18098187446594s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.4389400557373928e-09</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.4.1 (dev)
+
+Date: Fri Dec  6 09:40:00 2019
+Command line arguments: --jani qcomp/benchmarks/dtmc/coupon/coupon.9-4.jani --janiproperty exp_draws --constants B=5 --sound --timemem
+Current working directory: 
+
+Time for model input parsing: 0.034s.
+
+Time for model construction: 78.521s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	27642923
+Transitions: 	55677355
+Reward Models:  numberDraws
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * _ret0_ -> 6561 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "exp_draws": R[exp]{"numberDraws"}min=? [F "_ret0_"] ...
+Result (for initial states): 6.740072502
+Time for model checking: 103.559s.
+
+Performance statistics:
+  * peak memory usage: 6873MB
+  * CPU time: 162.083s
+  * wallclock time: 182.232s	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.dd - beb LineSeized 4-8-7</title>
+	<link rel="stylesheet" type="text/css" href=style.css>
+</head>
+<body>
+<h1>Storm.dd</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#beb">beb</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">H</span> = 4, <span class="tt">K</span> = 8, <span class="tt">N</span> = 7</td></tr>
+		<tr><td>Property:</td><td><span class="tt">LineSeized</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (dd)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">storm/build/bin/storm --jani qcomp/benchmarks/mdp/beb/beb.4-8.jani --janiproperty LineSeized --constants N=7 --engine dd --ddlib sylvan --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Symbolic engine with Sylvan using 4GB memory
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">28.485798358917236s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.4753894315159203e-08</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.4.1 (dev)
+
+Date: Mon Dec  9 13:22:44 2019
+Command line arguments: --jani qcomp/benchmarks/mdp/beb/beb.4-8.jani --janiproperty LineSeized --constants N=7 --engine dd --ddlib sylvan '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: 
+
+Time for model input parsing: 0.010s.
+
+Time for model construction: 0.662s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	20186888 (14639 nodes)
+Transitions: 	35508778 (69450 nodes)
+Choices: 	20949082
+Reward Models:  none
+Variables: 	rows: 20 meta variables (62 DD variables), columns: 20 meta variables (62 DD variables), nondeterminism: 6 meta variables (6 DD variables)
+Labels: 	2
+   * deadlock -> 240263 state(s) (1069 nodes)
+   * init -> 1 state(s) (63 nodes)
+-------------------------------------------------------------- 
+
+Model checking property "LineSeized": Pmax=? [F line_seized] ...
+ WARN (SymbolicMinMaxLinearEquationSolver.cpp:44): Selected method is not supported for this solver, switching to value iteration.
+ WARN (SymbolicMinMaxLinearEquationSolver.cpp:44): Selected method is not supported for this solver, switching to value iteration.
+Result (for initial states): 0.9998854837
+Time for model checking: 27.723s.
+
+Performance statistics:
+  * peak memory usage: 3855MB
+  * CPU time: 111.801s
+  * wallclock time: 28.422s	</pre>
+</div>
+</body>
+</html>

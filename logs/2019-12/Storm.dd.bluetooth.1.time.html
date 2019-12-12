@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.dd - bluetooth time 1</title>
+	<link rel="stylesheet" type="text/css" href=style.css>
+</head>
+<body>
+<h1>Storm.dd</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#bluetooth">bluetooth</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">mrec</span> = 1</td></tr>
+		<tr><td>Property:</td><td><span class="tt">time</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (dd)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">storm/build/bin/storm --prism qcomp/benchmarks/dtmc/bluetooth/bluetooth.prism --prop qcomp/benchmarks/dtmc/bluetooth/bluetooth.props time --constants mrec=1 --engine dd --ddlib sylvan --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Symbolic engine with Sylvan using 4GB memory
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">7.101102352142334s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.4.1 (dev)
+
+Date: Mon Dec  9 13:22:19 2019
+Command line arguments: --prism qcomp/benchmarks/dtmc/bluetooth/bluetooth.prism --prop qcomp/benchmarks/dtmc/bluetooth/bluetooth.props time --constants mrec=1 --engine dd --ddlib sylvan '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: 
+
+Time for model input parsing: 0.011s.
+
+Time for model construction: 6.760s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	3411945339 (4393 nodes)
+Transitions: 	5035263739 (14727 nodes)
+Reward Models:  time
+Variables: 	rows: 13 meta variables (52 DD variables), columns: 13 meta variables (52 DD variables)
+Labels: 	2
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 536870912 state(s) (27 nodes)
+-------------------------------------------------------------- 
+
+Model checking property "time": R[exp]=? [F (rec = 1)] ...
+Result (for initial states): 8229
+Time for model checking: 0.246s.
+
+Performance statistics:
+  * peak memory usage: 2882MB
+  * CPU time: 27.394s
+  * wallclock time: 7.035s	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.ddbisim - beb LineSeized 5-16-15</title>
+	<link rel="stylesheet" type="text/css" href=style.css>
+</head>
+<body>
+<h1>Storm.ddbisim</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#beb">beb</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">H</span> = 5, <span class="tt">K</span> = 16, <span class="tt">N</span> = 15</td></tr>
+		<tr><td>Property:</td><td><span class="tt">LineSeized</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (ddbisim)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">storm/build/bin/storm --jani qcomp/benchmarks/mdp/beb/beb.5-16.jani --janiproperty LineSeized --constants N=15 --engine dd --bisimulation --bisimulation:quot sparse --ddlib sylvan --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Symbolic bisimulation with sparse quotient and sylvan using 4GB memory
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">241.74791169166565s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">1</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.4.1 (dev)
+
+Date: Mon Dec  9 13:22:44 2019
+Command line arguments: --jani qcomp/benchmarks/mdp/beb/beb.5-16.jani --janiproperty LineSeized --constants N=15 --engine dd --bisimulation '--bisimulation:quot' sparse --ddlib sylvan '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: 
+
+Time for model input parsing: 0.038s.
+
+Time for model construction: 5.430s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	1842013522945 (327500 nodes)
+Transitions: 	3543644735688 (1546588 nodes)
+Choices: 	1869419233708
+Reward Models:  none
+Variables: 	rows: 24 meta variables (91 DD variables), columns: 24 meta variables (91 DD variables), nondeterminism: 6 meta variables (6 DD variables)
+Labels: 	2
+   * deadlock -> 6703888276 state(s) (8504 nodes)
+   * init -> 1 state(s) (92 nodes)
+--------------------------------------------------------------	</pre>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">STDERR</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">BDD Unique table full, 66195714 of 67108864 buckets filled!	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.dd - rectangle-tireworld goal 11</title>
+	<link rel="stylesheet" type="text/css" href=style.css>
+</head>
+<body>
+<h1>Storm.dd</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#rectangle-tireworld">rectangle-tireworld</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">xy</span> = 11</td></tr>
+		<tr><td>Property:</td><td><span class="tt">goal</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (dd)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">storm/build/bin/storm --jani qcomp/benchmarks/mdp/rectangle-tireworld/rectangle-tireworld.11.jani --janiproperty goal --engine dd --ddlib sylvan --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Symbolic engine with Sylvan using 4GB memory
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">19.83367609977722s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.4.1 (dev)
+
+Date: Mon Dec  9 13:23:05 2019
+Command line arguments: --jani qcomp/benchmarks/mdp/rectangle-tireworld/rectangle-tireworld.11.jani --janiproperty goal --engine dd --ddlib sylvan '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: 
+
+Time for model input parsing: 12.166s.
+
+Time for model construction: 7.046s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	242 (11 nodes)
+Transitions: 	16084 (22792 nodes)
+Choices: 	15367
+Reward Models:  none
+Variables: 	rows: 4 meta variables (11 DD variables), columns: 4 meta variables (11 DD variables), nondeterminism: 7 meta variables (7 DD variables)
+Labels: 	2
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (12 nodes)
+-------------------------------------------------------------- 
+
+Model checking property "goal": Pmax=? [F (((var2 = 2) & (var1 = 2)) & (var0 = 1))] ...
+ WARN (SymbolicMinMaxLinearEquationSolver.cpp:44): Selected method is not supported for this solver, switching to value iteration.
+ WARN (SymbolicMinMaxLinearEquationSolver.cpp:44): Selected method is not supported for this solver, switching to value iteration.
+Result (for initial states): 1
+Time for model checking: 0.014s.
+
+Performance statistics:
+  * peak memory usage: 3004MB
+  * CPU time: 39.714s
+  * wallclock time: 19.757s	</pre>
+</div>
+</body>
+</html>

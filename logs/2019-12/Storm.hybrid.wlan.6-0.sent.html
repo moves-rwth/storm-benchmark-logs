@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.hybrid - wlan sent 6-0</title>
+	<link rel="stylesheet" type="text/css" href=style.css>
+</head>
+<body>
+<h1>Storm.hybrid</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#wlan">wlan</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_BACKOFF</span> = 6, <span class="tt">COL</span> = 0</td></tr>
+		<tr><td>Property:</td><td><span class="tt">sent</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (hybrid)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">storm/build/bin/storm --prism qcomp/benchmarks/mdp/wlan/wlan.6.prism --prop qcomp/benchmarks/mdp/wlan/wlan.props sent --constants COL=0 --engine hybrid --ddlib sylvan --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Hybrid engine with Sylvan using 4GB memory
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">3.259267568588257s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.4.1 (dev)
+
+Date: Mon Dec  9 13:23:06 2019
+Command line arguments: --prism qcomp/benchmarks/mdp/wlan/wlan.6.prism --prop qcomp/benchmarks/mdp/wlan/wlan.props sent --constants COL=0 --engine hybrid --ddlib sylvan '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: 
+
+Time for model input parsing: 0.023s.
+
+Time for model construction: 0.623s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	5007548 (3894 nodes)
+Transitions: 	11475748 (20432 nodes)
+Choices: 	6350470
+Reward Models:  none
+Variables: 	rows: 13 meta variables (47 DD variables), columns: 13 meta variables (47 DD variables), nondeterminism: 7 meta variables (7 DD variables)
+Labels: 	2
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (48 nodes)
+-------------------------------------------------------------- 
+
+Model checking property "sent": P>=1 [F ((s1 = 12) & (s2 = 12))] ...
+Result (for initial states): true
+
+Time for model checking: 2.534s.
+
+Performance statistics:
+  * peak memory usage: 3056MB
+  * CPU time: 12.077s
+  * wallclock time: 3.202s	</pre>
+</div>
+</body>
+</html>

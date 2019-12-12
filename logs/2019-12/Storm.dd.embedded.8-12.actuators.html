@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.dd - embedded actuators 8-12</title>
+	<link rel="stylesheet" type="text/css" href=style.css>
+</head>
+<body>
+<h1>Storm.dd</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#embedded">embedded</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_COUNT</span> = 8, <span class="tt">T</span> = 12</td></tr>
+		<tr><td>Property:</td><td><span class="tt">actuators</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (dd)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">storm/build/bin/storm --prism qcomp/benchmarks/ctmc/embedded/embedded.prism --prop qcomp/benchmarks/ctmc/embedded/embedded.props actuators --constants MAX_COUNT=8,T=12 --prismcompat --engine dd --ddlib sylvan --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Symbolic engine with Sylvan using 4GB memory Use `--prismcompat` to ensure compatibility with prism benchmark.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">0.4924907684326172s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">0</td></tr>
+		<tr><td>Note(s):</td><td>Unable to obtain tool result.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.4.1 (dev)
+
+Date: Mon Dec  9 13:22:43 2019
+Command line arguments: --prism qcomp/benchmarks/ctmc/embedded/embedded.prism --prop qcomp/benchmarks/ctmc/embedded/embedded.props actuators --constants 'MAX_COUNT=8,T=12' --prismcompat --engine dd --ddlib sylvan '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: 
+
+ WARN (Program.cpp:178): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+ WARN (Program.cpp:1250): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1250): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1250): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1250): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1250): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1250): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1250): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1250): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model input parsing: 0.003s.
+
+ WARN (Program.cpp:1250): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1250): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1250): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 0.419s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (symbolic)
+States: 	8034 (61 nodes)
+Transitions: 	33564 (1888 nodes)
+Reward Models:  none
+Variables: 	rows: 9 meta variables (16 DD variables), columns: 9 meta variables (16 DD variables)
+Labels: 	9
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (17 nodes)
+   * danger
+   * down
+   * fail_actuators
+   * fail_io
+   * fail_main
+   * fail_sensors
+   * up
+-------------------------------------------------------------- 
+
+Model checking property "actuators": P=? [!("down") U "fail_actuators"] ...
+ERROR (verification.h:399): The model type CTMC is not supported by the dd engine.
+ WARN (model-handling.h:701): Cannot handle property: NotSupportedException: The model type CTMC is not supported by the dd engine.
+ERROR (model-handling.h:663): Property is unsupported by selected engine/settings.
+
+
+Performance statistics:
+  * peak memory usage: 2860MB
+  * CPU time: 1.116s
+  * wallclock time: 0.434s	</pre>
+</div>
+</body>
+</html>

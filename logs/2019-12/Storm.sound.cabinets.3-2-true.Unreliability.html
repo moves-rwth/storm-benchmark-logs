@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.sound - cabinets Unreliability 3-2-true</title>
+	<link rel="stylesheet" type="text/css" href=style.css>
+</head>
+<body>
+<h1>Storm.sound</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#cabinets">cabinets</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 3, <span class="tt">P</span> = 2, <span class="tt">R</span> = True</td></tr>
+		<tr><td>Property:</td><td><span class="tt">Unreliability</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (sound)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">storm/build/bin/storm --jani qcomp/benchmarks/ma/cabinets/cabinets.3-2-true.jani --janiproperty Unreliability --sound --timemem --precision 0.001</pre>
+	Sparse engine with sound model checking
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">37.32656645774841s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.4.1 (dev)
+
+Date: Fri Dec  6 10:12:20 2019
+Command line arguments: --jani qcomp/benchmarks/ma/cabinets/cabinets.3-2-true.jani --janiproperty Unreliability --sound --timemem --precision 0.001
+Current working directory: 
+
+Time for model input parsing: 0.009s.
+
+Time for model construction: 25.555s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	1960162
+Transitions: 	3068096
+Choices: 	2040512
+Markovian St.: 	267648
+Max. Rate.: 	4.1865
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * marked -> 149888 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.504s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	1960162
+Transitions: 	3068096
+Choices: 	2040512
+Markovian St.: 	267648
+Max. Rate.: 	4.1865
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * marked -> 149888 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "Unreliability": Pmax=? [true U<=1 marked] ...
+Result (for initial states): 6.67352732e-08
+Time for model checking: 11.187s.
+
+Performance statistics:
+  * peak memory usage: 469MB
+  * CPU time: 37.017s
+  * wallclock time: 37.274s	</pre>
+</div>
+</body>
+</html>

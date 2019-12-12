@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.exact - resource-gathering expsteps 1300-100-100</title>
+	<link rel="stylesheet" type="text/css" href=style.css>
+</head>
+<body>
+<h1>Storm.exact</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#resource-gathering">resource-gathering</a> <span class="tt">v.2</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">B</span> = 1300, <span class="tt">GOLD_TO_COLLECT</span> = 100, <span class="tt">GEM_TO_COLLECT</span> = 100</td></tr>
+		<tr><td>Property:</td><td><span class="tt">expsteps</span> (exp-steps)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (exact)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">storm/build/bin/storm --prism qcomp/benchmarks/mdp/resource-gathering/resource-gathering.pm --prop qcomp/benchmarks/mdp/resource-gathering/resource-gathering.prctl expsteps --constants B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100 --exact --timemem</pre>
+	Sparse engine with exact model checking
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">99.27955985069275s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.4.1 (dev)
+
+Date: Fri Dec  6 10:05:48 2019
+Command line arguments: --prism qcomp/benchmarks/mdp/resource-gathering/resource-gathering.pm --prop qcomp/benchmarks/mdp/resource-gathering/resource-gathering.prctl expsteps --constants 'B=1300,GOLD_TO_COLLECT=100,GEM_TO_COLLECT=100' --exact --timemem
+Current working directory: 
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 23.240s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	958801
+Transitions: 	3325201
+Choices: 	3080401
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * success -> 1 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "expsteps": T[exp]min=? [F "success"] ...
+Result (for initial states): 34900/27 (approx. 1292.592593)
+Time for model checking: 75.714s.
+
+Performance statistics:
+  * peak memory usage: 1595MB
+  * CPU time: 97.978s
+  * wallclock time: 99.112s	</pre>
+</div>
+</body>
+</html>

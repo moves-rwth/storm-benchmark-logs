@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.dd - philosophers MaxPrReachDeadlockTB 16-1</title>
+	<link rel="stylesheet" type="text/css" href=style.css>
+</head>
+<body>
+<h1>Storm.dd</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#philosophers">philosophers</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 16, <span class="tt">TIME_BOUND</span> = 1</td></tr>
+		<tr><td>Property:</td><td><span class="tt">MaxPrReachDeadlockTB</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (dd)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">storm/build/bin/storm --jani qcomp/benchmarks/ctmc/philosophers/philosophers.16.jani --janiproperty MaxPrReachDeadlockTB --constants TIME_BOUND=1 --engine dd --ddlib sylvan --sylvan:maxmem 4096 --sylvan:threads 4 --timemem --precision 0.001</pre>
+	Symbolic engine with Sylvan using 4GB memory
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">0.7339749336242676s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">0</td></tr>
+		<tr><td>Note(s):</td><td>Unable to obtain tool result.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.4.1 (dev)
+
+Date: Mon Dec  9 13:24:12 2019
+Command line arguments: --jani qcomp/benchmarks/ctmc/philosophers/philosophers.16.jani --janiproperty MaxPrReachDeadlockTB --constants TIME_BOUND=1 --engine dd --ddlib sylvan '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem --precision 0.001
+Current working directory: 
+
+Time for model input parsing: 0.011s.
+
+Time for model construction: 0.648s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (symbolic)
+States: 	1331714 (270 nodes)
+Transitions: 	13774113 (2229 nodes)
+Reward Models:  none
+Variables: 	rows: 65 meta variables (65 DD variables), columns: 65 meta variables (65 DD variables)
+Labels: 	3
+   * deadlock -> 1 state(s) (66 nodes)
+   * init -> 1 state(s) (66 nodes)
+   * deadl
+-------------------------------------------------------------- 
+
+Model checking property "MaxPrReachDeadlockTB": Pmax=? [true U<=1 "deadl"] ...
+ERROR (verification.h:399): The model type CTMC is not supported by the dd engine.
+ WARN (model-handling.h:701): Cannot handle property: NotSupportedException: The model type CTMC is not supported by the dd engine.
+ERROR (model-handling.h:663): Property is unsupported by selected engine/settings.
+
+
+Performance statistics:
+  * peak memory usage: 2887MB
+  * CPU time: 2.024s
+  * wallclock time: 0.674s	</pre>
+</div>
+</body>
+</html>

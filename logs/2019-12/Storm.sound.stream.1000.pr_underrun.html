@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.sound - stream pr_underrun 1000</title>
+	<link rel="stylesheet" type="text/css" href=style.css>
+</head>
+<body>
+<h1>Storm.sound</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#stream">stream</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000</td></tr>
+		<tr><td>Property:</td><td><span class="tt">pr_underrun</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (sound)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">storm/build/bin/storm --prism qcomp/benchmarks/ma/stream/stream.ma --prop qcomp/benchmarks/ma/stream/stream.csl pr_underrun --constants N=1000 --sound --timemem</pre>
+	Sparse engine with sound model checking
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">29.504364013671875s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">7.300963170810878e-11</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.4.1 (dev)
+
+Date: Fri Dec  6 10:04:40 2019
+Command line arguments: --prism qcomp/benchmarks/ma/stream/stream.ma --prop qcomp/benchmarks/ma/stream/stream.csl pr_underrun --constants N=1000 --sound --timemem
+Current working directory: 
+
+Time for model input parsing: 0.002s.
+
+Time for model construction: 1.369s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	503501
+Transitions: 	1004999
+Choices: 	504500
+Markovian St.: 	502500
+Max. Rate.: 	8
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * underrun -> 999 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.066s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	503501
+Transitions: 	1004999
+Choices: 	504500
+Markovian St.: 	502500
+Max. Rate.: 	8
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * underrun -> 999 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "pr_underrun": Pmin=? [F "underrun"] ...
+Result (for initial states): 0.2712315729
+Time for model checking: 27.992s.
+
+Performance statistics:
+  * peak memory usage: 148MB
+  * CPU time: 29.336s
+  * wallclock time: 29.443s	</pre>
+</div>
+</body>
+</html>

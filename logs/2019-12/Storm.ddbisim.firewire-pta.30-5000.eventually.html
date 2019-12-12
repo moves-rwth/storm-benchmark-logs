@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.ddbisim - firewire-pta eventually 30-5000</title>
+	<link rel="stylesheet" type="text/css" href=style.css>
+</head>
+<body>
+<h1>Storm.ddbisim</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#firewire-pta">firewire-pta</a> <span class="tt">v.1</span> (PTA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">delay</span> = 30, <span class="tt">T</span> = 5000</td></tr>
+		<tr><td>Property:</td><td><span class="tt">eventually</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (ddbisim)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">storm/build/bin/storm --jani qcomp/benchmarks/pta/firewire-pta/converted_firewire-pta.jani --janiproperty eventually --engine dd --bisimulation --bisimulation:quot sparse --ddlib sylvan --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Symbolic bisimulation with sparse quotient and sylvan using 4GB memory Use moconv to convert the PTA to an MDP using digital-clocks semantics.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">0.41051316261291504s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">1</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.4.1 (dev)
+
+Date: Mon Dec  9 13:23:19 2019
+Command line arguments: --jani qcomp/benchmarks/pta/firewire-pta/converted_firewire-pta.jani --janiproperty eventually --engine dd --bisimulation '--bisimulation:quot' sparse --ddlib sylvan '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: 
+
+Time for model input parsing: 0.322s.
+
+ERROR (DdJaniModelBuilder.cpp:2063): The symbolic JANI model builder currently does not support assignment levels.
+ERROR (storm.cpp:23): An exception caused Storm to terminate. The message of the exception is: WrongFormatException: The symbolic JANI model builder currently does not support assignment levels.	</pre>
+</div>
+</body>
+</html>

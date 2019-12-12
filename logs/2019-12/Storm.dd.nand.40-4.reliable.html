@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.dd - nand reliable 40-4</title>
+	<link rel="stylesheet" type="text/css" href=style.css>
+</head>
+<body>
+<h1>Storm.dd</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#nand">nand</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 40, <span class="tt">K</span> = 4</td></tr>
+		<tr><td>Property:</td><td><span class="tt">reliable</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (dd)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">storm/build/bin/storm --prism qcomp/benchmarks/dtmc/nand/nand.prism --prop qcomp/benchmarks/dtmc/nand/nand.props reliable --constants N=40,K=4 --engine dd --ddlib sylvan --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Symbolic engine with Sylvan using 4GB memory
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">42.30303621292114s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">2.4568545500428518e-11</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.4.1 (dev)
+
+Date: Mon Dec  9 13:22:42 2019
+Command line arguments: --prism qcomp/benchmarks/dtmc/nand/nand.prism --prop qcomp/benchmarks/dtmc/nand/nand.props reliable --constants 'N=40,K=4' --engine dd --ddlib sylvan '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: 
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 0.526s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	3999522 (8239 nodes)
+Transitions: 	6288542 (49270 nodes)
+Reward Models:  none
+Variables: 	rows: 8 meta variables (33 DD variables), columns: 8 meta variables (33 DD variables)
+Labels: 	2
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (34 nodes)
+-------------------------------------------------------------- 
+
+Model checking property "reliable": P=? [F ((s = 4) & ((z / 40) < 1/10))] ...
+Result (for initial states): 0.6186822208
+Time for model checking: 41.673s.
+
+Performance statistics:
+  * peak memory usage: 3872MB
+  * CPU time: 166.127s
+  * wallclock time: 42.236s	</pre>
+</div>
+</body>
+</html>

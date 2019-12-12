@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.sparse - sms Unavailability 3-true</title>
+	<link rel="stylesheet" type="text/css" href=style.css>
+</head>
+<body>
+<h1>Storm.sparse</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#sms">sms</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">A</span> = 3, <span class="tt">R</span> = True</td></tr>
+		<tr><td>Property:</td><td><span class="tt">Unavailability</span> (steady-state-prob)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (sparse)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">storm/build/bin/storm --jani qcomp/benchmarks/ma/sms/sms.3-true.jani --janiproperty Unavailability  --timemem</pre>
+	Sparse engine (default)
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">18.641676664352417s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">4.0451500004036875e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.4.1 (dev)
+
+Date: Fri Dec  6 10:08:14 2019
+Command line arguments: --jani qcomp/benchmarks/ma/sms/sms.3-true.jani --janiproperty Unavailability --timemem
+Current working directory: 
+
+Time for model input parsing: 0.017s.
+
+Time for model construction: 16.558s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	1486857
+Transitions: 	2437116
+Choices: 	1486857
+Markovian St.: 	131071
+Max. Rate.: 	3.02412356
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 1 item(s)
+   * marked -> 1486704 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.402s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	1486857
+Transitions: 	2437116
+Choices: 	1486857
+Markovian St.: 	131071
+Max. Rate.: 	3.02412356
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 1 item(s)
+   * marked -> 1486704 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "Unavailability": LRAmax=? [marked] ...
+Result (for initial states): 0.9999595484
+Time for model checking: 1.579s.
+
+Performance statistics:
+  * peak memory usage: 399MB
+  * CPU time: 18.333s
+  * wallclock time: 18.571s	</pre>
+</div>
+</body>
+</html>

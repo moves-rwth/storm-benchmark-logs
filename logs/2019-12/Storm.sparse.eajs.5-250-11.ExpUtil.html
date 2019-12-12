@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.sparse - eajs ExpUtil 5-250-11</title>
+	<link rel="stylesheet" type="text/css" href=style.css>
+</head>
+<body>
+<h1>Storm.sparse</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#eajs">eajs</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 5, <span class="tt">energy_capacity</span> = 250, <span class="tt">B</span> = 11</td></tr>
+		<tr><td>Property:</td><td><span class="tt">ExpUtil</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (sparse)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">storm/build/bin/storm --prism qcomp/benchmarks/mdp/eajs/eajs.5.prism --prop qcomp/benchmarks/mdp/eajs/eajs.props ExpUtil --constants energy_capacity=250,B=11  --timemem</pre>
+	Sparse engine (default)
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">38.55463457107544s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.559417700343345e-10</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.4.1 (dev)
+
+Date: Fri Dec  6 09:41:08 2019
+Command line arguments: --prism qcomp/benchmarks/mdp/eajs/eajs.5.prism --prop qcomp/benchmarks/mdp/eajs/eajs.props ExpUtil --constants 'energy_capacity=250,B=11' --timemem
+Current working directory: 
+
+Time for model input parsing: 0.015s.
+
+Time for model construction: 35.430s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	3049471
+Transitions: 	6960278
+Choices: 	4250853
+Reward Models:  utilityLocal
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (battery_load = 0) -> 13476 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "ExpUtil": R[exp]{"utilityLocal"}max=? [F (battery_load = 0)] ...
+Result (for initial states): 10.03294069
+Time for model checking: 3.029s.
+
+Performance statistics:
+  * peak memory usage: 830MB
+  * CPU time: 38.142s
+  * wallclock time: 38.496s	</pre>
+</div>
+</body>
+</html>
