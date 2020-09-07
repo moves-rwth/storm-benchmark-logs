@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.sound - pnueli-zuck live 5</title>
+	<link rel="stylesheet" type="text/css" href=../style.css>
+</head>
+<body>
+<h1>Storm.sound</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#pnueli-zuck">pnueli-zuck</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">live</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (sound)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">/home/tq429871/storm/build/bin/storm --prism /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/mdp/pnueli-zuck/pnueli-zuck.5.prism --prop /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/mdp/pnueli-zuck/pnueli-zuck.props live --sound --timemem</pre>
+	Sparse engine with sound model checking
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">2.983727216720581s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.6.2
+
+Date: Sat Sep  5 20:54:07 2020
+Command line arguments: --prism /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/mdp/pnueli-zuck/pnueli-zuck.5.prism --prop /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/mdp/pnueli-zuck/pnueli-zuck.props live --sound --timemem
+Current working directory: /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks
+
+Time for model input parsing: 0.006s.
+
+Time for model construction: 2.693s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	307523
+Transitions: 	1886851
+Choices: 	1753715
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (p1 = 10) -> 4096 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "live": Pmax=? [F (p1 = 10)] ...
+Result (for initial states): 1
+Time for model checking: 0.228s.
+
+Performance statistics:
+  * peak memory usage: 121MB
+  * CPU time: 2.906s
+  * wallclock time: 2.933s	</pre>
+</div>
+</body>
+</html>

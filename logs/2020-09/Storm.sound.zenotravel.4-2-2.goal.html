@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.sound - zenotravel goal 4-2-2</title>
+	<link rel="stylesheet" type="text/css" href=../style.css>
+</head>
+<body>
+<h1>Storm.sound</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#zenotravel">zenotravel</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">c</span> = 4, <span class="tt">p</span> = 2, <span class="tt">a</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">goal</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (sound)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">/home/tq429871/storm/build/bin/storm --jani /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/mdp/zenotravel/zenotravel.4-2-2.jani --janiproperty goal --sound --timemem</pre>
+	Sparse engine with sound model checking
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">10.77701449394226s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.6.2
+
+Date: Sat Sep  5 20:57:46 2020
+Command line arguments: --jani /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/mdp/zenotravel/zenotravel.4-2-2.jani --janiproperty goal --sound --timemem
+Current working directory: /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks
+
+Time for model input parsing: 0.020s.
+
+Time for model construction: 10.230s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	459900
+Transitions: 	3818556
+Choices: 	2976444
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * ((var7 = 1) & (var6 = 2)) -> 2124 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "goal": Pmax=? [F ((var7 = 1) & (var6 = 2))] ...
+Result (for initial states): 1
+Time for model checking: 0.461s.
+
+Performance statistics:
+  * peak memory usage: 204MB
+  * CPU time: 10.658s
+  * wallclock time: 10.719s	</pre>
+</div>
+</body>
+</html>

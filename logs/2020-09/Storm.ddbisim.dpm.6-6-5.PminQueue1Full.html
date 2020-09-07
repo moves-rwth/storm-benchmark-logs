@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.ddbisim - dpm PminQueue1Full 6-6-5</title>
+	<link rel="stylesheet" type="text/css" href=../style.css>
+</head>
+<body>
+<h1>Storm.ddbisim</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#dpm">dpm</a> <span class="tt">v.2</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 6, <span class="tt">C</span> = 6, <span class="tt">TIME_BOUND</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">PminQueue1Full</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (ddbisim)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">/home/tq429871/storm/build/bin/storm --jani /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ma/dpm/dpm.jani --janiproperty PminQueue1Full --constants N=6,C=6,TIME_BOUND=5 --engine dd-to-sparse --bisimulation --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Symbolic bisimulation with sparse quotient and sylvan using 4GB memory
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="color: red;">&gt 1800s (Timeout)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.6.2
+
+Date: Sat Sep  5 20:58:50 2020
+Command line arguments: --jani /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ma/dpm/dpm.jani --janiproperty PminQueue1Full --constants 'N=6,C=6,TIME_BOUND=5' --engine dd-to-sparse --bisimulation '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks
+
+Time for model input parsing: 0.004s.
+
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(6 >= 7)' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(6 >= 8)' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(6 >= 9)' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(6 >= 10)' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((6 >= 7) & (items7 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((6 >= 8) & (items8 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((6 >= 9) & (items9 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((6 >= 10) & (items10 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((6 >= 7) & (items7 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((6 >= 8) & (items8 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((6 >= 9) & (items9 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((6 >= 10) & (items10 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((6 >= 7) & (items7 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((6 >= 8) & (items8 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((6 >= 9) & (items9 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((6 >= 10) & (items10 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+Time for model construction: 0.459s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (symbolic)
+States: 	9191028 (368 nodes)
+Transitions: 	17865498 (11673 nodes)
+Choices: 	10604874
+Reward Models:  none
+Variables: 	rows: 15 meta variables (44 DD variables), columns: 15 meta variables (44 DD variables), nondeterminism: 8 meta variables (8 DD variables)
+Labels: 	2
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (45 nodes)
+-------------------------------------------------------------- 
+
+
+----------
+Computation aborted after 1800.0127639770508 seconds since the total time limit of 1800 seconds was exceeded.	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.dd - polling s1_before_s2 18-16</title>
+	<link rel="stylesheet" type="text/css" href=../style.css>
+</head>
+<body>
+<h1>Storm.dd</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#polling">polling</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 18, <span class="tt">T</span> = 16</td></tr>
+		<tr><td>Property:</td><td><span class="tt">s1_before_s2</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (dd)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">/home/tq429871/storm/build/bin/storm --prism /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ctmc/polling/polling.18.prism --prop /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ctmc/polling/polling.props s1_before_s2 --constants T=16 --prismcompat --engine dd --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Symbolic engine with Sylvan using 4GB memory Use `--prismcompat` to ensure compatibility with prism benchmark.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">0.589402437210083s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">0</td></tr>
+		<tr><td>Note(s):</td><td>Unable to obtain tool result.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.6.2
+
+Date: Sat Sep  5 20:50:53 2020
+Command line arguments: --prism /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ctmc/polling/polling.18.prism --prop /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ctmc/polling/polling.props s1_before_s2 --constants T=16 --prismcompat --engine dd '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks
+
+ WARN (Program.cpp:178): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model input parsing: 0.007s.
+
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (cli.cpp:262): The model checking query does not seem to be supported for the selected engine. Storm will try to solve the query, but you will most likely get an error for at least one of the provided properties.
+Time for model construction: 0.511s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (symbolic)
+States: 	7077888 (57 nodes)
+Transitions: 	68485120 (2743 nodes)
+Reward Models:  none
+Variables: 	rows: 20 meta variables (24 DD variables), columns: 20 meta variables (24 DD variables)
+Labels: 	2
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (25 nodes)
+-------------------------------------------------------------- 
+
+Model checking property "s1_before_s2": P=? [!(((s = 2) & (a = 1))) U ((s = 1) & (a = 1))] ...
+ERROR (verification.h:425): The model type CTMC is not supported by the dd engine.
+ WARN (model-handling.h:885): Cannot handle property: NotSupportedException: The model type CTMC is not supported by the dd engine.
+ERROR (model-handling.h:847): Property is unsupported by selected engine/settings.
+
+
+Performance statistics:
+  * peak memory usage: 2862MB
+  * CPU time: 1.536s
+  * wallclock time: 0.530s	</pre>
+</div>
+</body>
+</html>

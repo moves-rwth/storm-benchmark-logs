@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.automatic - readers-writers exp_time_many_requests 40</title>
+	<link rel="stylesheet" type="text/css" href=../style.css>
+</head>
+<body>
+<h1>Storm.automatic</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#readers-writers">readers-writers</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">K</span> = 40</td></tr>
+		<tr><td>Property:</td><td><span class="tt">exp_time_many_requests</span> (exp-time)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (automatic)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">/home/tq429871/storm/build/bin/storm --jani /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ma/readers-writers/readers-writers.40.jani --janiproperty exp_time_many_requests --engine automatic --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Automatic selection
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">18.043044567108154s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.2327522517007676e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.6.2
+
+Date: Sat Sep  5 21:09:12 2020
+Command line arguments: --jani /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ma/readers-writers/readers-writers.40.jani --janiproperty exp_time_many_requests --engine automatic '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks
+
+Time for model input parsing: 0.003s.
+
+Automatic engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=false
+Time for model construction: 6.902s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	1884366
+Transitions: 	3815040
+Choices: 	1884366
+Markovian St.: 	372594
+Max. Rate.: 	400
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (((p_lan_w + p_w) + (p_lan_r + p_r)) > (320 / 10)) -> 56038 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (sparse)
+States: 	1884366
+Transitions: 	3815040
+Choices: 	1884366
+Markovian St.: 	372594
+Max. Rate.: 	400
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * (((p_lan_w + p_w) + (p_lan_r + p_r)) > (320 / 10)) -> 56038 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "exp_time_many_requests": T[exp]min=? [F (((p_lan_w + p_w) + (p_lan_r + p_r)) > (320 / 10))] ...
+Result (for initial states): 3.72931331
+Time for model checking: 11.073s.
+
+Performance statistics:
+  * peak memory usage: 604MB
+  * CPU time: 17.762s
+  * wallclock time: 17.994s	</pre>
+</div>
+</body>
+</html>

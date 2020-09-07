@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.dd - eajs ExpUtil 5-250-11</title>
+	<link rel="stylesheet" type="text/css" href=../style.css>
+</head>
+<body>
+<h1>Storm.dd</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#eajs">eajs</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 5, <span class="tt">energy_capacity</span> = 250, <span class="tt">B</span> = 11</td></tr>
+		<tr><td>Property:</td><td><span class="tt">ExpUtil</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (dd)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">/home/tq429871/storm/build/bin/storm --prism /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/mdp/eajs/eajs.5.prism --prop /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/mdp/eajs/eajs.props ExpUtil --constants energy_capacity=250,B=11 --engine dd --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Symbolic engine with Sylvan using 4GB memory
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">61.35952067375183s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">7.817792201323902e-09</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.6.2
+
+Date: Sat Sep  5 20:46:49 2020
+Command line arguments: --prism /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/mdp/eajs/eajs.5.prism --prop /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/mdp/eajs/eajs.props ExpUtil --constants 'energy_capacity=250,B=11' --engine dd '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks
+
+Time for model input parsing: 0.008s.
+
+Time for model construction: 0.613s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	3049471 (3310 nodes)
+Transitions: 	6960278 (29689 nodes)
+Choices: 	4250853
+Reward Models:  utilityLocal
+Variables: 	rows: 14 meta variables (43 DD variables), columns: 14 meta variables (43 DD variables), nondeterminism: 5 meta variables (5 DD variables)
+Labels: 	10
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (44 nodes)
+   * emptyBattery
+   * localFailure
+   * noLocalFailure
+   * process_1_finishes
+   * process_2_finishes
+   * process_3_finishes
+   * process_4_finishes
+   * process_5_finishes
+-------------------------------------------------------------- 
+
+Model checking property "ExpUtil": R[exp]{"utilityLocal"}max=? [F (battery_load = 0)] ...
+ WARN (SymbolicMinMaxLinearEquationSolver.cpp:45): Selected method is not supported for this solver, switching to value iteration.
+ WARN (SymbolicMinMaxLinearEquationSolver.cpp:45): Selected method is not supported for this solver, switching to value iteration.
+Result (for initial states): 10.03294061
+Time for model checking: 60.673s.
+
+Performance statistics:
+  * peak memory usage: 3875MB
+  * CPU time: 242.670s
+  * wallclock time: 61.313s	</pre>
+</div>
+</body>
+</html>

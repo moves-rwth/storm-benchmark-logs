@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Benchmark results</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.2/css/fixedHeader.dataTables.min.css">
+
+      <script type="text/javascript" language="javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js"></script>
+      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.colVis.min.js"></script>
+
+      <script>
+        $(document).ready(function() {
+          // Set correct file
+          $("#content").load("data.html");
+        } );
+
+        function updateBest(table) {
+          // Remove old best ones
+          table.cells().every( function() {
+            $(this.node()).removeClass("best");
+          });
+          table.rows().every( function ( rowIdx, tableLoop, rowLoop ) {
+              var bestValue = -1
+              var bestIndex = -1
+              $.each( this.data(), function( index, value ){
+                if (index > 5 && table.column(index).visible()) {
+    			    var text = $(value).text()
+    	            if (["TO", "ERR", "INC", "MO", "NS", ""].indexOf(text) < 0) {
+    				    var number = parseFloat(text);
+    	                if (bestValue == -1 || bestValue > number) {
+    	                  // New best value
+    	                  bestValue = number;
+    	                  bestIndex = index;
+    	                }
+    				  }
+    			  }
+              });
+              // Set new best
+              if (bestIndex >= 0) {
+                $(table.cell(rowIdx, bestIndex).node()).addClass("best");
+              }
+          } );
+      }
+      </script>
+    </head>
+    <body>
+<div>
+	<table id="table" class="display">
+		<thead>
+			<tr>
+				<th>Model</th>
+				<th>Type</th>
+				<th>Original</th>
+				<th>Parameters</th>
+				<th>Property</th>
+				<th>Type</th>
+				<th>Storm.sparse</th>
+				<th>Storm.hybrid</th>
+				<th>Storm.dd</th>
+				<th>Storm.ddbisim</th>
+				<th>Storm.sound</th>
+				<th>Storm.exact</th>
+				<th>Storm.automatic</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#beb">beb</a></td>
+				<td>MDP</td>
+				<td>Modest</td>
+				<td>4-8-7</td>
+				<td>LineSeized</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.beb.4-8-7.LineSeized.html' >104.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.beb.4-8-7.LineSeized.html' >15.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.beb.4-8-7.LineSeized.html' >27.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.beb.4-8-7.LineSeized.html' >21.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.beb.4-8-7.LineSeized.html' >117.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.beb.4-8-7.LineSeized.html' >332.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.beb.4-8-7.LineSeized.html' >15.9</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#beb">beb</a></td>
+				<td>MDP</td>
+				<td>Modest</td>
+				<td>5-16-15</td>
+				<td>LineSeized</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.beb.5-16-15.LineSeized.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.beb.5-16-15.LineSeized.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.beb.5-16-15.LineSeized.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.beb.5-16-15.LineSeized.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.beb.5-16-15.LineSeized.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.beb.5-16-15.LineSeized.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.beb.5-16-15.LineSeized.html'  class='timeout'>TO</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#bitcoin-attack">bitcoin-attack</a></td>
+				<td>MA</td>
+				<td>Modest</td>
+				<td>20-6</td>
+				<td>P_MWinMax</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.bitcoin-attack.20-6.P_MWinMax.html' >0.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.bitcoin-attack.20-6.P_MWinMax.html' >0.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.bitcoin-attack.20-6.P_MWinMax.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.bitcoin-attack.20-6.P_MWinMax.html' >1.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.bitcoin-attack.20-6.P_MWinMax.html' >0.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.bitcoin-attack.20-6.P_MWinMax.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.bitcoin-attack.20-6.P_MWinMax.html' >1.0</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#bluetooth">bluetooth</a></td>
+				<td>DTMC</td>
+				<td>PRISM</td>
+				<td>1</td>
+				<td>time</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.bluetooth.1.time.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.bluetooth.1.time.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.bluetooth.1.time.html' >6.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.bluetooth.1.time.html' >6.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.bluetooth.1.time.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.bluetooth.1.time.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.bluetooth.1.time.html' >6.9</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#cabinets">cabinets</a></td>
+				<td>MA</td>
+				<td>Galileo</td>
+				<td>3-2-true</td>
+				<td>Unavailability</td>
+				<td>S</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.cabinets.3-2-true.Unavailability.html' >36.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.cabinets.3-2-true.Unavailability.html' >57.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.cabinets.3-2-true.Unavailability.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.cabinets.3-2-true.Unavailability.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.cabinets.3-2-true.Unavailability.html' >38.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.cabinets.3-2-true.Unavailability.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.cabinets.3-2-true.Unavailability.html' >36.5</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#cabinets">cabinets</a></td>
+				<td>MA</td>
+				<td>Galileo</td>
+				<td>3-2-true</td>
+				<td>Unreliability</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.cabinets.3-2-true.Unreliability.html' >23.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.cabinets.3-2-true.Unreliability.html' >29.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.cabinets.3-2-true.Unreliability.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.cabinets.3-2-true.Unreliability.html' >24.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.cabinets.3-2-true.Unreliability.html' >25.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.cabinets.3-2-true.Unreliability.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.cabinets.3-2-true.Unreliability.html' >25.4</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#cluster">cluster</a></td>
+				<td>CTMC</td>
+				<td>PRISM</td>
+				<td>128-2000-20</td>
+				<td>premium_steady</td>
+				<td>S</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.cluster.128-2000-20.premium_steady.html' >27.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.cluster.128-2000-20.premium_steady.html' >6.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.cluster.128-2000-20.premium_steady.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.cluster.128-2000-20.premium_steady.html' >54.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.cluster.128-2000-20.premium_steady.html' >91.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.cluster.128-2000-20.premium_steady.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.cluster.128-2000-20.premium_steady.html' >29.3</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#cluster">cluster</a></td>
+				<td>CTMC</td>
+				<td>PRISM</td>
+				<td>128-2000-20</td>
+				<td>qos1</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.cluster.128-2000-20.qos1.html' >78.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.cluster.128-2000-20.qos1.html' >67.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.cluster.128-2000-20.qos1.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.cluster.128-2000-20.qos1.html' >100.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.cluster.128-2000-20.qos1.html' >195.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.cluster.128-2000-20.qos1.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.cluster.128-2000-20.qos1.html' >79.5</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#cluster">cluster</a></td>
+				<td>CTMC</td>
+				<td>PRISM</td>
+				<td>64-2000-20</td>
+				<td>below_min</td>
+				<td>Eb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.cluster.64-2000-20.below_min.html' >109.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.cluster.64-2000-20.below_min.html' >133.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.cluster.64-2000-20.below_min.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.cluster.64-2000-20.below_min.html' >149.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.cluster.64-2000-20.below_min.html' >386.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.cluster.64-2000-20.below_min.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.cluster.64-2000-20.below_min.html' >123.9</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#consensus">consensus</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>4-4</td>
+				<td>disagree</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.consensus.4-4.disagree.html' >0.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.consensus.4-4.disagree.html' >2.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.consensus.4-4.disagree.html' >72.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.consensus.4-4.disagree.html' >1.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.consensus.4-4.disagree.html' >14.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.consensus.4-4.disagree.html' >9.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.consensus.4-4.disagree.html' >0.9</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#consensus">consensus</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>4-4</td>
+				<td>steps_min</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.consensus.4-4.steps_min.html' >1.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.consensus.4-4.steps_min.html' >3.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.consensus.4-4.steps_min.html' >20.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.consensus.4-4.steps_min.html' >1.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.consensus.4-4.steps_min.html' >3.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.consensus.4-4.steps_min.html' >3.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.consensus.4-4.steps_min.html' >1.3</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#consensus">consensus</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>6-2</td>
+				<td>disagree</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.consensus.6-2.disagree.html' >23.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.consensus.6-2.disagree.html' >26.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.consensus.6-2.disagree.html' >152.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.consensus.6-2.disagree.html' >3.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.consensus.6-2.disagree.html' >175.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.consensus.6-2.disagree.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.consensus.6-2.disagree.html' >3.6</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#consensus">consensus</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>6-2</td>
+				<td>steps_min</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.consensus.6-2.steps_min.html' >29.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.consensus.6-2.steps_min.html' >51.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.consensus.6-2.steps_min.html' >57.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.consensus.6-2.steps_min.html' >2.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.consensus.6-2.steps_min.html' >112.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.consensus.6-2.steps_min.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.consensus.6-2.steps_min.html' >2.3</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#coupon">coupon</a></td>
+				<td>DTMC</td>
+				<td>PGCL</td>
+				<td>15-4-5</td>
+				<td>collect_all_bounded</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.coupon.15-4-5.collect_all_bounded.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.coupon.15-4-5.collect_all_bounded.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.coupon.15-4-5.collect_all_bounded.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.coupon.15-4-5.collect_all_bounded.html' >980.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.coupon.15-4-5.collect_all_bounded.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.coupon.15-4-5.collect_all_bounded.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.coupon.15-4-5.collect_all_bounded.html' >929.0</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#coupon">coupon</a></td>
+				<td>DTMC</td>
+				<td>PGCL</td>
+				<td>15-4-5</td>
+				<td>exp_draws</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.coupon.15-4-5.exp_draws.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.coupon.15-4-5.exp_draws.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.coupon.15-4-5.exp_draws.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.coupon.15-4-5.exp_draws.html' >771.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.coupon.15-4-5.exp_draws.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.coupon.15-4-5.exp_draws.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.coupon.15-4-5.exp_draws.html' >812.8</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#coupon">coupon</a></td>
+				<td>DTMC</td>
+				<td>PGCL</td>
+				<td>9-4-5</td>
+				<td>collect_all_bounded</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.coupon.9-4-5.collect_all_bounded.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.coupon.9-4-5.collect_all_bounded.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.coupon.9-4-5.collect_all_bounded.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.coupon.9-4-5.collect_all_bounded.html' >2.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.coupon.9-4-5.collect_all_bounded.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.coupon.9-4-5.collect_all_bounded.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.coupon.9-4-5.collect_all_bounded.html' >2.4</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#coupon">coupon</a></td>
+				<td>DTMC</td>
+				<td>PGCL</td>
+				<td>9-4-5</td>
+				<td>exp_draws</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.coupon.9-4-5.exp_draws.html' >124.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.coupon.9-4-5.exp_draws.html' >91.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.coupon.9-4-5.exp_draws.html' >89.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.coupon.9-4-5.exp_draws.html' >2.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.coupon.9-4-5.exp_draws.html' >136.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.coupon.9-4-5.exp_draws.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.coupon.9-4-5.exp_draws.html' >2.1</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#crowds">crowds</a></td>
+				<td>DTMC</td>
+				<td>PRISM</td>
+				<td>5-20</td>
+				<td>positive</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.crowds.5-20.positive.html' >10.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.crowds.5-20.positive.html' >6.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.crowds.5-20.positive.html' >3.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.crowds.5-20.positive.html' >1.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.crowds.5-20.positive.html' >10.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.crowds.5-20.positive.html' >46.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.crowds.5-20.positive.html' >1.3</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#crowds">crowds</a></td>
+				<td>DTMC</td>
+				<td>PRISM</td>
+				<td>6-20</td>
+				<td>positive</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.crowds.6-20.positive.html' >72.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.crowds.6-20.positive.html' >47.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.crowds.6-20.positive.html' >5.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.crowds.6-20.positive.html' >1.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.crowds.6-20.positive.html' >70.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.crowds.6-20.positive.html' >279.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.crowds.6-20.positive.html' >1.3</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#csma">csma</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>3-4</td>
+				<td>all_before_max</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.csma.3-4.all_before_max.html' >10.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.csma.3-4.all_before_max.html' >3.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.csma.3-4.all_before_max.html' >8.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.csma.3-4.all_before_max.html' >10.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.csma.3-4.all_before_max.html' >11.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.csma.3-4.all_before_max.html' >25.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.csma.3-4.all_before_max.html' >3.3</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#csma">csma</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>3-4</td>
+				<td>time_max</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.csma.3-4.time_max.html' >10.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.csma.3-4.time_max.html' >5.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.csma.3-4.time_max.html' >138.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.csma.3-4.time_max.html' >7.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.csma.3-4.time_max.html' >10.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.csma.3-4.time_max.html' >52.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.csma.3-4.time_max.html' >5.3</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#csma">csma</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>4-2</td>
+				<td>all_before_max</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.csma.4-2.all_before_max.html' >6.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.csma.4-2.all_before_max.html' >3.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.csma.4-2.all_before_max.html' >17.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.csma.4-2.all_before_max.html' >5.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.csma.4-2.all_before_max.html' >7.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.csma.4-2.all_before_max.html' >17.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.csma.4-2.all_before_max.html' >3.6</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#csma">csma</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>4-2</td>
+				<td>time_max</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.csma.4-2.time_max.html' >6.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.csma.4-2.time_max.html' >3.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.csma.4-2.time_max.html' >97.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.csma.4-2.time_max.html' >5.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.csma.4-2.time_max.html' >6.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.csma.4-2.time_max.html' >19.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.csma.4-2.time_max.html' >3.7</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#dpm">dpm</a></td>
+				<td>MA</td>
+				<td>Modest</td>
+				<td>4-8-5</td>
+				<td>PmaxQueuesFullBound</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.dpm.4-8-5.PmaxQueuesFullBound.html' >34.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.dpm.4-8-5.PmaxQueuesFullBound.html' >999.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.dpm.4-8-5.PmaxQueuesFullBound.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.dpm.4-8-5.PmaxQueuesFullBound.html' >29.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.dpm.4-8-5.PmaxQueuesFullBound.html' >32.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.dpm.4-8-5.PmaxQueuesFullBound.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.dpm.4-8-5.PmaxQueuesFullBound.html' >29.9</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#dpm">dpm</a></td>
+				<td>MA</td>
+				<td>Modest</td>
+				<td>6-6-5</td>
+				<td>PminQueue1Full</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.dpm.6-6-5.PminQueue1Full.html' >39.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.dpm.6-6-5.PminQueue1Full.html' >44.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.dpm.6-6-5.PminQueue1Full.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.dpm.6-6-5.PminQueue1Full.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.dpm.6-6-5.PminQueue1Full.html' >69.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.dpm.6-6-5.PminQueue1Full.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.dpm.6-6-5.PminQueue1Full.html' >40.5</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#eajs">eajs</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>5-250-11</td>
+				<td>ExpUtil</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.eajs.5-250-11.ExpUtil.html' >36.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.eajs.5-250-11.ExpUtil.html' >15.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.eajs.5-250-11.ExpUtil.html' >61.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.eajs.5-250-11.ExpUtil.html' >11.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.eajs.5-250-11.ExpUtil.html' >38.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.eajs.5-250-11.ExpUtil.html' >95.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.eajs.5-250-11.ExpUtil.html' >12.0</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#eajs">eajs</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>6-300-13</td>
+				<td>ExpUtil</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.eajs.6-300-13.ExpUtil.html' >119.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.eajs.6-300-13.ExpUtil.html' >48.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.eajs.6-300-13.ExpUtil.html' >200.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.eajs.6-300-13.ExpUtil.html' >27.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.eajs.6-300-13.ExpUtil.html' >118.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.eajs.6-300-13.ExpUtil.html' >298.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.eajs.6-300-13.ExpUtil.html' >27.6</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#echoring">echoring</a></td>
+				<td>MDP</td>
+				<td>Modest</td>
+				<td>100</td>
+				<td>MaxOffline1</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.echoring.100.MaxOffline1.html' >36.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.echoring.100.MaxOffline1.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.echoring.100.MaxOffline1.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.echoring.100.MaxOffline1.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.echoring.100.MaxOffline1.html' >35.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.echoring.100.MaxOffline1.html' >135.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.echoring.100.MaxOffline1.html' >35.4</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#egl">egl</a></td>
+				<td>DTMC</td>
+				<td>PRISM</td>
+				<td>10-2</td>
+				<td>messagesB</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.egl.10-2.messagesB.html' >581.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.egl.10-2.messagesB.html' >456.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.egl.10-2.messagesB.html' >0.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.egl.10-2.messagesB.html' >1.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.egl.10-2.messagesB.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.egl.10-2.messagesB.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.egl.10-2.messagesB.html' >1.4</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#egl">egl</a></td>
+				<td>DTMC</td>
+				<td>PRISM</td>
+				<td>10-2</td>
+				<td>unfairA</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.egl.10-2.unfairA.html' >478.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.egl.10-2.unfairA.html' >0.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.egl.10-2.unfairA.html' >0.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.egl.10-2.unfairA.html' >1.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.egl.10-2.unfairA.html' >485.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.egl.10-2.unfairA.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.egl.10-2.unfairA.html' >1.7</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#egl">egl</a></td>
+				<td>DTMC</td>
+				<td>PRISM</td>
+				<td>10-8</td>
+				<td>messagesB</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.egl.10-8.messagesB.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.egl.10-8.messagesB.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.egl.10-8.messagesB.html' >14.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.egl.10-8.messagesB.html' >9.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.egl.10-8.messagesB.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.egl.10-8.messagesB.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.egl.10-8.messagesB.html' >9.0</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#egl">egl</a></td>
+				<td>DTMC</td>
+				<td>PRISM</td>
+				<td>10-8</td>
+				<td>unfairA</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.egl.10-8.unfairA.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.egl.10-8.unfairA.html' >1.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.egl.10-8.unfairA.html' >1.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.egl.10-8.unfairA.html' >17.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.egl.10-8.unfairA.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.egl.10-8.unfairA.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.egl.10-8.unfairA.html' >16.6</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#elevators">elevators</a></td>
+				<td>MDP</td>
+				<td>PPDDL</td>
+				<td>b-11-9</td>
+				<td>goal</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.elevators.b-11-9.goal.html' >5.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.elevators.b-11-9.goal.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.elevators.b-11-9.goal.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.elevators.b-11-9.goal.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.elevators.b-11-9.goal.html' >5.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.elevators.b-11-9.goal.html' >21.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.elevators.b-11-9.goal.html' >5.5</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#embedded">embedded</a></td>
+				<td>CTMC</td>
+				<td>PRISM</td>
+				<td>8-12</td>
+				<td>actuators</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.embedded.8-12.actuators.html' >0.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.embedded.8-12.actuators.html' >0.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.embedded.8-12.actuators.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.embedded.8-12.actuators.html' >0.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.embedded.8-12.actuators.html' >0.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.embedded.8-12.actuators.html' >0.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.embedded.8-12.actuators.html' >0.1</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#embedded">embedded</a></td>
+				<td>CTMC</td>
+				<td>PRISM</td>
+				<td>8-12</td>
+				<td>up_time</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.embedded.8-12.up_time.html' >0.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.embedded.8-12.up_time.html' >0.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.embedded.8-12.up_time.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.embedded.8-12.up_time.html' >0.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.embedded.8-12.up_time.html' >0.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.embedded.8-12.up_time.html' >0.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.embedded.8-12.up_time.html' >0.1</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#exploding-blocksworld">exploding-blocksworld</a></td>
+				<td>MDP</td>
+				<td>PPDDL</td>
+				<td>10</td>
+				<td>goal</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.exploding-blocksworld.10.goal.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.exploding-blocksworld.10.goal.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.exploding-blocksworld.10.goal.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.exploding-blocksworld.10.goal.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.exploding-blocksworld.10.goal.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.exploding-blocksworld.10.goal.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.exploding-blocksworld.10.goal.html'  class='memout'>MO</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#firewire-pta">firewire-pta</a></td>
+				<td>PTA</td>
+				<td>PRISM</td>
+				<td>30-5000</td>
+				<td>eventually</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.firewire-pta.30-5000.eventually.html' >73.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.firewire-pta.30-5000.eventually.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.firewire-pta.30-5000.eventually.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.firewire-pta.30-5000.eventually.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.firewire-pta.30-5000.eventually.html' >73.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.firewire-pta.30-5000.eventually.html' >176.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.firewire-pta.30-5000.eventually.html' >73.5</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#firewire">firewire</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>false-36-800</td>
+				<td>deadline</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.firewire.false-36-800.deadline.html' >22.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.firewire.false-36-800.deadline.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.firewire.false-36-800.deadline.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.firewire.false-36-800.deadline.html' >17.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.firewire.false-36-800.deadline.html' >21.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.firewire.false-36-800.deadline.html' >231.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.firewire.false-36-800.deadline.html' >18.6</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#fms">fms</a></td>
+				<td>CTMC</td>
+				<td>PRISM</td>
+				<td>8</td>
+				<td>productivity</td>
+				<td>S</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.fms.8.productivity.html' >87.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.fms.8.productivity.html' >87.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.fms.8.productivity.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.fms.8.productivity.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.fms.8.productivity.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.fms.8.productivity.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.fms.8.productivity.html' >78.0</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#ftpp">ftpp</a></td>
+				<td>MA</td>
+				<td>Galileo</td>
+				<td>2-2-true</td>
+				<td>Unavailability</td>
+				<td>S</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.ftpp.2-2-true.Unavailability.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.ftpp.2-2-true.Unavailability.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.ftpp.2-2-true.Unavailability.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.ftpp.2-2-true.Unavailability.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.ftpp.2-2-true.Unavailability.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.ftpp.2-2-true.Unavailability.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.ftpp.2-2-true.Unavailability.html'  class='memout'>MO</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#ftwc">ftwc</a></td>
+				<td>MA</td>
+				<td>Modest</td>
+				<td>8-5</td>
+				<td>TimeMax</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.ftwc.8-5.TimeMax.html'  class='incorrect'>INC</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.ftwc.8-5.TimeMax.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.ftwc.8-5.TimeMax.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.ftwc.8-5.TimeMax.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.ftwc.8-5.TimeMax.html' >30.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.ftwc.8-5.TimeMax.html' >1588.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.ftwc.8-5.TimeMax.html'  class='incorrect'>INC</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#ftwc">ftwc</a></td>
+				<td>MA</td>
+				<td>Modest</td>
+				<td>8-5</td>
+				<td>TimeMin</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.ftwc.8-5.TimeMin.html'  class='incorrect'>INC</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.ftwc.8-5.TimeMin.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.ftwc.8-5.TimeMin.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.ftwc.8-5.TimeMin.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.ftwc.8-5.TimeMin.html' >25.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.ftwc.8-5.TimeMin.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.ftwc.8-5.TimeMin.html'  class='incorrect'>INC</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#haddad-monmege">haddad-monmege</a></td>
+				<td>DTMC</td>
+				<td>PRISM</td>
+				<td>100-0.7</td>
+				<td>exp_steps</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.haddad-monmege.100-0.7.exp_steps.html'  class='incorrect'>INC</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.haddad-monmege.100-0.7.exp_steps.html'  class='incorrect'>INC</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.haddad-monmege.100-0.7.exp_steps.html'  class='incorrect'>INC</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.haddad-monmege.100-0.7.exp_steps.html'  class='incorrect'>INC</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.haddad-monmege.100-0.7.exp_steps.html'  class='incorrect'>INC</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.haddad-monmege.100-0.7.exp_steps.html' >0.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.haddad-monmege.100-0.7.exp_steps.html' >0.1</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#haddad-monmege">haddad-monmege</a></td>
+				<td>DTMC</td>
+				<td>PRISM</td>
+				<td>100-0.7</td>
+				<td>target</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.haddad-monmege.100-0.7.target.html'  class='incorrect'>INC</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.haddad-monmege.100-0.7.target.html'  class='incorrect'>INC</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.haddad-monmege.100-0.7.target.html'  class='incorrect'>INC</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.haddad-monmege.100-0.7.target.html'  class='incorrect'>INC</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.haddad-monmege.100-0.7.target.html'  class='incorrect'>INC</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.haddad-monmege.100-0.7.target.html' >0.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.haddad-monmege.100-0.7.target.html' >0.1</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#hecs">hecs</a></td>
+				<td>MA</td>
+				<td>Galileo</td>
+				<td>false-1-1</td>
+				<td>Unreliability</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.hecs.false-1-1.Unreliability.html' >0.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.hecs.false-1-1.Unreliability.html' >1.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.hecs.false-1-1.Unreliability.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.hecs.false-1-1.Unreliability.html' >1.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.hecs.false-1-1.Unreliability.html' >0.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.hecs.false-1-1.Unreliability.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.hecs.false-1-1.Unreliability.html' >0.2</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#hecs">hecs</a></td>
+				<td>MA</td>
+				<td>Galileo</td>
+				<td>false-2-2</td>
+				<td>Unreliability</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.hecs.false-2-2.Unreliability.html' >38.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.hecs.false-2-2.Unreliability.html' >137.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.hecs.false-2-2.Unreliability.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.hecs.false-2-2.Unreliability.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.hecs.false-2-2.Unreliability.html' >38.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.hecs.false-2-2.Unreliability.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.hecs.false-2-2.Unreliability.html' >39.0</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#hecs">hecs</a></td>
+				<td>MA</td>
+				<td>Galileo</td>
+				<td>false-3-2</td>
+				<td>Unreliability</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.hecs.false-3-2.Unreliability.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.hecs.false-3-2.Unreliability.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.hecs.false-3-2.Unreliability.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.hecs.false-3-2.Unreliability.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.hecs.false-3-2.Unreliability.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.hecs.false-3-2.Unreliability.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.hecs.false-3-2.Unreliability.html'  class='memout'>MO</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#herman">herman</a></td>
+				<td>DTMC</td>
+				<td>PRISM</td>
+				<td>15</td>
+				<td>steps</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.herman.15.steps.html' >16.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.herman.15.steps.html' >2.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.herman.15.steps.html' >72.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.herman.15.steps.html' >1.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.herman.15.steps.html' >16.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.herman.15.steps.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.herman.15.steps.html' >2.8</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#kanban">kanban</a></td>
+				<td>CTMC</td>
+				<td>PRISM</td>
+				<td>5</td>
+				<td>throughput</td>
+				<td>S</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.kanban.5.throughput.html' >45.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.kanban.5.throughput.html' >31.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.kanban.5.throughput.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.kanban.5.throughput.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.kanban.5.throughput.html' >154.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.kanban.5.throughput.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.kanban.5.throughput.html' >29.2</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#majority">majority</a></td>
+				<td>CTMC</td>
+				<td>PRISM</td>
+				<td>2100</td>
+				<td>change_state</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.majority.2100.change_state.html' >24.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.majority.2100.change_state.html' >54.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.majority.2100.change_state.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.majority.2100.change_state.html' >58.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.majority.2100.change_state.html' >61.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.majority.2100.change_state.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.majority.2100.change_state.html' >24.1</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#mapk_cascade">mapk_cascade</a></td>
+				<td>CTMC</td>
+				<td>PRISM</td>
+				<td>4-30</td>
+				<td>activated_time</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.mapk_cascade.4-30.activated_time.html' >2.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.mapk_cascade.4-30.activated_time.html' >2.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.mapk_cascade.4-30.activated_time.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.mapk_cascade.4-30.activated_time.html' >7.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.mapk_cascade.4-30.activated_time.html' >8.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.mapk_cascade.4-30.activated_time.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.mapk_cascade.4-30.activated_time.html' >2.6</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#mapk_cascade">mapk_cascade</a></td>
+				<td>CTMC</td>
+				<td>PRISM</td>
+				<td>4-30</td>
+				<td>reactions</td>
+				<td>Eb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.mapk_cascade.4-30.reactions.html' >105.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.mapk_cascade.4-30.reactions.html' >101.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.mapk_cascade.4-30.reactions.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.mapk_cascade.4-30.reactions.html' >106.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.mapk_cascade.4-30.reactions.html' >109.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.mapk_cascade.4-30.reactions.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.mapk_cascade.4-30.reactions.html' >112.3</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#nand">nand</a></td>
+				<td>DTMC</td>
+				<td>PRISM</td>
+				<td>40-4</td>
+				<td>reliable</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.nand.40-4.reliable.html' >13.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.nand.40-4.reliable.html' >6.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.nand.40-4.reliable.html' >39.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.nand.40-4.reliable.html' >677.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.nand.40-4.reliable.html' >13.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.nand.40-4.reliable.html' >67.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.nand.40-4.reliable.html' >5.6</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#nand">nand</a></td>
+				<td>DTMC</td>
+				<td>PRISM</td>
+				<td>60-4</td>
+				<td>reliable</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.nand.60-4.reliable.html' >60.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.nand.60-4.reliable.html' >26.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.nand.60-4.reliable.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.nand.60-4.reliable.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.nand.60-4.reliable.html' >67.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.nand.60-4.reliable.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.nand.60-4.reliable.html' >25.8</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#oscillators">oscillators</a></td>
+				<td>DTMC</td>
+				<td>PRISM</td>
+				<td>8-10-0.1-1-0.1-1.0</td>
+				<td>power_consumption</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.oscillators.8-10-0.1-1-0.1-1.0.power_consumption.html' >112.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.oscillators.8-10-0.1-1-0.1-1.0.power_consumption.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.oscillators.8-10-0.1-1-0.1-1.0.power_consumption.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.oscillators.8-10-0.1-1-0.1-1.0.power_consumption.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.oscillators.8-10-0.1-1-0.1-1.0.power_consumption.html' >138.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.oscillators.8-10-0.1-1-0.1-1.0.power_consumption.html' >238.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.oscillators.8-10-0.1-1-0.1-1.0.power_consumption.html' >149.5</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#oscillators">oscillators</a></td>
+				<td>DTMC</td>
+				<td>PRISM</td>
+				<td>8-10-0.1-1-0.1-1.0</td>
+				<td>time_to_synch</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.oscillators.8-10-0.1-1-0.1-1.0.time_to_synch.html' >137.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.oscillators.8-10-0.1-1-0.1-1.0.time_to_synch.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.oscillators.8-10-0.1-1-0.1-1.0.time_to_synch.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.oscillators.8-10-0.1-1-0.1-1.0.time_to_synch.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.oscillators.8-10-0.1-1-0.1-1.0.time_to_synch.html' >125.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.oscillators.8-10-0.1-1-0.1-1.0.time_to_synch.html' >213.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.oscillators.8-10-0.1-1-0.1-1.0.time_to_synch.html' >125.6</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#pacman">pacman</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>100</td>
+				<td>crash</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.pacman.100.crash.html' >289.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.pacman.100.crash.html' >47.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.pacman.100.crash.html' >232.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.pacman.100.crash.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.pacman.100.crash.html' >291.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.pacman.100.crash.html' >456.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.pacman.100.crash.html' >50.3</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#pacman">pacman</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>60</td>
+				<td>crash</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.pacman.60.crash.html' >131.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.pacman.60.crash.html' >20.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.pacman.60.crash.html' >28.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.pacman.60.crash.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.pacman.60.crash.html' >123.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.pacman.60.crash.html' >178.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.pacman.60.crash.html' >20.8</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#philosophers">philosophers</a></td>
+				<td>CTMC</td>
+				<td>GreatSPN</td>
+				<td>16-1</td>
+				<td>MaxPrReachDeadlock</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.philosophers.16-1.MaxPrReachDeadlock.html' >23.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.philosophers.16-1.MaxPrReachDeadlock.html' >0.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.philosophers.16-1.MaxPrReachDeadlock.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.philosophers.16-1.MaxPrReachDeadlock.html' >131.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.philosophers.16-1.MaxPrReachDeadlock.html' >22.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.philosophers.16-1.MaxPrReachDeadlock.html' >120.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.philosophers.16-1.MaxPrReachDeadlock.html' >0.7</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#philosophers">philosophers</a></td>
+				<td>CTMC</td>
+				<td>GreatSPN</td>
+				<td>16-1</td>
+				<td>MaxPrReachDeadlockTB</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.philosophers.16-1.MaxPrReachDeadlockTB.html' >38.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.philosophers.16-1.MaxPrReachDeadlockTB.html' >24.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.philosophers.16-1.MaxPrReachDeadlockTB.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.philosophers.16-1.MaxPrReachDeadlockTB.html' >143.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.philosophers.16-1.MaxPrReachDeadlockTB.html' >51.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.philosophers.16-1.MaxPrReachDeadlockTB.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.philosophers.16-1.MaxPrReachDeadlockTB.html' >25.0</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#philosophers">philosophers</a></td>
+				<td>CTMC</td>
+				<td>GreatSPN</td>
+				<td>16-1</td>
+				<td>MinExpTimeDeadlock</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.philosophers.16-1.MinExpTimeDeadlock.html' >29.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.philosophers.16-1.MinExpTimeDeadlock.html' >15.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.philosophers.16-1.MinExpTimeDeadlock.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.philosophers.16-1.MinExpTimeDeadlock.html' >142.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.philosophers.16-1.MinExpTimeDeadlock.html' >58.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.philosophers.16-1.MinExpTimeDeadlock.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.philosophers.16-1.MinExpTimeDeadlock.html' >16.0</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#philosophers">philosophers</a></td>
+				<td>CTMC</td>
+				<td>GreatSPN</td>
+				<td>20-1</td>
+				<td>MaxPrReachDeadlock</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.philosophers.20-1.MaxPrReachDeadlock.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.philosophers.20-1.MaxPrReachDeadlock.html' >0.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.philosophers.20-1.MaxPrReachDeadlock.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.philosophers.20-1.MaxPrReachDeadlock.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.philosophers.20-1.MaxPrReachDeadlock.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.philosophers.20-1.MaxPrReachDeadlock.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.philosophers.20-1.MaxPrReachDeadlock.html' >0.9</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#philosophers">philosophers</a></td>
+				<td>CTMC</td>
+				<td>GreatSPN</td>
+				<td>20-1</td>
+				<td>MaxPrReachDeadlockTB</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.philosophers.20-1.MaxPrReachDeadlockTB.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.philosophers.20-1.MaxPrReachDeadlockTB.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.philosophers.20-1.MaxPrReachDeadlockTB.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.philosophers.20-1.MaxPrReachDeadlockTB.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.philosophers.20-1.MaxPrReachDeadlockTB.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.philosophers.20-1.MaxPrReachDeadlockTB.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.philosophers.20-1.MaxPrReachDeadlockTB.html'  class='memout'>MO</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#philosophers">philosophers</a></td>
+				<td>CTMC</td>
+				<td>GreatSPN</td>
+				<td>20-1</td>
+				<td>MinExpTimeDeadlock</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.philosophers.20-1.MinExpTimeDeadlock.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.philosophers.20-1.MinExpTimeDeadlock.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.philosophers.20-1.MinExpTimeDeadlock.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.philosophers.20-1.MinExpTimeDeadlock.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.philosophers.20-1.MinExpTimeDeadlock.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.philosophers.20-1.MinExpTimeDeadlock.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.philosophers.20-1.MinExpTimeDeadlock.html'  class='memout'>MO</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#pnueli-zuck">pnueli-zuck</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>10</td>
+				<td>live</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.pnueli-zuck.10.live.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.pnueli-zuck.10.live.html' >1.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.pnueli-zuck.10.live.html' >1.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.pnueli-zuck.10.live.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.pnueli-zuck.10.live.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.pnueli-zuck.10.live.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.pnueli-zuck.10.live.html' >1.1</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#pnueli-zuck">pnueli-zuck</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>5</td>
+				<td>live</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.pnueli-zuck.5.live.html' >3.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.pnueli-zuck.5.live.html' >0.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.pnueli-zuck.5.live.html' >0.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.pnueli-zuck.5.live.html' >2.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.pnueli-zuck.5.live.html' >3.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.pnueli-zuck.5.live.html' >8.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.pnueli-zuck.5.live.html' >0.6</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#polling">polling</a></td>
+				<td>CTMC</td>
+				<td>PRISM</td>
+				<td>18-16</td>
+				<td>s1_before_s2</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.polling.18-16.s1_before_s2.html' >104.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.polling.18-16.s1_before_s2.html' >10.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.polling.18-16.s1_before_s2.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.polling.18-16.s1_before_s2.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.polling.18-16.s1_before_s2.html' >225.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.polling.18-16.s1_before_s2.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.polling.18-16.s1_before_s2.html' >10.2</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#rabin">rabin</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>10</td>
+				<td>live</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.rabin.10.live.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.rabin.10.live.html' >0.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.rabin.10.live.html' >0.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.rabin.10.live.html' >4.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.rabin.10.live.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.rabin.10.live.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.rabin.10.live.html' >0.9</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#readers-writers">readers-writers</a></td>
+				<td>MA</td>
+				<td>GreatSPN</td>
+				<td>40</td>
+				<td>exp_time_many_requests</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.readers-writers.40.exp_time_many_requests.html' >19.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.readers-writers.40.exp_time_many_requests.html' >53.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.readers-writers.40.exp_time_many_requests.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.readers-writers.40.exp_time_many_requests.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.readers-writers.40.exp_time_many_requests.html' >78.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.readers-writers.40.exp_time_many_requests.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.readers-writers.40.exp_time_many_requests.html' >18.0</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#readers-writers">readers-writers</a></td>
+				<td>MA</td>
+				<td>GreatSPN</td>
+				<td>40</td>
+				<td>prtb_many_requests</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.readers-writers.40.prtb_many_requests.html' >310.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.readers-writers.40.prtb_many_requests.html' >286.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.readers-writers.40.prtb_many_requests.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.readers-writers.40.prtb_many_requests.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.readers-writers.40.prtb_many_requests.html' >324.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.readers-writers.40.prtb_many_requests.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.readers-writers.40.prtb_many_requests.html' >286.0</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#rectangle-tireworld">rectangle-tireworld</a></td>
+				<td>MDP</td>
+				<td>PPDDL</td>
+				<td>11</td>
+				<td>goal</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.rectangle-tireworld.11.goal.html' >13.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.rectangle-tireworld.11.goal.html' >18.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.rectangle-tireworld.11.goal.html' >17.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.rectangle-tireworld.11.goal.html' >18.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.rectangle-tireworld.11.goal.html' >13.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.rectangle-tireworld.11.goal.html' >13.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.rectangle-tireworld.11.goal.html' >13.6</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#resource-gathering">resource-gathering</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>1300-100-100</td>
+				<td>expgold</td>
+				<td>Eb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.resource-gathering.1300-100-100.expgold.html' >35.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.resource-gathering.1300-100-100.expgold.html' >25.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.resource-gathering.1300-100-100.expgold.html' >1.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.resource-gathering.1300-100-100.expgold.html' >1.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.resource-gathering.1300-100-100.expgold.html' >35.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.resource-gathering.1300-100-100.expgold.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.resource-gathering.1300-100-100.expgold.html' >26.4</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#resource-gathering">resource-gathering</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>1300-100-100</td>
+				<td>expsteps</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.resource-gathering.1300-100-100.expsteps.html' >15.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.resource-gathering.1300-100-100.expsteps.html' >14.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.resource-gathering.1300-100-100.expsteps.html' >112.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.resource-gathering.1300-100-100.expsteps.html' >312.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.resource-gathering.1300-100-100.expsteps.html' >53.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.resource-gathering.1300-100-100.expsteps.html' >100.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.resource-gathering.1300-100-100.expsteps.html' >17.0</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#resource-gathering">resource-gathering</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>1300-100-100</td>
+				<td>prgoldgem</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.resource-gathering.1300-100-100.prgoldgem.html' >63.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.resource-gathering.1300-100-100.prgoldgem.html' >23.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.resource-gathering.1300-100-100.prgoldgem.html' >18.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.resource-gathering.1300-100-100.prgoldgem.html' >349.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.resource-gathering.1300-100-100.prgoldgem.html' >63.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.resource-gathering.1300-100-100.prgoldgem.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.resource-gathering.1300-100-100.prgoldgem.html' >26.9</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#sms">sms</a></td>
+				<td>MA</td>
+				<td>Galileo</td>
+				<td>3-true</td>
+				<td>Unavailability</td>
+				<td>S</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.sms.3-true.Unavailability.html' >10.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.sms.3-true.Unavailability.html' >7.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.sms.3-true.Unavailability.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.sms.3-true.Unavailability.html' >99.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.sms.3-true.Unavailability.html' >10.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.sms.3-true.Unavailability.html' >44.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.sms.3-true.Unavailability.html' >7.6</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#sms">sms</a></td>
+				<td>MA</td>
+				<td>Galileo</td>
+				<td>3-true</td>
+				<td>Unreliability</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.sms.3-true.Unreliability.html' >0.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.sms.3-true.Unreliability.html' >0.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.sms.3-true.Unreliability.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.sms.3-true.Unreliability.html' >1.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.sms.3-true.Unreliability.html' >0.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.sms.3-true.Unreliability.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.sms.3-true.Unreliability.html' >0.1</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#speed-ind">speed-ind</a></td>
+				<td>CTMC</td>
+				<td>PRISM</td>
+				<td>2100</td>
+				<td>change_state</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.speed-ind.2100.change_state.html' >100.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.speed-ind.2100.change_state.html' >110.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.speed-ind.2100.change_state.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.speed-ind.2100.change_state.html' >204.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.speed-ind.2100.change_state.html' >282.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.speed-ind.2100.change_state.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.speed-ind.2100.change_state.html' >110.2</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#stream">stream</a></td>
+				<td>MA</td>
+				<td>PRISM-MA</td>
+				<td>1000</td>
+				<td>exp_buffertime</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.stream.1000.exp_buffertime.html' >7.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.stream.1000.exp_buffertime.html' >9.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.stream.1000.exp_buffertime.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.stream.1000.exp_buffertime.html' >218.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.stream.1000.exp_buffertime.html' >6.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.stream.1000.exp_buffertime.html' >25.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.stream.1000.exp_buffertime.html' >7.8</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#stream">stream</a></td>
+				<td>MA</td>
+				<td>PRISM-MA</td>
+				<td>1000</td>
+				<td>pr_underrun</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.stream.1000.pr_underrun.html' >1.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.stream.1000.pr_underrun.html' >4.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.stream.1000.pr_underrun.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.stream.1000.pr_underrun.html' >107.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.stream.1000.pr_underrun.html' >2.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.stream.1000.pr_underrun.html' >6.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.stream.1000.pr_underrun.html' >1.8</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#stream">stream</a></td>
+				<td>MA</td>
+				<td>PRISM-MA</td>
+				<td>1000</td>
+				<td>pr_underrun_tb</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.stream.1000.pr_underrun_tb.html' >5.0</a></td>
+				<td></td>
+				<td><a href='../../logs/2020-09/Storm.dd.stream.1000.pr_underrun_tb.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.stream.1000.pr_underrun_tb.html' >119.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.stream.1000.pr_underrun_tb.html' >5.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.stream.1000.pr_underrun_tb.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.stream.1000.pr_underrun_tb.html' >5.4</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#tireworld">tireworld</a></td>
+				<td>MDP</td>
+				<td>PPDDL</td>
+				<td>45</td>
+				<td>goal</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.tireworld.45.goal.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.tireworld.45.goal.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.tireworld.45.goal.html' >1310.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.tireworld.45.goal.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.tireworld.45.goal.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.tireworld.45.goal.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.tireworld.45.goal.html'  class='timeout'>TO</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#triangle-tireworld">triangle-tireworld</a></td>
+				<td>MDP</td>
+				<td>PPDDL</td>
+				<td>441</td>
+				<td>goal</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.triangle-tireworld.441.goal.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.triangle-tireworld.441.goal.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.triangle-tireworld.441.goal.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.triangle-tireworld.441.goal.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.triangle-tireworld.441.goal.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.triangle-tireworld.441.goal.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.triangle-tireworld.441.goal.html'  class='memout'>MO</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#vgs">vgs</a></td>
+				<td>MA</td>
+				<td>Galileo</td>
+				<td>5-10000</td>
+				<td>MaxPrReachFailedTB</td>
+				<td>Pb</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.vgs.5-10000.MaxPrReachFailedTB.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.vgs.5-10000.MaxPrReachFailedTB.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.vgs.5-10000.MaxPrReachFailedTB.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.vgs.5-10000.MaxPrReachFailedTB.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.vgs.5-10000.MaxPrReachFailedTB.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.vgs.5-10000.MaxPrReachFailedTB.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.vgs.5-10000.MaxPrReachFailedTB.html'  class='timeout'>TO</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#vgs">vgs</a></td>
+				<td>MA</td>
+				<td>Galileo</td>
+				<td>5-10000</td>
+				<td>MinExpTimeFailed</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.vgs.5-10000.MinExpTimeFailed.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.vgs.5-10000.MinExpTimeFailed.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.vgs.5-10000.MinExpTimeFailed.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.vgs.5-10000.MinExpTimeFailed.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.vgs.5-10000.MinExpTimeFailed.html'  class='memout'>MO</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.vgs.5-10000.MinExpTimeFailed.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.vgs.5-10000.MinExpTimeFailed.html'  class='memout'>MO</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#wlan-large">wlan-large</a></td>
+				<td>PTA</td>
+				<td>Modest</td>
+				<td>2</td>
+				<td>E_or</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.wlan-large.2.E_or.html' >31.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.wlan-large.2.E_or.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.wlan-large.2.E_or.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.wlan-large.2.E_or.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.wlan-large.2.E_or.html' >35.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.wlan-large.2.E_or.html' >122.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.wlan-large.2.E_or.html' >31.5</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#wlan-large">wlan-large</a></td>
+				<td>PTA</td>
+				<td>Modest</td>
+				<td>2</td>
+				<td>P_max</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.wlan-large.2.P_max.html' >4.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.wlan-large.2.P_max.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.wlan-large.2.P_max.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.wlan-large.2.P_max.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.wlan-large.2.P_max.html' >5.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.wlan-large.2.P_max.html' >18.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.wlan-large.2.P_max.html' >5.0</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#wlan">wlan</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>4-0</td>
+				<td>cost_min</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.wlan.4-0.cost_min.html' >2.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.wlan.4-0.cost_min.html' >2.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.wlan.4-0.cost_min.html' >19.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.wlan.4-0.cost_min.html' >124.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.wlan.4-0.cost_min.html' >3.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.wlan.4-0.cost_min.html' >8.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.wlan.4-0.cost_min.html' >2.5</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#wlan">wlan</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>4-0</td>
+				<td>sent</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.wlan.4-0.sent.html' >2.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.wlan.4-0.sent.html' >1.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.wlan.4-0.sent.html' >1.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.wlan.4-0.sent.html' >131.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.wlan.4-0.sent.html' >2.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.wlan.4-0.sent.html' >5.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.wlan.4-0.sent.html' >1.1</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#wlan">wlan</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>5-0</td>
+				<td>cost_min</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.wlan.5-0.cost_min.html' >11.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.wlan.5-0.cost_min.html' >7.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.wlan.5-0.cost_min.html' >75.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.wlan.5-0.cost_min.html' >863.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.wlan.5-0.cost_min.html' >11.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.wlan.5-0.cost_min.html' >28.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.wlan.5-0.cost_min.html' >7.8</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#wlan">wlan</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>5-0</td>
+				<td>sent</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.wlan.5-0.sent.html' >8.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.wlan.5-0.sent.html' >1.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.wlan.5-0.sent.html' >1.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.wlan.5-0.sent.html' >840.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.wlan.5-0.sent.html' >8.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.wlan.5-0.sent.html' >19.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.wlan.5-0.sent.html' >1.7</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#wlan">wlan</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>6-0</td>
+				<td>cost_min</td>
+				<td>E</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.wlan.6-0.cost_min.html' >48.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.wlan.6-0.cost_min.html' >29.5</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.wlan.6-0.cost_min.html' >315.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.wlan.6-0.cost_min.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.wlan.6-0.cost_min.html' >46.3</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.wlan.6-0.cost_min.html' >115.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.wlan.6-0.cost_min.html' >30.2</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#wlan">wlan</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>6-0</td>
+				<td>sent</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.wlan.6-0.sent.html' >35.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.wlan.6-0.sent.html' >3.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.wlan.6-0.sent.html' >3.2</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.wlan.6-0.sent.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.wlan.6-0.sent.html' >35.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.wlan.6-0.sent.html' >79.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.wlan.6-0.sent.html' >3.0</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#zenotravel">zenotravel</a></td>
+				<td>MDP</td>
+				<td>PPDDL</td>
+				<td>4-2-2</td>
+				<td>goal</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.zenotravel.4-2-2.goal.html' >11.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.zenotravel.4-2-2.goal.html' >4.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.zenotravel.4-2-2.goal.html' >3.9</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.zenotravel.4-2-2.goal.html' >19.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.zenotravel.4-2-2.goal.html' >10.8</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.zenotravel.4-2-2.goal.html' >24.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.zenotravel.4-2-2.goal.html' >4.1</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#zeroconf-pta">zeroconf-pta</a></td>
+				<td>PTA</td>
+				<td>PRISM</td>
+				<td>200</td>
+				<td>incorrect</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.zeroconf-pta.200.incorrect.html' >0.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.zeroconf-pta.200.incorrect.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.zeroconf-pta.200.incorrect.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.zeroconf-pta.200.incorrect.html'  class='unsupported'>NS</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.zeroconf-pta.200.incorrect.html' >0.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.zeroconf-pta.200.incorrect.html' >0.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.zeroconf-pta.200.incorrect.html' >0.1</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#zeroconf">zeroconf</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>1000-8-false</td>
+				<td>correct_max</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.zeroconf.1000-8-false.correct_max.html' >17.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.zeroconf.1000-8-false.correct_max.html' >18.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.zeroconf.1000-8-false.correct_max.html' >268.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.zeroconf.1000-8-false.correct_max.html' >120.1</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.zeroconf.1000-8-false.correct_max.html' >23.7</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.zeroconf.1000-8-false.correct_max.html'  class='timeout'>TO</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.zeroconf.1000-8-false.correct_max.html' >17.2</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://qcomp.org/benchmarks/index.html#zeroconf">zeroconf</a></td>
+				<td>MDP</td>
+				<td>PRISM</td>
+				<td>1000-8-false</td>
+				<td>correct_min</td>
+				<td>P</td>
+				<td><a href='../../logs/2020-09/Storm.sparse.zeroconf.1000-8-false.correct_min.html' >14.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.hybrid.zeroconf.1000-8-false.correct_min.html' >16.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.dd.zeroconf.1000-8-false.correct_min.html' >672.6</a></td>
+				<td><a href='../../logs/2020-09/Storm.ddbisim.zeroconf.1000-8-false.correct_min.html' >118.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.sound.zeroconf.1000-8-false.correct_min.html' >26.0</a></td>
+				<td><a href='../../logs/2020-09/Storm.exact.zeroconf.1000-8-false.correct_min.html' >47.4</a></td>
+				<td><a href='../../logs/2020-09/Storm.automatic.zeroconf.1000-8-false.correct_min.html' >13.1</a></td>
+			</tr>
+		</tbody>
+</table>
+<script>
+	var table = $("#table").DataTable( {
+		"paging": false,
+		"autoWidth": false,
+		"info": false,
+		fixedHeader: {
+			"header": true,
+		},
+		"dom": "Bfrtip",
+		buttons: [
+			{
+				extend: "columnsToggle",
+				columns: [6],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [7],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [8],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [9],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [10],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [11],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [12],
+			},
+			{
+				extend: "colvisGroup",
+				text: "Show all",
+				show: [6, 7, 8, 9, 10, 11, 12],
+				hide: []
+			},
+			{
+				extend: "colvisGroup",
+				text: "Hide all",
+				show: [],
+				hide: [6, 7, 8, 9, 10, 11, 12]
+			},
+		],
+	});
+
+	table.on("column-sizing.dt", function (e, settings) {
+		updateBest(table);
+	} );
+
+	updateBest(table);
+</script>
+</div>
+</body>
+</html>

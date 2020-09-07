@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.dd - stream exp_buffertime 1000</title>
+	<link rel="stylesheet" type="text/css" href=../style.css>
+</head>
+<body>
+<h1>Storm.dd</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#stream">stream</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000</td></tr>
+		<tr><td>Property:</td><td><span class="tt">exp_buffertime</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (dd)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">/home/tq429871/storm/build/bin/storm --prism /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ma/stream/stream.ma --prop /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ma/stream/stream.csl exp_buffertime --constants N=1000 --engine dd --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Symbolic engine with Sylvan using 4GB memory
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">2.446373224258423s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">0</td></tr>
+		<tr><td>Note(s):</td><td>Unable to obtain tool result.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.6.2
+
+Date: Sat Sep  5 20:47:58 2020
+Command line arguments: --prism /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ma/stream/stream.ma --prop /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ma/stream/stream.csl exp_buffertime --constants N=1000 --engine dd '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks
+
+Time for model input parsing: 0.001s.
+
+ WARN (model-handling.h:304): Dd-based model builder for Markov Automata is only available for JANI models, automatically converting the input model.
+ WARN (cli.cpp:262): The model checking query does not seem to be supported for the selected engine. Storm will try to solve the query, but you will most likely get an error for at least one of the provided properties.
+Time for model construction: 2.372s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (symbolic)
+States: 	1502501 (6054 nodes)
+Transitions: 	3001001 (52796 nodes)
+Choices: 	2002001
+Reward Models:  buffering
+Variables: 	rows: 4 meta variables (23 DD variables), columns: 4 meta variables (23 DD variables), nondeterminism: 3 meta variables (3 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (24 nodes)
+   * done
+-------------------------------------------------------------- 
+
+Model checking property "exp_buffertime": R[exp]{"buffering"}min=? [F "done"] ...
+ERROR (verification.h:425): The model type Markov Automaton is not supported by the dd engine.
+ WARN (model-handling.h:885): Cannot handle property: NotSupportedException: The model type Markov Automaton is not supported by the dd engine.
+ERROR (model-handling.h:847): Property is unsupported by selected engine/settings.
+
+
+Performance statistics:
+  * peak memory usage: 2872MB
+  * CPU time: 8.973s
+  * wallclock time: 2.391s	</pre>
+</div>
+</body>
+</html>

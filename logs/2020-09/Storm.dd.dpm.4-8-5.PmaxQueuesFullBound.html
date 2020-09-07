@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.dd - dpm PmaxQueuesFullBound 4-8-5</title>
+	<link rel="stylesheet" type="text/css" href=../style.css>
+</head>
+<body>
+<h1>Storm.dd</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#dpm">dpm</a> <span class="tt">v.2</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 4, <span class="tt">C</span> = 8, <span class="tt">TIME_BOUND</span> = 5</td></tr>
+		<tr><td>Property:</td><td><span class="tt">PmaxQueuesFullBound</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (dd)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">/home/tq429871/storm/build/bin/storm --jani /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ma/dpm/dpm.jani --janiproperty PmaxQueuesFullBound --constants N=4,C=8,TIME_BOUND=5 --engine dd --sylvan:maxmem 4096 --sylvan:threads 4 --timemem --precision 0.001</pre>
+	Symbolic engine with Sylvan using 4GB memory
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">0.4837760925292969s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">0</td></tr>
+		<tr><td>Note(s):</td><td>Unable to obtain tool result.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.6.2
+
+Date: Sat Sep  5 21:02:58 2020
+Command line arguments: --jani /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ma/dpm/dpm.jani --janiproperty PmaxQueuesFullBound --constants 'N=4,C=8,TIME_BOUND=5' --engine dd '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem --precision 0.001
+Current working directory: /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks
+
+Time for model input parsing: 0.004s.
+
+ WARN (cli.cpp:262): The model checking query does not seem to be supported for the selected engine. Storm will try to solve the query, but you will most likely get an error for at least one of the provided properties.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(4 >= 5)' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(4 >= 6)' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(4 >= 7)' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(4 >= 8)' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(4 >= 9)' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(4 >= 10)' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((4 >= 5) & (items5 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((4 >= 6) & (items6 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((4 >= 7) & (items7 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((4 >= 8) & (items8 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((4 >= 9) & (items9 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((4 >= 10) & (items10 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((4 >= 5) & (items5 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((4 >= 6) & (items6 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((4 >= 7) & (items7 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((4 >= 8) & (items8 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((4 >= 9) & (items9 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((4 >= 10) & (items10 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((4 >= 5) & (items5 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((4 >= 6) & (items6 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((4 >= 7) & (items7 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((4 >= 8) & (items8 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((4 >= 9) & (items9 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+ WARN (DdJaniModelBuilder.cpp:1384): The guard '(((4 >= 10) & (items10 > 0)) & (ServiceProvider_pmode = 1))' is unsatisfiable.
+Time for model construction: 0.422s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (symbolic)
+States: 	356426 (414 nodes)
+Transitions: 	681242 (10180 nodes)
+Choices: 	418842
+Reward Models:  none
+Variables: 	rows: 15 meta variables (53 DD variables), columns: 15 meta variables (53 DD variables), nondeterminism: 7 meta variables (7 DD variables)
+Labels: 	2
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (54 nodes)
+-------------------------------------------------------------- 
+
+Model checking property "PmaxQueuesFullBound": Pmax=? [true U<=5 (((((((((((4 < 1) | (items1 = 8)) & ((4 < 2) | (items2 = 8))) & ((4 < 3) | (items3 = 8))) & ((4 < 4) | (items4 = 8))) & ((4 < 5) | (items5 = 8))) & ((4 < 6) | (items6 = 8))) & ((4 < 7) | (items7 = 8))) & ((4 < 8) | (items8 = 8))) & ((4 < 9) | (items9 = 8))) & ((4 < 10) | (items10 = 8)))] ...
+ERROR (verification.h:425): The model type Markov Automaton is not supported by the dd engine.
+ WARN (model-handling.h:885): Cannot handle property: NotSupportedException: The model type Markov Automaton is not supported by the dd engine.
+ERROR (model-handling.h:847): Property is unsupported by selected engine/settings.
+
+
+Performance statistics:
+  * peak memory usage: 2862MB
+  * CPU time: 1.188s
+  * wallclock time: 0.439s	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.ddbisim - philosophers MaxPrReachDeadlock 16-1</title>
+	<link rel="stylesheet" type="text/css" href=../style.css>
+</head>
+<body>
+<h1>Storm.ddbisim</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#philosophers">philosophers</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 16, <span class="tt">TIME_BOUND</span> = 1</td></tr>
+		<tr><td>Property:</td><td><span class="tt">MaxPrReachDeadlock</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (ddbisim)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">/home/tq429871/storm/build/bin/storm --jani /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ctmc/philosophers/philosophers.16.jani --janiproperty MaxPrReachDeadlock --constants TIME_BOUND=1 --engine dd-to-sparse --bisimulation --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Symbolic bisimulation with sparse quotient and sylvan using 4GB memory
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">131.9202742576599s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.6.2
+
+Date: Sat Sep  5 20:50:02 2020
+Command line arguments: --jani /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ctmc/philosophers/philosophers.16.jani --janiproperty MaxPrReachDeadlock --constants TIME_BOUND=1 --engine dd-to-sparse --bisimulation '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks
+
+Time for model input parsing: 0.007s.
+
+Time for model construction: 0.559s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (symbolic)
+States: 	1331714 (270 nodes)
+Transitions: 	13774113 (2229 nodes)
+Reward Models:  none
+Variables: 	rows: 65 meta variables (65 DD variables), columns: 65 meta variables (65 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (66 nodes)
+   * deadl
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 131.149s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	83311
+Transitions: 	860723
+Reward Models:  none
+State Labels: 	4 labels
+   * deadl -> 1 item(s)
+   * init -> 1 item(s)
+   * (((((((((thinking16 < 1) | (fork16 < 1)) | ((wait16 + 1) > 1)) & (((wait1 < 1) | (fork16 < 1)) | ((eating1 + 1) > 1))) & (((((thinking9 + 1) > 1) | ((fork8 + 1) > 1)) | (((fork9 + 1) > 1) | (eating9 < 1))) & (((thinking8 < 1) | (fork8 < 1)) | ((wait8 + 1) > 1)))) & ((((((thinking13 + 1) > 1) | ((fork12 + 1) > 1)) | (((fork13 + 1) > 1) | (eating13 < 1))) & (((thinking4 < 1) | (fork4 < 1)) | ((wait4 + 1) > 1))) & ((((thinking12 < 1) | (fork12 < 1)) | ((wait12 + 1) > 1)) & ((((thinking5 + 1) > 1) | ((fork4 + 1) > 1)) | (((fork5 + 1) > 1) | (eating5 < 1)))))) & (((((((thinking15 + 1) > 1) | ((fork14 + 1) > 1)) | (((fork15 + 1) > 1) | (eating15 < 1))) & (((thinking2 < 1) | (fork2 < 1)) | ((wait2 + 1) > 1))) & ((((thinking10 < 1) | (fork10 < 1)) | ((wait10 + 1) > 1)) & ((((thinking7 + 1) > 1) | ((fork6 + 1) > 1)) | (((fork7 + 1) > 1) | (eating7 < 1))))) & (((((thinking14 < 1) | (fork14 < 1)) | ((wait14 + 1) > 1)) & ((((thinking3 + 1) > 1) | ((fork2 + 1) > 1)) | (((fork3 + 1) > 1) | (eating3 < 1)))) & (((((thinking11 + 1) > 1) | ((fork10 + 1) > 1)) | (((fork11 + 1) > 1) | (eating11 < 1))) & (((thinking6 < 1) | (fork6 < 1)) | ((wait6 + 1) > 1)))))) & ((((((((thinking16 + 1) > 1) | ((fork15 + 1) > 1)) | (((fork16 + 1) > 1) | (eating16 < 1))) & (((thinking1 < 1) | (fork1 < 1)) | ((wait1 + 1) > 1))) & ((((thinking9 < 1) | (fork9 < 1)) | ((wait9 + 1) > 1)) & ((((thinking8 + 1) > 1) | ((fork7 + 1) > 1)) | (((fork8 + 1) > 1) | (eating8 < 1))))) & (((((thinking13 < 1) | (fork13 < 1)) | ((wait13 + 1) > 1)) & ((((thinking4 + 1) > 1) | ((fork3 + 1) > 1)) | (((fork4 + 1) > 1) | (eating4 < 1)))) & (((((thinking12 + 1) > 1) | ((fork11 + 1) > 1)) | (((fork12 + 1) > 1) | (eating12 < 1))) & (((thinking5 < 1) | (fork5 < 1)) | ((wait5 + 1) > 1))))) & ((((((thinking15 < 1) | (fork15 < 1)) | ((wait15 + 1) > 1)) & ((((thinking2 + 1) > 1) | ((fork1 + 1) > 1)) | (((fork2 + 1) > 1) | (eating2 < 1)))) & (((((thinking10 + 1) > 1) | ((fork9 + 1) > 1)) | (((fork10 + 1) > 1) | (eating10 < 1))) & (((thinking7 < 1) | (fork7 < 1)) | ((wait7 + 1) > 1)))) & ((((((thinking14 + 1) > 1) | ((fork13 + 1) > 1)) | (((fork14 + 1) > 1) | (eating14 < 1))) & (((thinking3 < 1) | (fork3 < 1)) | ((wait3 + 1) > 1))) & ((((thinking11 < 1) | (fork11 < 1)) | ((wait11 + 1) > 1)) & ((((thinking6 + 1) > 1) | ((fork5 + 1) > 1)) | (((fork6 + 1) > 1) | (eating6 < 1)))))))) & (((((((wait16 < 1) | (fork15 < 1)) | ((eating16 + 1) > 1)) & ((((thinking1 + 1) > 1) | ((fork16 + 1) > 1)) | (((fork1 + 1) > 1) | (eating1 < 1)))) & ((((wait9 < 1) | (fork8 < 1)) | ((eating9 + 1) > 1)) & (((wait8 < 1) | (fork7 < 1)) | ((eating8 + 1) > 1)))) & (((((wait13 < 1) | (fork12 < 1)) | ((eating13 + 1) > 1)) & (((wait4 < 1) | (fork3 < 1)) | ((eating4 + 1) > 1))) & ((((wait12 < 1) | (fork11 < 1)) | ((eating12 + 1) > 1)) & (((wait5 < 1) | (fork4 < 1)) | ((eating5 + 1) > 1))))) & ((((((wait15 < 1) | (fork14 < 1)) | ((eating15 + 1) > 1)) & (((wait2 < 1) | (fork1 < 1)) | ((eating2 + 1) > 1))) & ((((wait10 < 1) | (fork9 < 1)) | ((eating10 + 1) > 1)) & (((wait7 < 1) | (fork6 < 1)) | ((eating7 + 1) > 1)))) & (((((wait14 < 1) | (fork13 < 1)) | ((eating14 + 1) > 1)) & (((wait3 < 1) | (fork2 < 1)) | ((eating3 + 1) > 1))) & ((((wait11 < 1) | (fork10 < 1)) | ((eating11 + 1) > 1)) & (((wait6 < 1) | (fork5 < 1)) | ((eating6 + 1) > 1))))))) -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "MaxPrReachDeadlock": Pmax=? [F "deadl"] ...
+Result (for initial states): 1
+Time for model checking: 0.066s.
+
+Performance statistics:
+  * peak memory usage: 4025MB
+  * CPU time: 513.464s
+  * wallclock time: 131.801s	</pre>
+</div>
+</body>
+</html>

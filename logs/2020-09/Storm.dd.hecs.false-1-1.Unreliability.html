@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.dd - hecs Unreliability false-1-1</title>
+	<link rel="stylesheet" type="text/css" href=../style.css>
+</head>
+<body>
+<h1>Storm.dd</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#hecs">hecs</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">R</span> = False, <span class="tt">N</span> = 1, <span class="tt">k</span> = 1</td></tr>
+		<tr><td>Property:</td><td><span class="tt">Unreliability</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (dd)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">/home/tq429871/storm/build/bin/storm --jani /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ma/hecs/hecs.false-1-1.jani --janiproperty Unreliability --engine dd --sylvan:maxmem 4096 --sylvan:threads 4 --timemem --precision 0.001</pre>
+	Symbolic engine with Sylvan using 4GB memory
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">0.907515287399292s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">0</td></tr>
+		<tr><td>Note(s):</td><td>Unable to obtain tool result.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.6.2
+
+Date: Sat Sep  5 21:03:07 2020
+Command line arguments: --jani /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ma/hecs/hecs.false-1-1.jani --janiproperty Unreliability --engine dd '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem --precision 0.001
+Current working directory: /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks
+
+Time for model input parsing: 0.028s.
+
+ WARN (cli.cpp:262): The model checking query does not seem to be supported for the selected engine. Storm will try to solve the query, but you will most likely get an error for at least one of the provided properties.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !4 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !4 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !5 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !5 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !3 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !4 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !4 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !1 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionACTIVATE !2 !TRUE that is mentioned in parallel composition.
+ WARN (DdJaniModelBuilder.cpp:989): Subcomposition does not have actionDEACTIVATE !2 !TRUE that is mentioned in parallel composition.
+Time for model construction: 0.782s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (symbolic)
+States: 	7084 (18087 nodes)
+Transitions: 	9504 (132463 nodes)
+Choices: 	7085
+Reward Models:  none
+Variables: 	rows: 22 meta variables (59 DD variables), columns: 22 meta variables (59 DD variables), nondeterminism: 15 meta variables (15 DD variables)
+Labels: 	2
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (60 nodes)
+-------------------------------------------------------------- 
+
+Model checking property "Unreliability": Pmax=? [true U<=1 marked] ...
+ERROR (verification.h:425): The model type Markov Automaton is not supported by the dd engine.
+ WARN (model-handling.h:885): Cannot handle property: NotSupportedException: The model type Markov Automaton is not supported by the dd engine.
+ERROR (model-handling.h:847): Property is unsupported by selected engine/settings.
+
+
+Performance statistics:
+  * peak memory usage: 2888MB
+  * CPU time: 2.701s
+  * wallclock time: 0.862s	</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.automatic - firewire-pta eventually 30-5000</title>
+	<link rel="stylesheet" type="text/css" href=../style.css>
+</head>
+<body>
+<h1>Storm.automatic</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#firewire-pta">firewire-pta</a> <span class="tt">v.1</span> (PTA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">delay</span> = 30, <span class="tt">T</span> = 5000</td></tr>
+		<tr><td>Property:</td><td><span class="tt">eventually</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (automatic)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">/home/tq429871/storm/build/bin/storm --jani /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/pta/firewire-pta/converted_firewire-pta.jani --janiproperty eventually --engine automatic --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Automatic selection Use moconv to convert the PTA to an MDP using digital-clocks semantics.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">73.45507597923279s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">0.0</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.6.2
+
+Date: Sat Sep  5 20:58:21 2020
+Command line arguments: --jani /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/pta/firewire-pta/converted_firewire-pta.jani --janiproperty eventually --engine automatic '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks
+
+Time for model input parsing: 0.128s.
+
+Automatic engine picked the following settings: 
+	engine=sparse	 bisimulation=false	 exact=false
+Time for model construction: 72.276s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	4432272
+Transitions: 	5533832
+Choices: 	5529800
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * done -> 1054 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "eventually": Pmin=? [F "done"] ...
+Result (for initial states): 1
+Time for model checking: 0.988s.
+
+Performance statistics:
+  * peak memory usage: 362MB
+  * CPU time: 73.084s
+  * wallclock time: 73.405s	</pre>
+</div>
+</body>
+</html>

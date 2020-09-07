@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.hybrid - crowds positive 6-20</title>
+	<link rel="stylesheet" type="text/css" href=../style.css>
+</head>
+<body>
+<h1>Storm.hybrid</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#crowds">crowds</a> <span class="tt">v.1</span> (DTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">TotalRuns</span> = 6, <span class="tt">CrowdSize</span> = 20</td></tr>
+		<tr><td>Property:</td><td><span class="tt">positive</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (hybrid)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">/home/tq429871/storm/build/bin/storm --prism /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/dtmc/crowds/crowds.prism --prop /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/dtmc/crowds/crowds.props positive --constants TotalRuns=6,CrowdSize=20 --engine hybrid --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Hybrid engine with Sylvan using 4GB memory
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">47.03738331794739s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">7.961345535304823e-07</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.6.2
+
+Date: Sat Sep  5 20:49:45 2020
+Command line arguments: --prism /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/dtmc/crowds/crowds.prism --prop /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/dtmc/crowds/crowds.props positive --constants 'TotalRuns=6,CrowdSize=20' --engine hybrid '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks
+
+Time for model input parsing: 0.006s.
+
+ WARN (DdPrismModelBuilder.cpp:667): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:667): The guard 'false' is unsatisfiable.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+ WARN (DdPrismModelBuilder.cpp:810): Guard of a command overlaps with previous guards.
+Time for model construction: 0.453s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	10291282 (5401 nodes)
+Transitions: 	37068802 (28651 nodes)
+Reward Models:  none
+Variables: 	rows: 32 meta variables (78 DD variables), columns: 32 meta variables (78 DD variables)
+Labels: 	2
+   * deadlock -> 219604 state(s) (403 nodes)
+   * init -> 1 state(s) (79 nodes)
+-------------------------------------------------------------- 
+
+Model checking property "positive": P=? [F (observe0 > 1)] ...
+Result (for initial states): 0.1204764668
+Time for model checking: 46.514s.
+
+Performance statistics:
+  * peak memory usage: 3139MB
+  * CPU time: 186.831s
+  * wallclock time: 46.987s	</pre>
+</div>
+</body>
+</html>

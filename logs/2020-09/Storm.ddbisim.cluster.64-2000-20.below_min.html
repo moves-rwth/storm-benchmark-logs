@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.ddbisim - cluster below_min 64-2000-20</title>
+	<link rel="stylesheet" type="text/css" href=../style.css>
+</head>
+<body>
+<h1>Storm.ddbisim</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#cluster">cluster</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 64, <span class="tt">T</span> = 2000, <span class="tt">t</span> = 20</td></tr>
+		<tr><td>Property:</td><td><span class="tt">below_min</span> (exp-reward-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (ddbisim)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">/home/tq429871/storm/build/bin/storm --prism /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ctmc/cluster/cluster.prism --prop /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ctmc/cluster/cluster.props below_min --constants N=64,T=2000,t=20 --prismcompat --engine dd-to-sparse --bisimulation --sylvan:maxmem 4096 --sylvan:threads 4 --timemem --precision 0.001</pre>
+	Symbolic bisimulation with sparse quotient and sylvan using 4GB memory Use `--prismcompat` to ensure compatibility with prism benchmark.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">149.0152187347412s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">4.1996057747352735e-07</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.6.2
+
+Date: Sat Sep  5 21:05:40 2020
+Command line arguments: --prism /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ctmc/cluster/cluster.prism --prop /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ctmc/cluster/cluster.props below_min --constants 'N=64,T=2000,t=20' --prismcompat --engine dd-to-sparse --bisimulation '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem --precision 0.001
+Current working directory: /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks
+
+ WARN (Program.cpp:178): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model input parsing: 0.003s.
+
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 0.488s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (symbolic)
+States: 	151060 (38 nodes)
+Transitions: 	733216 (8225 nodes)
+Reward Models:  time_not_min
+Variables: 	rows: 11 meta variables (23 DD variables), columns: 11 meta variables (23 DD variables)
+Labels: 	4
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (24 nodes)
+   * minimum
+   * premium
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 6.352s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	151060
+Transitions: 	733216
+Reward Models:  time_not_min
+State Labels: 	2 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "below_min": R[exp]{"time_not_min"}=? [C<=2000] ...
+Result (for initial states): 0.004219445442
+Time for model checking: 142.102s.
+
+Performance statistics:
+  * peak memory usage: 3194MB
+  * CPU time: 167.772s
+  * wallclock time: 148.961s	</pre>
+</div>
+</body>
+</html>

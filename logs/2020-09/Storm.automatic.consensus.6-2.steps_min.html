@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.automatic - consensus steps_min 6-2</title>
+	<link rel="stylesheet" type="text/css" href=../style.css>
+</head>
+<body>
+<h1>Storm.automatic</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#consensus">consensus</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 6, <span class="tt">K</span> = 2</td></tr>
+		<tr><td>Property:</td><td><span class="tt">steps_min</span> (exp-reward)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (automatic)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">/home/tq429871/storm/build/bin/storm --prism /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/mdp/consensus/consensus.6.prism --prop /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/mdp/consensus/consensus.props steps_min --constants K=2 --engine automatic --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Automatic selection
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">2.289170980453491s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">5.206875e-05</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.6.2
+
+Date: Sat Sep  5 20:45:54 2020
+Command line arguments: --prism /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/mdp/consensus/consensus.6.prism --prop /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/mdp/consensus/consensus.props steps_min --constants K=2 --engine automatic '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks
+
+Time for model input parsing: 0.004s.
+
+Automatic engine picked the following settings: 
+	engine=dd-to-sparse	 bisimulation=true	 exact=false
+Time for model construction: 0.463s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	1258240 (218 nodes)
+Transitions: 	6236736 (7075 nodes)
+Choices: 	5008128
+Reward Models:  steps
+Variables: 	rows: 13 meta variables (24 DD variables), columns: 13 meta variables (24 DD variables), nondeterminism: 6 meta variables (6 DD variables)
+Labels: 	6
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (25 nodes)
+   * agree
+   * all_coins_equal_0
+   * all_coins_equal_1
+   * finished
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 1.652s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	2673
+Transitions: 	16082
+Choices: 	12896
+Reward Models:  steps
+State Labels: 	4 labels
+   * finished -> 1 item(s)
+   * ((((((pc1 = 3) & (pc2 = 3)) & (pc3 = 3)) & (pc4 = 3)) & (pc5 = 3)) & (pc6 = 3)) -> 1 item(s)
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "steps_min": R[exp]{"steps"}min=? [F "finished"] ...
+Result (for initial states): 432.0224937
+Time for model checking: 0.097s.
+
+Performance statistics:
+  * peak memory usage: 2971MB
+  * CPU time: 6.816s
+  * wallclock time: 2.232s	</pre>
+</div>
+</body>
+</html>

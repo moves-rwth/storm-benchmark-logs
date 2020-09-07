@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.ddbisim - embedded actuators 8-12</title>
+	<link rel="stylesheet" type="text/css" href=../style.css>
+</head>
+<body>
+<h1>Storm.ddbisim</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#embedded">embedded</a> <span class="tt">v.1</span> (CTMC)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">MAX_COUNT</span> = 8, <span class="tt">T</span> = 12</td></tr>
+		<tr><td>Property:</td><td><span class="tt">actuators</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (ddbisim)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">/home/tq429871/storm/build/bin/storm --prism /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ctmc/embedded/embedded.prism --prop /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ctmc/embedded/embedded.props actuators --constants MAX_COUNT=8,T=12 --prismcompat --engine dd-to-sparse --bisimulation --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Symbolic bisimulation with sparse quotient and sylvan using 4GB memory Use `--prismcompat` to ensure compatibility with prism benchmark.
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">0.7600550651550293s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">2.557487840339145e-08</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.6.2
+
+Date: Sat Sep  5 20:49:59 2020
+Command line arguments: --prism /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ctmc/embedded/embedded.prism --prop /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ctmc/embedded/embedded.props actuators --constants 'MAX_COUNT=8,T=12' --prismcompat --engine dd-to-sparse --bisimulation '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks
+
+ WARN (Program.cpp:178): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model input parsing: 0.003s.
+
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+ WARN (Program.cpp:1277): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 0.398s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (symbolic)
+States: 	8034 (61 nodes)
+Transitions: 	33564 (1888 nodes)
+Reward Models:  none
+Variables: 	rows: 9 meta variables (16 DD variables), columns: 9 meta variables (16 DD variables)
+Labels: 	9
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (17 nodes)
+   * danger
+   * down
+   * fail_actuators
+   * fail_io
+   * fail_main
+   * fail_sensors
+   * up
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.289s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	579
+Transitions: 	3848
+Reward Models:  none
+State Labels: 	6 labels
+   * (((((i = 2) & (s < 2)) | (count = (8 + 1))) | ((o = 2) & (a < 1))) | (m = 0)) -> 150 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * down -> 150 item(s)
+   * ((o = 2) & (a < 1)) -> 1 item(s)
+   * fail_actuators -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "actuators": P=? [!("down") U "fail_actuators"] ...
+Result (for initial states): 0.1053036531
+Time for model checking: 0.001s.
+
+Performance statistics:
+  * peak memory usage: 2885MB
+  * CPU time: 1.622s
+  * wallclock time: 0.704s	</pre>
+</div>
+</body>
+</html>

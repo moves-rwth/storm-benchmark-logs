@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.dd - readers-writers prtb_many_requests 40</title>
+	<link rel="stylesheet" type="text/css" href=../style.css>
+</head>
+<body>
+<h1>Storm.dd</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#readers-writers">readers-writers</a> <span class="tt">v.1</span> (MA)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">K</span> = 40</td></tr>
+		<tr><td>Property:</td><td><span class="tt">prtb_many_requests</span> (prob-reach-time-bounded)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (dd)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">/home/tq429871/storm/build/bin/storm --jani /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ma/readers-writers/readers-writers.40.jani --janiproperty prtb_many_requests --engine dd --sylvan:maxmem 4096 --sylvan:threads 4 --timemem --precision 0.001</pre>
+	Symbolic engine with Sylvan using 4GB memory
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">1.4193975925445557s</td></tr>
+		<tr><td>Return code:</td><td style="tt; color: red;">0</td></tr>
+		<tr><td>Note(s):</td><td>Unable to obtain tool result.</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.6.2
+
+Date: Sat Sep  5 21:04:10 2020
+Command line arguments: --jani /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/ma/readers-writers/readers-writers.40.jani --janiproperty prtb_many_requests --engine dd '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem --precision 0.001
+Current working directory: /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks
+
+Time for model input parsing: 0.003s.
+
+ WARN (cli.cpp:262): The model checking query does not seem to be supported for the selected engine. Storm will try to solve the query, but you will most likely get an error for at least one of the provided properties.
+Time for model construction: 1.221s.
+
+-------------------------------------------------------------- 
+Model type: 	Markov Automaton (symbolic)
+States: 	1884366 (9462 nodes)
+Transitions: 	3815040 (1355711 nodes)
+Choices: 	1884366
+Reward Models:  none
+Variables: 	rows: 14 meta variables (69 DD variables), columns: 14 meta variables (69 DD variables), nondeterminism: 1 meta variables (1 DD variables)
+Labels: 	2
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (70 nodes)
+-------------------------------------------------------------- 
+
+Model checking property "prtb_many_requests": Pmax=? [true U<=5 (((p_lan_w + p_w) + (p_lan_r + p_r)) > (320 / 10))] ...
+ERROR (verification.h:425): The model type Markov Automaton is not supported by the dd engine.
+ WARN (model-handling.h:885): Cannot handle property: NotSupportedException: The model type Markov Automaton is not supported by the dd engine.
+ERROR (model-handling.h:847): Property is unsupported by selected engine/settings.
+
+
+Performance statistics:
+  * peak memory usage: 2917MB
+  * CPU time: 4.890s
+  * wallclock time: 1.366s	</pre>
+</div>
+</body>
+</html>

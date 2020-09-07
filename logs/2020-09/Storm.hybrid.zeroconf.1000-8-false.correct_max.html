@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Storm.hybrid - zeroconf correct_max 1000-8-false</title>
+	<link rel="stylesheet" type="text/css" href=../style.css>
+</head>
+<body>
+<h1>Storm.hybrid</h1>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Benchmark</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Model:</td><td><a href="http://qcomp.org/benchmarks/index.html#zeroconf">zeroconf</a> <span class="tt">v.1</span> (MDP)</td></tr>
+		<tr><td>Parameter(s)</td><td><span class="tt">N</span> = 1000, <span class="tt">K</span> = 8, <span class="tt">reset</span> = False</td></tr>
+		<tr><td>Property:</td><td><span class="tt">correct_max</span> (prob-reach)</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Invocation (hybrid)</div></div>
+	<pre style="overflow: auto; padding-bottom: 1.5ex; padding-top: 1ex; font-size: 15px; margin-bottom: 0ex;  margin-top: 0ex;">/home/tq429871/storm/build/bin/storm --prism /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/mdp/zeroconf/zeroconf.prism --prop /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/mdp/zeroconf/zeroconf.props correct_max --constants N=1000,K=8,reset=false --engine hybrid --sylvan:maxmem 4096 --sylvan:threads 4 --timemem</pre>
+	Hybrid engine with Sylvan using 4GB memory
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Execution</div></div>
+	<table style="margin-bottom: 0.75ex;">
+		<tr><td>Walltime:</td><td style="tt">18.417579412460327s</td></tr>
+		<tr><td>Return code:</td><td style="tt">0</td></tr>
+		<tr><td>Relative Error:</td><td style="tt">1.5085210170452104e-11</td></tr>
+	</table>
+</div>
+<div class="box">
+	<div class="boxlabelo"><div class="boxlabelc">Log</div></div>
+	<pre style="overflow:auto; padding-bottom: 1.5ex">Storm 1.6.2
+
+Date: Sat Sep  5 20:57:49 2020
+Command line arguments: --prism /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/mdp/zeroconf/zeroconf.prism --prop /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks/qcomp/benchmarks/mdp/zeroconf/zeroconf.props correct_max --constants 'N=1000,K=8,reset=false' --engine hybrid '--sylvan:maxmem' 4096 '--sylvan:threads' 4 --timemem
+Current working directory: /rwthfs/rz/cluster/home/tq429871/git/storm-qcomp-benchmarks
+
+Time for model input parsing: 0.005s.
+
+Time for model construction: 6.036s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	1868787 (21641 nodes)
+Transitions: 	4224736 (151330 nodes)
+Choices: 	3430379
+Reward Models:  none
+Variables: 	rows: 22 meta variables (58 DD variables), columns: 22 meta variables (58 DD variables), nondeterminism: 7 meta variables (7 DD variables)
+Labels: 	2
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (59 nodes)
+-------------------------------------------------------------- 
+
+Model checking property "correct_max": Pmax=? [F ((l = 4) & (ip = 1))] ...
+Result (for initial states): 4.801413635e-08
+Time for model checking: 12.293s.
+
+Performance statistics:
+  * peak memory usage: 3505MB
+  * CPU time: 72.519s
+  * wallclock time: 18.367s	</pre>
+</div>
+</body>
+</html>
